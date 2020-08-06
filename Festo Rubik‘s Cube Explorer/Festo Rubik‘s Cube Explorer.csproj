@@ -67,6 +67,12 @@
     <Compile Include="Form_Manual.Designer.cs">
       <DependentUpon>Form_Manual.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Servo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Servo.Designer.cs">
+      <DependentUpon>Form_Servo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -74,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Manual.resx">
       <DependentUpon>Form_Manual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Servo.resx">
+      <DependentUpon>Form_Servo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -99,6 +108,10 @@
     <None Include="Resources\未就绪.png" />
     <None Include="Resources\使用中.png" />
     <None Include="Resources\就绪 %281%29.png" />
+    <None Include="Resources\status.png" />
+    <None Include="Resources\status-away.png" />
+    <None Include="Resources\status-busy.png" />
+    <None Include="Resources\status-offline.png" />
     <Content Include="Rubik%27s Cube.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
