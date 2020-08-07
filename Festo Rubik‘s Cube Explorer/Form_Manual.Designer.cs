@@ -119,34 +119,34 @@
             this.tabPage_Servo = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_U_Rotate = new System.Windows.Forms.Button();
+            this.btn_U_Grab = new System.Windows.Forms.Button();
+            this.btn_U_Move = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_L_Rotate = new System.Windows.Forms.Button();
+            this.btn_L_Grab = new System.Windows.Forms.Button();
+            this.btn_L_Move_Cam = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_F_Rotate = new System.Windows.Forms.Button();
+            this.btn_F_Grab = new System.Windows.Forms.Button();
+            this.btn_F_Move_Cam = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_R_Rotate = new System.Windows.Forms.Button();
+            this.btn_R_Grab = new System.Windows.Forms.Button();
+            this.btn_R_Move_Cam = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btn_B_Rotate = new System.Windows.Forms.Button();
+            this.btn_B_Grab = new System.Windows.Forms.Button();
+            this.btn_B__Move_Cam = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
+            this.btn_D_Rotate = new System.Windows.Forms.Button();
+            this.btn_D_Grab = new System.Windows.Forms.Button();
+            this.btn_D_Move_Cam = new System.Windows.Forms.Button();
+            this.btn_D_Move = new System.Windows.Forms.Button();
+            this.btn_Feeding = new System.Windows.Forms.Button();
+            this.btn_Rotate = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage_Cam.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -1005,7 +1005,7 @@
             this.tableLayoutPanel_CamControl.ColumnCount = 3;
             this.tableLayoutPanel_CamControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel_CamControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel_CamControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
+            this.tableLayoutPanel_CamControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 137F));
             this.tableLayoutPanel_CamControl.Controls.Add(this.lbl_Trigger, 0, 0);
             this.tableLayoutPanel_CamControl.Controls.Add(this.lbl_Light, 1, 0);
             this.tableLayoutPanel_CamControl.Controls.Add(this.lbl_Status, 2, 0);
@@ -1045,7 +1045,7 @@
             this.lbl_Trigger.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_Trigger.Location = new System.Drawing.Point(4, 1);
             this.lbl_Trigger.Name = "lbl_Trigger";
-            this.lbl_Trigger.Size = new System.Drawing.Size(71, 37);
+            this.lbl_Trigger.Size = new System.Drawing.Size(70, 37);
             this.lbl_Trigger.TabIndex = 1;
             this.lbl_Trigger.Text = "触发";
             this.lbl_Trigger.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1053,9 +1053,9 @@
             // lbl_Light
             // 
             this.lbl_Light.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Light.Location = new System.Drawing.Point(82, 1);
+            this.lbl_Light.Location = new System.Drawing.Point(81, 1);
             this.lbl_Light.Name = "lbl_Light";
-            this.lbl_Light.Size = new System.Drawing.Size(71, 37);
+            this.lbl_Light.Size = new System.Drawing.Size(70, 37);
             this.lbl_Light.TabIndex = 2;
             this.lbl_Light.Text = "光源";
             this.lbl_Light.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1063,9 +1063,9 @@
             // lbl_Status
             // 
             this.lbl_Status.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status.Location = new System.Drawing.Point(160, 1);
+            this.lbl_Status.Location = new System.Drawing.Point(158, 1);
             this.lbl_Status.Name = "lbl_Status";
-            this.lbl_Status.Size = new System.Drawing.Size(130, 37);
+            this.lbl_Status.Size = new System.Drawing.Size(132, 37);
             this.lbl_Status.TabIndex = 3;
             this.lbl_Status.Text = "状态";
             this.lbl_Status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1075,7 +1075,7 @@
             this.btn_U.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_U.Location = new System.Drawing.Point(4, 42);
             this.btn_U.Name = "btn_U";
-            this.btn_U.Size = new System.Drawing.Size(71, 31);
+            this.btn_U.Size = new System.Drawing.Size(70, 31);
             this.btn_U.TabIndex = 4;
             this.btn_U.Text = "U";
             this.btn_U.UseVisualStyleBackColor = true;
@@ -1085,7 +1085,7 @@
             this.btn_L.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_L.Location = new System.Drawing.Point(4, 80);
             this.btn_L.Name = "btn_L";
-            this.btn_L.Size = new System.Drawing.Size(71, 31);
+            this.btn_L.Size = new System.Drawing.Size(70, 31);
             this.btn_L.TabIndex = 5;
             this.btn_L.Text = "L";
             this.btn_L.UseVisualStyleBackColor = true;
@@ -1095,7 +1095,7 @@
             this.btn_F.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_F.Location = new System.Drawing.Point(4, 118);
             this.btn_F.Name = "btn_F";
-            this.btn_F.Size = new System.Drawing.Size(71, 31);
+            this.btn_F.Size = new System.Drawing.Size(70, 31);
             this.btn_F.TabIndex = 6;
             this.btn_F.Text = "F";
             this.btn_F.UseVisualStyleBackColor = true;
@@ -1105,7 +1105,7 @@
             this.btn_R.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_R.Location = new System.Drawing.Point(4, 156);
             this.btn_R.Name = "btn_R";
-            this.btn_R.Size = new System.Drawing.Size(71, 31);
+            this.btn_R.Size = new System.Drawing.Size(70, 31);
             this.btn_R.TabIndex = 7;
             this.btn_R.Text = "R";
             this.btn_R.UseVisualStyleBackColor = true;
@@ -1115,7 +1115,7 @@
             this.btn_B.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_B.Location = new System.Drawing.Point(4, 194);
             this.btn_B.Name = "btn_B";
-            this.btn_B.Size = new System.Drawing.Size(71, 31);
+            this.btn_B.Size = new System.Drawing.Size(70, 31);
             this.btn_B.TabIndex = 8;
             this.btn_B.Text = "B";
             this.btn_B.UseVisualStyleBackColor = true;
@@ -1125,7 +1125,7 @@
             this.btn_D.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_D.Location = new System.Drawing.Point(4, 232);
             this.btn_D.Name = "btn_D";
-            this.btn_D.Size = new System.Drawing.Size(71, 33);
+            this.btn_D.Size = new System.Drawing.Size(70, 33);
             this.btn_D.TabIndex = 9;
             this.btn_D.Text = "D";
             this.btn_D.UseVisualStyleBackColor = true;
@@ -1133,9 +1133,9 @@
             // pic_L_U
             // 
             this.pic_L_U.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_U.Location = new System.Drawing.Point(82, 42);
+            this.pic_L_U.Location = new System.Drawing.Point(81, 42);
             this.pic_L_U.Name = "pic_L_U";
-            this.pic_L_U.Size = new System.Drawing.Size(71, 31);
+            this.pic_L_U.Size = new System.Drawing.Size(70, 31);
             this.pic_L_U.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_L_U.TabIndex = 10;
             this.pic_L_U.TabStop = false;
@@ -1143,9 +1143,9 @@
             // pic_L_L
             // 
             this.pic_L_L.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_L.Location = new System.Drawing.Point(82, 80);
+            this.pic_L_L.Location = new System.Drawing.Point(81, 80);
             this.pic_L_L.Name = "pic_L_L";
-            this.pic_L_L.Size = new System.Drawing.Size(71, 31);
+            this.pic_L_L.Size = new System.Drawing.Size(70, 31);
             this.pic_L_L.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_L_L.TabIndex = 11;
             this.pic_L_L.TabStop = false;
@@ -1153,9 +1153,9 @@
             // pic_L_F
             // 
             this.pic_L_F.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_F.Location = new System.Drawing.Point(82, 118);
+            this.pic_L_F.Location = new System.Drawing.Point(81, 118);
             this.pic_L_F.Name = "pic_L_F";
-            this.pic_L_F.Size = new System.Drawing.Size(71, 31);
+            this.pic_L_F.Size = new System.Drawing.Size(70, 31);
             this.pic_L_F.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_L_F.TabIndex = 12;
             this.pic_L_F.TabStop = false;
@@ -1163,9 +1163,9 @@
             // pic_L_R
             // 
             this.pic_L_R.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_R.Location = new System.Drawing.Point(82, 156);
+            this.pic_L_R.Location = new System.Drawing.Point(81, 156);
             this.pic_L_R.Name = "pic_L_R";
-            this.pic_L_R.Size = new System.Drawing.Size(71, 31);
+            this.pic_L_R.Size = new System.Drawing.Size(70, 31);
             this.pic_L_R.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_L_R.TabIndex = 13;
             this.pic_L_R.TabStop = false;
@@ -1173,9 +1173,9 @@
             // pic_L_B
             // 
             this.pic_L_B.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_B.Location = new System.Drawing.Point(82, 194);
+            this.pic_L_B.Location = new System.Drawing.Point(81, 194);
             this.pic_L_B.Name = "pic_L_B";
-            this.pic_L_B.Size = new System.Drawing.Size(71, 31);
+            this.pic_L_B.Size = new System.Drawing.Size(70, 31);
             this.pic_L_B.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_L_B.TabIndex = 14;
             this.pic_L_B.TabStop = false;
@@ -1183,9 +1183,9 @@
             // pic_L_D
             // 
             this.pic_L_D.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_D.Location = new System.Drawing.Point(82, 232);
+            this.pic_L_D.Location = new System.Drawing.Point(81, 232);
             this.pic_L_D.Name = "pic_L_D";
-            this.pic_L_D.Size = new System.Drawing.Size(71, 33);
+            this.pic_L_D.Size = new System.Drawing.Size(70, 33);
             this.pic_L_D.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_L_D.TabIndex = 15;
             this.pic_L_D.TabStop = false;
@@ -1193,9 +1193,9 @@
             // lbl_Status_U
             // 
             this.lbl_Status_U.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_U.Location = new System.Drawing.Point(160, 39);
+            this.lbl_Status_U.Location = new System.Drawing.Point(158, 39);
             this.lbl_Status_U.Name = "lbl_Status_U";
-            this.lbl_Status_U.Size = new System.Drawing.Size(130, 37);
+            this.lbl_Status_U.Size = new System.Drawing.Size(132, 37);
             this.lbl_Status_U.TabIndex = 16;
             this.lbl_Status_U.Text = "已连接";
             this.lbl_Status_U.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1203,9 +1203,9 @@
             // lbl_Status_L
             // 
             this.lbl_Status_L.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_L.Location = new System.Drawing.Point(160, 77);
+            this.lbl_Status_L.Location = new System.Drawing.Point(158, 77);
             this.lbl_Status_L.Name = "lbl_Status_L";
-            this.lbl_Status_L.Size = new System.Drawing.Size(130, 37);
+            this.lbl_Status_L.Size = new System.Drawing.Size(132, 37);
             this.lbl_Status_L.TabIndex = 17;
             this.lbl_Status_L.Text = "已连接";
             this.lbl_Status_L.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1213,9 +1213,9 @@
             // lbl_Status_F
             // 
             this.lbl_Status_F.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_F.Location = new System.Drawing.Point(160, 115);
+            this.lbl_Status_F.Location = new System.Drawing.Point(158, 115);
             this.lbl_Status_F.Name = "lbl_Status_F";
-            this.lbl_Status_F.Size = new System.Drawing.Size(130, 37);
+            this.lbl_Status_F.Size = new System.Drawing.Size(132, 37);
             this.lbl_Status_F.TabIndex = 18;
             this.lbl_Status_F.Text = "已连接";
             this.lbl_Status_F.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1223,9 +1223,9 @@
             // lbl_Status_R
             // 
             this.lbl_Status_R.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_R.Location = new System.Drawing.Point(160, 153);
+            this.lbl_Status_R.Location = new System.Drawing.Point(158, 153);
             this.lbl_Status_R.Name = "lbl_Status_R";
-            this.lbl_Status_R.Size = new System.Drawing.Size(130, 37);
+            this.lbl_Status_R.Size = new System.Drawing.Size(132, 37);
             this.lbl_Status_R.TabIndex = 19;
             this.lbl_Status_R.Text = "已连接";
             this.lbl_Status_R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1233,9 +1233,9 @@
             // lbl_Status_B
             // 
             this.lbl_Status_B.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_B.Location = new System.Drawing.Point(160, 191);
+            this.lbl_Status_B.Location = new System.Drawing.Point(158, 191);
             this.lbl_Status_B.Name = "lbl_Status_B";
-            this.lbl_Status_B.Size = new System.Drawing.Size(130, 37);
+            this.lbl_Status_B.Size = new System.Drawing.Size(132, 37);
             this.lbl_Status_B.TabIndex = 20;
             this.lbl_Status_B.Text = "已连接";
             this.lbl_Status_B.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1243,9 +1243,9 @@
             // lbl_Status_D
             // 
             this.lbl_Status_D.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_D.Location = new System.Drawing.Point(160, 229);
+            this.lbl_Status_D.Location = new System.Drawing.Point(158, 229);
             this.lbl_Status_D.Name = "lbl_Status_D";
-            this.lbl_Status_D.Size = new System.Drawing.Size(130, 39);
+            this.lbl_Status_D.Size = new System.Drawing.Size(132, 39);
             this.lbl_Status_D.TabIndex = 21;
             this.lbl_Status_D.Text = "已连接";
             this.lbl_Status_D.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1267,8 +1267,8 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Feeding, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Rotate, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(7, 8);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
@@ -1302,6 +1302,295 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(851, 440);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
+            // panel2
+            // 
+            this.panel2.AutoScroll = true;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btn_U_Rotate);
+            this.panel2.Controls.Add(this.btn_U_Grab);
+            this.panel2.Controls.Add(this.btn_U_Move);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(215, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(206, 140);
+            this.panel2.TabIndex = 0;
+            // 
+            // btn_U_Rotate
+            // 
+            this.btn_U_Rotate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_U_Rotate.Location = new System.Drawing.Point(0, 70);
+            this.btn_U_Rotate.Name = "btn_U_Rotate";
+            this.btn_U_Rotate.Size = new System.Drawing.Size(204, 35);
+            this.btn_U_Rotate.TabIndex = 2;
+            this.btn_U_Rotate.Text = "U拧";
+            this.btn_U_Rotate.UseVisualStyleBackColor = true;
+            // 
+            // btn_U_Grab
+            // 
+            this.btn_U_Grab.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_U_Grab.Location = new System.Drawing.Point(0, 35);
+            this.btn_U_Grab.Name = "btn_U_Grab";
+            this.btn_U_Grab.Size = new System.Drawing.Size(204, 35);
+            this.btn_U_Grab.TabIndex = 1;
+            this.btn_U_Grab.Text = "U旋转杆上下";
+            this.btn_U_Grab.UseVisualStyleBackColor = true;
+            // 
+            // btn_U_Move
+            // 
+            this.btn_U_Move.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_U_Move.Location = new System.Drawing.Point(0, 0);
+            this.btn_U_Move.Name = "btn_U_Move";
+            this.btn_U_Move.Size = new System.Drawing.Size(204, 35);
+            this.btn_U_Move.TabIndex = 0;
+            this.btn_U_Move.Text = "U拍照位/旋转位";
+            this.btn_U_Move.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.AutoScroll = true;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btn_L_Rotate);
+            this.panel3.Controls.Add(this.btn_L_Grab);
+            this.panel3.Controls.Add(this.btn_L_Move_Cam);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 149);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(206, 140);
+            this.panel3.TabIndex = 1;
+            // 
+            // btn_L_Rotate
+            // 
+            this.btn_L_Rotate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_L_Rotate.Location = new System.Drawing.Point(0, 70);
+            this.btn_L_Rotate.Name = "btn_L_Rotate";
+            this.btn_L_Rotate.Size = new System.Drawing.Size(204, 35);
+            this.btn_L_Rotate.TabIndex = 3;
+            this.btn_L_Rotate.Text = "L拧";
+            this.btn_L_Rotate.UseVisualStyleBackColor = true;
+            // 
+            // btn_L_Grab
+            // 
+            this.btn_L_Grab.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_L_Grab.Location = new System.Drawing.Point(0, 35);
+            this.btn_L_Grab.Name = "btn_L_Grab";
+            this.btn_L_Grab.Size = new System.Drawing.Size(204, 35);
+            this.btn_L_Grab.TabIndex = 2;
+            this.btn_L_Grab.Text = "L旋转杆前后";
+            this.btn_L_Grab.UseVisualStyleBackColor = true;
+            // 
+            // btn_L_Move_Cam
+            // 
+            this.btn_L_Move_Cam.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_L_Move_Cam.Location = new System.Drawing.Point(0, 0);
+            this.btn_L_Move_Cam.Name = "btn_L_Move_Cam";
+            this.btn_L_Move_Cam.Size = new System.Drawing.Size(204, 35);
+            this.btn_L_Move_Cam.TabIndex = 1;
+            this.btn_L_Move_Cam.Text = "L相机上下";
+            this.btn_L_Move_Cam.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            this.panel4.AutoScroll = true;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.btn_F_Rotate);
+            this.panel4.Controls.Add(this.btn_F_Grab);
+            this.panel4.Controls.Add(this.btn_F_Move_Cam);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(215, 149);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(206, 140);
+            this.panel4.TabIndex = 2;
+            // 
+            // btn_F_Rotate
+            // 
+            this.btn_F_Rotate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_F_Rotate.Location = new System.Drawing.Point(0, 70);
+            this.btn_F_Rotate.Name = "btn_F_Rotate";
+            this.btn_F_Rotate.Size = new System.Drawing.Size(204, 35);
+            this.btn_F_Rotate.TabIndex = 3;
+            this.btn_F_Rotate.Text = "F拧";
+            this.btn_F_Rotate.UseVisualStyleBackColor = true;
+            // 
+            // btn_F_Grab
+            // 
+            this.btn_F_Grab.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_F_Grab.Location = new System.Drawing.Point(0, 35);
+            this.btn_F_Grab.Name = "btn_F_Grab";
+            this.btn_F_Grab.Size = new System.Drawing.Size(204, 35);
+            this.btn_F_Grab.TabIndex = 2;
+            this.btn_F_Grab.Text = "F旋转杆前后";
+            this.btn_F_Grab.UseVisualStyleBackColor = true;
+            // 
+            // btn_F_Move_Cam
+            // 
+            this.btn_F_Move_Cam.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_F_Move_Cam.Location = new System.Drawing.Point(0, 0);
+            this.btn_F_Move_Cam.Name = "btn_F_Move_Cam";
+            this.btn_F_Move_Cam.Size = new System.Drawing.Size(204, 35);
+            this.btn_F_Move_Cam.TabIndex = 1;
+            this.btn_F_Move_Cam.Text = "F相机上下";
+            this.btn_F_Move_Cam.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.AutoScroll = true;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.btn_R_Rotate);
+            this.panel5.Controls.Add(this.btn_R_Grab);
+            this.panel5.Controls.Add(this.btn_R_Move_Cam);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(427, 149);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(206, 140);
+            this.panel5.TabIndex = 3;
+            // 
+            // btn_R_Rotate
+            // 
+            this.btn_R_Rotate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_R_Rotate.Location = new System.Drawing.Point(0, 70);
+            this.btn_R_Rotate.Name = "btn_R_Rotate";
+            this.btn_R_Rotate.Size = new System.Drawing.Size(204, 35);
+            this.btn_R_Rotate.TabIndex = 3;
+            this.btn_R_Rotate.Text = "R拧";
+            this.btn_R_Rotate.UseVisualStyleBackColor = true;
+            // 
+            // btn_R_Grab
+            // 
+            this.btn_R_Grab.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_R_Grab.Location = new System.Drawing.Point(0, 35);
+            this.btn_R_Grab.Name = "btn_R_Grab";
+            this.btn_R_Grab.Size = new System.Drawing.Size(204, 35);
+            this.btn_R_Grab.TabIndex = 2;
+            this.btn_R_Grab.Text = "R旋转杆前后";
+            this.btn_R_Grab.UseVisualStyleBackColor = true;
+            // 
+            // btn_R_Move_Cam
+            // 
+            this.btn_R_Move_Cam.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_R_Move_Cam.Location = new System.Drawing.Point(0, 0);
+            this.btn_R_Move_Cam.Name = "btn_R_Move_Cam";
+            this.btn_R_Move_Cam.Size = new System.Drawing.Size(204, 35);
+            this.btn_R_Move_Cam.TabIndex = 1;
+            this.btn_R_Move_Cam.Text = "R相机上下";
+            this.btn_R_Move_Cam.UseVisualStyleBackColor = true;
+            // 
+            // panel6
+            // 
+            this.panel6.AutoScroll = true;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.btn_B_Rotate);
+            this.panel6.Controls.Add(this.btn_B_Grab);
+            this.panel6.Controls.Add(this.btn_B__Move_Cam);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(639, 149);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(209, 140);
+            this.panel6.TabIndex = 4;
+            // 
+            // btn_B_Rotate
+            // 
+            this.btn_B_Rotate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_B_Rotate.Location = new System.Drawing.Point(0, 70);
+            this.btn_B_Rotate.Name = "btn_B_Rotate";
+            this.btn_B_Rotate.Size = new System.Drawing.Size(207, 35);
+            this.btn_B_Rotate.TabIndex = 3;
+            this.btn_B_Rotate.Text = "B拧";
+            this.btn_B_Rotate.UseVisualStyleBackColor = true;
+            // 
+            // btn_B_Grab
+            // 
+            this.btn_B_Grab.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_B_Grab.Location = new System.Drawing.Point(0, 35);
+            this.btn_B_Grab.Name = "btn_B_Grab";
+            this.btn_B_Grab.Size = new System.Drawing.Size(207, 35);
+            this.btn_B_Grab.TabIndex = 2;
+            this.btn_B_Grab.Text = "B旋转杆前后";
+            this.btn_B_Grab.UseVisualStyleBackColor = true;
+            // 
+            // btn_B__Move_Cam
+            // 
+            this.btn_B__Move_Cam.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_B__Move_Cam.Location = new System.Drawing.Point(0, 0);
+            this.btn_B__Move_Cam.Name = "btn_B__Move_Cam";
+            this.btn_B__Move_Cam.Size = new System.Drawing.Size(207, 35);
+            this.btn_B__Move_Cam.TabIndex = 1;
+            this.btn_B__Move_Cam.Text = "B相机上下";
+            this.btn_B__Move_Cam.UseVisualStyleBackColor = true;
+            // 
+            // panel7
+            // 
+            this.panel7.AutoScroll = true;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.btn_D_Rotate);
+            this.panel7.Controls.Add(this.btn_D_Grab);
+            this.panel7.Controls.Add(this.btn_D_Move_Cam);
+            this.panel7.Controls.Add(this.btn_D_Move);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(215, 295);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(206, 142);
+            this.panel7.TabIndex = 5;
+            // 
+            // btn_D_Rotate
+            // 
+            this.btn_D_Rotate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_D_Rotate.Location = new System.Drawing.Point(0, 105);
+            this.btn_D_Rotate.Name = "btn_D_Rotate";
+            this.btn_D_Rotate.Size = new System.Drawing.Size(204, 35);
+            this.btn_D_Rotate.TabIndex = 4;
+            this.btn_D_Rotate.Text = "D拧";
+            this.btn_D_Rotate.UseVisualStyleBackColor = true;
+            // 
+            // btn_D_Grab
+            // 
+            this.btn_D_Grab.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_D_Grab.Location = new System.Drawing.Point(0, 70);
+            this.btn_D_Grab.Name = "btn_D_Grab";
+            this.btn_D_Grab.Size = new System.Drawing.Size(204, 35);
+            this.btn_D_Grab.TabIndex = 3;
+            this.btn_D_Grab.Text = "D旋转杆上下";
+            this.btn_D_Grab.UseVisualStyleBackColor = true;
+            // 
+            // btn_D_Move_Cam
+            // 
+            this.btn_D_Move_Cam.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_D_Move_Cam.Location = new System.Drawing.Point(0, 35);
+            this.btn_D_Move_Cam.Name = "btn_D_Move_Cam";
+            this.btn_D_Move_Cam.Size = new System.Drawing.Size(204, 35);
+            this.btn_D_Move_Cam.TabIndex = 2;
+            this.btn_D_Move_Cam.Text = "D相机上下";
+            this.btn_D_Move_Cam.UseVisualStyleBackColor = true;
+            // 
+            // btn_D_Move
+            // 
+            this.btn_D_Move.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_D_Move.Location = new System.Drawing.Point(0, 0);
+            this.btn_D_Move.Name = "btn_D_Move";
+            this.btn_D_Move.Size = new System.Drawing.Size(204, 35);
+            this.btn_D_Move.TabIndex = 1;
+            this.btn_D_Move.Text = "D拍照位/旋转位";
+            this.btn_D_Move.UseVisualStyleBackColor = true;
+            // 
+            // btn_Feeding
+            // 
+            this.btn_Feeding.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Feeding.Location = new System.Drawing.Point(3, 3);
+            this.btn_Feeding.Name = "btn_Feeding";
+            this.btn_Feeding.Size = new System.Drawing.Size(845, 34);
+            this.btn_Feeding.TabIndex = 1;
+            this.btn_Feeding.Text = "魔方上下料";
+            this.btn_Feeding.UseVisualStyleBackColor = true;
+            // 
+            // btn_Rotate
+            // 
+            this.btn_Rotate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Rotate.Location = new System.Drawing.Point(3, 43);
+            this.btn_Rotate.Name = "btn_Rotate";
+            this.btn_Rotate.Size = new System.Drawing.Size(845, 34);
+            this.btn_Rotate.TabIndex = 2;
+            this.btn_Rotate.Text = "魔方旋转";
+            this.btn_Rotate.UseVisualStyleBackColor = true;
+            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -1309,295 +1598,6 @@
             this.imageList1.Images.SetKeyName(0, "未就绪.png");
             this.imageList1.Images.SetKeyName(1, "使用中.png");
             this.imageList1.Images.SetKeyName(2, "就绪.png");
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(845, 34);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "魔方上下料";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(3, 43);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(845, 34);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "魔方旋转";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.AutoScroll = true;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(215, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(206, 140);
-            this.panel2.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.AutoScroll = true;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.button8);
-            this.panel3.Controls.Add(this.button7);
-            this.panel3.Controls.Add(this.button6);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 149);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(206, 140);
-            this.panel3.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.AutoScroll = true;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.button11);
-            this.panel4.Controls.Add(this.button10);
-            this.panel4.Controls.Add(this.button9);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(215, 149);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(206, 140);
-            this.panel4.TabIndex = 2;
-            // 
-            // panel5
-            // 
-            this.panel5.AutoScroll = true;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.button14);
-            this.panel5.Controls.Add(this.button13);
-            this.panel5.Controls.Add(this.button12);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(427, 149);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(206, 140);
-            this.panel5.TabIndex = 3;
-            // 
-            // panel6
-            // 
-            this.panel6.AutoScroll = true;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.button17);
-            this.panel6.Controls.Add(this.button16);
-            this.panel6.Controls.Add(this.button15);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(639, 149);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(209, 140);
-            this.panel6.TabIndex = 4;
-            // 
-            // panel7
-            // 
-            this.panel7.AutoScroll = true;
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.button21);
-            this.panel7.Controls.Add(this.button20);
-            this.panel7.Controls.Add(this.button19);
-            this.panel7.Controls.Add(this.button18);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(215, 295);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(206, 142);
-            this.panel7.TabIndex = 5;
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(204, 35);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "U拍照位/旋转位";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.Location = new System.Drawing.Point(0, 35);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(204, 35);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "U旋转杆上下";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.Location = new System.Drawing.Point(0, 70);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(204, 35);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "U拧";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.Location = new System.Drawing.Point(0, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(204, 35);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "L相机上下";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.Location = new System.Drawing.Point(0, 35);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(204, 35);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "L旋转杆前后";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.Location = new System.Drawing.Point(0, 70);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(204, 35);
-            this.button8.TabIndex = 3;
-            this.button8.Text = "L拧";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.Location = new System.Drawing.Point(0, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(204, 35);
-            this.button9.TabIndex = 1;
-            this.button9.Text = "F相机上下";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button10.Location = new System.Drawing.Point(0, 35);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(204, 35);
-            this.button10.TabIndex = 2;
-            this.button10.Text = "F旋转杆前后";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button11.Location = new System.Drawing.Point(0, 70);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(204, 35);
-            this.button11.TabIndex = 3;
-            this.button11.Text = "F拧";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button12.Location = new System.Drawing.Point(0, 0);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(204, 35);
-            this.button12.TabIndex = 1;
-            this.button12.Text = "R相机上下";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button13.Location = new System.Drawing.Point(0, 35);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(204, 35);
-            this.button13.TabIndex = 2;
-            this.button13.Text = "R旋转杆前后";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button14.Location = new System.Drawing.Point(0, 70);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(204, 35);
-            this.button14.TabIndex = 3;
-            this.button14.Text = "R拧";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button15.Location = new System.Drawing.Point(0, 0);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(207, 35);
-            this.button15.TabIndex = 1;
-            this.button15.Text = "B相机上下";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button16.Location = new System.Drawing.Point(0, 35);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(207, 35);
-            this.button16.TabIndex = 2;
-            this.button16.Text = "B旋转杆前后";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            this.button17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button17.Location = new System.Drawing.Point(0, 70);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(207, 35);
-            this.button17.TabIndex = 3;
-            this.button17.Text = "B拧";
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button18.Location = new System.Drawing.Point(0, 0);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(204, 35);
-            this.button18.TabIndex = 1;
-            this.button18.Text = "D拍照位/旋转位";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            this.button19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button19.Location = new System.Drawing.Point(0, 35);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(204, 35);
-            this.button19.TabIndex = 2;
-            this.button19.Text = "D相机上下";
-            this.button19.UseVisualStyleBackColor = true;
-            // 
-            // button20
-            // 
-            this.button20.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button20.Location = new System.Drawing.Point(0, 70);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(204, 35);
-            this.button20.TabIndex = 3;
-            this.button20.Text = "D旋转杆上下";
-            this.button20.UseVisualStyleBackColor = true;
-            // 
-            // button21
-            // 
-            this.button21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button21.Location = new System.Drawing.Point(0, 105);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(204, 35);
-            this.button21.TabIndex = 4;
-            this.button21.Text = "D拧";
-            this.button21.UseVisualStyleBackColor = true;
             // 
             // Form_Manual
             // 
@@ -1738,26 +1738,26 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button btn_Feeding;
+        private System.Windows.Forms.Button btn_Rotate;
+        private System.Windows.Forms.Button btn_U_Rotate;
+        private System.Windows.Forms.Button btn_U_Grab;
+        private System.Windows.Forms.Button btn_U_Move;
+        private System.Windows.Forms.Button btn_L_Rotate;
+        private System.Windows.Forms.Button btn_L_Grab;
+        private System.Windows.Forms.Button btn_L_Move_Cam;
+        private System.Windows.Forms.Button btn_F_Rotate;
+        private System.Windows.Forms.Button btn_F_Grab;
+        private System.Windows.Forms.Button btn_F_Move_Cam;
+        private System.Windows.Forms.Button btn_R_Rotate;
+        private System.Windows.Forms.Button btn_R_Grab;
+        private System.Windows.Forms.Button btn_R_Move_Cam;
+        private System.Windows.Forms.Button btn_B_Rotate;
+        private System.Windows.Forms.Button btn_B_Grab;
+        private System.Windows.Forms.Button btn_B__Move_Cam;
+        private System.Windows.Forms.Button btn_D_Rotate;
+        private System.Windows.Forms.Button btn_D_Grab;
+        private System.Windows.Forms.Button btn_D_Move_Cam;
+        private System.Windows.Forms.Button btn_D_Move;
     }
 }

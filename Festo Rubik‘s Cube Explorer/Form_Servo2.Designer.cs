@@ -1,6 +1,6 @@
 ﻿namespace Festo_Rubik_s_Cube_Explorer
 {
-    partial class Form_Servo
+    partial class Form_Servo2
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Servo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Servo2));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.cbx_o_Enable = new System.Windows.Forms.CheckBox();
@@ -516,7 +516,7 @@
             this.lbl_ServoName.TabIndex = 1;
             this.lbl_ServoName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Form_Servo
+            // Form_Servo2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -526,7 +526,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form_Servo";
+            this.Name = "Form_Servo2";
             this.Text = "Form_Servo";
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
