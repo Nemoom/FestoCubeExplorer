@@ -1049,6 +1049,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Festo Rubik\'s Cube Explorer";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel_Cube.ResumeLayout(false);
             this.tableLayoutPanel_U.ResumeLayout(false);

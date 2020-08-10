@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Cube> 
+  <CamU IP="192.168.9.111">
+    <ColorMatch>
+      <Red>
+        <R_min>0</R_min>
+        <R_max>255</R_max>
+        <G_min>0</G_min>
+        <G_max>255</G_max>
+        <B_min>0</B_min>
+        <B_max>255</B_max>
+      </Red>
+      <Green>
+        <R_min>0</R_min>
+        <R_max>255</R_max>
+        <G_min>0</G_min>
+        <G_max>255</G_max>
+        <B_min>0</B_min>
+        <B_max>255</B_max>
+      </Green>
+      <Blue>
+        <R_min>0</R_min>
+        <R_max>255</R_max>
+        <G_min>0</G_min>
+        <G_max>255</G_max>
+        <B_min>0</B_min>
+        <B_max>255</B_max>
+      </Blue>
+      <White>
+        <R_min>0</R_min>
+        <R_max>255</R_max>
+        <G_min>0</G_min>
+        <G_max>255</G_max>
+        <B_min>0</B_min>
+        <B_max>255</B_max>
+      </White>
+      <Orange>
+        <R_min>0</R_min>
+        <R_max>255</R_max>
+        <G_min>0</G_min>
+        <G_max>255</G_max>
+        <B_min>0</B_min>
+        <B_max>255</B_max>
+      </Orange>
+      <Yellow>
+        <R_min>0</R_min>
+        <R_max>255</R_max>
+        <G_min>0</G_min>
+        <G_max>255</G_max>
+        <B_min>0</B_min>
+        <B_max>255</B_max>
+      </Yellow>
+    </ColorMatch>
+  </CamU>
+  <CamD IP="192.168.9.112">
+  </CamD>
+  <CamL IP="192.168.9.113">
+  </CamL>
+  <CamR IP="192.168.9.114">
+  </CamR>
+  <CamF IP="192.168.9.115">
+  </CamF>
+  <CamB IP="192.168.9.116">
+  </CamB>
+  <PLC IP="192.168.9.110">
+	<!--上料位/下料位-->
+	<Feeding>
+		<i_Enable></i_Enable>
+		<i_Error></i_Error>
+		<i_ErrorID></i_ErrorID>
+		<i_Home></i_Home>
+		<i_MC></i_MC>
+		<i_ActPos></i_ActPos>
+		<o_Enable></o_Enable>
+		<o_Reset></o_Reset>
+		<o_Home></o_Home>
+		<o_JogPositive></o_JogPositive>
+		<o_JogNegative></o_JogNegative>
+		<o_Vel></o_Vel>
+		<o_Acc></o_Acc>
+		<o_Dec></o_Dec>
+		<o_Jerk></o_Jerk>
+		<o_Pos></o_Pos>
+		<o_Go></o_Go>
+		<P1></P1>
+		<P2></P2>
+	</Feeding>
+	<!--魔方拍照位/旋转位-->
+	<Rotate>
+		
+	</Rotate>
+	<!--上方模块拍照位/旋转位-->
+	<U_Move>
+		
+	</U_Move>
+	<!--上方旋杆儿上/下-->
+	<U_Grab>
+		
+	</U_Grab>
+	<!--上方拧-->
+	<U_Rotate>
+		<i_Enable></i_Enable>
+		<i_Error></i_Error>
+		<i_ErrorID></i_ErrorID>
+		<i_Home></i_Home>
+		<i_MC></i_MC>
+		<i_ActPos></i_ActPos>
+		<o_Enable></o_Enable>
+		<o_Reset></o_Reset>
+		<o_Home></o_Home>
+		<o_JogPositive></o_JogPositive>
+		<o_JogNegative></o_JogNegative>
+		<o_Vel></o_Vel>
+		<o_Acc></o_Acc>
+		<o_Dec></o_Dec>
+		<o_Jerk></o_Jerk>
+		<o_Pos></o_Pos>
+		<o_Go></o_Go>
+		<P_90></P_90>
+		<P_180></P_180>
+		<P_270></P_270>
+	</U_Rotate>
+	<!--前侧相机上/下-->
+	<F_Move_Cam>
+		
+	</F_Move_Cam>
+	<!--前侧旋杆儿前/后-->
+	<F_Grab>
+		
+	</F_Grab>
+	<!--前侧拧-->
+	<F_Rotate>
+		
+	</F_Rotate>
+	<!--后侧相机上/下-->
+	<B_Move_Cam></B_Move_Cam>
+	<!--后侧旋杆儿前/后-->
+	<B_Grab></B_Grab>
+	<!--后侧拧-->
+	<B_Rotate></B_Rotate>
+	<!--左侧相机上/下-->
+	<L_Move_Cam></L_Move_Cam>
+	<!--左侧旋杆儿前/后-->
+	<L_Grab></L_Grab>
+	<!--左侧拧-->
+	<L_Rotate></L_Rotate>
+	<!--右侧相机上/下-->
+	<R_Move_Cam></R_Move_Cam>
+	<!--右侧旋杆儿前/后-->
+	<R_Grab></R_Grab>
+	<!--右侧拧-->
+	<R_Rotate></R_Rotate>
+	<!--下方模块拍照位/旋转位-->
+	<D_Move></D_Move>
+	<!--下方相机上/下-->
+	<D_Move_Cam></D_Move_Cam>
+	<!--下方旋杆儿上/下-->
+	<D_Grab></D_Grab>
+	<!--下方拧-->
+	<D_Rotate></D_Rotate>
+  </PLC>
+</Cube>

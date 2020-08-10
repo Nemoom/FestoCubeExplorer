@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
+using Opc.Ua;
+using OpcUaHelper;
 
 namespace Festo_Rubik_s_Cube_Explorer
 {
@@ -15,6 +17,33 @@ namespace Festo_Rubik_s_Cube_Explorer
         public Form1()
         {
             InitializeComponent();
+        }
+
+        OpcUaClient m_OpcUaClient;
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            m_OpcUaClient = new OpcUaClient();
+            //设置匿名连接
+            m_OpcUaClient.UserIdentity = new UserIdentity(new AnonymousIdentityToken());
+            //设置用户名连接
+            //m_OpcUaClient.UserIdentity = new UserIdentity( "user", "password" );
+
+            //使用证书连接
+            //X509Certificate2 certificate = new X509Certificate2("[证书的路径]", "[密钥]", X509KeyStorageFlags.MachineKeySet | X509KeyStorageFlags.Exportable);
+            //m_OpcUaClient.UserIdentity = new UserIdentity(certificate);
+
+            m_OpcUaClient.ConnectComplete += M_OpcUaClient_ConnectComplete;
+            m_OpcUaClient.OpcStatusChange += M_OpcUaClient_OpcStatusChange;
+        }
+
+        private void M_OpcUaClient_OpcStatusChange(object sender, OpcUaStatusEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void M_OpcUaClient_ConnectComplete(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void btn_KeyPress(object sender, KeyPressEventArgs e)
@@ -394,5 +423,6 @@ namespace Festo_Rubik_s_Cube_Explorer
                 SetColor((i + 1), textBox1.Text.Substring(i, 1));
             }
         }
+ 
     }
 }

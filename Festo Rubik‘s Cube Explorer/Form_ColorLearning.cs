@@ -14,5 +14,6 @@ namespace Festo_Rubik_s_Cube_Explorer
         public Form_ColorLearning()
         {
             InitializeComponent();
-        }       
+        }
+    }
 }
