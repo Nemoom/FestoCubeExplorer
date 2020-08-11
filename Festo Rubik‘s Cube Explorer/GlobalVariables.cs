@@ -661,7 +661,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 if (xmlnode != null)
                 {
                     CurrentParas.mPLC.str_IP = xmlnode.Attributes["IP"].Value;
-                    #region Feeding
+                    #region 1-Feeding
                     XmlNode ServoNode = xmlnode.SelectSingleNode("Feeding");
                     if (ServoNode != null)
                     {
@@ -691,7 +691,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                         return XMLCheckResult.ErrorPLC.ToString();
                     }
                     #endregion
-                    #region Rotate
+                    #region 2-Rotate
                     ServoNode = xmlnode.SelectSingleNode("Rotate");
                     if (ServoNode != null)
                     {
@@ -721,7 +721,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                         return XMLCheckResult.ErrorPLC.ToString();
                     }
                     #endregion
-                    #region U_Move
+                    #region 3-U_Move
                     ServoNode = xmlnode.SelectSingleNode("U_Move");
                     if (ServoNode != null)
                     {
@@ -751,7 +751,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                         return XMLCheckResult.ErrorPLC.ToString();
                     }
                     #endregion
-                    #region U_Grab
+                    #region 4-U_Grab
                     ServoNode = xmlnode.SelectSingleNode("U_Grab");
                     if (ServoNode != null)
                     {
@@ -781,7 +781,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                         return XMLCheckResult.ErrorPLC.ToString();
                     }
                     #endregion
-                    #region U_Rotate
+                    #region 5-U_Rotate
                     ServoNode = xmlnode.SelectSingleNode("U_Rotate");
                     if (ServoNode != null)
                     {
@@ -811,7 +811,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                         return XMLCheckResult.ErrorPLC.ToString();
                     }
                     #endregion
-                    #region F_Move_Cam
+                    #region 6-F_Move_Cam
                     ServoNode = xmlnode.SelectSingleNode("F_Move_Cam");
                     if (ServoNode != null)
                     {
@@ -841,7 +841,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                         return XMLCheckResult.ErrorPLC.ToString();
                     }
                     #endregion
-                    #region F_Grab
+                    #region 7-F_Grab
                     ServoNode = xmlnode.SelectSingleNode("F_Grab");
                     if (ServoNode != null)
                     {
@@ -871,7 +871,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                         return XMLCheckResult.ErrorPLC.ToString();
                     }
                     #endregion
-                    #region F_Rotate
+                    #region 8-F_Rotate
                     ServoNode = xmlnode.SelectSingleNode("F_Rotate");
                     if (ServoNode != null)
                     {
@@ -901,7 +901,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                         return XMLCheckResult.ErrorPLC.ToString();
                     }
                     #endregion
-                    #region B_Move_Cam
+                    #region 9-B_Move_Cam
                     ServoNode = xmlnode.SelectSingleNode("B_Move_Cam");
                     if (ServoNode != null)
                     {
@@ -931,7 +931,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                         return XMLCheckResult.ErrorPLC.ToString();
                     }
                     #endregion
-                    #region B_Grab
+                    #region 10-B_Grab
                     ServoNode = xmlnode.SelectSingleNode("B_Grab");
                     if (ServoNode != null)
                     {
@@ -961,7 +961,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                         return XMLCheckResult.ErrorPLC.ToString();
                     }
                     #endregion
-                    #region B_Rotate
+                    #region 11-B_Rotate
                     ServoNode = xmlnode.SelectSingleNode("B_Rotate");
                     if (ServoNode != null)
                     {
@@ -985,6 +985,306 @@ namespace Festo_Rubik_s_Cube_Explorer
                         CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
                         CurrentParas.mPLC.servo_B_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
                         CurrentParas.mPLC.servo_B_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
+                    }
+                    else
+                    {
+                        return XMLCheckResult.ErrorPLC.ToString();
+                    }
+                    #endregion
+                    #region 12-L_Move_Cam
+                    ServoNode = xmlnode.SelectSingleNode("L_Move_Cam");
+                    if (ServoNode != null)
+                    {
+                        CurrentParas.mPLC.servo_L_Move_Cam.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
+                        CurrentParas.mPLC.servo_L_Move_Cam.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
+                        CurrentParas.mPLC.servo_L_Move_Cam.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
+                        CurrentParas.mPLC.servo_L_Move_Cam.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText;
+                        CurrentParas.mPLC.servo_L_Move_Cam.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText;
+                        CurrentParas.mPLC.servo_L_Move_Cam.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText;
+
+                        CurrentParas.mPLC.servo_L_Move_Cam.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText;
+                        CurrentParas.mPLC.servo_L_Move_Cam.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText;
+                        CurrentParas.mPLC.servo_L_Move_Cam.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText;
+                        CurrentParas.mPLC.servo_L_Move_Cam.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText;
+                        CurrentParas.mPLC.servo_L_Move_Cam.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText;
+                        CurrentParas.mPLC.servo_L_Move_Cam.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText;
+                        CurrentParas.mPLC.servo_L_Move_Cam.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText;
+                        CurrentParas.mPLC.servo_L_Move_Cam.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText;
+                        CurrentParas.mPLC.servo_L_Move_Cam.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText;
+                        CurrentParas.mPLC.servo_L_Move_Cam.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText;
+                        CurrentParas.mPLC.servo_L_Move_Cam.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
+                        CurrentParas.mPLC.servo_L_Move_Cam.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
+                        CurrentParas.mPLC.servo_L_Move_Cam.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
+                    }
+                    else
+                    {
+                        return XMLCheckResult.ErrorPLC.ToString();
+                    }
+                    #endregion
+                    #region 13-L_Grab
+                    ServoNode = xmlnode.SelectSingleNode("L_Grab");
+                    if (ServoNode != null)
+                    {
+                        CurrentParas.mPLC.servo_L_Grab.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
+                        CurrentParas.mPLC.servo_L_Grab.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
+                        CurrentParas.mPLC.servo_L_Grab.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
+                        CurrentParas.mPLC.servo_L_Grab.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText;
+                        CurrentParas.mPLC.servo_L_Grab.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText;
+                        CurrentParas.mPLC.servo_L_Grab.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText;
+
+                        CurrentParas.mPLC.servo_L_Grab.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText;
+                        CurrentParas.mPLC.servo_L_Grab.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText;
+                        CurrentParas.mPLC.servo_L_Grab.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText;
+                        CurrentParas.mPLC.servo_L_Grab.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText;
+                        CurrentParas.mPLC.servo_L_Grab.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText;
+                        CurrentParas.mPLC.servo_L_Grab.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText;
+                        CurrentParas.mPLC.servo_L_Grab.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText;
+                        CurrentParas.mPLC.servo_L_Grab.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText;
+                        CurrentParas.mPLC.servo_L_Grab.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText;
+                        CurrentParas.mPLC.servo_L_Grab.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText;
+                        CurrentParas.mPLC.servo_L_Grab.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
+                        CurrentParas.mPLC.servo_L_Grab.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
+                        CurrentParas.mPLC.servo_L_Grab.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
+                    }
+                    else
+                    {
+                        return XMLCheckResult.ErrorPLC.ToString();
+                    }
+                    #endregion
+                    #region 14-L_Rotate
+                    ServoNode = xmlnode.SelectSingleNode("L_Rotate");
+                    if (ServoNode != null)
+                    {
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText;
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText;
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText;
+
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText;
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText;
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText;
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText;
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText;
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText;
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText;
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText;
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText;
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText;
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
+                        CurrentParas.mPLC.servo_L_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
+                        CurrentParas.mPLC.servo_L_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
+                    }
+                    else
+                    {
+                        return XMLCheckResult.ErrorPLC.ToString();
+                    }
+                    #endregion
+                    #region 15-R_Move_Cam
+                    ServoNode = xmlnode.SelectSingleNode("R_Move_Cam");
+                    if (ServoNode != null)
+                    {
+                        CurrentParas.mPLC.servo_R_Move_Cam.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
+                        CurrentParas.mPLC.servo_R_Move_Cam.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
+                        CurrentParas.mPLC.servo_R_Move_Cam.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
+                        CurrentParas.mPLC.servo_R_Move_Cam.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText;
+                        CurrentParas.mPLC.servo_R_Move_Cam.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText;
+                        CurrentParas.mPLC.servo_R_Move_Cam.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText;
+
+                        CurrentParas.mPLC.servo_R_Move_Cam.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText;
+                        CurrentParas.mPLC.servo_R_Move_Cam.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText;
+                        CurrentParas.mPLC.servo_R_Move_Cam.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText;
+                        CurrentParas.mPLC.servo_R_Move_Cam.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText;
+                        CurrentParas.mPLC.servo_R_Move_Cam.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText;
+                        CurrentParas.mPLC.servo_R_Move_Cam.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText;
+                        CurrentParas.mPLC.servo_R_Move_Cam.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText;
+                        CurrentParas.mPLC.servo_R_Move_Cam.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText;
+                        CurrentParas.mPLC.servo_R_Move_Cam.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText;
+                        CurrentParas.mPLC.servo_R_Move_Cam.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText;
+                        CurrentParas.mPLC.servo_R_Move_Cam.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
+                        CurrentParas.mPLC.servo_R_Move_Cam.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
+                        CurrentParas.mPLC.servo_R_Move_Cam.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
+                    }
+                    else
+                    {
+                        return XMLCheckResult.ErrorPLC.ToString();
+                    }
+                    #endregion
+                    #region 16-R_Grab
+                    ServoNode = xmlnode.SelectSingleNode("R_Grab");
+                    if (ServoNode != null)
+                    {
+                        CurrentParas.mPLC.servo_R_Grab.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
+                        CurrentParas.mPLC.servo_R_Grab.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
+                        CurrentParas.mPLC.servo_R_Grab.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
+                        CurrentParas.mPLC.servo_R_Grab.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText;
+                        CurrentParas.mPLC.servo_R_Grab.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText;
+                        CurrentParas.mPLC.servo_R_Grab.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText;
+
+                        CurrentParas.mPLC.servo_R_Grab.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText;
+                        CurrentParas.mPLC.servo_R_Grab.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText;
+                        CurrentParas.mPLC.servo_R_Grab.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText;
+                        CurrentParas.mPLC.servo_R_Grab.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText;
+                        CurrentParas.mPLC.servo_R_Grab.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText;
+                        CurrentParas.mPLC.servo_R_Grab.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText;
+                        CurrentParas.mPLC.servo_R_Grab.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText;
+                        CurrentParas.mPLC.servo_R_Grab.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText;
+                        CurrentParas.mPLC.servo_R_Grab.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText;
+                        CurrentParas.mPLC.servo_R_Grab.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText;
+                        CurrentParas.mPLC.servo_R_Grab.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
+                        CurrentParas.mPLC.servo_R_Grab.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
+                        CurrentParas.mPLC.servo_R_Grab.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
+                    }
+                    else
+                    {
+                        return XMLCheckResult.ErrorPLC.ToString();
+                    }
+                    #endregion
+                    #region 17-R_Rotate
+                    ServoNode = xmlnode.SelectSingleNode("R_Rotate");
+                    if (ServoNode != null)
+                    {
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText;
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText;
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText;
+
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText;
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText;
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText;
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText;
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText;
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText;
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText;
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText;
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText;
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText;
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
+                        CurrentParas.mPLC.servo_R_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
+                        CurrentParas.mPLC.servo_R_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
+                    }
+                    else
+                    {
+                        return XMLCheckResult.ErrorPLC.ToString();
+                    }
+                    #endregion
+                    #region 18-D_Move
+                    ServoNode = xmlnode.SelectSingleNode("D_Move");
+                    if (ServoNode != null)
+                    {
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText;
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText;
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText;
+
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText;
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText;
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText;
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText;
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText;
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText;
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText;
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText;
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText;
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText;
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
+                        CurrentParas.mPLC.servo_D_Move.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
+                        CurrentParas.mPLC.servo_D_Move.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
+                    }
+                    else
+                    {
+                        return XMLCheckResult.ErrorPLC.ToString();
+                    }
+                    #endregion
+                    #region 19-D_Move_Cam
+                    ServoNode = xmlnode.SelectSingleNode("D_Move_Cam");
+                    if (ServoNode != null)
+                    {
+                        CurrentParas.mPLC.servo_D_Move_Cam.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
+                        CurrentParas.mPLC.servo_D_Move_Cam.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
+                        CurrentParas.mPLC.servo_D_Move_Cam.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
+                        CurrentParas.mPLC.servo_D_Move_Cam.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText;
+                        CurrentParas.mPLC.servo_D_Move_Cam.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText;
+                        CurrentParas.mPLC.servo_D_Move_Cam.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText;
+
+                        CurrentParas.mPLC.servo_D_Move_Cam.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText;
+                        CurrentParas.mPLC.servo_D_Move_Cam.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText;
+                        CurrentParas.mPLC.servo_D_Move_Cam.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText;
+                        CurrentParas.mPLC.servo_D_Move_Cam.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText;
+                        CurrentParas.mPLC.servo_D_Move_Cam.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText;
+                        CurrentParas.mPLC.servo_D_Move_Cam.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText;
+                        CurrentParas.mPLC.servo_D_Move_Cam.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText;
+                        CurrentParas.mPLC.servo_D_Move_Cam.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText;
+                        CurrentParas.mPLC.servo_D_Move_Cam.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText;
+                        CurrentParas.mPLC.servo_D_Move_Cam.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText;
+                        CurrentParas.mPLC.servo_D_Move_Cam.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
+                        CurrentParas.mPLC.servo_D_Move_Cam.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
+                        CurrentParas.mPLC.servo_D_Move_Cam.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
+                    }
+                    else
+                    {
+                        return XMLCheckResult.ErrorPLC.ToString();
+                    }
+                    #endregion
+                    #region 20-D_Grab
+                    ServoNode = xmlnode.SelectSingleNode("D_Grab");
+                    if (ServoNode != null)
+                    {
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText;
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText;
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText;
+
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText;
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText;
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText;
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText;
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText;
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText;
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText;
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText;
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText;
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText;
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
+                        CurrentParas.mPLC.servo_D_Grab.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
+                        CurrentParas.mPLC.servo_D_Grab.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
+                    }
+                    else
+                    {
+                        return XMLCheckResult.ErrorPLC.ToString();
+                    }
+                    #endregion
+                    #region 21-D_Rotate
+                    ServoNode = xmlnode.SelectSingleNode("D_Rotate");
+                    if (ServoNode != null)
+                    {
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText;
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText;
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText;
+
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText;
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText;
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText;
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText;
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText;
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText;
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText;
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText;
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText;
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText;
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
+                        CurrentParas.mPLC.servo_D_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
+                        CurrentParas.mPLC.servo_D_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
                     }
                     else
                     {
