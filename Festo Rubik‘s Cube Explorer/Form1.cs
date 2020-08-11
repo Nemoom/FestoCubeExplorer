@@ -9,6 +9,9 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using Opc.Ua;
 using OpcUaHelper;
+using System.Net.Sockets;
+using System.Net;
+using Modbus.Device;
 
 namespace Festo_Rubik_s_Cube_Explorer
 {
@@ -17,11 +20,43 @@ namespace Festo_Rubik_s_Cube_Explorer
         public Form1()
         {
             InitializeComponent();
+            GlobalVariables.LoadParasFromXML();
+            tcpClient_CamU = new TcpClient(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamU.str_IP), 502));
+            tcpClient_CamD = new TcpClient(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamD.str_IP), 502));
+            tcpClient_CamL = new TcpClient(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamL.str_IP), 502));
+            tcpClient_CamR = new TcpClient(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamR.str_IP), 502));
+            tcpClient_CamF = new TcpClient(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamF.str_IP), 502));
+            tcpClient_CamB = new TcpClient(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamB.str_IP), 502));
+            tcpClient_CamU.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            tcpClient_CamD.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            tcpClient_CamL.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            tcpClient_CamR.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            tcpClient_CamF.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            tcpClient_CamB.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            m_Master_CamU = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamU);
+            m_Master_CamD = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamD);
+            m_Master_CamL = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamL);
+            m_Master_CamR = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamR);
+            m_Master_CamF = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamF);
+            m_Master_CamB = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamB);
         }
 
-        OpcUaClient m_OpcUaClient;
+        public static OpcUaClient m_OpcUaClient;
+        public TcpClient tcpClient_CamU;
+        public TcpClient tcpClient_CamD;
+        public TcpClient tcpClient_CamL;
+        public TcpClient tcpClient_CamR;
+        public TcpClient tcpClient_CamF;
+        public TcpClient tcpClient_CamB;
+        public static Modbus.Device.ModbusIpMaster m_Master_CamU;
+        public static Modbus.Device.ModbusIpMaster m_Master_CamD;
+        public static Modbus.Device.ModbusIpMaster m_Master_CamL;
+        public static Modbus.Device.ModbusIpMaster m_Master_CamR;
+        public static Modbus.Device.ModbusIpMaster m_Master_CamF; 
+        public static Modbus.Device.ModbusIpMaster m_Master_CamB;
         private void Form1_Load(object sender, EventArgs e)
         {
+           
             m_OpcUaClient = new OpcUaClient();
             //设置匿名连接
             m_OpcUaClient.UserIdentity = new UserIdentity(new AnonymousIdentityToken());
