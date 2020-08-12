@@ -472,6 +472,10 @@ namespace Festo_Rubik_s_Cube_Explorer
             CamTrigger(CamID.CamU);
         }
 
+        /// <summary>
+        /// 相机触发
+        /// </summary>
+        /// <param name="mCamID"></param>
         public static void CamTrigger(CamID mCamID)
         {
             ModbusIpMaster m_Master_Cam = null;
