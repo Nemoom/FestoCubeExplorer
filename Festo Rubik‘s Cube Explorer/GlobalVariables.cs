@@ -1418,6 +1418,27 @@ namespace Festo_Rubik_s_Cube_Explorer
         public double P_180;
         public double P_270;
     }
+
+    public enum CamID
+    {
+        CamU = 1,
+        CamD = 2,
+        CamL = 3,
+        CamR = 4,
+        CamF = 5,
+        CamB = 6
+    }
+
+    public enum FaceColor
+    {
+        Red = 1,
+        Green = 2,
+        Blue = 3,
+        White = 4,
+        Orange = 5,
+        Yellow = 6
+    }
+
     public enum XMLCheckResult
     {
         [Description("设置完整")]

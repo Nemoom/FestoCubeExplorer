@@ -12,6 +12,7 @@ using OpcUaHelper;
 using System.Net.Sockets;
 using System.Net;
 using Modbus.Device;
+using System.Threading;
 
 namespace Festo_Rubik_s_Cube_Explorer
 {
@@ -21,24 +22,30 @@ namespace Festo_Rubik_s_Cube_Explorer
         {
             InitializeComponent();
             GlobalVariables.LoadParasFromXML();
-            tcpClient_CamU = new TcpClient(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamU.str_IP), 502));
-            tcpClient_CamD = new TcpClient(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamD.str_IP), 502));
-            tcpClient_CamL = new TcpClient(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamL.str_IP), 502));
-            tcpClient_CamR = new TcpClient(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamR.str_IP), 502));
-            tcpClient_CamF = new TcpClient(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamF.str_IP), 502));
-            tcpClient_CamB = new TcpClient(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamB.str_IP), 502));
+            tcpClient_CamU = new TcpClient();
+            //tcpClient_CamD = new TcpClient();
+            //tcpClient_CamL = new TcpClient();
+            //tcpClient_CamR = new TcpClient();
+            //tcpClient_CamF = new TcpClient();
+            //tcpClient_CamB = new TcpClient();
+            tcpClient_CamU.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamU.str_IP), 502));
+            //tcpClient_CamD.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamD.str_IP), 502));
+            //tcpClient_CamL.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamL.str_IP), 502));
+            //tcpClient_CamR.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamR.str_IP), 502));
+            //tcpClient_CamF.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamF.str_IP), 502));
+            //tcpClient_CamB.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamB.str_IP), 502));
             tcpClient_CamU.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            tcpClient_CamD.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            tcpClient_CamL.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            tcpClient_CamR.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            tcpClient_CamF.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            tcpClient_CamB.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            //tcpClient_CamD.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            //tcpClient_CamL.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            //tcpClient_CamR.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            //tcpClient_CamF.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            //tcpClient_CamB.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
             m_Master_CamU = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamU);
-            m_Master_CamD = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamD);
-            m_Master_CamL = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamL);
-            m_Master_CamR = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamR);
-            m_Master_CamF = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamF);
-            m_Master_CamB = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamB);
+            //m_Master_CamD = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamD);
+            //m_Master_CamL = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamL);
+            //m_Master_CamR = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamR);
+            //m_Master_CamF = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamF);
+            //m_Master_CamB = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamB);
         }
 
         public static OpcUaClient m_OpcUaClient;
@@ -458,6 +465,715 @@ namespace Festo_Rubik_s_Cube_Explorer
                 SetColor((i + 1), textBox1.Text.Substring(i, 1));
             }
         }
- 
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ushort[] m = m_Master_CamU.ReadHoldingRegisters(1, 0, 10);
+            CamTrigger(CamID.CamU);
+        }
+
+        public static void CamTrigger(CamID mCamID)
+        {
+            ModbusIpMaster m_Master_Cam = null;
+            switch (mCamID)
+            {
+                case CamID.CamU:
+                    m_Master_Cam = m_Master_CamU;
+                    break;
+                case CamID.CamD:
+                    m_Master_Cam = m_Master_CamD;
+                    break;
+                case CamID.CamL:
+                    m_Master_Cam = m_Master_CamL;
+                    break;
+                case CamID.CamR:
+                    m_Master_Cam = m_Master_CamR;
+                    break;
+                case CamID.CamF:
+                    m_Master_Cam = m_Master_CamF;
+                    break;
+                case CamID.CamB:
+                    m_Master_Cam = m_Master_CamB;
+                    break;
+            }
+            if (m_Master_Cam != null)
+            {
+                m_Master_Cam.WriteSingleRegister(1, 0, 1);//0:Trigger signal置1
+                //延时，等待拍照完成
+                Thread.Sleep(100);
+                m_Master_Cam.WriteSingleRegister(1, 0, 0);//0:Trigger signal清0
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="mCamID"></param>
+        /// <param name="BlockID">Start from 1</param>
+        /// <returns></returns>
+        public static Color GetRGBvalue(CamID mCamID, int BlockID)
+        {
+            Color r_Color = new Color();
+            //Color FestoBlue_Light = Color.FromArgb(200, 200, 230, 250);//第1个参数为透明度(alpha)参数,其后为红,绿和蓝.
+            //Color FestoBlue = Color.FromArgb(200, 0, 145, 220);//第1个参数为透明度(alpha)参数,其后为红,绿和蓝.
+            //Color FestoBlue_Dark = Color.FromArgb(200, 114, 196, 239);//第1个参数为透明度(alpha)参数,其后为红,绿和蓝.
+            ModbusIpMaster m_Master_Cam = null;
+            switch (mCamID)
+            {
+                case CamID.CamU:
+                    m_Master_Cam = m_Master_CamU;
+                    break;
+                case CamID.CamD:
+                    m_Master_Cam = m_Master_CamD;
+                    break;
+                case CamID.CamL:
+                    m_Master_Cam = m_Master_CamL;
+                    break;
+                case CamID.CamR:
+                    m_Master_Cam = m_Master_CamR;
+                    break;
+                case CamID.CamF:
+                    m_Master_Cam = m_Master_CamF;
+                    break;
+                case CamID.CamB:
+                    m_Master_Cam = m_Master_CamB;
+                    break;
+            }
+            if (m_Master_Cam != null)
+            {
+                ushort startAddress = (ushort)(10000 + (BlockID - 1) * 3 * 100);
+                ushort[] m_R = m_Master_CamU.ReadHoldingRegisters(1, (ushort)(startAddress + 79), 1);
+                ushort[] m_G = m_Master_CamU.ReadHoldingRegisters(1, (ushort)(startAddress + 179), 1);
+                ushort[] m_B = m_Master_CamU.ReadHoldingRegisters(1, (ushort)(startAddress + 279), 1);
+                r_Color = Color.FromArgb(m_R[0], m_G[0], m_B[0]);
+            }
+            return r_Color;
+        }
+
+        public static FaceColor ColorMatch(CamID mCamID, Color mColor)
+        {
+            FaceColor r_FaceColor = 0;
+            ColorMatch mColorMatch = new ColorMatch();
+            switch (mCamID)
+            {
+                case CamID.CamU:
+                    mColorMatch = GlobalVariables.CurrentParas.CamU.mColorMatch;
+                    break;
+                case CamID.CamD:
+                    mColorMatch = GlobalVariables.CurrentParas.CamD.mColorMatch;
+                    break;
+                case CamID.CamL:
+                    mColorMatch = GlobalVariables.CurrentParas.CamL.mColorMatch;
+                    break;
+                case CamID.CamR:
+                    mColorMatch = GlobalVariables.CurrentParas.CamR.mColorMatch;
+                    break;
+                case CamID.CamF:
+                    mColorMatch = GlobalVariables.CurrentParas.CamF.mColorMatch;
+                    break;
+                case CamID.CamB:
+                    mColorMatch = GlobalVariables.CurrentParas.CamB.mColorMatch;
+                    break;
+            }
+            if (mColor.R >= mColorMatch.c_Red.R_min && mColor.R <= mColorMatch.c_Red.R_max
+                && mColor.G >= mColorMatch.c_Red.G_min && mColor.G <= mColorMatch.c_Red.G_max
+                && mColor.B >= mColorMatch.c_Red.B_min && mColor.B <= mColorMatch.c_Red.B_max)
+            {
+                r_FaceColor = FaceColor.Red;
+            }
+            else if (mColor.R >= mColorMatch.c_Green.R_min && mColor.R <= mColorMatch.c_Green.R_max
+                && mColor.G >= mColorMatch.c_Green.G_min && mColor.G <= mColorMatch.c_Green.G_max
+                && mColor.B >= mColorMatch.c_Green.B_min && mColor.B <= mColorMatch.c_Green.B_max)
+            {
+                r_FaceColor = FaceColor.Green;
+            }
+            else if (mColor.R >= mColorMatch.c_Blue.R_min && mColor.R <= mColorMatch.c_Blue.R_max
+                && mColor.G >= mColorMatch.c_Blue.G_min && mColor.G <= mColorMatch.c_Blue.G_max
+                && mColor.B >= mColorMatch.c_Blue.B_min && mColor.B <= mColorMatch.c_Blue.B_max)
+            {
+                r_FaceColor = FaceColor.Blue;
+            }
+            else if (mColor.R >= mColorMatch.c_White.R_min && mColor.R <= mColorMatch.c_White.R_max
+                && mColor.G >= mColorMatch.c_White.G_min && mColor.G <= mColorMatch.c_White.G_max
+                && mColor.B >= mColorMatch.c_White.B_min && mColor.B <= mColorMatch.c_White.B_max)
+            {
+                r_FaceColor = FaceColor.White;
+            }
+            else if (mColor.R >= mColorMatch.c_Orange.R_min && mColor.R <= mColorMatch.c_Orange.R_max
+                && mColor.G >= mColorMatch.c_Orange.G_min && mColor.G <= mColorMatch.c_Orange.G_max
+                && mColor.B >= mColorMatch.c_Orange.B_min && mColor.B <= mColorMatch.c_Orange.B_max)
+            {
+                r_FaceColor = FaceColor.Orange;
+            }
+            else if (mColor.R >= mColorMatch.c_Yellow.R_min && mColor.R <= mColorMatch.c_Yellow.R_max
+              && mColor.G >= mColorMatch.c_Yellow.G_min && mColor.G <= mColorMatch.c_Yellow.G_max
+              && mColor.B >= mColorMatch.c_Yellow.B_min && mColor.B <= mColorMatch.c_Yellow.B_max)
+            {
+                r_FaceColor = FaceColor.Yellow;
+            }
+            return r_FaceColor;
+        }
+
+        /// <summary>
+        /// 显示相机原本识别的RGB值
+        /// </summary>
+        /// <param name="mCamID"></param>
+        /// <param name="BlockID"></param>
+        /// <param name="mColor"></param>
+        public void OriginalColorDisplay(CamID mCamID, int BlockID, Color mColor)
+        {
+            Button mBtn = new Button();
+            switch (mCamID)
+            {
+                case CamID.CamU:
+                    switch (BlockID)
+                    {
+                        case 1:
+                            mBtn = btn_U1;
+                            break;
+                        case 2:
+                            mBtn = btn_U2;
+                            break;
+                        case 3:
+                            mBtn = btn_U3;
+                            break;
+                        case 4:
+                            mBtn = btn_U4;
+                            break;
+                        case 5:
+                            mBtn = btn_U5;
+                            break;
+                        case 6:
+                            mBtn = btn_U6;
+                            break;
+                        case 7:
+                            mBtn = btn_U7;
+                            break;
+                        case 8:
+                            mBtn = btn_U8;
+                            break;
+                        case 9:
+                            mBtn = btn_U9;
+                            break;
+                    }
+                    break;
+                case CamID.CamD:
+                    switch (BlockID)
+                    {
+                        case 1:
+                            mBtn = btn_D1;
+                            break;
+                        case 2:
+                            mBtn = btn_D2;
+                            break;
+                        case 3:
+                            mBtn = btn_D3;
+                            break;
+                        case 4:
+                            mBtn = btn_D4;
+                            break;
+                        case 5:
+                            mBtn = btn_D5;
+                            break;
+                        case 6:
+                            mBtn = btn_D6;
+                            break;
+                        case 7:
+                            mBtn = btn_D7;
+                            break;
+                        case 8:
+                            mBtn = btn_D8;
+                            break;
+                        case 9:
+                            mBtn = btn_D9;
+                            break;
+                    }
+                    break;
+                case CamID.CamL:
+                    switch (BlockID)
+                    {
+                        case 1:
+                            mBtn = btn_L1;
+                            break;
+                        case 2:
+                            mBtn = btn_L2;
+                            break;
+                        case 3:
+                            mBtn = btn_L3;
+                            break;
+                        case 4:
+                            mBtn = btn_L4;
+                            break;
+                        case 5:
+                            mBtn = btn_L5;
+                            break;
+                        case 6:
+                            mBtn = btn_L6;
+                            break;
+                        case 7:
+                            mBtn = btn_L7;
+                            break;
+                        case 8:
+                            mBtn = btn_L8;
+                            break;
+                        case 9:
+                            mBtn = btn_L9;
+                            break;
+                    }
+                    break;
+                case CamID.CamR:
+                    switch (BlockID)
+                    {
+                        case 1:
+                            mBtn = btn_R1;
+                            break;
+                        case 2:
+                            mBtn = btn_R2;
+                            break;
+                        case 3:
+                            mBtn = btn_R3;
+                            break;
+                        case 4:
+                            mBtn = btn_R4;
+                            break;
+                        case 5:
+                            mBtn = btn_R5;
+                            break;
+                        case 6:
+                            mBtn = btn_R6;
+                            break;
+                        case 7:
+                            mBtn = btn_R7;
+                            break;
+                        case 8:
+                            mBtn = btn_R8;
+                            break;
+                        case 9:
+                            mBtn = btn_R9;
+                            break;
+                    }
+                    break;
+                case CamID.CamF:
+                    switch (BlockID)
+                    {
+                        case 1:
+                            mBtn = btn_F1;
+                            break;
+                        case 2:
+                            mBtn = btn_F2;
+                            break;
+                        case 3:
+                            mBtn = btn_F3;
+                            break;
+                        case 4:
+                            mBtn = btn_F4;
+                            break;
+                        case 5:
+                            mBtn = btn_F5;
+                            break;
+                        case 6:
+                            mBtn = btn_F6;
+                            break;
+                        case 7:
+                            mBtn = btn_F7;
+                            break;
+                        case 8:
+                            mBtn = btn_F8;
+                            break;
+                        case 9:
+                            mBtn = btn_F9;
+                            break;
+                    }
+                    break;
+                case CamID.CamB:
+                    switch (BlockID)
+                    {
+                        case 1:
+                            mBtn = btn_B1;
+                            break;
+                        case 2:
+                            mBtn = btn_B2;
+                            break;
+                        case 3:
+                            mBtn = btn_B3;
+                            break;
+                        case 4:
+                            mBtn = btn_B4;
+                            break;
+                        case 5:
+                            mBtn = btn_B5;
+                            break;
+                        case 6:
+                            mBtn = btn_B6;
+                            break;
+                        case 7:
+                            mBtn = btn_B7;
+                            break;
+                        case 8:
+                            mBtn = btn_B8;
+                            break;
+                        case 9:
+                            mBtn = btn_B9;
+                            break;
+                    }
+                    break;
+            }
+            mBtn.BackColor = mColor;
+        }
+
+        /// <summary>
+        /// 显示为匹配到的颜色
+        /// </summary>
+        /// <param name="mCamID"></param>
+        /// <param name="BlockID"></param>
+        /// <param name="mFaceColor"></param>
+        public void ColorDisplay(CamID mCamID, int BlockID, FaceColor mFaceColor)
+        {
+            Button mBtn = new Button();
+            switch (mCamID)
+            {
+                case CamID.CamU:
+                    switch (BlockID)
+                    {
+                        case 1:
+                            mBtn = btn_U1;
+                            break;
+                        case 2:
+                            mBtn = btn_U2;
+                            break;
+                        case 3:
+                            mBtn = btn_U3;
+                            break;
+                        case 4:
+                            mBtn = btn_U4;
+                            break;
+                        case 5:
+                            mBtn = btn_U5;
+                            break;
+                        case 6:
+                            mBtn = btn_U6;
+                            break;
+                        case 7:
+                            mBtn = btn_U7;
+                            break;
+                        case 8:
+                            mBtn = btn_U8;
+                            break;
+                        case 9:
+                            mBtn = btn_U9;
+                            break;
+                    }
+                    break;
+                case CamID.CamD:
+                    switch (BlockID)
+                    {
+                        case 1:
+                            mBtn = btn_D1;
+                            break;
+                        case 2:
+                            mBtn = btn_D2;
+                            break;
+                        case 3:
+                            mBtn = btn_D3;
+                            break;
+                        case 4:
+                            mBtn = btn_D4;
+                            break;
+                        case 5:
+                            mBtn = btn_D5;
+                            break;
+                        case 6:
+                            mBtn = btn_D6;
+                            break;
+                        case 7:
+                            mBtn = btn_D7;
+                            break;
+                        case 8:
+                            mBtn = btn_D8;
+                            break;
+                        case 9:
+                            mBtn = btn_D9;
+                            break;
+                    }
+                    break;
+                case CamID.CamL:
+                    switch (BlockID)
+                    {
+                        case 1:
+                            mBtn = btn_L1;
+                            break;
+                        case 2:
+                            mBtn = btn_L2;
+                            break;
+                        case 3:
+                            mBtn = btn_L3;
+                            break;
+                        case 4:
+                            mBtn = btn_L4;
+                            break;
+                        case 5:
+                            mBtn = btn_L5;
+                            break;
+                        case 6:
+                            mBtn = btn_L6;
+                            break;
+                        case 7:
+                            mBtn = btn_L7;
+                            break;
+                        case 8:
+                            mBtn = btn_L8;
+                            break;
+                        case 9:
+                            mBtn = btn_L9;
+                            break;
+                    }
+                    break;
+                case CamID.CamR:
+                    switch (BlockID)
+                    {
+                        case 1:
+                            mBtn = btn_R1;
+                            break;
+                        case 2:
+                            mBtn = btn_R2;
+                            break;
+                        case 3:
+                            mBtn = btn_R3;
+                            break;
+                        case 4:
+                            mBtn = btn_R4;
+                            break;
+                        case 5:
+                            mBtn = btn_R5;
+                            break;
+                        case 6:
+                            mBtn = btn_R6;
+                            break;
+                        case 7:
+                            mBtn = btn_R7;
+                            break;
+                        case 8:
+                            mBtn = btn_R8;
+                            break;
+                        case 9:
+                            mBtn = btn_R9;
+                            break;
+                    }
+                    break;
+                case CamID.CamF:
+                    switch (BlockID)
+                    {
+                        case 1:
+                            mBtn = btn_F1;
+                            break;
+                        case 2:
+                            mBtn = btn_F2;
+                            break;
+                        case 3:
+                            mBtn = btn_F3;
+                            break;
+                        case 4:
+                            mBtn = btn_F4;
+                            break;
+                        case 5:
+                            mBtn = btn_F5;
+                            break;
+                        case 6:
+                            mBtn = btn_F6;
+                            break;
+                        case 7:
+                            mBtn = btn_F7;
+                            break;
+                        case 8:
+                            mBtn = btn_F8;
+                            break;
+                        case 9:
+                            mBtn = btn_F9;
+                            break;
+                    }
+                    break;
+                case CamID.CamB:
+                    switch (BlockID)
+                    {
+                        case 1:
+                            mBtn = btn_B1;
+                            break;
+                        case 2:
+                            mBtn = btn_B2;
+                            break;
+                        case 3:
+                            mBtn = btn_B3;
+                            break;
+                        case 4:
+                            mBtn = btn_B4;
+                            break;
+                        case 5:
+                            mBtn = btn_B5;
+                            break;
+                        case 6:
+                            mBtn = btn_B6;
+                            break;
+                        case 7:
+                            mBtn = btn_B7;
+                            break;
+                        case 8:
+                            mBtn = btn_B8;
+                            break;
+                        case 9:
+                            mBtn = btn_B9;
+                            break;
+                    }
+                    break;
+            }
+            switch (mFaceColor)
+            {
+                case FaceColor.Red:
+                    mBtn.BackColor = Color.Red;
+                    break;
+                case FaceColor.Green:
+                    mBtn.BackColor = Color.Green;
+                    break;
+                case FaceColor.Blue:
+                    mBtn.BackColor = Color.Blue;
+                    break;
+                case FaceColor.White:
+                    mBtn.BackColor = Color.White;
+                    break;
+                case FaceColor.Orange:
+                    mBtn.BackColor = Color.Orange;
+                    break;
+                case FaceColor.Yellow:
+                    mBtn.BackColor = Color.Yellow;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public void OriginalColorDisplay()
+        {
+            OriginalColorDisplay(CamID.CamU, 1, GetRGBvalue(CamID.CamU, 1));
+            OriginalColorDisplay(CamID.CamU, 2, GetRGBvalue(CamID.CamU, 2));
+            OriginalColorDisplay(CamID.CamU, 3, GetRGBvalue(CamID.CamU, 3));
+            OriginalColorDisplay(CamID.CamU, 4, GetRGBvalue(CamID.CamU, 4));
+            OriginalColorDisplay(CamID.CamU, 5, GetRGBvalue(CamID.CamU, 5));
+            OriginalColorDisplay(CamID.CamU, 6, GetRGBvalue(CamID.CamU, 6));
+            OriginalColorDisplay(CamID.CamU, 7, GetRGBvalue(CamID.CamU, 7));
+            OriginalColorDisplay(CamID.CamU, 8, GetRGBvalue(CamID.CamU, 8));
+            OriginalColorDisplay(CamID.CamU, 9, GetRGBvalue(CamID.CamU, 9));
+
+            OriginalColorDisplay(CamID.CamD, 1, GetRGBvalue(CamID.CamD, 1));
+            OriginalColorDisplay(CamID.CamD, 2, GetRGBvalue(CamID.CamD, 2));
+            OriginalColorDisplay(CamID.CamD, 3, GetRGBvalue(CamID.CamD, 3));
+            OriginalColorDisplay(CamID.CamD, 4, GetRGBvalue(CamID.CamD, 4));
+            OriginalColorDisplay(CamID.CamD, 5, GetRGBvalue(CamID.CamD, 5));
+            OriginalColorDisplay(CamID.CamD, 6, GetRGBvalue(CamID.CamD, 6));
+            OriginalColorDisplay(CamID.CamD, 7, GetRGBvalue(CamID.CamD, 7));
+            OriginalColorDisplay(CamID.CamD, 8, GetRGBvalue(CamID.CamD, 8));
+            OriginalColorDisplay(CamID.CamD, 9, GetRGBvalue(CamID.CamD, 9));
+
+            OriginalColorDisplay(CamID.CamL, 1, GetRGBvalue(CamID.CamL, 1));
+            OriginalColorDisplay(CamID.CamL, 2, GetRGBvalue(CamID.CamL, 2));
+            OriginalColorDisplay(CamID.CamL, 3, GetRGBvalue(CamID.CamL, 3));
+            OriginalColorDisplay(CamID.CamL, 4, GetRGBvalue(CamID.CamL, 4));
+            OriginalColorDisplay(CamID.CamL, 5, GetRGBvalue(CamID.CamL, 5));
+            OriginalColorDisplay(CamID.CamL, 6, GetRGBvalue(CamID.CamL, 6));
+            OriginalColorDisplay(CamID.CamL, 7, GetRGBvalue(CamID.CamL, 7));
+            OriginalColorDisplay(CamID.CamL, 8, GetRGBvalue(CamID.CamL, 8));
+            OriginalColorDisplay(CamID.CamL, 9, GetRGBvalue(CamID.CamL, 9));
+
+            OriginalColorDisplay(CamID.CamR, 1, GetRGBvalue(CamID.CamR, 1));
+            OriginalColorDisplay(CamID.CamR, 2, GetRGBvalue(CamID.CamR, 2));
+            OriginalColorDisplay(CamID.CamR, 3, GetRGBvalue(CamID.CamR, 3));
+            OriginalColorDisplay(CamID.CamR, 4, GetRGBvalue(CamID.CamR, 4));
+            OriginalColorDisplay(CamID.CamR, 5, GetRGBvalue(CamID.CamR, 5));
+            OriginalColorDisplay(CamID.CamR, 6, GetRGBvalue(CamID.CamR, 6));
+            OriginalColorDisplay(CamID.CamR, 7, GetRGBvalue(CamID.CamR, 7));
+            OriginalColorDisplay(CamID.CamR, 8, GetRGBvalue(CamID.CamR, 8));
+            OriginalColorDisplay(CamID.CamR, 9, GetRGBvalue(CamID.CamR, 9));
+
+            OriginalColorDisplay(CamID.CamF, 1, GetRGBvalue(CamID.CamF, 1));
+            OriginalColorDisplay(CamID.CamF, 2, GetRGBvalue(CamID.CamF, 2));
+            OriginalColorDisplay(CamID.CamF, 3, GetRGBvalue(CamID.CamF, 3));
+            OriginalColorDisplay(CamID.CamF, 4, GetRGBvalue(CamID.CamF, 4));
+            OriginalColorDisplay(CamID.CamF, 5, GetRGBvalue(CamID.CamF, 5));
+            OriginalColorDisplay(CamID.CamF, 6, GetRGBvalue(CamID.CamF, 6));
+            OriginalColorDisplay(CamID.CamF, 7, GetRGBvalue(CamID.CamF, 7));
+            OriginalColorDisplay(CamID.CamF, 8, GetRGBvalue(CamID.CamF, 8));
+            OriginalColorDisplay(CamID.CamF, 9, GetRGBvalue(CamID.CamF, 9));
+
+            OriginalColorDisplay(CamID.CamB, 1, GetRGBvalue(CamID.CamB, 1));
+            OriginalColorDisplay(CamID.CamB, 2, GetRGBvalue(CamID.CamB, 2));
+            OriginalColorDisplay(CamID.CamB, 3, GetRGBvalue(CamID.CamB, 3));
+            OriginalColorDisplay(CamID.CamB, 4, GetRGBvalue(CamID.CamB, 4));
+            OriginalColorDisplay(CamID.CamB, 5, GetRGBvalue(CamID.CamB, 5));
+            OriginalColorDisplay(CamID.CamB, 6, GetRGBvalue(CamID.CamB, 6));
+            OriginalColorDisplay(CamID.CamB, 7, GetRGBvalue(CamID.CamB, 7));
+            OriginalColorDisplay(CamID.CamB, 8, GetRGBvalue(CamID.CamB, 8));
+            OriginalColorDisplay(CamID.CamB, 9, GetRGBvalue(CamID.CamB, 9));
+        }
+
+        public void ColorDisplay()
+        {
+            ColorDisplay(CamID.CamU, 1, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 1)));
+            ColorDisplay(CamID.CamU, 2, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 2)));
+            ColorDisplay(CamID.CamU, 3, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 3)));
+            ColorDisplay(CamID.CamU, 4, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 4)));
+            ColorDisplay(CamID.CamU, 5, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 5)));
+            ColorDisplay(CamID.CamU, 6, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 6)));
+            ColorDisplay(CamID.CamU, 7, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 7)));
+            ColorDisplay(CamID.CamU, 8, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 8)));
+            ColorDisplay(CamID.CamU, 9, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 9)));
+       
+            ColorDisplay(CamID.CamD, 1, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 1)));
+            ColorDisplay(CamID.CamD, 2, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 2)));
+            ColorDisplay(CamID.CamD, 3, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 3)));
+            ColorDisplay(CamID.CamD, 4, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 4)));
+            ColorDisplay(CamID.CamD, 5, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 5)));
+            ColorDisplay(CamID.CamD, 6, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 6)));
+            ColorDisplay(CamID.CamD, 7, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 7)));
+            ColorDisplay(CamID.CamD, 8, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 8)));
+            ColorDisplay(CamID.CamD, 9, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 9)));
+
+            ColorDisplay(CamID.CamL, 1, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 1)));
+            ColorDisplay(CamID.CamL, 2, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 2)));
+            ColorDisplay(CamID.CamL, 3, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 3)));
+            ColorDisplay(CamID.CamL, 4, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 4)));
+            ColorDisplay(CamID.CamL, 5, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 5)));
+            ColorDisplay(CamID.CamL, 6, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 6)));
+            ColorDisplay(CamID.CamL, 7, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 7)));
+            ColorDisplay(CamID.CamL, 8, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 8)));
+            ColorDisplay(CamID.CamL, 9, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 9)));
+                                       
+            ColorDisplay(CamID.CamR, 1, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 1)));
+            ColorDisplay(CamID.CamR, 2, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 2)));
+            ColorDisplay(CamID.CamR, 3, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 3)));
+            ColorDisplay(CamID.CamR, 4, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 4)));
+            ColorDisplay(CamID.CamR, 5, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 5)));
+            ColorDisplay(CamID.CamR, 6, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 6)));
+            ColorDisplay(CamID.CamR, 7, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 7)));
+            ColorDisplay(CamID.CamR, 8, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 8)));
+            ColorDisplay(CamID.CamR, 9, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 9)));
+                                        
+            ColorDisplay(CamID.CamF, 1, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 1)));
+            ColorDisplay(CamID.CamF, 2, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 2)));
+            ColorDisplay(CamID.CamF, 3, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 3)));
+            ColorDisplay(CamID.CamF, 4, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 4)));
+            ColorDisplay(CamID.CamF, 5, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 5)));
+            ColorDisplay(CamID.CamF, 6, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 6)));
+            ColorDisplay(CamID.CamF, 7, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 7)));
+            ColorDisplay(CamID.CamF, 8, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 8)));
+            ColorDisplay(CamID.CamF, 9, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 9)));
+                                        
+            ColorDisplay(CamID.CamB, 1, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 1)));
+            ColorDisplay(CamID.CamB, 2, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 2)));
+            ColorDisplay(CamID.CamB, 3, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 3)));
+            ColorDisplay(CamID.CamB, 4, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 4)));
+            ColorDisplay(CamID.CamB, 5, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 5)));
+            ColorDisplay(CamID.CamB, 6, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 6)));
+            ColorDisplay(CamID.CamB, 7, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 7)));
+            ColorDisplay(CamID.CamB, 8, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 8)));
+            ColorDisplay(CamID.CamB, 9, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 9)));
+        }
     }
 }
