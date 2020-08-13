@@ -13,6 +13,32 @@ namespace Festo_Rubik_s_Cube_Explorer
     {
         public static string ProjectPath = "";
         public static XMLStruct CurrentParas;
+        public static double global_Vel;
+        public static double global_Acc;
+        public static double global_Dec;
+        public static double global_Jerk;
+        public static ServoStatus servo_Feeding;
+        public static IOlinkStatus IOlink_Rotate;
+        public static ServoStatus servo_U_Move;
+        public static ServoStatus servo_U_Grab;
+        public static ServoStatus servo_U_Rotate;
+        public static IOlinkStatus IOlink_F_Move_Cam;
+        public static IOlinkStatus IOlink_F_Grab;
+        public static ServoStatus servo_F_Rotate;
+        public static IOlinkStatus IOlink_B_Move_Cam;
+        public static IOlinkStatus IOlink_B_Grab;
+        public static ServoStatus servo_B_Rotate;
+        public static IOlinkStatus IOlink_L_Move_Cam;
+        public static IOlinkStatus IOlink_L_Grab;
+        public static ServoStatus servo_L_Rotate;
+        public static IOlinkStatus IOlink_R_Move_Cam;
+        public static IOlinkStatus IOlink_R_Grab;
+        public static ServoStatus servo_R_Rotate;
+        public static ServoStatus servo_D_Move;
+        public static IOlinkStatus IOlink_D_Move_Cam;
+        public static ServoStatus servo_D_Grab;
+        public static ServoStatus servo_D_Rotate;
+
         public static string LoadParasFromXML()
         {
             string str_CheckXML = XMLCheckResult.OK.ToString();
@@ -1178,6 +1204,9 @@ namespace Festo_Rubik_s_Cube_Explorer
             return str_CheckXML;
         }
     }
+
+    #region XML中的参数
+    //写在XML中的参数
     public struct XMLStruct
     {
         public CamParas CamU;
@@ -1237,6 +1266,8 @@ namespace Festo_Rubik_s_Cube_Explorer
         public ServoParas servo_D_Rotate;
         public CubeResultNodeID CubeResult;
     }
+
+    //PC写给PLC的参数
     public struct CubeResultNodeID
     {
         public string NodeID_Step1;
@@ -1267,6 +1298,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         public ServoNodeID mServoNodeID;//变量在PLC中的节点名
         public double P1;
         public double P2;
+        public double P3;
         public double P_90;
         public double P_180;
         public double P_270;
@@ -1289,18 +1321,19 @@ namespace Festo_Rubik_s_Cube_Explorer
         public string NodeID_o_Dec;
         public string NodeID_o_Jerk;
         public string NodeID_o_Pos;
-        public string NodeID_o_Go;      
+        public string NodeID_o_Go;
     }
     public struct IOlinkNodeID
     {
         public string NodeID_i_In;
         public string NodeID_i_Out;
         public string NodeID_i_Move;
-        public string NodeID_i_Device;        
+        public string NodeID_i_Device;
         public string NodeID_o_In;
         public string NodeID_o_Out;
         public string NodeID_o_QuitError;
-    }
+    } 
+    #endregion
     public struct ServoStatus
     {
         public bool i_Enable;
@@ -1320,11 +1353,22 @@ namespace Festo_Rubik_s_Cube_Explorer
         public double o_Jerk;
         public double o_Pos;
         public bool o_Go;
-        public double P1;
-        public double P2;
-        public double P_90;
-        public double P_180;
-        public double P_270;
+        public bool b_P1;
+        public bool b_P2;
+        public bool b_P3;
+        public bool b_P_90;
+        public bool b_P_180;
+        public bool b_P_270;
+    }
+    public struct IOlinkStatus
+    {
+        public bool i_In;
+        public bool i_Out;
+        public bool i_Move;
+        public bool i_Device;
+        public bool o_In;
+        public bool o_Out;
+        public bool o_QuitError;
     }
 
     public enum CamID
