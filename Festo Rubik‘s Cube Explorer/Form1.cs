@@ -1179,5 +1179,69 @@ namespace Festo_Rubik_s_Cube_Explorer
             ColorDisplay(CamID.CamB, 8, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 8)));
             ColorDisplay(CamID.CamB, 9, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 9)));
         }
+
+        public void SendResult2PLC()
+        {
+            string[] mCubeResult = textBox2.Text.Split(' ');
+            string[] mCubeResult_Send = new string[21];
+            for (int i = 0; i < mCubeResult.Length; i++)
+            {
+                mCubeResult_Send[i] = mCubeResult[i];
+            }
+            bool success = m_OpcUaClient.WriteNodes(new string[] {
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step1,
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step2,
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step3,
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step4,
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step5,
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step6,
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step7,
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step8,
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step9,
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step10,
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step11,
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step12,
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step13,
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step14,
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step15,
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step16,
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step17,
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step18,
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step19,
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step20,
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step21 },        
+           new object[] {
+            mCubeResult_Send[0],
+            mCubeResult_Send[1],
+            mCubeResult_Send[2],
+            mCubeResult_Send[3],
+            mCubeResult_Send[4],
+            mCubeResult_Send[5],
+            mCubeResult_Send[6],
+            mCubeResult_Send[7],
+            mCubeResult_Send[8],
+            mCubeResult_Send[9],
+            mCubeResult_Send[10],
+            mCubeResult_Send[11],
+            mCubeResult_Send[12],
+            mCubeResult_Send[13],
+            mCubeResult_Send[14],
+            mCubeResult_Send[15],
+            mCubeResult_Send[16],
+            mCubeResult_Send[17],
+            mCubeResult_Send[18],
+            mCubeResult_Send[19],
+            mCubeResult_Send[20],
+            mCubeResult_Send[21],
+           });
+            if (success)
+            {
+                // 写入成功
+            }
+            else
+            {
+                // 写入失败，一个失败即为失败
+            }
+        }
     }
 }

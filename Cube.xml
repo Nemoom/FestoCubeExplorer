@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="gb2312"?>
 <Cube> 
-  <CamU IP="192.168.9.111">
+  <CamU IP="127.0.0.1">
     <ColorMatch>
       <Red>
         <R_min>0</R_min>
@@ -87,7 +87,13 @@
 	</Feeding>
 	<!--魔方拍照位/旋转位-->
 	<Rotate>
-		
+		<i_In></i_In>
+		<i_Out></i_Out>
+		<i_Move></i_Move>
+		<i_Device></i_Device>
+		<o_In></o_In>
+		<o_Out></o_Out>
+		<o_QuitError></o_QuitError>
 	</Rotate>
 	<!--上方模块拍照位/旋转位-->
 	<U_Move>
@@ -158,5 +164,28 @@
 	<D_Grab></D_Grab>
 	<!--下方拧-->
 	<D_Rotate></D_Rotate>
+	<CubeResult>
+		<Step1></Step1>
+		<Step2></Step2>
+		<Step3></Step3>
+		<Step4></Step4>
+		<Step5></Step5>
+		<Step6></Step6>
+		<Step7></Step7>
+		<Step8></Step8>
+		<Step9></Step9>
+		<Step10></Step10>
+		<Step11></Step11>
+		<Step12></Step12>
+		<Step13></Step13>
+		<Step14></Step14>
+		<Step15></Step15>
+		<Step16></Step16>
+		<Step17></Step17>
+		<Step18></Step18>
+		<Step19></Step19>
+		<Step20></Step20>
+		<Step21></Step21>		
+	</CubeResult>
   </PLC>
 </Cube>

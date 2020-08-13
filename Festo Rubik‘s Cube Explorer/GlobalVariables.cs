@@ -1234,8 +1234,34 @@ namespace Festo_Rubik_s_Cube_Explorer
         public ServoParas servo_D_Move;
         public IOlinkNodeID IOlink_D_Move_Cam;
         public ServoParas servo_D_Grab;
-        public ServoParas servo_D_Rotate;        
+        public ServoParas servo_D_Rotate;
+        public CubeResultNodeID CubeResult;
     }
+    public struct CubeResultNodeID
+    {
+        public string NodeID_Step1;
+        public string NodeID_Step2;
+        public string NodeID_Step3;
+        public string NodeID_Step4;
+        public string NodeID_Step5;
+        public string NodeID_Step6;
+        public string NodeID_Step7;
+        public string NodeID_Step8;
+        public string NodeID_Step9;
+        public string NodeID_Step10;
+        public string NodeID_Step11;
+        public string NodeID_Step12;
+        public string NodeID_Step13;
+        public string NodeID_Step14;
+        public string NodeID_Step15;
+        public string NodeID_Step16;
+        public string NodeID_Step17;
+        public string NodeID_Step18;
+        public string NodeID_Step19;
+        public string NodeID_Step20;
+        public string NodeID_Step21;
+    }
+
     public struct ServoParas
     {
         public ServoNodeID mServoNodeID;//变量在PLC中的节点名
