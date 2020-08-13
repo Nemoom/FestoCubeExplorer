@@ -148,85 +148,85 @@
             this.btn_Rotate = new System.Windows.Forms.Button();
             this.tabPage_Step = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
+            this.lbl_Servo_Rotate_R = new System.Windows.Forms.Label();
+            this.lbl_Servo_Move_R = new System.Windows.Forms.Label();
+            this.lbl_Servo_Feeding_R = new System.Windows.Forms.Label();
+            this.lbl_Servo_Grab_R = new System.Windows.Forms.Label();
+            this.lbl_IOlink_Grab_R = new System.Windows.Forms.Label();
+            this.lbl_IOlink_Rotate_R = new System.Windows.Forms.Label();
+            this.lbl_IOlink_Move_Cam_R = new System.Windows.Forms.Label();
+            this.lbl_P_Rotate = new System.Windows.Forms.Label();
+            this.lbl_Servo_Rotate_A = new System.Windows.Forms.Label();
+            this.lbl_Servo_Move_A = new System.Windows.Forms.Label();
+            this.lbl_Servo_Feeding_A = new System.Windows.Forms.Label();
+            this.lbl_Servo_Grab_A = new System.Windows.Forms.Label();
+            this.lbl_IOlink_Grab_A = new System.Windows.Forms.Label();
+            this.lbl_IOlink_Rotate_A = new System.Windows.Forms.Label();
+            this.lbl_IOlink_Move_Cam_A = new System.Windows.Forms.Label();
+            this.lbl_P_Acquire = new System.Windows.Forms.Label();
+            this.lbl_Servo_Rotate_S = new System.Windows.Forms.Label();
+            this.lbl_Servo_Move_S = new System.Windows.Forms.Label();
+            this.lbl_Servo_Feeding_S = new System.Windows.Forms.Label();
+            this.lbl_Servo_Grab_S = new System.Windows.Forms.Label();
+            this.lbl_IOlink_Grab_S = new System.Windows.Forms.Label();
+            this.lbl_IOlink_Rotate_S = new System.Windows.Forms.Label();
+            this.lbl_IOlink_Move_Cam_S = new System.Windows.Forms.Label();
+            this.lbl_P_Start = new System.Windows.Forms.Label();
+            this.lbl_Servo_Rotate = new System.Windows.Forms.Label();
+            this.lbl_Servo_Move = new System.Windows.Forms.Label();
+            this.lbl_Servo_Feeding = new System.Windows.Forms.Label();
+            this.lbl_Servo_Grab = new System.Windows.Forms.Label();
+            this.lbl_IOlink_Grab = new System.Windows.Forms.Label();
+            this.lbl_IOlink_Rotate = new System.Windows.Forms.Label();
+            this.lbl_IOlink_Move_Cam = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
-            this.label31 = new System.Windows.Forms.Label();
+            this.rbtn_Feeding_P1 = new System.Windows.Forms.RadioButton();
+            this.rbtn_Feeding_P2 = new System.Windows.Forms.RadioButton();
+            this.lbl_ActPos_Feeding = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.label24 = new System.Windows.Forms.Label();
+            this.lbl_ActPos_MoveD = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.label27 = new System.Windows.Forms.Label();
+            this.rbtn_BlockMoveU_P1 = new System.Windows.Forms.RadioButton();
+            this.rbtn_BlockMoveU_P2 = new System.Windows.Forms.RadioButton();
+            this.rbtn_BlockMoveD_P1 = new System.Windows.Forms.RadioButton();
+            this.rbtn_BlockMoveD_P2 = new System.Windows.Forms.RadioButton();
+            this.lbl_ActPos_MoveU = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lbl_ActPos_RotateB = new System.Windows.Forms.Label();
+            this.lbl_ActPos_RotateF = new System.Windows.Forms.Label();
+            this.lbl_ActPos_RotateR = new System.Windows.Forms.Label();
+            this.lbl_ActPos_RotateL = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_ActPos_RotateD = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_ActPos_RotateU = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.radioButton33 = new System.Windows.Forms.RadioButton();
-            this.radioButton34 = new System.Windows.Forms.RadioButton();
-            this.radioButton35 = new System.Windows.Forms.RadioButton();
-            this.radioButton36 = new System.Windows.Forms.RadioButton();
-            this.radioButton37 = new System.Windows.Forms.RadioButton();
-            this.radioButton38 = new System.Windows.Forms.RadioButton();
-            this.radioButton39 = new System.Windows.Forms.RadioButton();
-            this.radioButton40 = new System.Windows.Forms.RadioButton();
+            this.rbtn_GrabL_P1 = new System.Windows.Forms.RadioButton();
+            this.rbtn_GrabL_P2 = new System.Windows.Forms.RadioButton();
+            this.rbtn_GrabR_P1 = new System.Windows.Forms.RadioButton();
+            this.rbtn_GrabR_P2 = new System.Windows.Forms.RadioButton();
+            this.rbtn_GrabF_P1 = new System.Windows.Forms.RadioButton();
+            this.rbtn_GrabF_P2 = new System.Windows.Forms.RadioButton();
+            this.rbtn_GrabB_P1 = new System.Windows.Forms.RadioButton();
+            this.rbtn_GrabB_P2 = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.radioButton15 = new System.Windows.Forms.RadioButton();
-            this.radioButton16 = new System.Windows.Forms.RadioButton();
+            this.rbtn_Rotate_P1 = new System.Windows.Forms.RadioButton();
+            this.rbtn_Rotate_P2 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label13 = new System.Windows.Forms.Label();
@@ -234,27 +234,27 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.radioButton18 = new System.Windows.Forms.RadioButton();
-            this.radioButton19 = new System.Windows.Forms.RadioButton();
-            this.radioButton21 = new System.Windows.Forms.RadioButton();
-            this.radioButton22 = new System.Windows.Forms.RadioButton();
-            this.radioButton23 = new System.Windows.Forms.RadioButton();
-            this.radioButton24 = new System.Windows.Forms.RadioButton();
-            this.radioButton25 = new System.Windows.Forms.RadioButton();
-            this.radioButton26 = new System.Windows.Forms.RadioButton();
-            this.radioButton27 = new System.Windows.Forms.RadioButton();
-            this.radioButton28 = new System.Windows.Forms.RadioButton();
+            this.rbtn_MoveD_P1 = new System.Windows.Forms.RadioButton();
+            this.rbtn_MoveD_P2 = new System.Windows.Forms.RadioButton();
+            this.rbtn_MoveL_P1 = new System.Windows.Forms.RadioButton();
+            this.rbtn_MoveL_P2 = new System.Windows.Forms.RadioButton();
+            this.rbtn_MoveR_P1 = new System.Windows.Forms.RadioButton();
+            this.rbtn_MoveR_P2 = new System.Windows.Forms.RadioButton();
+            this.rbtn_MoveF_P1 = new System.Windows.Forms.RadioButton();
+            this.rbtn_MoveF_P2 = new System.Windows.Forms.RadioButton();
+            this.rbtn_MoveB_P1 = new System.Windows.Forms.RadioButton();
+            this.rbtn_MoveB_P2 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_ActPos_GrabD = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.rbtn_GrabU_P1 = new System.Windows.Forms.RadioButton();
+            this.rbtn_GrabU_P2 = new System.Windows.Forms.RadioButton();
+            this.rbtn_GrabU_P3 = new System.Windows.Forms.RadioButton();
+            this.rbtn_GrabD_P1 = new System.Windows.Forms.RadioButton();
+            this.rbtn_GrabD_P2 = new System.Windows.Forms.RadioButton();
+            this.rbtn_GrabD_P3 = new System.Windows.Forms.RadioButton();
             this.lbl_ActPos_GrabU = new System.Windows.Forms.Label();
             this.btn_CubeBack = new System.Windows.Forms.Button();
             this.btn_Solve = new System.Windows.Forms.Button();
@@ -323,7 +323,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1299, 900);
+            this.tabControl1.Size = new System.Drawing.Size(1295, 895);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 0;
             // 
@@ -336,7 +336,7 @@
             this.tabPage_Cam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage_Cam.Name = "tabPage_Cam";
             this.tabPage_Cam.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage_Cam.Size = new System.Drawing.Size(1291, 860);
+            this.tabPage_Cam.Size = new System.Drawing.Size(1287, 855);
             this.tabPage_Cam.TabIndex = 0;
             this.tabPage_Cam.Text = "Camera";
             this.tabPage_Cam.UseVisualStyleBackColor = true;
@@ -344,9 +344,9 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.tableLayoutPanel_Cube);
-            this.panel1.Location = new System.Drawing.Point(488, 8);
+            this.panel1.Location = new System.Drawing.Point(374, 15);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(740, 511);
+            this.panel1.Size = new System.Drawing.Size(892, 664);
             this.panel1.TabIndex = 2;
             // 
             // tableLayoutPanel_Cube
@@ -371,7 +371,7 @@
             this.tableLayoutPanel_Cube.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
             this.tableLayoutPanel_Cube.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
             this.tableLayoutPanel_Cube.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
-            this.tableLayoutPanel_Cube.Size = new System.Drawing.Size(740, 511);
+            this.tableLayoutPanel_Cube.Size = new System.Drawing.Size(892, 664);
             this.tableLayoutPanel_Cube.TabIndex = 0;
             // 
             // tableLayoutPanel_U
@@ -392,24 +392,24 @@
             this.tableLayoutPanel_U.Controls.Add(this.btn_U1, 0, 0);
             this.tableLayoutPanel_U.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel_U.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tableLayoutPanel_U.Location = new System.Drawing.Point(185, 0);
+            this.tableLayoutPanel_U.Location = new System.Drawing.Point(223, 0);
             this.tableLayoutPanel_U.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel_U.Name = "tableLayoutPanel_U";
             this.tableLayoutPanel_U.RowCount = 3;
             this.tableLayoutPanel_U.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
             this.tableLayoutPanel_U.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
             this.tableLayoutPanel_U.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
-            this.tableLayoutPanel_U.Size = new System.Drawing.Size(185, 170);
+            this.tableLayoutPanel_U.Size = new System.Drawing.Size(223, 221);
             this.tableLayoutPanel_U.TabIndex = 0;
             // 
             // btn_U9
             // 
             this.btn_U9.BackColor = System.Drawing.Color.White;
             this.btn_U9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_U9.Location = new System.Drawing.Point(124, 114);
+            this.btn_U9.Location = new System.Drawing.Point(149, 148);
             this.btn_U9.Margin = new System.Windows.Forms.Padding(1);
             this.btn_U9.Name = "btn_U9";
-            this.btn_U9.Size = new System.Drawing.Size(59, 54);
+            this.btn_U9.Size = new System.Drawing.Size(72, 71);
             this.btn_U9.TabIndex = 8;
             this.btn_U9.UseVisualStyleBackColor = false;
             // 
@@ -417,10 +417,10 @@
             // 
             this.btn_U8.BackColor = System.Drawing.Color.White;
             this.btn_U8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_U8.Location = new System.Drawing.Point(63, 114);
+            this.btn_U8.Location = new System.Drawing.Point(75, 148);
             this.btn_U8.Margin = new System.Windows.Forms.Padding(1);
             this.btn_U8.Name = "btn_U8";
-            this.btn_U8.Size = new System.Drawing.Size(58, 54);
+            this.btn_U8.Size = new System.Drawing.Size(71, 71);
             this.btn_U8.TabIndex = 7;
             this.btn_U8.UseVisualStyleBackColor = false;
             // 
@@ -428,10 +428,10 @@
             // 
             this.btn_U7.BackColor = System.Drawing.Color.White;
             this.btn_U7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_U7.Location = new System.Drawing.Point(2, 114);
+            this.btn_U7.Location = new System.Drawing.Point(2, 148);
             this.btn_U7.Margin = new System.Windows.Forms.Padding(1);
             this.btn_U7.Name = "btn_U7";
-            this.btn_U7.Size = new System.Drawing.Size(58, 54);
+            this.btn_U7.Size = new System.Drawing.Size(70, 71);
             this.btn_U7.TabIndex = 6;
             this.btn_U7.UseVisualStyleBackColor = false;
             // 
@@ -439,10 +439,10 @@
             // 
             this.btn_U6.BackColor = System.Drawing.Color.White;
             this.btn_U6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_U6.Location = new System.Drawing.Point(124, 58);
+            this.btn_U6.Location = new System.Drawing.Point(149, 75);
             this.btn_U6.Margin = new System.Windows.Forms.Padding(1);
             this.btn_U6.Name = "btn_U6";
-            this.btn_U6.Size = new System.Drawing.Size(59, 53);
+            this.btn_U6.Size = new System.Drawing.Size(72, 70);
             this.btn_U6.TabIndex = 5;
             this.btn_U6.UseVisualStyleBackColor = false;
             // 
@@ -450,10 +450,10 @@
             // 
             this.btn_U5.BackColor = System.Drawing.Color.White;
             this.btn_U5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_U5.Location = new System.Drawing.Point(63, 58);
+            this.btn_U5.Location = new System.Drawing.Point(75, 75);
             this.btn_U5.Margin = new System.Windows.Forms.Padding(1);
             this.btn_U5.Name = "btn_U5";
-            this.btn_U5.Size = new System.Drawing.Size(58, 53);
+            this.btn_U5.Size = new System.Drawing.Size(71, 70);
             this.btn_U5.TabIndex = 4;
             this.btn_U5.UseVisualStyleBackColor = false;
             // 
@@ -461,10 +461,10 @@
             // 
             this.btn_U4.BackColor = System.Drawing.Color.White;
             this.btn_U4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_U4.Location = new System.Drawing.Point(2, 58);
+            this.btn_U4.Location = new System.Drawing.Point(2, 75);
             this.btn_U4.Margin = new System.Windows.Forms.Padding(1);
             this.btn_U4.Name = "btn_U4";
-            this.btn_U4.Size = new System.Drawing.Size(58, 53);
+            this.btn_U4.Size = new System.Drawing.Size(70, 70);
             this.btn_U4.TabIndex = 3;
             this.btn_U4.UseVisualStyleBackColor = false;
             // 
@@ -472,10 +472,10 @@
             // 
             this.btn_U3.BackColor = System.Drawing.Color.White;
             this.btn_U3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_U3.Location = new System.Drawing.Point(124, 2);
+            this.btn_U3.Location = new System.Drawing.Point(149, 2);
             this.btn_U3.Margin = new System.Windows.Forms.Padding(1);
             this.btn_U3.Name = "btn_U3";
-            this.btn_U3.Size = new System.Drawing.Size(59, 53);
+            this.btn_U3.Size = new System.Drawing.Size(72, 70);
             this.btn_U3.TabIndex = 2;
             this.btn_U3.UseVisualStyleBackColor = false;
             // 
@@ -483,10 +483,10 @@
             // 
             this.btn_U2.BackColor = System.Drawing.Color.White;
             this.btn_U2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_U2.Location = new System.Drawing.Point(63, 2);
+            this.btn_U2.Location = new System.Drawing.Point(75, 2);
             this.btn_U2.Margin = new System.Windows.Forms.Padding(1);
             this.btn_U2.Name = "btn_U2";
-            this.btn_U2.Size = new System.Drawing.Size(58, 53);
+            this.btn_U2.Size = new System.Drawing.Size(71, 70);
             this.btn_U2.TabIndex = 1;
             this.btn_U2.UseVisualStyleBackColor = false;
             // 
@@ -497,7 +497,7 @@
             this.btn_U1.Location = new System.Drawing.Point(2, 2);
             this.btn_U1.Margin = new System.Windows.Forms.Padding(1);
             this.btn_U1.Name = "btn_U1";
-            this.btn_U1.Size = new System.Drawing.Size(58, 53);
+            this.btn_U1.Size = new System.Drawing.Size(70, 70);
             this.btn_U1.TabIndex = 0;
             this.btn_U1.UseVisualStyleBackColor = false;
             // 
@@ -519,7 +519,7 @@
             this.tableLayoutPanel_L.Controls.Add(this.btn_L1, 0, 0);
             this.tableLayoutPanel_L.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel_L.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tableLayoutPanel_L.Location = new System.Drawing.Point(0, 170);
+            this.tableLayoutPanel_L.Location = new System.Drawing.Point(0, 221);
             this.tableLayoutPanel_L.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel_L.Name = "tableLayoutPanel_L";
             this.tableLayoutPanel_L.RowCount = 3;
@@ -527,17 +527,17 @@
             this.tableLayoutPanel_L.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
             this.tableLayoutPanel_L.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
             this.tableLayoutPanel_L.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel_L.Size = new System.Drawing.Size(185, 170);
+            this.tableLayoutPanel_L.Size = new System.Drawing.Size(223, 221);
             this.tableLayoutPanel_L.TabIndex = 1;
             // 
             // btn_L9
             // 
             this.btn_L9.BackColor = System.Drawing.Color.Blue;
             this.btn_L9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_L9.Location = new System.Drawing.Point(124, 114);
+            this.btn_L9.Location = new System.Drawing.Point(149, 148);
             this.btn_L9.Margin = new System.Windows.Forms.Padding(1);
             this.btn_L9.Name = "btn_L9";
-            this.btn_L9.Size = new System.Drawing.Size(59, 54);
+            this.btn_L9.Size = new System.Drawing.Size(72, 71);
             this.btn_L9.TabIndex = 9;
             this.btn_L9.UseVisualStyleBackColor = false;
             // 
@@ -545,10 +545,10 @@
             // 
             this.btn_L8.BackColor = System.Drawing.Color.Blue;
             this.btn_L8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_L8.Location = new System.Drawing.Point(63, 114);
+            this.btn_L8.Location = new System.Drawing.Point(75, 148);
             this.btn_L8.Margin = new System.Windows.Forms.Padding(1);
             this.btn_L8.Name = "btn_L8";
-            this.btn_L8.Size = new System.Drawing.Size(58, 54);
+            this.btn_L8.Size = new System.Drawing.Size(71, 71);
             this.btn_L8.TabIndex = 8;
             this.btn_L8.UseVisualStyleBackColor = false;
             // 
@@ -556,10 +556,10 @@
             // 
             this.btn_L7.BackColor = System.Drawing.Color.Blue;
             this.btn_L7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_L7.Location = new System.Drawing.Point(2, 114);
+            this.btn_L7.Location = new System.Drawing.Point(2, 148);
             this.btn_L7.Margin = new System.Windows.Forms.Padding(1);
             this.btn_L7.Name = "btn_L7";
-            this.btn_L7.Size = new System.Drawing.Size(58, 54);
+            this.btn_L7.Size = new System.Drawing.Size(70, 71);
             this.btn_L7.TabIndex = 7;
             this.btn_L7.UseVisualStyleBackColor = false;
             // 
@@ -567,10 +567,10 @@
             // 
             this.btn_L6.BackColor = System.Drawing.Color.Blue;
             this.btn_L6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_L6.Location = new System.Drawing.Point(124, 58);
+            this.btn_L6.Location = new System.Drawing.Point(149, 75);
             this.btn_L6.Margin = new System.Windows.Forms.Padding(1);
             this.btn_L6.Name = "btn_L6";
-            this.btn_L6.Size = new System.Drawing.Size(59, 53);
+            this.btn_L6.Size = new System.Drawing.Size(72, 70);
             this.btn_L6.TabIndex = 6;
             this.btn_L6.UseVisualStyleBackColor = false;
             // 
@@ -578,10 +578,10 @@
             // 
             this.btn_L5.BackColor = System.Drawing.Color.Blue;
             this.btn_L5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_L5.Location = new System.Drawing.Point(63, 58);
+            this.btn_L5.Location = new System.Drawing.Point(75, 75);
             this.btn_L5.Margin = new System.Windows.Forms.Padding(1);
             this.btn_L5.Name = "btn_L5";
-            this.btn_L5.Size = new System.Drawing.Size(58, 53);
+            this.btn_L5.Size = new System.Drawing.Size(71, 70);
             this.btn_L5.TabIndex = 5;
             this.btn_L5.UseVisualStyleBackColor = false;
             // 
@@ -589,10 +589,10 @@
             // 
             this.btn_L4.BackColor = System.Drawing.Color.Blue;
             this.btn_L4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_L4.Location = new System.Drawing.Point(2, 58);
+            this.btn_L4.Location = new System.Drawing.Point(2, 75);
             this.btn_L4.Margin = new System.Windows.Forms.Padding(1);
             this.btn_L4.Name = "btn_L4";
-            this.btn_L4.Size = new System.Drawing.Size(58, 53);
+            this.btn_L4.Size = new System.Drawing.Size(70, 70);
             this.btn_L4.TabIndex = 4;
             this.btn_L4.UseVisualStyleBackColor = false;
             // 
@@ -600,10 +600,10 @@
             // 
             this.btn_L3.BackColor = System.Drawing.Color.Blue;
             this.btn_L3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_L3.Location = new System.Drawing.Point(124, 2);
+            this.btn_L3.Location = new System.Drawing.Point(149, 2);
             this.btn_L3.Margin = new System.Windows.Forms.Padding(1);
             this.btn_L3.Name = "btn_L3";
-            this.btn_L3.Size = new System.Drawing.Size(59, 53);
+            this.btn_L3.Size = new System.Drawing.Size(72, 70);
             this.btn_L3.TabIndex = 3;
             this.btn_L3.UseVisualStyleBackColor = false;
             // 
@@ -611,10 +611,10 @@
             // 
             this.btn_L2.BackColor = System.Drawing.Color.Blue;
             this.btn_L2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_L2.Location = new System.Drawing.Point(63, 2);
+            this.btn_L2.Location = new System.Drawing.Point(75, 2);
             this.btn_L2.Margin = new System.Windows.Forms.Padding(1);
             this.btn_L2.Name = "btn_L2";
-            this.btn_L2.Size = new System.Drawing.Size(58, 53);
+            this.btn_L2.Size = new System.Drawing.Size(71, 70);
             this.btn_L2.TabIndex = 2;
             this.btn_L2.UseVisualStyleBackColor = false;
             // 
@@ -625,7 +625,7 @@
             this.btn_L1.Location = new System.Drawing.Point(2, 2);
             this.btn_L1.Margin = new System.Windows.Forms.Padding(1);
             this.btn_L1.Name = "btn_L1";
-            this.btn_L1.Size = new System.Drawing.Size(58, 53);
+            this.btn_L1.Size = new System.Drawing.Size(70, 70);
             this.btn_L1.TabIndex = 1;
             this.btn_L1.UseVisualStyleBackColor = false;
             // 
@@ -647,24 +647,24 @@
             this.tableLayoutPanel_F.Controls.Add(this.btn_F1, 0, 0);
             this.tableLayoutPanel_F.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel_F.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tableLayoutPanel_F.Location = new System.Drawing.Point(185, 170);
+            this.tableLayoutPanel_F.Location = new System.Drawing.Point(223, 221);
             this.tableLayoutPanel_F.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel_F.Name = "tableLayoutPanel_F";
             this.tableLayoutPanel_F.RowCount = 3;
             this.tableLayoutPanel_F.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
             this.tableLayoutPanel_F.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
             this.tableLayoutPanel_F.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
-            this.tableLayoutPanel_F.Size = new System.Drawing.Size(185, 170);
+            this.tableLayoutPanel_F.Size = new System.Drawing.Size(223, 221);
             this.tableLayoutPanel_F.TabIndex = 2;
             // 
             // btn_F9
             // 
             this.btn_F9.BackColor = System.Drawing.Color.Orange;
             this.btn_F9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_F9.Location = new System.Drawing.Point(124, 114);
+            this.btn_F9.Location = new System.Drawing.Point(149, 148);
             this.btn_F9.Margin = new System.Windows.Forms.Padding(1);
             this.btn_F9.Name = "btn_F9";
-            this.btn_F9.Size = new System.Drawing.Size(59, 54);
+            this.btn_F9.Size = new System.Drawing.Size(72, 71);
             this.btn_F9.TabIndex = 9;
             this.btn_F9.UseVisualStyleBackColor = false;
             // 
@@ -672,10 +672,10 @@
             // 
             this.btn_F8.BackColor = System.Drawing.Color.Orange;
             this.btn_F8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_F8.Location = new System.Drawing.Point(63, 114);
+            this.btn_F8.Location = new System.Drawing.Point(75, 148);
             this.btn_F8.Margin = new System.Windows.Forms.Padding(1);
             this.btn_F8.Name = "btn_F8";
-            this.btn_F8.Size = new System.Drawing.Size(58, 54);
+            this.btn_F8.Size = new System.Drawing.Size(71, 71);
             this.btn_F8.TabIndex = 8;
             this.btn_F8.UseVisualStyleBackColor = false;
             // 
@@ -683,10 +683,10 @@
             // 
             this.btn_F7.BackColor = System.Drawing.Color.Orange;
             this.btn_F7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_F7.Location = new System.Drawing.Point(2, 114);
+            this.btn_F7.Location = new System.Drawing.Point(2, 148);
             this.btn_F7.Margin = new System.Windows.Forms.Padding(1);
             this.btn_F7.Name = "btn_F7";
-            this.btn_F7.Size = new System.Drawing.Size(58, 54);
+            this.btn_F7.Size = new System.Drawing.Size(70, 71);
             this.btn_F7.TabIndex = 7;
             this.btn_F7.UseVisualStyleBackColor = false;
             // 
@@ -694,10 +694,10 @@
             // 
             this.btn_F6.BackColor = System.Drawing.Color.Orange;
             this.btn_F6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_F6.Location = new System.Drawing.Point(124, 58);
+            this.btn_F6.Location = new System.Drawing.Point(149, 75);
             this.btn_F6.Margin = new System.Windows.Forms.Padding(1);
             this.btn_F6.Name = "btn_F6";
-            this.btn_F6.Size = new System.Drawing.Size(59, 53);
+            this.btn_F6.Size = new System.Drawing.Size(72, 70);
             this.btn_F6.TabIndex = 6;
             this.btn_F6.UseVisualStyleBackColor = false;
             // 
@@ -705,10 +705,10 @@
             // 
             this.btn_F5.BackColor = System.Drawing.Color.Orange;
             this.btn_F5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_F5.Location = new System.Drawing.Point(63, 58);
+            this.btn_F5.Location = new System.Drawing.Point(75, 75);
             this.btn_F5.Margin = new System.Windows.Forms.Padding(1);
             this.btn_F5.Name = "btn_F5";
-            this.btn_F5.Size = new System.Drawing.Size(58, 53);
+            this.btn_F5.Size = new System.Drawing.Size(71, 70);
             this.btn_F5.TabIndex = 5;
             this.btn_F5.UseVisualStyleBackColor = false;
             // 
@@ -716,10 +716,10 @@
             // 
             this.btn_F4.BackColor = System.Drawing.Color.Orange;
             this.btn_F4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_F4.Location = new System.Drawing.Point(2, 58);
+            this.btn_F4.Location = new System.Drawing.Point(2, 75);
             this.btn_F4.Margin = new System.Windows.Forms.Padding(1);
             this.btn_F4.Name = "btn_F4";
-            this.btn_F4.Size = new System.Drawing.Size(58, 53);
+            this.btn_F4.Size = new System.Drawing.Size(70, 70);
             this.btn_F4.TabIndex = 4;
             this.btn_F4.UseVisualStyleBackColor = false;
             // 
@@ -727,10 +727,10 @@
             // 
             this.btn_F3.BackColor = System.Drawing.Color.Orange;
             this.btn_F3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_F3.Location = new System.Drawing.Point(124, 2);
+            this.btn_F3.Location = new System.Drawing.Point(149, 2);
             this.btn_F3.Margin = new System.Windows.Forms.Padding(1);
             this.btn_F3.Name = "btn_F3";
-            this.btn_F3.Size = new System.Drawing.Size(59, 53);
+            this.btn_F3.Size = new System.Drawing.Size(72, 70);
             this.btn_F3.TabIndex = 3;
             this.btn_F3.UseVisualStyleBackColor = false;
             // 
@@ -738,10 +738,10 @@
             // 
             this.btn_F2.BackColor = System.Drawing.Color.Orange;
             this.btn_F2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_F2.Location = new System.Drawing.Point(63, 2);
+            this.btn_F2.Location = new System.Drawing.Point(75, 2);
             this.btn_F2.Margin = new System.Windows.Forms.Padding(1);
             this.btn_F2.Name = "btn_F2";
-            this.btn_F2.Size = new System.Drawing.Size(58, 53);
+            this.btn_F2.Size = new System.Drawing.Size(71, 70);
             this.btn_F2.TabIndex = 2;
             this.btn_F2.UseVisualStyleBackColor = false;
             // 
@@ -752,7 +752,7 @@
             this.btn_F1.Location = new System.Drawing.Point(2, 2);
             this.btn_F1.Margin = new System.Windows.Forms.Padding(1);
             this.btn_F1.Name = "btn_F1";
-            this.btn_F1.Size = new System.Drawing.Size(58, 53);
+            this.btn_F1.Size = new System.Drawing.Size(70, 70);
             this.btn_F1.TabIndex = 1;
             this.btn_F1.UseVisualStyleBackColor = false;
             // 
@@ -774,24 +774,24 @@
             this.tableLayoutPanel_R.Controls.Add(this.btn_R1, 0, 0);
             this.tableLayoutPanel_R.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel_R.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tableLayoutPanel_R.Location = new System.Drawing.Point(370, 170);
+            this.tableLayoutPanel_R.Location = new System.Drawing.Point(446, 221);
             this.tableLayoutPanel_R.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel_R.Name = "tableLayoutPanel_R";
             this.tableLayoutPanel_R.RowCount = 3;
             this.tableLayoutPanel_R.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
             this.tableLayoutPanel_R.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
             this.tableLayoutPanel_R.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
-            this.tableLayoutPanel_R.Size = new System.Drawing.Size(185, 170);
+            this.tableLayoutPanel_R.Size = new System.Drawing.Size(223, 221);
             this.tableLayoutPanel_R.TabIndex = 3;
             // 
             // btn_R9
             // 
             this.btn_R9.BackColor = System.Drawing.Color.Green;
             this.btn_R9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_R9.Location = new System.Drawing.Point(124, 114);
+            this.btn_R9.Location = new System.Drawing.Point(149, 148);
             this.btn_R9.Margin = new System.Windows.Forms.Padding(1);
             this.btn_R9.Name = "btn_R9";
-            this.btn_R9.Size = new System.Drawing.Size(59, 54);
+            this.btn_R9.Size = new System.Drawing.Size(72, 71);
             this.btn_R9.TabIndex = 9;
             this.btn_R9.UseVisualStyleBackColor = false;
             // 
@@ -799,10 +799,10 @@
             // 
             this.btn_R8.BackColor = System.Drawing.Color.Green;
             this.btn_R8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_R8.Location = new System.Drawing.Point(63, 114);
+            this.btn_R8.Location = new System.Drawing.Point(75, 148);
             this.btn_R8.Margin = new System.Windows.Forms.Padding(1);
             this.btn_R8.Name = "btn_R8";
-            this.btn_R8.Size = new System.Drawing.Size(58, 54);
+            this.btn_R8.Size = new System.Drawing.Size(71, 71);
             this.btn_R8.TabIndex = 8;
             this.btn_R8.UseVisualStyleBackColor = false;
             // 
@@ -810,10 +810,10 @@
             // 
             this.btn_R7.BackColor = System.Drawing.Color.Green;
             this.btn_R7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_R7.Location = new System.Drawing.Point(2, 114);
+            this.btn_R7.Location = new System.Drawing.Point(2, 148);
             this.btn_R7.Margin = new System.Windows.Forms.Padding(1);
             this.btn_R7.Name = "btn_R7";
-            this.btn_R7.Size = new System.Drawing.Size(58, 54);
+            this.btn_R7.Size = new System.Drawing.Size(70, 71);
             this.btn_R7.TabIndex = 7;
             this.btn_R7.UseVisualStyleBackColor = false;
             // 
@@ -821,10 +821,10 @@
             // 
             this.btn_R6.BackColor = System.Drawing.Color.Green;
             this.btn_R6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_R6.Location = new System.Drawing.Point(124, 58);
+            this.btn_R6.Location = new System.Drawing.Point(149, 75);
             this.btn_R6.Margin = new System.Windows.Forms.Padding(1);
             this.btn_R6.Name = "btn_R6";
-            this.btn_R6.Size = new System.Drawing.Size(59, 53);
+            this.btn_R6.Size = new System.Drawing.Size(72, 70);
             this.btn_R6.TabIndex = 6;
             this.btn_R6.UseVisualStyleBackColor = false;
             // 
@@ -832,10 +832,10 @@
             // 
             this.btn_R5.BackColor = System.Drawing.Color.Green;
             this.btn_R5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_R5.Location = new System.Drawing.Point(63, 58);
+            this.btn_R5.Location = new System.Drawing.Point(75, 75);
             this.btn_R5.Margin = new System.Windows.Forms.Padding(1);
             this.btn_R5.Name = "btn_R5";
-            this.btn_R5.Size = new System.Drawing.Size(58, 53);
+            this.btn_R5.Size = new System.Drawing.Size(71, 70);
             this.btn_R5.TabIndex = 5;
             this.btn_R5.UseVisualStyleBackColor = false;
             // 
@@ -843,10 +843,10 @@
             // 
             this.btn_R4.BackColor = System.Drawing.Color.Green;
             this.btn_R4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_R4.Location = new System.Drawing.Point(2, 58);
+            this.btn_R4.Location = new System.Drawing.Point(2, 75);
             this.btn_R4.Margin = new System.Windows.Forms.Padding(1);
             this.btn_R4.Name = "btn_R4";
-            this.btn_R4.Size = new System.Drawing.Size(58, 53);
+            this.btn_R4.Size = new System.Drawing.Size(70, 70);
             this.btn_R4.TabIndex = 4;
             this.btn_R4.UseVisualStyleBackColor = false;
             // 
@@ -854,10 +854,10 @@
             // 
             this.btn_R3.BackColor = System.Drawing.Color.Green;
             this.btn_R3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_R3.Location = new System.Drawing.Point(124, 2);
+            this.btn_R3.Location = new System.Drawing.Point(149, 2);
             this.btn_R3.Margin = new System.Windows.Forms.Padding(1);
             this.btn_R3.Name = "btn_R3";
-            this.btn_R3.Size = new System.Drawing.Size(59, 53);
+            this.btn_R3.Size = new System.Drawing.Size(72, 70);
             this.btn_R3.TabIndex = 3;
             this.btn_R3.UseVisualStyleBackColor = false;
             // 
@@ -865,10 +865,10 @@
             // 
             this.btn_R2.BackColor = System.Drawing.Color.Green;
             this.btn_R2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_R2.Location = new System.Drawing.Point(63, 2);
+            this.btn_R2.Location = new System.Drawing.Point(75, 2);
             this.btn_R2.Margin = new System.Windows.Forms.Padding(1);
             this.btn_R2.Name = "btn_R2";
-            this.btn_R2.Size = new System.Drawing.Size(58, 53);
+            this.btn_R2.Size = new System.Drawing.Size(71, 70);
             this.btn_R2.TabIndex = 2;
             this.btn_R2.UseVisualStyleBackColor = false;
             // 
@@ -879,7 +879,7 @@
             this.btn_R1.Location = new System.Drawing.Point(2, 2);
             this.btn_R1.Margin = new System.Windows.Forms.Padding(1);
             this.btn_R1.Name = "btn_R1";
-            this.btn_R1.Size = new System.Drawing.Size(58, 53);
+            this.btn_R1.Size = new System.Drawing.Size(70, 70);
             this.btn_R1.TabIndex = 1;
             this.btn_R1.UseVisualStyleBackColor = false;
             // 
@@ -901,24 +901,24 @@
             this.tableLayoutPanel_B.Controls.Add(this.btn_B1, 0, 0);
             this.tableLayoutPanel_B.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel_B.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tableLayoutPanel_B.Location = new System.Drawing.Point(555, 170);
+            this.tableLayoutPanel_B.Location = new System.Drawing.Point(669, 221);
             this.tableLayoutPanel_B.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel_B.Name = "tableLayoutPanel_B";
             this.tableLayoutPanel_B.RowCount = 3;
             this.tableLayoutPanel_B.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
             this.tableLayoutPanel_B.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
             this.tableLayoutPanel_B.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
-            this.tableLayoutPanel_B.Size = new System.Drawing.Size(185, 170);
+            this.tableLayoutPanel_B.Size = new System.Drawing.Size(223, 221);
             this.tableLayoutPanel_B.TabIndex = 4;
             // 
             // btn_B9
             // 
             this.btn_B9.BackColor = System.Drawing.Color.Red;
             this.btn_B9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_B9.Location = new System.Drawing.Point(124, 114);
+            this.btn_B9.Location = new System.Drawing.Point(149, 148);
             this.btn_B9.Margin = new System.Windows.Forms.Padding(1);
             this.btn_B9.Name = "btn_B9";
-            this.btn_B9.Size = new System.Drawing.Size(59, 54);
+            this.btn_B9.Size = new System.Drawing.Size(72, 71);
             this.btn_B9.TabIndex = 9;
             this.btn_B9.UseVisualStyleBackColor = false;
             // 
@@ -926,10 +926,10 @@
             // 
             this.btn_B8.BackColor = System.Drawing.Color.Red;
             this.btn_B8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_B8.Location = new System.Drawing.Point(63, 114);
+            this.btn_B8.Location = new System.Drawing.Point(75, 148);
             this.btn_B8.Margin = new System.Windows.Forms.Padding(1);
             this.btn_B8.Name = "btn_B8";
-            this.btn_B8.Size = new System.Drawing.Size(58, 54);
+            this.btn_B8.Size = new System.Drawing.Size(71, 71);
             this.btn_B8.TabIndex = 8;
             this.btn_B8.UseVisualStyleBackColor = false;
             // 
@@ -937,10 +937,10 @@
             // 
             this.btn_B7.BackColor = System.Drawing.Color.Red;
             this.btn_B7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_B7.Location = new System.Drawing.Point(2, 114);
+            this.btn_B7.Location = new System.Drawing.Point(2, 148);
             this.btn_B7.Margin = new System.Windows.Forms.Padding(1);
             this.btn_B7.Name = "btn_B7";
-            this.btn_B7.Size = new System.Drawing.Size(58, 54);
+            this.btn_B7.Size = new System.Drawing.Size(70, 71);
             this.btn_B7.TabIndex = 7;
             this.btn_B7.UseVisualStyleBackColor = false;
             // 
@@ -948,10 +948,10 @@
             // 
             this.btn_B6.BackColor = System.Drawing.Color.Red;
             this.btn_B6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_B6.Location = new System.Drawing.Point(124, 58);
+            this.btn_B6.Location = new System.Drawing.Point(149, 75);
             this.btn_B6.Margin = new System.Windows.Forms.Padding(1);
             this.btn_B6.Name = "btn_B6";
-            this.btn_B6.Size = new System.Drawing.Size(59, 53);
+            this.btn_B6.Size = new System.Drawing.Size(72, 70);
             this.btn_B6.TabIndex = 6;
             this.btn_B6.UseVisualStyleBackColor = false;
             // 
@@ -959,10 +959,10 @@
             // 
             this.btn_B5.BackColor = System.Drawing.Color.Red;
             this.btn_B5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_B5.Location = new System.Drawing.Point(63, 58);
+            this.btn_B5.Location = new System.Drawing.Point(75, 75);
             this.btn_B5.Margin = new System.Windows.Forms.Padding(1);
             this.btn_B5.Name = "btn_B5";
-            this.btn_B5.Size = new System.Drawing.Size(58, 53);
+            this.btn_B5.Size = new System.Drawing.Size(71, 70);
             this.btn_B5.TabIndex = 5;
             this.btn_B5.UseVisualStyleBackColor = false;
             // 
@@ -970,10 +970,10 @@
             // 
             this.btn_B4.BackColor = System.Drawing.Color.Red;
             this.btn_B4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_B4.Location = new System.Drawing.Point(2, 58);
+            this.btn_B4.Location = new System.Drawing.Point(2, 75);
             this.btn_B4.Margin = new System.Windows.Forms.Padding(1);
             this.btn_B4.Name = "btn_B4";
-            this.btn_B4.Size = new System.Drawing.Size(58, 53);
+            this.btn_B4.Size = new System.Drawing.Size(70, 70);
             this.btn_B4.TabIndex = 4;
             this.btn_B4.UseVisualStyleBackColor = false;
             // 
@@ -981,10 +981,10 @@
             // 
             this.btn_B3.BackColor = System.Drawing.Color.Red;
             this.btn_B3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_B3.Location = new System.Drawing.Point(124, 2);
+            this.btn_B3.Location = new System.Drawing.Point(149, 2);
             this.btn_B3.Margin = new System.Windows.Forms.Padding(1);
             this.btn_B3.Name = "btn_B3";
-            this.btn_B3.Size = new System.Drawing.Size(59, 53);
+            this.btn_B3.Size = new System.Drawing.Size(72, 70);
             this.btn_B3.TabIndex = 3;
             this.btn_B3.UseVisualStyleBackColor = false;
             // 
@@ -992,10 +992,10 @@
             // 
             this.btn_B2.BackColor = System.Drawing.Color.Red;
             this.btn_B2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_B2.Location = new System.Drawing.Point(63, 2);
+            this.btn_B2.Location = new System.Drawing.Point(75, 2);
             this.btn_B2.Margin = new System.Windows.Forms.Padding(1);
             this.btn_B2.Name = "btn_B2";
-            this.btn_B2.Size = new System.Drawing.Size(58, 53);
+            this.btn_B2.Size = new System.Drawing.Size(71, 70);
             this.btn_B2.TabIndex = 2;
             this.btn_B2.UseVisualStyleBackColor = false;
             // 
@@ -1006,7 +1006,7 @@
             this.btn_B1.Location = new System.Drawing.Point(2, 2);
             this.btn_B1.Margin = new System.Windows.Forms.Padding(1);
             this.btn_B1.Name = "btn_B1";
-            this.btn_B1.Size = new System.Drawing.Size(58, 53);
+            this.btn_B1.Size = new System.Drawing.Size(70, 70);
             this.btn_B1.TabIndex = 1;
             this.btn_B1.UseVisualStyleBackColor = false;
             // 
@@ -1028,24 +1028,24 @@
             this.tableLayoutPanel_D.Controls.Add(this.btn_D1, 0, 0);
             this.tableLayoutPanel_D.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel_D.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tableLayoutPanel_D.Location = new System.Drawing.Point(185, 340);
+            this.tableLayoutPanel_D.Location = new System.Drawing.Point(223, 442);
             this.tableLayoutPanel_D.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel_D.Name = "tableLayoutPanel_D";
             this.tableLayoutPanel_D.RowCount = 3;
             this.tableLayoutPanel_D.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
             this.tableLayoutPanel_D.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
             this.tableLayoutPanel_D.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
-            this.tableLayoutPanel_D.Size = new System.Drawing.Size(185, 171);
+            this.tableLayoutPanel_D.Size = new System.Drawing.Size(223, 222);
             this.tableLayoutPanel_D.TabIndex = 5;
             // 
             // btn_D9
             // 
             this.btn_D9.BackColor = System.Drawing.Color.Yellow;
             this.btn_D9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_D9.Location = new System.Drawing.Point(124, 114);
+            this.btn_D9.Location = new System.Drawing.Point(149, 148);
             this.btn_D9.Margin = new System.Windows.Forms.Padding(1);
             this.btn_D9.Name = "btn_D9";
-            this.btn_D9.Size = new System.Drawing.Size(59, 55);
+            this.btn_D9.Size = new System.Drawing.Size(72, 72);
             this.btn_D9.TabIndex = 9;
             this.btn_D9.UseVisualStyleBackColor = false;
             // 
@@ -1053,10 +1053,10 @@
             // 
             this.btn_D8.BackColor = System.Drawing.Color.Yellow;
             this.btn_D8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_D8.Location = new System.Drawing.Point(63, 114);
+            this.btn_D8.Location = new System.Drawing.Point(75, 148);
             this.btn_D8.Margin = new System.Windows.Forms.Padding(1);
             this.btn_D8.Name = "btn_D8";
-            this.btn_D8.Size = new System.Drawing.Size(58, 55);
+            this.btn_D8.Size = new System.Drawing.Size(71, 72);
             this.btn_D8.TabIndex = 8;
             this.btn_D8.UseVisualStyleBackColor = false;
             // 
@@ -1064,10 +1064,10 @@
             // 
             this.btn_D7.BackColor = System.Drawing.Color.Yellow;
             this.btn_D7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_D7.Location = new System.Drawing.Point(2, 114);
+            this.btn_D7.Location = new System.Drawing.Point(2, 148);
             this.btn_D7.Margin = new System.Windows.Forms.Padding(1);
             this.btn_D7.Name = "btn_D7";
-            this.btn_D7.Size = new System.Drawing.Size(58, 55);
+            this.btn_D7.Size = new System.Drawing.Size(70, 72);
             this.btn_D7.TabIndex = 7;
             this.btn_D7.UseVisualStyleBackColor = false;
             // 
@@ -1075,10 +1075,10 @@
             // 
             this.btn_D6.BackColor = System.Drawing.Color.Yellow;
             this.btn_D6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_D6.Location = new System.Drawing.Point(124, 58);
+            this.btn_D6.Location = new System.Drawing.Point(149, 75);
             this.btn_D6.Margin = new System.Windows.Forms.Padding(1);
             this.btn_D6.Name = "btn_D6";
-            this.btn_D6.Size = new System.Drawing.Size(59, 53);
+            this.btn_D6.Size = new System.Drawing.Size(72, 70);
             this.btn_D6.TabIndex = 6;
             this.btn_D6.UseVisualStyleBackColor = false;
             // 
@@ -1086,10 +1086,10 @@
             // 
             this.btn_D5.BackColor = System.Drawing.Color.Yellow;
             this.btn_D5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_D5.Location = new System.Drawing.Point(63, 58);
+            this.btn_D5.Location = new System.Drawing.Point(75, 75);
             this.btn_D5.Margin = new System.Windows.Forms.Padding(1);
             this.btn_D5.Name = "btn_D5";
-            this.btn_D5.Size = new System.Drawing.Size(58, 53);
+            this.btn_D5.Size = new System.Drawing.Size(71, 70);
             this.btn_D5.TabIndex = 5;
             this.btn_D5.UseVisualStyleBackColor = false;
             // 
@@ -1097,10 +1097,10 @@
             // 
             this.btn_D4.BackColor = System.Drawing.Color.Yellow;
             this.btn_D4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_D4.Location = new System.Drawing.Point(2, 58);
+            this.btn_D4.Location = new System.Drawing.Point(2, 75);
             this.btn_D4.Margin = new System.Windows.Forms.Padding(1);
             this.btn_D4.Name = "btn_D4";
-            this.btn_D4.Size = new System.Drawing.Size(58, 53);
+            this.btn_D4.Size = new System.Drawing.Size(70, 70);
             this.btn_D4.TabIndex = 4;
             this.btn_D4.UseVisualStyleBackColor = false;
             // 
@@ -1108,10 +1108,10 @@
             // 
             this.btn_D3.BackColor = System.Drawing.Color.Yellow;
             this.btn_D3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_D3.Location = new System.Drawing.Point(124, 2);
+            this.btn_D3.Location = new System.Drawing.Point(149, 2);
             this.btn_D3.Margin = new System.Windows.Forms.Padding(1);
             this.btn_D3.Name = "btn_D3";
-            this.btn_D3.Size = new System.Drawing.Size(59, 53);
+            this.btn_D3.Size = new System.Drawing.Size(72, 70);
             this.btn_D3.TabIndex = 3;
             this.btn_D3.UseVisualStyleBackColor = false;
             // 
@@ -1119,10 +1119,10 @@
             // 
             this.btn_D2.BackColor = System.Drawing.Color.Yellow;
             this.btn_D2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_D2.Location = new System.Drawing.Point(63, 2);
+            this.btn_D2.Location = new System.Drawing.Point(75, 2);
             this.btn_D2.Margin = new System.Windows.Forms.Padding(1);
             this.btn_D2.Name = "btn_D2";
-            this.btn_D2.Size = new System.Drawing.Size(58, 53);
+            this.btn_D2.Size = new System.Drawing.Size(71, 70);
             this.btn_D2.TabIndex = 2;
             this.btn_D2.UseVisualStyleBackColor = false;
             // 
@@ -1133,7 +1133,7 @@
             this.btn_D1.Location = new System.Drawing.Point(2, 2);
             this.btn_D1.Margin = new System.Windows.Forms.Padding(1);
             this.btn_D1.Name = "btn_D1";
-            this.btn_D1.Size = new System.Drawing.Size(58, 53);
+            this.btn_D1.Size = new System.Drawing.Size(70, 70);
             this.btn_D1.TabIndex = 1;
             this.btn_D1.UseVisualStyleBackColor = false;
             // 
@@ -1395,7 +1395,7 @@
             this.tabPage_Servo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage_Servo.Name = "tabPage_Servo";
             this.tabPage_Servo.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage_Servo.Size = new System.Drawing.Size(1291, 860);
+            this.tabPage_Servo.Size = new System.Drawing.Size(1287, 855);
             this.tabPage_Servo.TabIndex = 1;
             this.tabPage_Servo.Text = "Servo";
             this.tabPage_Servo.UseVisualStyleBackColor = true;
@@ -1413,7 +1413,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(851, 613);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1013, 715);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -1437,7 +1437,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(851, 533);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1013, 635);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // panel2
@@ -1448,9 +1448,9 @@
             this.panel2.Controls.Add(this.btn_U_Grab);
             this.panel2.Controls.Add(this.btn_U_Move);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(215, 3);
+            this.panel2.Location = new System.Drawing.Point(256, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(206, 171);
+            this.panel2.Size = new System.Drawing.Size(247, 205);
             this.panel2.TabIndex = 0;
             // 
             // btn_U_Rotate
@@ -1458,7 +1458,7 @@
             this.btn_U_Rotate.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_U_Rotate.Location = new System.Drawing.Point(0, 70);
             this.btn_U_Rotate.Name = "btn_U_Rotate";
-            this.btn_U_Rotate.Size = new System.Drawing.Size(204, 35);
+            this.btn_U_Rotate.Size = new System.Drawing.Size(245, 35);
             this.btn_U_Rotate.TabIndex = 2;
             this.btn_U_Rotate.Text = "U拧";
             this.btn_U_Rotate.UseVisualStyleBackColor = true;
@@ -1468,7 +1468,7 @@
             this.btn_U_Grab.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_U_Grab.Location = new System.Drawing.Point(0, 35);
             this.btn_U_Grab.Name = "btn_U_Grab";
-            this.btn_U_Grab.Size = new System.Drawing.Size(204, 35);
+            this.btn_U_Grab.Size = new System.Drawing.Size(245, 35);
             this.btn_U_Grab.TabIndex = 1;
             this.btn_U_Grab.Text = "U旋转杆上下";
             this.btn_U_Grab.UseVisualStyleBackColor = true;
@@ -1478,7 +1478,7 @@
             this.btn_U_Move.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_U_Move.Location = new System.Drawing.Point(0, 0);
             this.btn_U_Move.Name = "btn_U_Move";
-            this.btn_U_Move.Size = new System.Drawing.Size(204, 35);
+            this.btn_U_Move.Size = new System.Drawing.Size(245, 35);
             this.btn_U_Move.TabIndex = 0;
             this.btn_U_Move.Text = "U拍照位/旋转位";
             this.btn_U_Move.UseVisualStyleBackColor = true;
@@ -1491,9 +1491,9 @@
             this.panel3.Controls.Add(this.btn_L_Grab);
             this.panel3.Controls.Add(this.btn_L_Move_Cam);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 180);
+            this.panel3.Location = new System.Drawing.Point(3, 214);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(206, 171);
+            this.panel3.Size = new System.Drawing.Size(247, 205);
             this.panel3.TabIndex = 1;
             // 
             // btn_L_Rotate
@@ -1501,7 +1501,7 @@
             this.btn_L_Rotate.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_L_Rotate.Location = new System.Drawing.Point(0, 70);
             this.btn_L_Rotate.Name = "btn_L_Rotate";
-            this.btn_L_Rotate.Size = new System.Drawing.Size(204, 35);
+            this.btn_L_Rotate.Size = new System.Drawing.Size(245, 35);
             this.btn_L_Rotate.TabIndex = 3;
             this.btn_L_Rotate.Text = "L拧";
             this.btn_L_Rotate.UseVisualStyleBackColor = true;
@@ -1511,7 +1511,7 @@
             this.btn_L_Grab.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_L_Grab.Location = new System.Drawing.Point(0, 35);
             this.btn_L_Grab.Name = "btn_L_Grab";
-            this.btn_L_Grab.Size = new System.Drawing.Size(204, 35);
+            this.btn_L_Grab.Size = new System.Drawing.Size(245, 35);
             this.btn_L_Grab.TabIndex = 2;
             this.btn_L_Grab.Text = "L旋转杆前后";
             this.btn_L_Grab.UseVisualStyleBackColor = true;
@@ -1521,7 +1521,7 @@
             this.btn_L_Move_Cam.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_L_Move_Cam.Location = new System.Drawing.Point(0, 0);
             this.btn_L_Move_Cam.Name = "btn_L_Move_Cam";
-            this.btn_L_Move_Cam.Size = new System.Drawing.Size(204, 35);
+            this.btn_L_Move_Cam.Size = new System.Drawing.Size(245, 35);
             this.btn_L_Move_Cam.TabIndex = 1;
             this.btn_L_Move_Cam.Text = "L相机上下";
             this.btn_L_Move_Cam.UseVisualStyleBackColor = true;
@@ -1534,9 +1534,9 @@
             this.panel4.Controls.Add(this.btn_F_Grab);
             this.panel4.Controls.Add(this.btn_F_Move_Cam);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(215, 180);
+            this.panel4.Location = new System.Drawing.Point(256, 214);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(206, 171);
+            this.panel4.Size = new System.Drawing.Size(247, 205);
             this.panel4.TabIndex = 2;
             // 
             // btn_F_Rotate
@@ -1544,7 +1544,7 @@
             this.btn_F_Rotate.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_F_Rotate.Location = new System.Drawing.Point(0, 70);
             this.btn_F_Rotate.Name = "btn_F_Rotate";
-            this.btn_F_Rotate.Size = new System.Drawing.Size(204, 35);
+            this.btn_F_Rotate.Size = new System.Drawing.Size(245, 35);
             this.btn_F_Rotate.TabIndex = 3;
             this.btn_F_Rotate.Text = "F拧";
             this.btn_F_Rotate.UseVisualStyleBackColor = true;
@@ -1554,7 +1554,7 @@
             this.btn_F_Grab.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_F_Grab.Location = new System.Drawing.Point(0, 35);
             this.btn_F_Grab.Name = "btn_F_Grab";
-            this.btn_F_Grab.Size = new System.Drawing.Size(204, 35);
+            this.btn_F_Grab.Size = new System.Drawing.Size(245, 35);
             this.btn_F_Grab.TabIndex = 2;
             this.btn_F_Grab.Text = "F旋转杆前后";
             this.btn_F_Grab.UseVisualStyleBackColor = true;
@@ -1564,7 +1564,7 @@
             this.btn_F_Move_Cam.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_F_Move_Cam.Location = new System.Drawing.Point(0, 0);
             this.btn_F_Move_Cam.Name = "btn_F_Move_Cam";
-            this.btn_F_Move_Cam.Size = new System.Drawing.Size(204, 35);
+            this.btn_F_Move_Cam.Size = new System.Drawing.Size(245, 35);
             this.btn_F_Move_Cam.TabIndex = 1;
             this.btn_F_Move_Cam.Text = "F相机上下";
             this.btn_F_Move_Cam.UseVisualStyleBackColor = true;
@@ -1577,9 +1577,9 @@
             this.panel5.Controls.Add(this.btn_R_Grab);
             this.panel5.Controls.Add(this.btn_R_Move_Cam);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(427, 180);
+            this.panel5.Location = new System.Drawing.Point(509, 214);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(206, 171);
+            this.panel5.Size = new System.Drawing.Size(247, 205);
             this.panel5.TabIndex = 3;
             // 
             // btn_R_Rotate
@@ -1587,7 +1587,7 @@
             this.btn_R_Rotate.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_R_Rotate.Location = new System.Drawing.Point(0, 70);
             this.btn_R_Rotate.Name = "btn_R_Rotate";
-            this.btn_R_Rotate.Size = new System.Drawing.Size(204, 35);
+            this.btn_R_Rotate.Size = new System.Drawing.Size(245, 35);
             this.btn_R_Rotate.TabIndex = 3;
             this.btn_R_Rotate.Text = "R拧";
             this.btn_R_Rotate.UseVisualStyleBackColor = true;
@@ -1597,7 +1597,7 @@
             this.btn_R_Grab.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_R_Grab.Location = new System.Drawing.Point(0, 35);
             this.btn_R_Grab.Name = "btn_R_Grab";
-            this.btn_R_Grab.Size = new System.Drawing.Size(204, 35);
+            this.btn_R_Grab.Size = new System.Drawing.Size(245, 35);
             this.btn_R_Grab.TabIndex = 2;
             this.btn_R_Grab.Text = "R旋转杆前后";
             this.btn_R_Grab.UseVisualStyleBackColor = true;
@@ -1607,7 +1607,7 @@
             this.btn_R_Move_Cam.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_R_Move_Cam.Location = new System.Drawing.Point(0, 0);
             this.btn_R_Move_Cam.Name = "btn_R_Move_Cam";
-            this.btn_R_Move_Cam.Size = new System.Drawing.Size(204, 35);
+            this.btn_R_Move_Cam.Size = new System.Drawing.Size(245, 35);
             this.btn_R_Move_Cam.TabIndex = 1;
             this.btn_R_Move_Cam.Text = "R相机上下";
             this.btn_R_Move_Cam.UseVisualStyleBackColor = true;
@@ -1620,9 +1620,9 @@
             this.panel6.Controls.Add(this.btn_B_Grab);
             this.panel6.Controls.Add(this.btn_B__Move_Cam);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(639, 180);
+            this.panel6.Location = new System.Drawing.Point(762, 214);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(209, 171);
+            this.panel6.Size = new System.Drawing.Size(248, 205);
             this.panel6.TabIndex = 4;
             // 
             // btn_B_Rotate
@@ -1630,7 +1630,7 @@
             this.btn_B_Rotate.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_B_Rotate.Location = new System.Drawing.Point(0, 70);
             this.btn_B_Rotate.Name = "btn_B_Rotate";
-            this.btn_B_Rotate.Size = new System.Drawing.Size(207, 35);
+            this.btn_B_Rotate.Size = new System.Drawing.Size(246, 35);
             this.btn_B_Rotate.TabIndex = 3;
             this.btn_B_Rotate.Text = "B拧";
             this.btn_B_Rotate.UseVisualStyleBackColor = true;
@@ -1640,7 +1640,7 @@
             this.btn_B_Grab.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_B_Grab.Location = new System.Drawing.Point(0, 35);
             this.btn_B_Grab.Name = "btn_B_Grab";
-            this.btn_B_Grab.Size = new System.Drawing.Size(207, 35);
+            this.btn_B_Grab.Size = new System.Drawing.Size(246, 35);
             this.btn_B_Grab.TabIndex = 2;
             this.btn_B_Grab.Text = "B旋转杆前后";
             this.btn_B_Grab.UseVisualStyleBackColor = true;
@@ -1650,7 +1650,7 @@
             this.btn_B__Move_Cam.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_B__Move_Cam.Location = new System.Drawing.Point(0, 0);
             this.btn_B__Move_Cam.Name = "btn_B__Move_Cam";
-            this.btn_B__Move_Cam.Size = new System.Drawing.Size(207, 35);
+            this.btn_B__Move_Cam.Size = new System.Drawing.Size(246, 35);
             this.btn_B__Move_Cam.TabIndex = 1;
             this.btn_B__Move_Cam.Text = "B相机上下";
             this.btn_B__Move_Cam.UseVisualStyleBackColor = true;
@@ -1664,9 +1664,9 @@
             this.panel7.Controls.Add(this.btn_D_Move_Cam);
             this.panel7.Controls.Add(this.btn_D_Move);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(215, 357);
+            this.panel7.Location = new System.Drawing.Point(256, 425);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(206, 173);
+            this.panel7.Size = new System.Drawing.Size(247, 207);
             this.panel7.TabIndex = 5;
             // 
             // btn_D_Rotate
@@ -1674,7 +1674,7 @@
             this.btn_D_Rotate.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_D_Rotate.Location = new System.Drawing.Point(0, 159);
             this.btn_D_Rotate.Name = "btn_D_Rotate";
-            this.btn_D_Rotate.Size = new System.Drawing.Size(183, 69);
+            this.btn_D_Rotate.Size = new System.Drawing.Size(224, 69);
             this.btn_D_Rotate.TabIndex = 4;
             this.btn_D_Rotate.Text = "D拧";
             this.btn_D_Rotate.UseVisualStyleBackColor = true;
@@ -1684,7 +1684,7 @@
             this.btn_D_Grab.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_D_Grab.Location = new System.Drawing.Point(0, 104);
             this.btn_D_Grab.Name = "btn_D_Grab";
-            this.btn_D_Grab.Size = new System.Drawing.Size(183, 55);
+            this.btn_D_Grab.Size = new System.Drawing.Size(224, 55);
             this.btn_D_Grab.TabIndex = 3;
             this.btn_D_Grab.Text = "D旋转杆上下";
             this.btn_D_Grab.UseVisualStyleBackColor = true;
@@ -1694,7 +1694,7 @@
             this.btn_D_Move_Cam.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_D_Move_Cam.Location = new System.Drawing.Point(0, 35);
             this.btn_D_Move_Cam.Name = "btn_D_Move_Cam";
-            this.btn_D_Move_Cam.Size = new System.Drawing.Size(183, 69);
+            this.btn_D_Move_Cam.Size = new System.Drawing.Size(224, 69);
             this.btn_D_Move_Cam.TabIndex = 2;
             this.btn_D_Move_Cam.Text = "D相机上下";
             this.btn_D_Move_Cam.UseVisualStyleBackColor = true;
@@ -1704,7 +1704,7 @@
             this.btn_D_Move.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_D_Move.Location = new System.Drawing.Point(0, 0);
             this.btn_D_Move.Name = "btn_D_Move";
-            this.btn_D_Move.Size = new System.Drawing.Size(183, 35);
+            this.btn_D_Move.Size = new System.Drawing.Size(224, 35);
             this.btn_D_Move.TabIndex = 1;
             this.btn_D_Move.Text = "D拍照位/旋转位";
             this.btn_D_Move.UseVisualStyleBackColor = true;
@@ -1714,7 +1714,7 @@
             this.btn_Feeding.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Feeding.Location = new System.Drawing.Point(3, 3);
             this.btn_Feeding.Name = "btn_Feeding";
-            this.btn_Feeding.Size = new System.Drawing.Size(845, 34);
+            this.btn_Feeding.Size = new System.Drawing.Size(1007, 34);
             this.btn_Feeding.TabIndex = 1;
             this.btn_Feeding.Text = "魔方上下料";
             this.btn_Feeding.UseVisualStyleBackColor = true;
@@ -1724,7 +1724,7 @@
             this.btn_Rotate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Rotate.Location = new System.Drawing.Point(3, 43);
             this.btn_Rotate.Name = "btn_Rotate";
-            this.btn_Rotate.Size = new System.Drawing.Size(845, 34);
+            this.btn_Rotate.Size = new System.Drawing.Size(1007, 34);
             this.btn_Rotate.TabIndex = 2;
             this.btn_Rotate.Text = "魔方旋转";
             this.btn_Rotate.UseVisualStyleBackColor = true;
@@ -1736,7 +1736,7 @@
             this.tabPage_Step.Location = new System.Drawing.Point(4, 4);
             this.tabPage_Step.Name = "tabPage_Step";
             this.tabPage_Step.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Step.Size = new System.Drawing.Size(1291, 860);
+            this.tabPage_Step.Size = new System.Drawing.Size(1287, 855);
             this.tabPage_Step.TabIndex = 2;
             this.tabPage_Step.Text = "Step";
             this.tabPage_Step.UseVisualStyleBackColor = true;
@@ -1753,37 +1753,37 @@
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel10.Controls.Add(this.label60, 7, 3);
-            this.tableLayoutPanel10.Controls.Add(this.label59, 6, 3);
-            this.tableLayoutPanel10.Controls.Add(this.label58, 5, 3);
-            this.tableLayoutPanel10.Controls.Add(this.label57, 4, 3);
-            this.tableLayoutPanel10.Controls.Add(this.label56, 3, 3);
-            this.tableLayoutPanel10.Controls.Add(this.label55, 2, 3);
-            this.tableLayoutPanel10.Controls.Add(this.label54, 1, 3);
-            this.tableLayoutPanel10.Controls.Add(this.label53, 0, 3);
-            this.tableLayoutPanel10.Controls.Add(this.label52, 7, 2);
-            this.tableLayoutPanel10.Controls.Add(this.label51, 6, 2);
-            this.tableLayoutPanel10.Controls.Add(this.label50, 5, 2);
-            this.tableLayoutPanel10.Controls.Add(this.label49, 4, 2);
-            this.tableLayoutPanel10.Controls.Add(this.label48, 3, 2);
-            this.tableLayoutPanel10.Controls.Add(this.label47, 2, 2);
-            this.tableLayoutPanel10.Controls.Add(this.label46, 1, 2);
-            this.tableLayoutPanel10.Controls.Add(this.label45, 0, 2);
-            this.tableLayoutPanel10.Controls.Add(this.label44, 7, 1);
-            this.tableLayoutPanel10.Controls.Add(this.label43, 6, 1);
-            this.tableLayoutPanel10.Controls.Add(this.label42, 5, 1);
-            this.tableLayoutPanel10.Controls.Add(this.label41, 4, 1);
-            this.tableLayoutPanel10.Controls.Add(this.label40, 3, 1);
-            this.tableLayoutPanel10.Controls.Add(this.label39, 2, 1);
-            this.tableLayoutPanel10.Controls.Add(this.label38, 1, 1);
-            this.tableLayoutPanel10.Controls.Add(this.label37, 0, 1);
-            this.tableLayoutPanel10.Controls.Add(this.label36, 7, 0);
-            this.tableLayoutPanel10.Controls.Add(this.label35, 6, 0);
-            this.tableLayoutPanel10.Controls.Add(this.label34, 5, 0);
-            this.tableLayoutPanel10.Controls.Add(this.label33, 4, 0);
-            this.tableLayoutPanel10.Controls.Add(this.label32, 3, 0);
-            this.tableLayoutPanel10.Controls.Add(this.label30, 2, 0);
-            this.tableLayoutPanel10.Controls.Add(this.label29, 1, 0);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_Servo_Rotate_R, 7, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_Servo_Move_R, 6, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_Servo_Feeding_R, 5, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_Servo_Grab_R, 4, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_IOlink_Grab_R, 3, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_IOlink_Rotate_R, 2, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_IOlink_Move_Cam_R, 1, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_P_Rotate, 0, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_Servo_Rotate_A, 7, 2);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_Servo_Move_A, 6, 2);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_Servo_Feeding_A, 5, 2);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_Servo_Grab_A, 4, 2);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_IOlink_Grab_A, 3, 2);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_IOlink_Rotate_A, 2, 2);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_IOlink_Move_Cam_A, 1, 2);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_P_Acquire, 0, 2);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_Servo_Rotate_S, 7, 1);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_Servo_Move_S, 6, 1);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_Servo_Feeding_S, 5, 1);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_Servo_Grab_S, 4, 1);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_IOlink_Grab_S, 3, 1);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_IOlink_Rotate_S, 2, 1);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_IOlink_Move_Cam_S, 1, 1);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_P_Start, 0, 1);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_Servo_Rotate, 7, 0);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_Servo_Move, 6, 0);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_Servo_Feeding, 5, 0);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_Servo_Grab, 4, 0);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_IOlink_Grab, 3, 0);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_IOlink_Rotate, 2, 0);
+            this.tableLayoutPanel10.Controls.Add(this.lbl_IOlink_Move_Cam, 1, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
@@ -1792,319 +1792,319 @@
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(1285, 166);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(1281, 159);
             this.tableLayoutPanel10.TabIndex = 1;
             // 
-            // label60
+            // lbl_Servo_Rotate_R
             // 
-            this.label60.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label60.Location = new System.Drawing.Point(1114, 124);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(167, 41);
-            this.label60.TabIndex = 31;
-            this.label60.Text = "起始位";
-            this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Servo_Rotate_R.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Servo_Rotate_R.Location = new System.Drawing.Point(1114, 118);
+            this.lbl_Servo_Rotate_R.Name = "lbl_Servo_Rotate_R";
+            this.lbl_Servo_Rotate_R.Size = new System.Drawing.Size(163, 40);
+            this.lbl_Servo_Rotate_R.TabIndex = 31;
+            this.lbl_Servo_Rotate_R.Text = "起始位";
+            this.lbl_Servo_Rotate_R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label59
+            // lbl_Servo_Move_R
             // 
-            this.label59.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label59.Location = new System.Drawing.Point(947, 124);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(160, 41);
-            this.label59.TabIndex = 30;
-            this.label59.Text = "旋转位";
-            this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Servo_Move_R.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Servo_Move_R.Location = new System.Drawing.Point(947, 118);
+            this.lbl_Servo_Move_R.Name = "lbl_Servo_Move_R";
+            this.lbl_Servo_Move_R.Size = new System.Drawing.Size(160, 40);
+            this.lbl_Servo_Move_R.TabIndex = 30;
+            this.lbl_Servo_Move_R.Text = "旋转位";
+            this.lbl_Servo_Move_R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label58
+            // lbl_Servo_Feeding_R
             // 
-            this.label58.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label58.Location = new System.Drawing.Point(780, 124);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(160, 41);
-            this.label58.TabIndex = 29;
-            this.label58.Text = "工作位";
-            this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Servo_Feeding_R.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Servo_Feeding_R.Location = new System.Drawing.Point(780, 118);
+            this.lbl_Servo_Feeding_R.Name = "lbl_Servo_Feeding_R";
+            this.lbl_Servo_Feeding_R.Size = new System.Drawing.Size(160, 40);
+            this.lbl_Servo_Feeding_R.TabIndex = 29;
+            this.lbl_Servo_Feeding_R.Text = "工作位";
+            this.lbl_Servo_Feeding_R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label57
+            // lbl_Servo_Grab_R
             // 
-            this.label57.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label57.Location = new System.Drawing.Point(613, 124);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(160, 41);
-            this.label57.TabIndex = 28;
-            this.label57.Text = "旋转位";
-            this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Servo_Grab_R.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Servo_Grab_R.Location = new System.Drawing.Point(613, 118);
+            this.lbl_Servo_Grab_R.Name = "lbl_Servo_Grab_R";
+            this.lbl_Servo_Grab_R.Size = new System.Drawing.Size(160, 40);
+            this.lbl_Servo_Grab_R.TabIndex = 28;
+            this.lbl_Servo_Grab_R.Text = "旋转位";
+            this.lbl_Servo_Grab_R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label56
+            // lbl_IOlink_Grab_R
             // 
-            this.label56.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label56.Location = new System.Drawing.Point(446, 124);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(160, 41);
-            this.label56.TabIndex = 27;
-            this.label56.Text = "旋转位";
-            this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_IOlink_Grab_R.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_IOlink_Grab_R.Location = new System.Drawing.Point(446, 118);
+            this.lbl_IOlink_Grab_R.Name = "lbl_IOlink_Grab_R";
+            this.lbl_IOlink_Grab_R.Size = new System.Drawing.Size(160, 40);
+            this.lbl_IOlink_Grab_R.TabIndex = 27;
+            this.lbl_IOlink_Grab_R.Text = "旋转位";
+            this.lbl_IOlink_Grab_R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label55
+            // lbl_IOlink_Rotate_R
             // 
-            this.label55.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label55.Location = new System.Drawing.Point(279, 124);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(160, 41);
-            this.label55.TabIndex = 26;
-            this.label55.Text = "旋转位";
-            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_IOlink_Rotate_R.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_IOlink_Rotate_R.Location = new System.Drawing.Point(279, 118);
+            this.lbl_IOlink_Rotate_R.Name = "lbl_IOlink_Rotate_R";
+            this.lbl_IOlink_Rotate_R.Size = new System.Drawing.Size(160, 40);
+            this.lbl_IOlink_Rotate_R.TabIndex = 26;
+            this.lbl_IOlink_Rotate_R.Text = "旋转位";
+            this.lbl_IOlink_Rotate_R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label54
+            // lbl_IOlink_Move_Cam_R
             // 
-            this.label54.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label54.Location = new System.Drawing.Point(112, 124);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(160, 41);
-            this.label54.TabIndex = 25;
-            this.label54.Text = "原位";
-            this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_IOlink_Move_Cam_R.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_IOlink_Move_Cam_R.Location = new System.Drawing.Point(112, 118);
+            this.lbl_IOlink_Move_Cam_R.Name = "lbl_IOlink_Move_Cam_R";
+            this.lbl_IOlink_Move_Cam_R.Size = new System.Drawing.Size(160, 40);
+            this.lbl_IOlink_Move_Cam_R.TabIndex = 25;
+            this.lbl_IOlink_Move_Cam_R.Text = "原位";
+            this.lbl_IOlink_Move_Cam_R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label53
+            // lbl_P_Rotate
             // 
-            this.label53.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label53.Location = new System.Drawing.Point(4, 124);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(101, 41);
-            this.label53.TabIndex = 24;
-            this.label53.Text = "Rotate";
+            this.lbl_P_Rotate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_P_Rotate.Location = new System.Drawing.Point(4, 118);
+            this.lbl_P_Rotate.Name = "lbl_P_Rotate";
+            this.lbl_P_Rotate.Size = new System.Drawing.Size(101, 40);
+            this.lbl_P_Rotate.TabIndex = 24;
+            this.lbl_P_Rotate.Text = "Rotate";
             // 
-            // label52
+            // lbl_Servo_Rotate_A
             // 
-            this.label52.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label52.Location = new System.Drawing.Point(1114, 83);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(167, 40);
-            this.label52.TabIndex = 23;
-            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Servo_Rotate_A.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Servo_Rotate_A.Location = new System.Drawing.Point(1114, 79);
+            this.lbl_Servo_Rotate_A.Name = "lbl_Servo_Rotate_A";
+            this.lbl_Servo_Rotate_A.Size = new System.Drawing.Size(163, 38);
+            this.lbl_Servo_Rotate_A.TabIndex = 23;
+            this.lbl_Servo_Rotate_A.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label51
+            // lbl_Servo_Move_A
             // 
-            this.label51.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label51.Location = new System.Drawing.Point(947, 83);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(160, 40);
-            this.label51.TabIndex = 22;
-            this.label51.Text = "取像位";
-            this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Servo_Move_A.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Servo_Move_A.Location = new System.Drawing.Point(947, 79);
+            this.lbl_Servo_Move_A.Name = "lbl_Servo_Move_A";
+            this.lbl_Servo_Move_A.Size = new System.Drawing.Size(160, 38);
+            this.lbl_Servo_Move_A.TabIndex = 22;
+            this.lbl_Servo_Move_A.Text = "取像位";
+            this.lbl_Servo_Move_A.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label50
+            // lbl_Servo_Feeding_A
             // 
-            this.label50.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label50.Location = new System.Drawing.Point(780, 83);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(160, 40);
-            this.label50.TabIndex = 21;
-            this.label50.Text = "工作位";
-            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Servo_Feeding_A.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Servo_Feeding_A.Location = new System.Drawing.Point(780, 79);
+            this.lbl_Servo_Feeding_A.Name = "lbl_Servo_Feeding_A";
+            this.lbl_Servo_Feeding_A.Size = new System.Drawing.Size(160, 38);
+            this.lbl_Servo_Feeding_A.TabIndex = 21;
+            this.lbl_Servo_Feeding_A.Text = "工作位";
+            this.lbl_Servo_Feeding_A.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label49
+            // lbl_Servo_Grab_A
             // 
-            this.label49.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label49.Location = new System.Drawing.Point(613, 83);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(160, 40);
-            this.label49.TabIndex = 20;
-            this.label49.Text = "原位";
-            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Servo_Grab_A.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Servo_Grab_A.Location = new System.Drawing.Point(613, 79);
+            this.lbl_Servo_Grab_A.Name = "lbl_Servo_Grab_A";
+            this.lbl_Servo_Grab_A.Size = new System.Drawing.Size(160, 38);
+            this.lbl_Servo_Grab_A.TabIndex = 20;
+            this.lbl_Servo_Grab_A.Text = "原位";
+            this.lbl_Servo_Grab_A.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label48
+            // lbl_IOlink_Grab_A
             // 
-            this.label48.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label48.Location = new System.Drawing.Point(446, 83);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(160, 40);
-            this.label48.TabIndex = 19;
-            this.label48.Text = "原位";
-            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_IOlink_Grab_A.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_IOlink_Grab_A.Location = new System.Drawing.Point(446, 79);
+            this.lbl_IOlink_Grab_A.Name = "lbl_IOlink_Grab_A";
+            this.lbl_IOlink_Grab_A.Size = new System.Drawing.Size(160, 38);
+            this.lbl_IOlink_Grab_A.TabIndex = 19;
+            this.lbl_IOlink_Grab_A.Text = "原位";
+            this.lbl_IOlink_Grab_A.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label47
+            // lbl_IOlink_Rotate_A
             // 
-            this.label47.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label47.Location = new System.Drawing.Point(279, 83);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(160, 40);
-            this.label47.TabIndex = 18;
-            this.label47.Text = "取像位";
-            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_IOlink_Rotate_A.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_IOlink_Rotate_A.Location = new System.Drawing.Point(279, 79);
+            this.lbl_IOlink_Rotate_A.Name = "lbl_IOlink_Rotate_A";
+            this.lbl_IOlink_Rotate_A.Size = new System.Drawing.Size(160, 38);
+            this.lbl_IOlink_Rotate_A.TabIndex = 18;
+            this.lbl_IOlink_Rotate_A.Text = "取像位";
+            this.lbl_IOlink_Rotate_A.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label46
+            // lbl_IOlink_Move_Cam_A
             // 
-            this.label46.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label46.Location = new System.Drawing.Point(112, 83);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(160, 40);
-            this.label46.TabIndex = 17;
-            this.label46.Text = "取像位";
-            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_IOlink_Move_Cam_A.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_IOlink_Move_Cam_A.Location = new System.Drawing.Point(112, 79);
+            this.lbl_IOlink_Move_Cam_A.Name = "lbl_IOlink_Move_Cam_A";
+            this.lbl_IOlink_Move_Cam_A.Size = new System.Drawing.Size(160, 38);
+            this.lbl_IOlink_Move_Cam_A.TabIndex = 17;
+            this.lbl_IOlink_Move_Cam_A.Text = "取像位";
+            this.lbl_IOlink_Move_Cam_A.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label45
+            // lbl_P_Acquire
             // 
-            this.label45.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label45.Location = new System.Drawing.Point(4, 83);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(101, 40);
-            this.label45.TabIndex = 16;
-            this.label45.Text = "Acquire";
+            this.lbl_P_Acquire.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_P_Acquire.Location = new System.Drawing.Point(4, 79);
+            this.lbl_P_Acquire.Name = "lbl_P_Acquire";
+            this.lbl_P_Acquire.Size = new System.Drawing.Size(101, 38);
+            this.lbl_P_Acquire.TabIndex = 16;
+            this.lbl_P_Acquire.Text = "Acquire";
             // 
-            // label44
+            // lbl_Servo_Rotate_S
             // 
-            this.label44.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label44.Location = new System.Drawing.Point(1114, 42);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(167, 40);
-            this.label44.TabIndex = 15;
-            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Servo_Rotate_S.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Servo_Rotate_S.Location = new System.Drawing.Point(1114, 40);
+            this.lbl_Servo_Rotate_S.Name = "lbl_Servo_Rotate_S";
+            this.lbl_Servo_Rotate_S.Size = new System.Drawing.Size(163, 38);
+            this.lbl_Servo_Rotate_S.TabIndex = 15;
+            this.lbl_Servo_Rotate_S.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label43
+            // lbl_Servo_Move_S
             // 
-            this.label43.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label43.Location = new System.Drawing.Point(947, 42);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(160, 40);
-            this.label43.TabIndex = 14;
-            this.label43.Text = "取像位";
-            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Servo_Move_S.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Servo_Move_S.Location = new System.Drawing.Point(947, 40);
+            this.lbl_Servo_Move_S.Name = "lbl_Servo_Move_S";
+            this.lbl_Servo_Move_S.Size = new System.Drawing.Size(160, 38);
+            this.lbl_Servo_Move_S.TabIndex = 14;
+            this.lbl_Servo_Move_S.Text = "取像位";
+            this.lbl_Servo_Move_S.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label42
+            // lbl_Servo_Feeding_S
             // 
-            this.label42.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label42.Location = new System.Drawing.Point(780, 42);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(160, 40);
-            this.label42.TabIndex = 13;
-            this.label42.Text = "上料位";
-            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Servo_Feeding_S.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Servo_Feeding_S.Location = new System.Drawing.Point(780, 40);
+            this.lbl_Servo_Feeding_S.Name = "lbl_Servo_Feeding_S";
+            this.lbl_Servo_Feeding_S.Size = new System.Drawing.Size(160, 38);
+            this.lbl_Servo_Feeding_S.TabIndex = 13;
+            this.lbl_Servo_Feeding_S.Text = "上料位";
+            this.lbl_Servo_Feeding_S.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label41
+            // lbl_Servo_Grab_S
             // 
-            this.label41.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label41.Location = new System.Drawing.Point(613, 42);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(160, 40);
-            this.label41.TabIndex = 12;
-            this.label41.Text = "原位";
-            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Servo_Grab_S.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Servo_Grab_S.Location = new System.Drawing.Point(613, 40);
+            this.lbl_Servo_Grab_S.Name = "lbl_Servo_Grab_S";
+            this.lbl_Servo_Grab_S.Size = new System.Drawing.Size(160, 38);
+            this.lbl_Servo_Grab_S.TabIndex = 12;
+            this.lbl_Servo_Grab_S.Text = "原位";
+            this.lbl_Servo_Grab_S.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label40
+            // lbl_IOlink_Grab_S
             // 
-            this.label40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label40.Location = new System.Drawing.Point(446, 42);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(160, 40);
-            this.label40.TabIndex = 11;
-            this.label40.Text = "原位";
-            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_IOlink_Grab_S.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_IOlink_Grab_S.Location = new System.Drawing.Point(446, 40);
+            this.lbl_IOlink_Grab_S.Name = "lbl_IOlink_Grab_S";
+            this.lbl_IOlink_Grab_S.Size = new System.Drawing.Size(160, 38);
+            this.lbl_IOlink_Grab_S.TabIndex = 11;
+            this.lbl_IOlink_Grab_S.Text = "原位";
+            this.lbl_IOlink_Grab_S.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label39
+            // lbl_IOlink_Rotate_S
             // 
-            this.label39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label39.Location = new System.Drawing.Point(279, 42);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(160, 40);
-            this.label39.TabIndex = 10;
-            this.label39.Text = "取像位";
-            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_IOlink_Rotate_S.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_IOlink_Rotate_S.Location = new System.Drawing.Point(279, 40);
+            this.lbl_IOlink_Rotate_S.Name = "lbl_IOlink_Rotate_S";
+            this.lbl_IOlink_Rotate_S.Size = new System.Drawing.Size(160, 38);
+            this.lbl_IOlink_Rotate_S.TabIndex = 10;
+            this.lbl_IOlink_Rotate_S.Text = "取像位";
+            this.lbl_IOlink_Rotate_S.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label38
+            // lbl_IOlink_Move_Cam_S
             // 
-            this.label38.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label38.Location = new System.Drawing.Point(112, 42);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(160, 40);
-            this.label38.TabIndex = 9;
-            this.label38.Text = "原位";
-            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_IOlink_Move_Cam_S.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_IOlink_Move_Cam_S.Location = new System.Drawing.Point(112, 40);
+            this.lbl_IOlink_Move_Cam_S.Name = "lbl_IOlink_Move_Cam_S";
+            this.lbl_IOlink_Move_Cam_S.Size = new System.Drawing.Size(160, 38);
+            this.lbl_IOlink_Move_Cam_S.TabIndex = 9;
+            this.lbl_IOlink_Move_Cam_S.Text = "原位";
+            this.lbl_IOlink_Move_Cam_S.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label37
+            // lbl_P_Start
             // 
-            this.label37.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label37.Location = new System.Drawing.Point(4, 42);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(101, 40);
-            this.label37.TabIndex = 8;
-            this.label37.Text = "Start";
+            this.lbl_P_Start.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_P_Start.Location = new System.Drawing.Point(4, 40);
+            this.lbl_P_Start.Name = "lbl_P_Start";
+            this.lbl_P_Start.Size = new System.Drawing.Size(101, 38);
+            this.lbl_P_Start.TabIndex = 8;
+            this.lbl_P_Start.Text = "Start";
             // 
-            // label36
+            // lbl_Servo_Rotate
             // 
-            this.label36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label36.Location = new System.Drawing.Point(1114, 1);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(167, 40);
-            this.label36.TabIndex = 7;
-            this.label36.Text = "旋杆旋转";
-            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Servo_Rotate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Servo_Rotate.Location = new System.Drawing.Point(1114, 1);
+            this.lbl_Servo_Rotate.Name = "lbl_Servo_Rotate";
+            this.lbl_Servo_Rotate.Size = new System.Drawing.Size(163, 38);
+            this.lbl_Servo_Rotate.TabIndex = 7;
+            this.lbl_Servo_Rotate.Text = "旋杆旋转";
+            this.lbl_Servo_Rotate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label35
+            // lbl_Servo_Move
             // 
-            this.label35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label35.Location = new System.Drawing.Point(947, 1);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(160, 40);
-            this.label35.TabIndex = 6;
-            this.label35.Text = "模块水平移动";
-            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Servo_Move.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Servo_Move.Location = new System.Drawing.Point(947, 1);
+            this.lbl_Servo_Move.Name = "lbl_Servo_Move";
+            this.lbl_Servo_Move.Size = new System.Drawing.Size(160, 38);
+            this.lbl_Servo_Move.TabIndex = 6;
+            this.lbl_Servo_Move.Text = "模块水平移动";
+            this.lbl_Servo_Move.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label34
+            // lbl_Servo_Feeding
             // 
-            this.label34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label34.Location = new System.Drawing.Point(780, 1);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(160, 40);
-            this.label34.TabIndex = 5;
-            this.label34.Text = "上下料";
-            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Servo_Feeding.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Servo_Feeding.Location = new System.Drawing.Point(780, 1);
+            this.lbl_Servo_Feeding.Name = "lbl_Servo_Feeding";
+            this.lbl_Servo_Feeding.Size = new System.Drawing.Size(160, 38);
+            this.lbl_Servo_Feeding.TabIndex = 5;
+            this.lbl_Servo_Feeding.Text = "上下料";
+            this.lbl_Servo_Feeding.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label33
+            // lbl_Servo_Grab
             // 
-            this.label33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label33.Location = new System.Drawing.Point(613, 1);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(160, 40);
-            this.label33.TabIndex = 4;
-            this.label33.Text = "旋杆竖直移动";
-            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Servo_Grab.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Servo_Grab.Location = new System.Drawing.Point(613, 1);
+            this.lbl_Servo_Grab.Name = "lbl_Servo_Grab";
+            this.lbl_Servo_Grab.Size = new System.Drawing.Size(160, 38);
+            this.lbl_Servo_Grab.TabIndex = 4;
+            this.lbl_Servo_Grab.Text = "旋杆竖直移动";
+            this.lbl_Servo_Grab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label32
+            // lbl_IOlink_Grab
             // 
-            this.label32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label32.Location = new System.Drawing.Point(446, 1);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(160, 40);
-            this.label32.TabIndex = 3;
-            this.label32.Text = "旋杆前后移动";
-            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_IOlink_Grab.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_IOlink_Grab.Location = new System.Drawing.Point(446, 1);
+            this.lbl_IOlink_Grab.Name = "lbl_IOlink_Grab";
+            this.lbl_IOlink_Grab.Size = new System.Drawing.Size(160, 38);
+            this.lbl_IOlink_Grab.TabIndex = 3;
+            this.lbl_IOlink_Grab.Text = "旋杆前后移动";
+            this.lbl_IOlink_Grab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label30
+            // lbl_IOlink_Rotate
             // 
-            this.label30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label30.Location = new System.Drawing.Point(279, 1);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(160, 40);
-            this.label30.TabIndex = 2;
-            this.label30.Text = "魔方姿态";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_IOlink_Rotate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_IOlink_Rotate.Location = new System.Drawing.Point(279, 1);
+            this.lbl_IOlink_Rotate.Name = "lbl_IOlink_Rotate";
+            this.lbl_IOlink_Rotate.Size = new System.Drawing.Size(160, 38);
+            this.lbl_IOlink_Rotate.TabIndex = 2;
+            this.lbl_IOlink_Rotate.Text = "魔方姿态";
+            this.lbl_IOlink_Rotate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label29
+            // lbl_IOlink_Move_Cam
             // 
-            this.label29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label29.Location = new System.Drawing.Point(112, 1);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(160, 40);
-            this.label29.TabIndex = 1;
-            this.label29.Text = "相机上下移动";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_IOlink_Move_Cam.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_IOlink_Move_Cam.Location = new System.Drawing.Point(112, 1);
+            this.lbl_IOlink_Move_Cam.Name = "lbl_IOlink_Move_Cam";
+            this.lbl_IOlink_Move_Cam.Size = new System.Drawing.Size(160, 38);
+            this.lbl_IOlink_Move_Cam.TabIndex = 1;
+            this.lbl_IOlink_Move_Cam.Text = "相机上下移动";
+            this.lbl_IOlink_Move_Cam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // splitContainer1
             // 
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 169);
+            this.splitContainer1.Location = new System.Drawing.Point(3, 162);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -2127,8 +2127,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.btn_2_P_Acquire);
             this.splitContainer1.Panel2.Controls.Add(this.btn_2_P_Rotate);
             this.splitContainer1.Panel2.Controls.Add(this.btn_2_P_Start);
-            this.splitContainer1.Size = new System.Drawing.Size(1285, 688);
-            this.splitContainer1.SplitterDistance = 718;
+            this.splitContainer1.Size = new System.Drawing.Size(1281, 690);
+            this.splitContainer1.SplitterDistance = 715;
             this.splitContainer1.TabIndex = 0;
             // 
             // groupBox7
@@ -2148,9 +2148,9 @@
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
-            this.tableLayoutPanel9.Controls.Add(this.radioButton9, 2, 0);
-            this.tableLayoutPanel9.Controls.Add(this.radioButton12, 3, 0);
-            this.tableLayoutPanel9.Controls.Add(this.label31, 1, 0);
+            this.tableLayoutPanel9.Controls.Add(this.rbtn_Feeding_P1, 2, 0);
+            this.tableLayoutPanel9.Controls.Add(this.rbtn_Feeding_P2, 3, 0);
+            this.tableLayoutPanel9.Controls.Add(this.lbl_ActPos_Feeding, 1, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 30);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
@@ -2159,38 +2159,38 @@
             this.tableLayoutPanel9.Size = new System.Drawing.Size(396, 48);
             this.tableLayoutPanel9.TabIndex = 0;
             // 
-            // radioButton9
+            // rbtn_Feeding_P1
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton9.Location = new System.Drawing.Point(173, 3);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(107, 42);
-            this.radioButton9.TabIndex = 6;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "上料位";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.rbtn_Feeding_P1.AutoSize = true;
+            this.rbtn_Feeding_P1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_Feeding_P1.Location = new System.Drawing.Point(173, 3);
+            this.rbtn_Feeding_P1.Name = "rbtn_Feeding_P1";
+            this.rbtn_Feeding_P1.Size = new System.Drawing.Size(107, 42);
+            this.rbtn_Feeding_P1.TabIndex = 6;
+            this.rbtn_Feeding_P1.TabStop = true;
+            this.rbtn_Feeding_P1.Text = "上料位";
+            this.rbtn_Feeding_P1.UseVisualStyleBackColor = true;
             // 
-            // radioButton12
+            // rbtn_Feeding_P2
             // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton12.Location = new System.Drawing.Point(286, 3);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(107, 42);
-            this.radioButton12.TabIndex = 7;
-            this.radioButton12.TabStop = true;
-            this.radioButton12.Text = "工作位";
-            this.radioButton12.UseVisualStyleBackColor = true;
+            this.rbtn_Feeding_P2.AutoSize = true;
+            this.rbtn_Feeding_P2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_Feeding_P2.Location = new System.Drawing.Point(286, 3);
+            this.rbtn_Feeding_P2.Name = "rbtn_Feeding_P2";
+            this.rbtn_Feeding_P2.Size = new System.Drawing.Size(107, 42);
+            this.rbtn_Feeding_P2.TabIndex = 7;
+            this.rbtn_Feeding_P2.TabStop = true;
+            this.rbtn_Feeding_P2.Text = "工作位";
+            this.rbtn_Feeding_P2.UseVisualStyleBackColor = true;
             // 
-            // label31
+            // lbl_ActPos_Feeding
             // 
-            this.label31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label31.Location = new System.Drawing.Point(37, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(130, 48);
-            this.label31.TabIndex = 20;
+            this.lbl_ActPos_Feeding.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_ActPos_Feeding.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_ActPos_Feeding.Location = new System.Drawing.Point(37, 0);
+            this.lbl_ActPos_Feeding.Name = "lbl_ActPos_Feeding";
+            this.lbl_ActPos_Feeding.Size = new System.Drawing.Size(130, 48);
+            this.lbl_ActPos_Feeding.TabIndex = 20;
             // 
             // groupBox6
             // 
@@ -2209,14 +2209,14 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
-            this.tableLayoutPanel8.Controls.Add(this.label24, 1, 1);
+            this.tableLayoutPanel8.Controls.Add(this.lbl_ActPos_MoveD, 1, 1);
             this.tableLayoutPanel8.Controls.Add(this.label25, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.label26, 0, 1);
-            this.tableLayoutPanel8.Controls.Add(this.radioButton7, 2, 0);
-            this.tableLayoutPanel8.Controls.Add(this.radioButton8, 3, 0);
-            this.tableLayoutPanel8.Controls.Add(this.radioButton10, 2, 1);
-            this.tableLayoutPanel8.Controls.Add(this.radioButton11, 3, 1);
-            this.tableLayoutPanel8.Controls.Add(this.label27, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.rbtn_BlockMoveU_P1, 2, 0);
+            this.tableLayoutPanel8.Controls.Add(this.rbtn_BlockMoveU_P2, 3, 0);
+            this.tableLayoutPanel8.Controls.Add(this.rbtn_BlockMoveD_P1, 2, 1);
+            this.tableLayoutPanel8.Controls.Add(this.rbtn_BlockMoveD_P2, 3, 1);
+            this.tableLayoutPanel8.Controls.Add(this.lbl_ActPos_MoveU, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 30);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -2230,14 +2230,14 @@
             this.tableLayoutPanel8.Size = new System.Drawing.Size(396, 91);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
-            // label24
+            // lbl_ActPos_MoveD
             // 
-            this.label24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label24.Location = new System.Drawing.Point(37, 45);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(130, 46);
-            this.label24.TabIndex = 21;
+            this.lbl_ActPos_MoveD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_ActPos_MoveD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_ActPos_MoveD.Location = new System.Drawing.Point(37, 45);
+            this.lbl_ActPos_MoveD.Name = "lbl_ActPos_MoveD";
+            this.lbl_ActPos_MoveD.Size = new System.Drawing.Size(130, 46);
+            this.lbl_ActPos_MoveD.TabIndex = 21;
             // 
             // label25
             // 
@@ -2257,62 +2257,62 @@
             this.label26.TabIndex = 1;
             this.label26.Text = "D";
             // 
-            // radioButton7
+            // rbtn_BlockMoveU_P1
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton7.Location = new System.Drawing.Point(173, 3);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(107, 39);
-            this.radioButton7.TabIndex = 6;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "取像位";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.rbtn_BlockMoveU_P1.AutoSize = true;
+            this.rbtn_BlockMoveU_P1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_BlockMoveU_P1.Location = new System.Drawing.Point(173, 3);
+            this.rbtn_BlockMoveU_P1.Name = "rbtn_BlockMoveU_P1";
+            this.rbtn_BlockMoveU_P1.Size = new System.Drawing.Size(107, 39);
+            this.rbtn_BlockMoveU_P1.TabIndex = 6;
+            this.rbtn_BlockMoveU_P1.TabStop = true;
+            this.rbtn_BlockMoveU_P1.Text = "取像位";
+            this.rbtn_BlockMoveU_P1.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // rbtn_BlockMoveU_P2
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton8.Location = new System.Drawing.Point(286, 3);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(107, 39);
-            this.radioButton8.TabIndex = 7;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "旋转位";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.rbtn_BlockMoveU_P2.AutoSize = true;
+            this.rbtn_BlockMoveU_P2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_BlockMoveU_P2.Location = new System.Drawing.Point(286, 3);
+            this.rbtn_BlockMoveU_P2.Name = "rbtn_BlockMoveU_P2";
+            this.rbtn_BlockMoveU_P2.Size = new System.Drawing.Size(107, 39);
+            this.rbtn_BlockMoveU_P2.TabIndex = 7;
+            this.rbtn_BlockMoveU_P2.TabStop = true;
+            this.rbtn_BlockMoveU_P2.Text = "旋转位";
+            this.rbtn_BlockMoveU_P2.UseVisualStyleBackColor = true;
             // 
-            // radioButton10
+            // rbtn_BlockMoveD_P1
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton10.Location = new System.Drawing.Point(173, 48);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(107, 40);
-            this.radioButton10.TabIndex = 9;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "取像位";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.rbtn_BlockMoveD_P1.AutoSize = true;
+            this.rbtn_BlockMoveD_P1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_BlockMoveD_P1.Location = new System.Drawing.Point(173, 48);
+            this.rbtn_BlockMoveD_P1.Name = "rbtn_BlockMoveD_P1";
+            this.rbtn_BlockMoveD_P1.Size = new System.Drawing.Size(107, 40);
+            this.rbtn_BlockMoveD_P1.TabIndex = 9;
+            this.rbtn_BlockMoveD_P1.TabStop = true;
+            this.rbtn_BlockMoveD_P1.Text = "取像位";
+            this.rbtn_BlockMoveD_P1.UseVisualStyleBackColor = true;
             // 
-            // radioButton11
+            // rbtn_BlockMoveD_P2
             // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton11.Location = new System.Drawing.Point(286, 48);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(107, 40);
-            this.radioButton11.TabIndex = 10;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "旋转位";
-            this.radioButton11.UseVisualStyleBackColor = true;
+            this.rbtn_BlockMoveD_P2.AutoSize = true;
+            this.rbtn_BlockMoveD_P2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_BlockMoveD_P2.Location = new System.Drawing.Point(286, 48);
+            this.rbtn_BlockMoveD_P2.Name = "rbtn_BlockMoveD_P2";
+            this.rbtn_BlockMoveD_P2.Size = new System.Drawing.Size(107, 40);
+            this.rbtn_BlockMoveD_P2.TabIndex = 10;
+            this.rbtn_BlockMoveD_P2.TabStop = true;
+            this.rbtn_BlockMoveD_P2.Text = "旋转位";
+            this.rbtn_BlockMoveD_P2.UseVisualStyleBackColor = true;
             // 
-            // label27
+            // lbl_ActPos_MoveU
             // 
-            this.label27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label27.Location = new System.Drawing.Point(37, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(130, 45);
-            this.label27.TabIndex = 20;
+            this.lbl_ActPos_MoveU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_ActPos_MoveU.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_ActPos_MoveU.Location = new System.Drawing.Point(37, 0);
+            this.lbl_ActPos_MoveU.Name = "lbl_ActPos_MoveU";
+            this.lbl_ActPos_MoveU.Size = new System.Drawing.Size(130, 45);
+            this.lbl_ActPos_MoveU.TabIndex = 20;
             // 
             // groupBox5
             // 
@@ -2332,18 +2332,18 @@
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel7.Controls.Add(this.label23, 1, 5);
-            this.tableLayoutPanel7.Controls.Add(this.label22, 1, 4);
-            this.tableLayoutPanel7.Controls.Add(this.label21, 1, 3);
-            this.tableLayoutPanel7.Controls.Add(this.label20, 1, 2);
+            this.tableLayoutPanel7.Controls.Add(this.lbl_ActPos_RotateB, 1, 5);
+            this.tableLayoutPanel7.Controls.Add(this.lbl_ActPos_RotateF, 1, 4);
+            this.tableLayoutPanel7.Controls.Add(this.lbl_ActPos_RotateR, 1, 3);
+            this.tableLayoutPanel7.Controls.Add(this.lbl_ActPos_RotateL, 1, 2);
             this.tableLayoutPanel7.Controls.Add(this.label19, 0, 5);
             this.tableLayoutPanel7.Controls.Add(this.label9, 0, 4);
             this.tableLayoutPanel7.Controls.Add(this.label8, 0, 3);
             this.tableLayoutPanel7.Controls.Add(this.label7, 0, 2);
-            this.tableLayoutPanel7.Controls.Add(this.label3, 1, 1);
+            this.tableLayoutPanel7.Controls.Add(this.lbl_ActPos_RotateD, 1, 1);
             this.tableLayoutPanel7.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.label5, 0, 1);
-            this.tableLayoutPanel7.Controls.Add(this.label6, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.lbl_ActPos_RotateU, 1, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 30);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -2357,41 +2357,41 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(162, 204);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
-            // label23
+            // lbl_ActPos_RotateB
             // 
-            this.label23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label23.Location = new System.Drawing.Point(37, 165);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(122, 39);
-            this.label23.TabIndex = 29;
+            this.lbl_ActPos_RotateB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_ActPos_RotateB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_ActPos_RotateB.Location = new System.Drawing.Point(37, 165);
+            this.lbl_ActPos_RotateB.Name = "lbl_ActPos_RotateB";
+            this.lbl_ActPos_RotateB.Size = new System.Drawing.Size(122, 39);
+            this.lbl_ActPos_RotateB.TabIndex = 29;
             // 
-            // label22
+            // lbl_ActPos_RotateF
             // 
-            this.label22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label22.Location = new System.Drawing.Point(37, 132);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(122, 33);
-            this.label22.TabIndex = 28;
+            this.lbl_ActPos_RotateF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_ActPos_RotateF.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_ActPos_RotateF.Location = new System.Drawing.Point(37, 132);
+            this.lbl_ActPos_RotateF.Name = "lbl_ActPos_RotateF";
+            this.lbl_ActPos_RotateF.Size = new System.Drawing.Size(122, 33);
+            this.lbl_ActPos_RotateF.TabIndex = 28;
             // 
-            // label21
+            // lbl_ActPos_RotateR
             // 
-            this.label21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label21.Location = new System.Drawing.Point(37, 99);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(122, 33);
-            this.label21.TabIndex = 27;
+            this.lbl_ActPos_RotateR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_ActPos_RotateR.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_ActPos_RotateR.Location = new System.Drawing.Point(37, 99);
+            this.lbl_ActPos_RotateR.Name = "lbl_ActPos_RotateR";
+            this.lbl_ActPos_RotateR.Size = new System.Drawing.Size(122, 33);
+            this.lbl_ActPos_RotateR.TabIndex = 27;
             // 
-            // label20
+            // lbl_ActPos_RotateL
             // 
-            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label20.Location = new System.Drawing.Point(37, 66);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(122, 33);
-            this.label20.TabIndex = 26;
+            this.lbl_ActPos_RotateL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_ActPos_RotateL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_ActPos_RotateL.Location = new System.Drawing.Point(37, 66);
+            this.lbl_ActPos_RotateL.Name = "lbl_ActPos_RotateL";
+            this.lbl_ActPos_RotateL.Size = new System.Drawing.Size(122, 33);
+            this.lbl_ActPos_RotateL.TabIndex = 26;
             // 
             // label19
             // 
@@ -2429,14 +2429,14 @@
             this.label7.TabIndex = 22;
             this.label7.Text = "L";
             // 
-            // label3
+            // lbl_ActPos_RotateD
             // 
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(37, 33);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 33);
-            this.label3.TabIndex = 21;
+            this.lbl_ActPos_RotateD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_ActPos_RotateD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_ActPos_RotateD.Location = new System.Drawing.Point(37, 33);
+            this.lbl_ActPos_RotateD.Name = "lbl_ActPos_RotateD";
+            this.lbl_ActPos_RotateD.Size = new System.Drawing.Size(122, 33);
+            this.lbl_ActPos_RotateD.TabIndex = 21;
             // 
             // label4
             // 
@@ -2456,14 +2456,14 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "D";
             // 
-            // label6
+            // lbl_ActPos_RotateU
             // 
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(37, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 33);
-            this.label6.TabIndex = 20;
+            this.lbl_ActPos_RotateU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_ActPos_RotateU.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_ActPos_RotateU.Location = new System.Drawing.Point(37, 0);
+            this.lbl_ActPos_RotateU.Name = "lbl_ActPos_RotateU";
+            this.lbl_ActPos_RotateU.Size = new System.Drawing.Size(122, 33);
+            this.lbl_ActPos_RotateU.TabIndex = 20;
             // 
             // groupBox4
             // 
@@ -2487,14 +2487,14 @@
             this.tableLayoutPanel6.Controls.Add(this.label11, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.label12, 0, 2);
             this.tableLayoutPanel6.Controls.Add(this.label18, 0, 3);
-            this.tableLayoutPanel6.Controls.Add(this.radioButton33, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.radioButton34, 2, 0);
-            this.tableLayoutPanel6.Controls.Add(this.radioButton35, 1, 1);
-            this.tableLayoutPanel6.Controls.Add(this.radioButton36, 2, 1);
-            this.tableLayoutPanel6.Controls.Add(this.radioButton37, 1, 2);
-            this.tableLayoutPanel6.Controls.Add(this.radioButton38, 2, 2);
-            this.tableLayoutPanel6.Controls.Add(this.radioButton39, 1, 3);
-            this.tableLayoutPanel6.Controls.Add(this.radioButton40, 2, 3);
+            this.tableLayoutPanel6.Controls.Add(this.rbtn_GrabL_P1, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.rbtn_GrabL_P2, 2, 0);
+            this.tableLayoutPanel6.Controls.Add(this.rbtn_GrabR_P1, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.rbtn_GrabR_P2, 2, 1);
+            this.tableLayoutPanel6.Controls.Add(this.rbtn_GrabF_P1, 1, 2);
+            this.tableLayoutPanel6.Controls.Add(this.rbtn_GrabF_P2, 2, 2);
+            this.tableLayoutPanel6.Controls.Add(this.rbtn_GrabB_P1, 1, 3);
+            this.tableLayoutPanel6.Controls.Add(this.rbtn_GrabB_P2, 2, 3);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 30);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -2542,101 +2542,101 @@
             this.label18.TabIndex = 5;
             this.label18.Text = "B";
             // 
-            // radioButton33
+            // rbtn_GrabL_P1
             // 
-            this.radioButton33.AutoSize = true;
-            this.radioButton33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton33.Location = new System.Drawing.Point(37, 3);
-            this.radioButton33.Name = "radioButton33";
-            this.radioButton33.Size = new System.Drawing.Size(107, 35);
-            this.radioButton33.TabIndex = 12;
-            this.radioButton33.TabStop = true;
-            this.radioButton33.Text = "原位";
-            this.radioButton33.UseVisualStyleBackColor = true;
+            this.rbtn_GrabL_P1.AutoSize = true;
+            this.rbtn_GrabL_P1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_GrabL_P1.Location = new System.Drawing.Point(37, 3);
+            this.rbtn_GrabL_P1.Name = "rbtn_GrabL_P1";
+            this.rbtn_GrabL_P1.Size = new System.Drawing.Size(107, 35);
+            this.rbtn_GrabL_P1.TabIndex = 12;
+            this.rbtn_GrabL_P1.TabStop = true;
+            this.rbtn_GrabL_P1.Text = "原位";
+            this.rbtn_GrabL_P1.UseVisualStyleBackColor = true;
             // 
-            // radioButton34
+            // rbtn_GrabL_P2
             // 
-            this.radioButton34.AutoSize = true;
-            this.radioButton34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton34.Location = new System.Drawing.Point(150, 3);
-            this.radioButton34.Name = "radioButton34";
-            this.radioButton34.Size = new System.Drawing.Size(111, 35);
-            this.radioButton34.TabIndex = 13;
-            this.radioButton34.TabStop = true;
-            this.radioButton34.Text = "旋转位";
-            this.radioButton34.UseVisualStyleBackColor = true;
+            this.rbtn_GrabL_P2.AutoSize = true;
+            this.rbtn_GrabL_P2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_GrabL_P2.Location = new System.Drawing.Point(150, 3);
+            this.rbtn_GrabL_P2.Name = "rbtn_GrabL_P2";
+            this.rbtn_GrabL_P2.Size = new System.Drawing.Size(111, 35);
+            this.rbtn_GrabL_P2.TabIndex = 13;
+            this.rbtn_GrabL_P2.TabStop = true;
+            this.rbtn_GrabL_P2.Text = "旋转位";
+            this.rbtn_GrabL_P2.UseVisualStyleBackColor = true;
             // 
-            // radioButton35
+            // rbtn_GrabR_P1
             // 
-            this.radioButton35.AutoSize = true;
-            this.radioButton35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton35.Location = new System.Drawing.Point(37, 44);
-            this.radioButton35.Name = "radioButton35";
-            this.radioButton35.Size = new System.Drawing.Size(107, 35);
-            this.radioButton35.TabIndex = 14;
-            this.radioButton35.TabStop = true;
-            this.radioButton35.Text = "原位";
-            this.radioButton35.UseVisualStyleBackColor = true;
+            this.rbtn_GrabR_P1.AutoSize = true;
+            this.rbtn_GrabR_P1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_GrabR_P1.Location = new System.Drawing.Point(37, 44);
+            this.rbtn_GrabR_P1.Name = "rbtn_GrabR_P1";
+            this.rbtn_GrabR_P1.Size = new System.Drawing.Size(107, 35);
+            this.rbtn_GrabR_P1.TabIndex = 14;
+            this.rbtn_GrabR_P1.TabStop = true;
+            this.rbtn_GrabR_P1.Text = "原位";
+            this.rbtn_GrabR_P1.UseVisualStyleBackColor = true;
             // 
-            // radioButton36
+            // rbtn_GrabR_P2
             // 
-            this.radioButton36.AutoSize = true;
-            this.radioButton36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton36.Location = new System.Drawing.Point(150, 44);
-            this.radioButton36.Name = "radioButton36";
-            this.radioButton36.Size = new System.Drawing.Size(111, 35);
-            this.radioButton36.TabIndex = 15;
-            this.radioButton36.TabStop = true;
-            this.radioButton36.Text = "旋转位";
-            this.radioButton36.UseVisualStyleBackColor = true;
+            this.rbtn_GrabR_P2.AutoSize = true;
+            this.rbtn_GrabR_P2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_GrabR_P2.Location = new System.Drawing.Point(150, 44);
+            this.rbtn_GrabR_P2.Name = "rbtn_GrabR_P2";
+            this.rbtn_GrabR_P2.Size = new System.Drawing.Size(111, 35);
+            this.rbtn_GrabR_P2.TabIndex = 15;
+            this.rbtn_GrabR_P2.TabStop = true;
+            this.rbtn_GrabR_P2.Text = "旋转位";
+            this.rbtn_GrabR_P2.UseVisualStyleBackColor = true;
             // 
-            // radioButton37
+            // rbtn_GrabF_P1
             // 
-            this.radioButton37.AutoSize = true;
-            this.radioButton37.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton37.Location = new System.Drawing.Point(37, 85);
-            this.radioButton37.Name = "radioButton37";
-            this.radioButton37.Size = new System.Drawing.Size(107, 35);
-            this.radioButton37.TabIndex = 16;
-            this.radioButton37.TabStop = true;
-            this.radioButton37.Text = "原位";
-            this.radioButton37.UseVisualStyleBackColor = true;
+            this.rbtn_GrabF_P1.AutoSize = true;
+            this.rbtn_GrabF_P1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_GrabF_P1.Location = new System.Drawing.Point(37, 85);
+            this.rbtn_GrabF_P1.Name = "rbtn_GrabF_P1";
+            this.rbtn_GrabF_P1.Size = new System.Drawing.Size(107, 35);
+            this.rbtn_GrabF_P1.TabIndex = 16;
+            this.rbtn_GrabF_P1.TabStop = true;
+            this.rbtn_GrabF_P1.Text = "原位";
+            this.rbtn_GrabF_P1.UseVisualStyleBackColor = true;
             // 
-            // radioButton38
+            // rbtn_GrabF_P2
             // 
-            this.radioButton38.AutoSize = true;
-            this.radioButton38.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton38.Location = new System.Drawing.Point(150, 85);
-            this.radioButton38.Name = "radioButton38";
-            this.radioButton38.Size = new System.Drawing.Size(111, 35);
-            this.radioButton38.TabIndex = 17;
-            this.radioButton38.TabStop = true;
-            this.radioButton38.Text = "旋转位";
-            this.radioButton38.UseVisualStyleBackColor = true;
+            this.rbtn_GrabF_P2.AutoSize = true;
+            this.rbtn_GrabF_P2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_GrabF_P2.Location = new System.Drawing.Point(150, 85);
+            this.rbtn_GrabF_P2.Name = "rbtn_GrabF_P2";
+            this.rbtn_GrabF_P2.Size = new System.Drawing.Size(111, 35);
+            this.rbtn_GrabF_P2.TabIndex = 17;
+            this.rbtn_GrabF_P2.TabStop = true;
+            this.rbtn_GrabF_P2.Text = "旋转位";
+            this.rbtn_GrabF_P2.UseVisualStyleBackColor = true;
             // 
-            // radioButton39
+            // rbtn_GrabB_P1
             // 
-            this.radioButton39.AutoSize = true;
-            this.radioButton39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton39.Location = new System.Drawing.Point(37, 126);
-            this.radioButton39.Name = "radioButton39";
-            this.radioButton39.Size = new System.Drawing.Size(107, 38);
-            this.radioButton39.TabIndex = 18;
-            this.radioButton39.TabStop = true;
-            this.radioButton39.Text = "原位";
-            this.radioButton39.UseVisualStyleBackColor = true;
+            this.rbtn_GrabB_P1.AutoSize = true;
+            this.rbtn_GrabB_P1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_GrabB_P1.Location = new System.Drawing.Point(37, 126);
+            this.rbtn_GrabB_P1.Name = "rbtn_GrabB_P1";
+            this.rbtn_GrabB_P1.Size = new System.Drawing.Size(107, 38);
+            this.rbtn_GrabB_P1.TabIndex = 18;
+            this.rbtn_GrabB_P1.TabStop = true;
+            this.rbtn_GrabB_P1.Text = "原位";
+            this.rbtn_GrabB_P1.UseVisualStyleBackColor = true;
             // 
-            // radioButton40
+            // rbtn_GrabB_P2
             // 
-            this.radioButton40.AutoSize = true;
-            this.radioButton40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton40.Location = new System.Drawing.Point(150, 126);
-            this.radioButton40.Name = "radioButton40";
-            this.radioButton40.Size = new System.Drawing.Size(111, 38);
-            this.radioButton40.TabIndex = 19;
-            this.radioButton40.TabStop = true;
-            this.radioButton40.Text = "旋转位";
-            this.radioButton40.UseVisualStyleBackColor = true;
+            this.rbtn_GrabB_P2.AutoSize = true;
+            this.rbtn_GrabB_P2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_GrabB_P2.Location = new System.Drawing.Point(150, 126);
+            this.rbtn_GrabB_P2.Name = "rbtn_GrabB_P2";
+            this.rbtn_GrabB_P2.Size = new System.Drawing.Size(111, 38);
+            this.rbtn_GrabB_P2.TabIndex = 19;
+            this.rbtn_GrabB_P2.TabStop = true;
+            this.rbtn_GrabB_P2.Text = "旋转位";
+            this.rbtn_GrabB_P2.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -2654,8 +2654,8 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
-            this.tableLayoutPanel5.Controls.Add(this.radioButton15, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.radioButton16, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.rbtn_Rotate_P1, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.rbtn_Rotate_P2, 2, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 30);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -2668,29 +2668,29 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(270, 39);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
-            // radioButton15
+            // rbtn_Rotate_P1
             // 
-            this.radioButton15.AutoSize = true;
-            this.radioButton15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton15.Location = new System.Drawing.Point(37, 3);
-            this.radioButton15.Name = "radioButton15";
-            this.radioButton15.Size = new System.Drawing.Size(107, 33);
-            this.radioButton15.TabIndex = 9;
-            this.radioButton15.TabStop = true;
-            this.radioButton15.Text = "取像位";
-            this.radioButton15.UseVisualStyleBackColor = true;
+            this.rbtn_Rotate_P1.AutoSize = true;
+            this.rbtn_Rotate_P1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_Rotate_P1.Location = new System.Drawing.Point(37, 3);
+            this.rbtn_Rotate_P1.Name = "rbtn_Rotate_P1";
+            this.rbtn_Rotate_P1.Size = new System.Drawing.Size(107, 33);
+            this.rbtn_Rotate_P1.TabIndex = 9;
+            this.rbtn_Rotate_P1.TabStop = true;
+            this.rbtn_Rotate_P1.Text = "取像位";
+            this.rbtn_Rotate_P1.UseVisualStyleBackColor = true;
             // 
-            // radioButton16
+            // rbtn_Rotate_P2
             // 
-            this.radioButton16.AutoSize = true;
-            this.radioButton16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton16.Location = new System.Drawing.Point(150, 3);
-            this.radioButton16.Name = "radioButton16";
-            this.radioButton16.Size = new System.Drawing.Size(117, 33);
-            this.radioButton16.TabIndex = 10;
-            this.radioButton16.TabStop = true;
-            this.radioButton16.Text = "旋转位";
-            this.radioButton16.UseVisualStyleBackColor = true;
+            this.rbtn_Rotate_P2.AutoSize = true;
+            this.rbtn_Rotate_P2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_Rotate_P2.Location = new System.Drawing.Point(150, 3);
+            this.rbtn_Rotate_P2.Name = "rbtn_Rotate_P2";
+            this.rbtn_Rotate_P2.Size = new System.Drawing.Size(117, 33);
+            this.rbtn_Rotate_P2.TabIndex = 10;
+            this.rbtn_Rotate_P2.TabStop = true;
+            this.rbtn_Rotate_P2.Text = "旋转位";
+            this.rbtn_Rotate_P2.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -2714,16 +2714,16 @@
             this.tableLayoutPanel4.Controls.Add(this.label15, 0, 2);
             this.tableLayoutPanel4.Controls.Add(this.label16, 0, 3);
             this.tableLayoutPanel4.Controls.Add(this.label17, 0, 4);
-            this.tableLayoutPanel4.Controls.Add(this.radioButton18, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.radioButton19, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.radioButton21, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.radioButton22, 2, 1);
-            this.tableLayoutPanel4.Controls.Add(this.radioButton23, 1, 2);
-            this.tableLayoutPanel4.Controls.Add(this.radioButton24, 2, 2);
-            this.tableLayoutPanel4.Controls.Add(this.radioButton25, 1, 3);
-            this.tableLayoutPanel4.Controls.Add(this.radioButton26, 2, 3);
-            this.tableLayoutPanel4.Controls.Add(this.radioButton27, 1, 4);
-            this.tableLayoutPanel4.Controls.Add(this.radioButton28, 2, 4);
+            this.tableLayoutPanel4.Controls.Add(this.rbtn_MoveD_P1, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.rbtn_MoveD_P2, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.rbtn_MoveL_P1, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.rbtn_MoveL_P2, 2, 1);
+            this.tableLayoutPanel4.Controls.Add(this.rbtn_MoveR_P1, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.rbtn_MoveR_P2, 2, 2);
+            this.tableLayoutPanel4.Controls.Add(this.rbtn_MoveF_P1, 1, 3);
+            this.tableLayoutPanel4.Controls.Add(this.rbtn_MoveF_P2, 2, 3);
+            this.tableLayoutPanel4.Controls.Add(this.rbtn_MoveB_P1, 1, 4);
+            this.tableLayoutPanel4.Controls.Add(this.rbtn_MoveB_P2, 2, 4);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 30);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -2781,125 +2781,125 @@
             this.label17.TabIndex = 5;
             this.label17.Text = "B";
             // 
-            // radioButton18
+            // rbtn_MoveD_P1
             // 
-            this.radioButton18.AutoSize = true;
-            this.radioButton18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton18.Location = new System.Drawing.Point(37, 3);
-            this.radioButton18.Name = "radioButton18";
-            this.radioButton18.Size = new System.Drawing.Size(107, 42);
-            this.radioButton18.TabIndex = 9;
-            this.radioButton18.TabStop = true;
-            this.radioButton18.Text = "原位";
-            this.radioButton18.UseVisualStyleBackColor = true;
+            this.rbtn_MoveD_P1.AutoSize = true;
+            this.rbtn_MoveD_P1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_MoveD_P1.Location = new System.Drawing.Point(37, 3);
+            this.rbtn_MoveD_P1.Name = "rbtn_MoveD_P1";
+            this.rbtn_MoveD_P1.Size = new System.Drawing.Size(107, 42);
+            this.rbtn_MoveD_P1.TabIndex = 9;
+            this.rbtn_MoveD_P1.TabStop = true;
+            this.rbtn_MoveD_P1.Text = "原位";
+            this.rbtn_MoveD_P1.UseVisualStyleBackColor = true;
             // 
-            // radioButton19
+            // rbtn_MoveD_P2
             // 
-            this.radioButton19.AutoSize = true;
-            this.radioButton19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton19.Location = new System.Drawing.Point(150, 3);
-            this.radioButton19.Name = "radioButton19";
-            this.radioButton19.Size = new System.Drawing.Size(117, 42);
-            this.radioButton19.TabIndex = 10;
-            this.radioButton19.TabStop = true;
-            this.radioButton19.Text = "取像位";
-            this.radioButton19.UseVisualStyleBackColor = true;
+            this.rbtn_MoveD_P2.AutoSize = true;
+            this.rbtn_MoveD_P2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_MoveD_P2.Location = new System.Drawing.Point(150, 3);
+            this.rbtn_MoveD_P2.Name = "rbtn_MoveD_P2";
+            this.rbtn_MoveD_P2.Size = new System.Drawing.Size(117, 42);
+            this.rbtn_MoveD_P2.TabIndex = 10;
+            this.rbtn_MoveD_P2.TabStop = true;
+            this.rbtn_MoveD_P2.Text = "取像位";
+            this.rbtn_MoveD_P2.UseVisualStyleBackColor = true;
             // 
-            // radioButton21
+            // rbtn_MoveL_P1
             // 
-            this.radioButton21.AutoSize = true;
-            this.radioButton21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton21.Location = new System.Drawing.Point(37, 51);
-            this.radioButton21.Name = "radioButton21";
-            this.radioButton21.Size = new System.Drawing.Size(107, 42);
-            this.radioButton21.TabIndex = 12;
-            this.radioButton21.TabStop = true;
-            this.radioButton21.Text = "原位";
-            this.radioButton21.UseVisualStyleBackColor = true;
+            this.rbtn_MoveL_P1.AutoSize = true;
+            this.rbtn_MoveL_P1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_MoveL_P1.Location = new System.Drawing.Point(37, 51);
+            this.rbtn_MoveL_P1.Name = "rbtn_MoveL_P1";
+            this.rbtn_MoveL_P1.Size = new System.Drawing.Size(107, 42);
+            this.rbtn_MoveL_P1.TabIndex = 12;
+            this.rbtn_MoveL_P1.TabStop = true;
+            this.rbtn_MoveL_P1.Text = "原位";
+            this.rbtn_MoveL_P1.UseVisualStyleBackColor = true;
             // 
-            // radioButton22
+            // rbtn_MoveL_P2
             // 
-            this.radioButton22.AutoSize = true;
-            this.radioButton22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton22.Location = new System.Drawing.Point(150, 51);
-            this.radioButton22.Name = "radioButton22";
-            this.radioButton22.Size = new System.Drawing.Size(117, 42);
-            this.radioButton22.TabIndex = 13;
-            this.radioButton22.TabStop = true;
-            this.radioButton22.Text = "取像位";
-            this.radioButton22.UseVisualStyleBackColor = true;
+            this.rbtn_MoveL_P2.AutoSize = true;
+            this.rbtn_MoveL_P2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_MoveL_P2.Location = new System.Drawing.Point(150, 51);
+            this.rbtn_MoveL_P2.Name = "rbtn_MoveL_P2";
+            this.rbtn_MoveL_P2.Size = new System.Drawing.Size(117, 42);
+            this.rbtn_MoveL_P2.TabIndex = 13;
+            this.rbtn_MoveL_P2.TabStop = true;
+            this.rbtn_MoveL_P2.Text = "取像位";
+            this.rbtn_MoveL_P2.UseVisualStyleBackColor = true;
             // 
-            // radioButton23
+            // rbtn_MoveR_P1
             // 
-            this.radioButton23.AutoSize = true;
-            this.radioButton23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton23.Location = new System.Drawing.Point(37, 99);
-            this.radioButton23.Name = "radioButton23";
-            this.radioButton23.Size = new System.Drawing.Size(107, 42);
-            this.radioButton23.TabIndex = 14;
-            this.radioButton23.TabStop = true;
-            this.radioButton23.Text = "原位";
-            this.radioButton23.UseVisualStyleBackColor = true;
+            this.rbtn_MoveR_P1.AutoSize = true;
+            this.rbtn_MoveR_P1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_MoveR_P1.Location = new System.Drawing.Point(37, 99);
+            this.rbtn_MoveR_P1.Name = "rbtn_MoveR_P1";
+            this.rbtn_MoveR_P1.Size = new System.Drawing.Size(107, 42);
+            this.rbtn_MoveR_P1.TabIndex = 14;
+            this.rbtn_MoveR_P1.TabStop = true;
+            this.rbtn_MoveR_P1.Text = "原位";
+            this.rbtn_MoveR_P1.UseVisualStyleBackColor = true;
             // 
-            // radioButton24
+            // rbtn_MoveR_P2
             // 
-            this.radioButton24.AutoSize = true;
-            this.radioButton24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton24.Location = new System.Drawing.Point(150, 99);
-            this.radioButton24.Name = "radioButton24";
-            this.radioButton24.Size = new System.Drawing.Size(117, 42);
-            this.radioButton24.TabIndex = 15;
-            this.radioButton24.TabStop = true;
-            this.radioButton24.Text = "取像位";
-            this.radioButton24.UseVisualStyleBackColor = true;
+            this.rbtn_MoveR_P2.AutoSize = true;
+            this.rbtn_MoveR_P2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_MoveR_P2.Location = new System.Drawing.Point(150, 99);
+            this.rbtn_MoveR_P2.Name = "rbtn_MoveR_P2";
+            this.rbtn_MoveR_P2.Size = new System.Drawing.Size(117, 42);
+            this.rbtn_MoveR_P2.TabIndex = 15;
+            this.rbtn_MoveR_P2.TabStop = true;
+            this.rbtn_MoveR_P2.Text = "取像位";
+            this.rbtn_MoveR_P2.UseVisualStyleBackColor = true;
             // 
-            // radioButton25
+            // rbtn_MoveF_P1
             // 
-            this.radioButton25.AutoSize = true;
-            this.radioButton25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton25.Location = new System.Drawing.Point(37, 147);
-            this.radioButton25.Name = "radioButton25";
-            this.radioButton25.Size = new System.Drawing.Size(107, 42);
-            this.radioButton25.TabIndex = 16;
-            this.radioButton25.TabStop = true;
-            this.radioButton25.Text = "原位";
-            this.radioButton25.UseVisualStyleBackColor = true;
+            this.rbtn_MoveF_P1.AutoSize = true;
+            this.rbtn_MoveF_P1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_MoveF_P1.Location = new System.Drawing.Point(37, 147);
+            this.rbtn_MoveF_P1.Name = "rbtn_MoveF_P1";
+            this.rbtn_MoveF_P1.Size = new System.Drawing.Size(107, 42);
+            this.rbtn_MoveF_P1.TabIndex = 16;
+            this.rbtn_MoveF_P1.TabStop = true;
+            this.rbtn_MoveF_P1.Text = "原位";
+            this.rbtn_MoveF_P1.UseVisualStyleBackColor = true;
             // 
-            // radioButton26
+            // rbtn_MoveF_P2
             // 
-            this.radioButton26.AutoSize = true;
-            this.radioButton26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton26.Location = new System.Drawing.Point(150, 147);
-            this.radioButton26.Name = "radioButton26";
-            this.radioButton26.Size = new System.Drawing.Size(117, 42);
-            this.radioButton26.TabIndex = 17;
-            this.radioButton26.TabStop = true;
-            this.radioButton26.Text = "取像位";
-            this.radioButton26.UseVisualStyleBackColor = true;
+            this.rbtn_MoveF_P2.AutoSize = true;
+            this.rbtn_MoveF_P2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_MoveF_P2.Location = new System.Drawing.Point(150, 147);
+            this.rbtn_MoveF_P2.Name = "rbtn_MoveF_P2";
+            this.rbtn_MoveF_P2.Size = new System.Drawing.Size(117, 42);
+            this.rbtn_MoveF_P2.TabIndex = 17;
+            this.rbtn_MoveF_P2.TabStop = true;
+            this.rbtn_MoveF_P2.Text = "取像位";
+            this.rbtn_MoveF_P2.UseVisualStyleBackColor = true;
             // 
-            // radioButton27
+            // rbtn_MoveB_P1
             // 
-            this.radioButton27.AutoSize = true;
-            this.radioButton27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton27.Location = new System.Drawing.Point(37, 195);
-            this.radioButton27.Name = "radioButton27";
-            this.radioButton27.Size = new System.Drawing.Size(107, 44);
-            this.radioButton27.TabIndex = 18;
-            this.radioButton27.TabStop = true;
-            this.radioButton27.Text = "原位";
-            this.radioButton27.UseVisualStyleBackColor = true;
+            this.rbtn_MoveB_P1.AutoSize = true;
+            this.rbtn_MoveB_P1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_MoveB_P1.Location = new System.Drawing.Point(37, 195);
+            this.rbtn_MoveB_P1.Name = "rbtn_MoveB_P1";
+            this.rbtn_MoveB_P1.Size = new System.Drawing.Size(107, 44);
+            this.rbtn_MoveB_P1.TabIndex = 18;
+            this.rbtn_MoveB_P1.TabStop = true;
+            this.rbtn_MoveB_P1.Text = "原位";
+            this.rbtn_MoveB_P1.UseVisualStyleBackColor = true;
             // 
-            // radioButton28
+            // rbtn_MoveB_P2
             // 
-            this.radioButton28.AutoSize = true;
-            this.radioButton28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton28.Location = new System.Drawing.Point(150, 195);
-            this.radioButton28.Name = "radioButton28";
-            this.radioButton28.Size = new System.Drawing.Size(117, 44);
-            this.radioButton28.TabIndex = 19;
-            this.radioButton28.TabStop = true;
-            this.radioButton28.Text = "取像位";
-            this.radioButton28.UseVisualStyleBackColor = true;
+            this.rbtn_MoveB_P2.AutoSize = true;
+            this.rbtn_MoveB_P2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_MoveB_P2.Location = new System.Drawing.Point(150, 195);
+            this.rbtn_MoveB_P2.Name = "rbtn_MoveB_P2";
+            this.rbtn_MoveB_P2.Size = new System.Drawing.Size(117, 44);
+            this.rbtn_MoveB_P2.TabIndex = 19;
+            this.rbtn_MoveB_P2.TabStop = true;
+            this.rbtn_MoveB_P2.Text = "取像位";
+            this.rbtn_MoveB_P2.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -2922,12 +2922,12 @@
             this.tableLayoutPanel3.Controls.Add(this.lbl_ActPos_GrabD, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.radioButton1, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.radioButton2, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.radioButton3, 4, 0);
-            this.tableLayoutPanel3.Controls.Add(this.radioButton4, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(this.radioButton5, 3, 1);
-            this.tableLayoutPanel3.Controls.Add(this.radioButton6, 4, 1);
+            this.tableLayoutPanel3.Controls.Add(this.rbtn_GrabU_P1, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.rbtn_GrabU_P2, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.rbtn_GrabU_P3, 4, 0);
+            this.tableLayoutPanel3.Controls.Add(this.rbtn_GrabD_P1, 2, 1);
+            this.tableLayoutPanel3.Controls.Add(this.rbtn_GrabD_P2, 3, 1);
+            this.tableLayoutPanel3.Controls.Add(this.rbtn_GrabD_P3, 4, 1);
             this.tableLayoutPanel3.Controls.Add(this.lbl_ActPos_GrabU, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 30);
@@ -2969,77 +2969,77 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "D";
             // 
-            // radioButton1
+            // rbtn_GrabU_P1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton1.Location = new System.Drawing.Point(169, 3);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(102, 30);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "原位";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbtn_GrabU_P1.AutoSize = true;
+            this.rbtn_GrabU_P1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_GrabU_P1.Location = new System.Drawing.Point(169, 3);
+            this.rbtn_GrabU_P1.Name = "rbtn_GrabU_P1";
+            this.rbtn_GrabU_P1.Size = new System.Drawing.Size(102, 30);
+            this.rbtn_GrabU_P1.TabIndex = 6;
+            this.rbtn_GrabU_P1.TabStop = true;
+            this.rbtn_GrabU_P1.Text = "原位";
+            this.rbtn_GrabU_P1.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbtn_GrabU_P2
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton2.Location = new System.Drawing.Point(277, 3);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(112, 30);
-            this.radioButton2.TabIndex = 7;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "旋转位";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbtn_GrabU_P2.AutoSize = true;
+            this.rbtn_GrabU_P2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_GrabU_P2.Location = new System.Drawing.Point(277, 3);
+            this.rbtn_GrabU_P2.Name = "rbtn_GrabU_P2";
+            this.rbtn_GrabU_P2.Size = new System.Drawing.Size(112, 30);
+            this.rbtn_GrabU_P2.TabIndex = 7;
+            this.rbtn_GrabU_P2.TabStop = true;
+            this.rbtn_GrabU_P2.Text = "旋转位";
+            this.rbtn_GrabU_P2.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rbtn_GrabU_P3
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton3.Location = new System.Drawing.Point(395, 3);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(107, 30);
-            this.radioButton3.TabIndex = 8;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "取料位";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbtn_GrabU_P3.AutoSize = true;
+            this.rbtn_GrabU_P3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_GrabU_P3.Location = new System.Drawing.Point(395, 3);
+            this.rbtn_GrabU_P3.Name = "rbtn_GrabU_P3";
+            this.rbtn_GrabU_P3.Size = new System.Drawing.Size(107, 30);
+            this.rbtn_GrabU_P3.TabIndex = 8;
+            this.rbtn_GrabU_P3.TabStop = true;
+            this.rbtn_GrabU_P3.Text = "取料位";
+            this.rbtn_GrabU_P3.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rbtn_GrabD_P1
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton4.Location = new System.Drawing.Point(169, 39);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(102, 31);
-            this.radioButton4.TabIndex = 9;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "原位";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rbtn_GrabD_P1.AutoSize = true;
+            this.rbtn_GrabD_P1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_GrabD_P1.Location = new System.Drawing.Point(169, 39);
+            this.rbtn_GrabD_P1.Name = "rbtn_GrabD_P1";
+            this.rbtn_GrabD_P1.Size = new System.Drawing.Size(102, 31);
+            this.rbtn_GrabD_P1.TabIndex = 9;
+            this.rbtn_GrabD_P1.TabStop = true;
+            this.rbtn_GrabD_P1.Text = "原位";
+            this.rbtn_GrabD_P1.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // rbtn_GrabD_P2
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton5.Location = new System.Drawing.Point(277, 39);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(112, 31);
-            this.radioButton5.TabIndex = 10;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "旋转位";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rbtn_GrabD_P2.AutoSize = true;
+            this.rbtn_GrabD_P2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_GrabD_P2.Location = new System.Drawing.Point(277, 39);
+            this.rbtn_GrabD_P2.Name = "rbtn_GrabD_P2";
+            this.rbtn_GrabD_P2.Size = new System.Drawing.Size(112, 31);
+            this.rbtn_GrabD_P2.TabIndex = 10;
+            this.rbtn_GrabD_P2.TabStop = true;
+            this.rbtn_GrabD_P2.Text = "旋转位";
+            this.rbtn_GrabD_P2.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // rbtn_GrabD_P3
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton6.Location = new System.Drawing.Point(395, 39);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(107, 31);
-            this.radioButton6.TabIndex = 11;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "取料位";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rbtn_GrabD_P3.AutoSize = true;
+            this.rbtn_GrabD_P3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rbtn_GrabD_P3.Location = new System.Drawing.Point(395, 39);
+            this.rbtn_GrabD_P3.Name = "rbtn_GrabD_P3";
+            this.rbtn_GrabD_P3.Size = new System.Drawing.Size(107, 31);
+            this.rbtn_GrabD_P3.TabIndex = 11;
+            this.rbtn_GrabD_P3.TabStop = true;
+            this.rbtn_GrabD_P3.Text = "取料位";
+            this.rbtn_GrabD_P3.UseVisualStyleBackColor = true;
             // 
             // lbl_ActPos_GrabU
             // 
@@ -3128,7 +3128,10 @@
             this.ClientSize = new System.Drawing.Size(1315, 916);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("MetaPlusLF", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Manual";
             this.Padding = new System.Windows.Forms.Padding(8);
             this.Text = "Form_Manual";
@@ -3314,12 +3317,12 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton rbtn_GrabU_P1;
+        private System.Windows.Forms.RadioButton rbtn_GrabU_P2;
+        private System.Windows.Forms.RadioButton rbtn_GrabU_P3;
+        private System.Windows.Forms.RadioButton rbtn_GrabD_P1;
+        private System.Windows.Forms.RadioButton rbtn_GrabD_P2;
+        private System.Windows.Forms.RadioButton rbtn_GrabD_P3;
         private System.Windows.Forms.Label lbl_ActPos_GrabD;
         private System.Windows.Forms.Label lbl_ActPos_GrabU;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -3329,63 +3332,63 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.RadioButton radioButton18;
-        private System.Windows.Forms.RadioButton radioButton19;
-        private System.Windows.Forms.RadioButton radioButton21;
-        private System.Windows.Forms.RadioButton radioButton22;
-        private System.Windows.Forms.RadioButton radioButton23;
-        private System.Windows.Forms.RadioButton radioButton24;
-        private System.Windows.Forms.RadioButton radioButton25;
-        private System.Windows.Forms.RadioButton radioButton26;
-        private System.Windows.Forms.RadioButton radioButton27;
-        private System.Windows.Forms.RadioButton radioButton28;
+        private System.Windows.Forms.RadioButton rbtn_MoveD_P1;
+        private System.Windows.Forms.RadioButton rbtn_MoveD_P2;
+        private System.Windows.Forms.RadioButton rbtn_MoveL_P1;
+        private System.Windows.Forms.RadioButton rbtn_MoveL_P2;
+        private System.Windows.Forms.RadioButton rbtn_MoveR_P1;
+        private System.Windows.Forms.RadioButton rbtn_MoveR_P2;
+        private System.Windows.Forms.RadioButton rbtn_MoveF_P1;
+        private System.Windows.Forms.RadioButton rbtn_MoveF_P2;
+        private System.Windows.Forms.RadioButton rbtn_MoveB_P1;
+        private System.Windows.Forms.RadioButton rbtn_MoveB_P2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.RadioButton radioButton15;
-        private System.Windows.Forms.RadioButton radioButton16;
+        private System.Windows.Forms.RadioButton rbtn_Rotate_P1;
+        private System.Windows.Forms.RadioButton rbtn_Rotate_P2;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.RadioButton radioButton33;
-        private System.Windows.Forms.RadioButton radioButton34;
-        private System.Windows.Forms.RadioButton radioButton35;
-        private System.Windows.Forms.RadioButton radioButton36;
-        private System.Windows.Forms.RadioButton radioButton37;
-        private System.Windows.Forms.RadioButton radioButton38;
-        private System.Windows.Forms.RadioButton radioButton39;
-        private System.Windows.Forms.RadioButton radioButton40;
+        private System.Windows.Forms.RadioButton rbtn_GrabL_P1;
+        private System.Windows.Forms.RadioButton rbtn_GrabL_P2;
+        private System.Windows.Forms.RadioButton rbtn_GrabR_P1;
+        private System.Windows.Forms.RadioButton rbtn_GrabR_P2;
+        private System.Windows.Forms.RadioButton rbtn_GrabF_P1;
+        private System.Windows.Forms.RadioButton rbtn_GrabF_P2;
+        private System.Windows.Forms.RadioButton rbtn_GrabB_P1;
+        private System.Windows.Forms.RadioButton rbtn_GrabB_P2;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lbl_ActPos_RotateB;
+        private System.Windows.Forms.Label lbl_ActPos_RotateF;
+        private System.Windows.Forms.Label lbl_ActPos_RotateR;
+        private System.Windows.Forms.Label lbl_ActPos_RotateL;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_ActPos_RotateD;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl_ActPos_RotateU;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton12;
-        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.RadioButton rbtn_Feeding_P1;
+        private System.Windows.Forms.RadioButton rbtn_Feeding_P2;
+        private System.Windows.Forms.Label lbl_ActPos_Feeding;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label lbl_ActPos_MoveD;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.RadioButton rbtn_BlockMoveU_P1;
+        private System.Windows.Forms.RadioButton rbtn_BlockMoveU_P2;
+        private System.Windows.Forms.RadioButton rbtn_BlockMoveD_P1;
+        private System.Windows.Forms.RadioButton rbtn_BlockMoveD_P2;
+        private System.Windows.Forms.Label lbl_ActPos_MoveU;
         private System.Windows.Forms.Button btn_Solve;
         private System.Windows.Forms.Button btn_Exit;
         private System.Windows.Forms.Button btn_Acquire;
@@ -3394,36 +3397,36 @@
         private System.Windows.Forms.Button btn_2_P_Start;
         private System.Windows.Forms.Button btn_CubeBack;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label lbl_Servo_Rotate_R;
+        private System.Windows.Forms.Label lbl_Servo_Move_R;
+        private System.Windows.Forms.Label lbl_Servo_Feeding_R;
+        private System.Windows.Forms.Label lbl_Servo_Grab_R;
+        private System.Windows.Forms.Label lbl_IOlink_Grab_R;
+        private System.Windows.Forms.Label lbl_IOlink_Rotate_R;
+        private System.Windows.Forms.Label lbl_IOlink_Move_Cam_R;
+        private System.Windows.Forms.Label lbl_P_Rotate;
+        private System.Windows.Forms.Label lbl_Servo_Rotate_A;
+        private System.Windows.Forms.Label lbl_Servo_Move_A;
+        private System.Windows.Forms.Label lbl_Servo_Feeding_A;
+        private System.Windows.Forms.Label lbl_Servo_Grab_A;
+        private System.Windows.Forms.Label lbl_IOlink_Grab_A;
+        private System.Windows.Forms.Label lbl_IOlink_Rotate_A;
+        private System.Windows.Forms.Label lbl_IOlink_Move_Cam_A;
+        private System.Windows.Forms.Label lbl_P_Acquire;
+        private System.Windows.Forms.Label lbl_Servo_Rotate_S;
+        private System.Windows.Forms.Label lbl_Servo_Move_S;
+        private System.Windows.Forms.Label lbl_Servo_Feeding_S;
+        private System.Windows.Forms.Label lbl_Servo_Grab_S;
+        private System.Windows.Forms.Label lbl_IOlink_Grab_S;
+        private System.Windows.Forms.Label lbl_IOlink_Rotate_S;
+        private System.Windows.Forms.Label lbl_IOlink_Move_Cam_S;
+        private System.Windows.Forms.Label lbl_P_Start;
+        private System.Windows.Forms.Label lbl_Servo_Rotate;
+        private System.Windows.Forms.Label lbl_Servo_Move;
+        private System.Windows.Forms.Label lbl_Servo_Feeding;
+        private System.Windows.Forms.Label lbl_Servo_Grab;
+        private System.Windows.Forms.Label lbl_IOlink_Grab;
+        private System.Windows.Forms.Label lbl_IOlink_Rotate;
+        private System.Windows.Forms.Label lbl_IOlink_Move_Cam;
     }
 }
