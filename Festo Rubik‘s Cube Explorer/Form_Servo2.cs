@@ -11,10 +11,12 @@ namespace Festo_Rubik_s_Cube_Explorer
 {
     public partial class Form_Servo2 : Form
     {
+        string AxisID;
         IOlinkNodeID mIOlinkNodeID = new IOlinkNodeID();
-        public Form_Servo2(string AxisID)
+        public Form_Servo2(string mAxisID)
         {
             InitializeComponent();
+            AxisID = mAxisID;
             switch (AxisID)
             {
                 case "IOlink_Rotate":
@@ -173,6 +175,11 @@ namespace Festo_Rubik_s_Cube_Explorer
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void Form_Servo2_Load(object sender, EventArgs e)
+        {
+            lbl_ServoName.Text = AxisID;
         }
     }
 }
