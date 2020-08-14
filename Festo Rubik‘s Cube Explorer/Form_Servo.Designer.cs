@@ -528,6 +528,7 @@
             this.MinimizeBox = false;
             this.Name = "Form_Servo";
             this.Text = "Form_Servo";
+            this.Load += new System.EventHandler(this.Form_Servo_Load);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

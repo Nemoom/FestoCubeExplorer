@@ -188,8 +188,8 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_ActPos_MoveD = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.lbl_Status_MoveU = new System.Windows.Forms.Label();
+            this.lbl_Status_MoveD = new System.Windows.Forms.Label();
             this.rbtn_BlockMoveU_P1 = new System.Windows.Forms.RadioButton();
             this.rbtn_BlockMoveU_P2 = new System.Windows.Forms.RadioButton();
             this.rbtn_BlockMoveD_P1 = new System.Windows.Forms.RadioButton();
@@ -201,20 +201,20 @@
             this.lbl_ActPos_RotateF = new System.Windows.Forms.Label();
             this.lbl_ActPos_RotateR = new System.Windows.Forms.Label();
             this.lbl_ActPos_RotateL = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbl_Status_RotateB = new System.Windows.Forms.Label();
+            this.lbl_Status_RotateF = new System.Windows.Forms.Label();
+            this.lbl_Status_RotateR = new System.Windows.Forms.Label();
+            this.lbl_Status_RotateL = new System.Windows.Forms.Label();
             this.lbl_ActPos_RotateD = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_Status_RotateU = new System.Windows.Forms.Label();
+            this.lbl_Status_RotateD = new System.Windows.Forms.Label();
             this.lbl_ActPos_RotateU = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lbl_Status_GrabL = new System.Windows.Forms.Label();
+            this.lbl_Status_GrabR = new System.Windows.Forms.Label();
+            this.lbl_Status_GrabF = new System.Windows.Forms.Label();
+            this.lbl_Status_GrabB = new System.Windows.Forms.Label();
             this.rbtn_GrabL_P1 = new System.Windows.Forms.RadioButton();
             this.rbtn_GrabL_P2 = new System.Windows.Forms.RadioButton();
             this.rbtn_GrabR_P1 = new System.Windows.Forms.RadioButton();
@@ -229,11 +229,11 @@
             this.rbtn_Rotate_P2 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lbl_Status_MovCamD = new System.Windows.Forms.Label();
+            this.lbl_Status_MovCamL = new System.Windows.Forms.Label();
+            this.lbl_Status_MovCamR = new System.Windows.Forms.Label();
+            this.lbl_Status_MovCamF = new System.Windows.Forms.Label();
+            this.lbl_Status_MovCamB = new System.Windows.Forms.Label();
             this.rbtn_MoveD_P1 = new System.Windows.Forms.RadioButton();
             this.rbtn_MoveD_P2 = new System.Windows.Forms.RadioButton();
             this.rbtn_MoveL_P1 = new System.Windows.Forms.RadioButton();
@@ -247,8 +247,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_ActPos_GrabD = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_Status_GrabU = new System.Windows.Forms.Label();
+            this.lbl_Status_GrabD = new System.Windows.Forms.Label();
             this.rbtn_GrabU_P1 = new System.Windows.Forms.RadioButton();
             this.rbtn_GrabU_P2 = new System.Windows.Forms.RadioButton();
             this.rbtn_GrabU_P3 = new System.Windows.Forms.RadioButton();
@@ -264,6 +264,11 @@
             this.btn_2_P_Rotate = new System.Windows.Forms.Button();
             this.btn_2_P_Start = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList_Status = new System.Windows.Forms.ImageList(this.components);
+            this.imageList_Error = new System.Windows.Forms.ImageList(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lbl_Status_Rotate = new System.Windows.Forms.Label();
+            this.lbl_Status_Feeding = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage_Cam.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -1462,6 +1467,7 @@
             this.btn_U_Rotate.TabIndex = 2;
             this.btn_U_Rotate.Text = "U拧";
             this.btn_U_Rotate.UseVisualStyleBackColor = true;
+            this.btn_U_Rotate.Click += new System.EventHandler(this.btn_U_Rotate_Click);
             // 
             // btn_U_Grab
             // 
@@ -1472,6 +1478,7 @@
             this.btn_U_Grab.TabIndex = 1;
             this.btn_U_Grab.Text = "U旋转杆上下";
             this.btn_U_Grab.UseVisualStyleBackColor = true;
+            this.btn_U_Grab.Click += new System.EventHandler(this.btn_U_Grab_Click);
             // 
             // btn_U_Move
             // 
@@ -1482,6 +1489,7 @@
             this.btn_U_Move.TabIndex = 0;
             this.btn_U_Move.Text = "U拍照位/旋转位";
             this.btn_U_Move.UseVisualStyleBackColor = true;
+            this.btn_U_Move.Click += new System.EventHandler(this.btn_U_Move_Click);
             // 
             // panel3
             // 
@@ -1505,6 +1513,7 @@
             this.btn_L_Rotate.TabIndex = 3;
             this.btn_L_Rotate.Text = "L拧";
             this.btn_L_Rotate.UseVisualStyleBackColor = true;
+            this.btn_L_Rotate.Click += new System.EventHandler(this.btn_L_Rotate_Click);
             // 
             // btn_L_Grab
             // 
@@ -1515,6 +1524,7 @@
             this.btn_L_Grab.TabIndex = 2;
             this.btn_L_Grab.Text = "L旋转杆前后";
             this.btn_L_Grab.UseVisualStyleBackColor = true;
+            this.btn_L_Grab.Click += new System.EventHandler(this.btn_L_Grab_Click);
             // 
             // btn_L_Move_Cam
             // 
@@ -1525,6 +1535,7 @@
             this.btn_L_Move_Cam.TabIndex = 1;
             this.btn_L_Move_Cam.Text = "L相机上下";
             this.btn_L_Move_Cam.UseVisualStyleBackColor = true;
+            this.btn_L_Move_Cam.Click += new System.EventHandler(this.btn_L_Move_Cam_Click);
             // 
             // panel4
             // 
@@ -1548,6 +1559,7 @@
             this.btn_F_Rotate.TabIndex = 3;
             this.btn_F_Rotate.Text = "F拧";
             this.btn_F_Rotate.UseVisualStyleBackColor = true;
+            this.btn_F_Rotate.Click += new System.EventHandler(this.btn_F_Rotate_Click);
             // 
             // btn_F_Grab
             // 
@@ -1558,6 +1570,7 @@
             this.btn_F_Grab.TabIndex = 2;
             this.btn_F_Grab.Text = "F旋转杆前后";
             this.btn_F_Grab.UseVisualStyleBackColor = true;
+            this.btn_F_Grab.Click += new System.EventHandler(this.btn_F_Grab_Click);
             // 
             // btn_F_Move_Cam
             // 
@@ -1568,6 +1581,7 @@
             this.btn_F_Move_Cam.TabIndex = 1;
             this.btn_F_Move_Cam.Text = "F相机上下";
             this.btn_F_Move_Cam.UseVisualStyleBackColor = true;
+            this.btn_F_Move_Cam.Click += new System.EventHandler(this.btn_F_Move_Cam_Click);
             // 
             // panel5
             // 
@@ -1591,6 +1605,7 @@
             this.btn_R_Rotate.TabIndex = 3;
             this.btn_R_Rotate.Text = "R拧";
             this.btn_R_Rotate.UseVisualStyleBackColor = true;
+            this.btn_R_Rotate.Click += new System.EventHandler(this.btn_R_Rotate_Click);
             // 
             // btn_R_Grab
             // 
@@ -1601,6 +1616,7 @@
             this.btn_R_Grab.TabIndex = 2;
             this.btn_R_Grab.Text = "R旋转杆前后";
             this.btn_R_Grab.UseVisualStyleBackColor = true;
+            this.btn_R_Grab.Click += new System.EventHandler(this.btn_R_Grab_Click);
             // 
             // btn_R_Move_Cam
             // 
@@ -1611,6 +1627,7 @@
             this.btn_R_Move_Cam.TabIndex = 1;
             this.btn_R_Move_Cam.Text = "R相机上下";
             this.btn_R_Move_Cam.UseVisualStyleBackColor = true;
+            this.btn_R_Move_Cam.Click += new System.EventHandler(this.btn_R_Move_Cam_Click);
             // 
             // panel6
             // 
@@ -1634,6 +1651,7 @@
             this.btn_B_Rotate.TabIndex = 3;
             this.btn_B_Rotate.Text = "B拧";
             this.btn_B_Rotate.UseVisualStyleBackColor = true;
+            this.btn_B_Rotate.Click += new System.EventHandler(this.btn_B_Rotate_Click);
             // 
             // btn_B_Grab
             // 
@@ -1644,6 +1662,7 @@
             this.btn_B_Grab.TabIndex = 2;
             this.btn_B_Grab.Text = "B旋转杆前后";
             this.btn_B_Grab.UseVisualStyleBackColor = true;
+            this.btn_B_Grab.Click += new System.EventHandler(this.btn_B_Grab_Click);
             // 
             // btn_B__Move_Cam
             // 
@@ -1654,6 +1673,7 @@
             this.btn_B__Move_Cam.TabIndex = 1;
             this.btn_B__Move_Cam.Text = "B相机上下";
             this.btn_B__Move_Cam.UseVisualStyleBackColor = true;
+            this.btn_B__Move_Cam.Click += new System.EventHandler(this.btn_B__Move_Cam_Click);
             // 
             // panel7
             // 
@@ -1678,6 +1698,7 @@
             this.btn_D_Rotate.TabIndex = 4;
             this.btn_D_Rotate.Text = "D拧";
             this.btn_D_Rotate.UseVisualStyleBackColor = true;
+            this.btn_D_Rotate.Click += new System.EventHandler(this.btn_D_Rotate_Click);
             // 
             // btn_D_Grab
             // 
@@ -1688,6 +1709,7 @@
             this.btn_D_Grab.TabIndex = 3;
             this.btn_D_Grab.Text = "D旋转杆上下";
             this.btn_D_Grab.UseVisualStyleBackColor = true;
+            this.btn_D_Grab.Click += new System.EventHandler(this.btn_D_Grab_Click);
             // 
             // btn_D_Move_Cam
             // 
@@ -1698,6 +1720,7 @@
             this.btn_D_Move_Cam.TabIndex = 2;
             this.btn_D_Move_Cam.Text = "D相机上下";
             this.btn_D_Move_Cam.UseVisualStyleBackColor = true;
+            this.btn_D_Move_Cam.Click += new System.EventHandler(this.btn_D_Move_Cam_Click);
             // 
             // btn_D_Move
             // 
@@ -1708,6 +1731,7 @@
             this.btn_D_Move.TabIndex = 1;
             this.btn_D_Move.Text = "D拍照位/旋转位";
             this.btn_D_Move.UseVisualStyleBackColor = true;
+            this.btn_D_Move.Click += new System.EventHandler(this.btn_D_Move_Click);
             // 
             // btn_Feeding
             // 
@@ -1718,6 +1742,7 @@
             this.btn_Feeding.TabIndex = 1;
             this.btn_Feeding.Text = "魔方上下料";
             this.btn_Feeding.UseVisualStyleBackColor = true;
+            this.btn_Feeding.Click += new System.EventHandler(this.btn_Feeding_Click);
             // 
             // btn_Rotate
             // 
@@ -1728,6 +1753,7 @@
             this.btn_Rotate.TabIndex = 2;
             this.btn_Rotate.Text = "魔方旋转";
             this.btn_Rotate.UseVisualStyleBackColor = true;
+            this.btn_Rotate.Click += new System.EventHandler(this.btn_Rotate_Click);
             // 
             // tabPage_Step
             // 
@@ -2148,6 +2174,7 @@
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
+            this.tableLayoutPanel9.Controls.Add(this.lbl_Status_Feeding, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.rbtn_Feeding_P1, 2, 0);
             this.tableLayoutPanel9.Controls.Add(this.rbtn_Feeding_P2, 3, 0);
             this.tableLayoutPanel9.Controls.Add(this.lbl_ActPos_Feeding, 1, 0);
@@ -2210,8 +2237,8 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
             this.tableLayoutPanel8.Controls.Add(this.lbl_ActPos_MoveD, 1, 1);
-            this.tableLayoutPanel8.Controls.Add(this.label25, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.label26, 0, 1);
+            this.tableLayoutPanel8.Controls.Add(this.lbl_Status_MoveU, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.lbl_Status_MoveD, 0, 1);
             this.tableLayoutPanel8.Controls.Add(this.rbtn_BlockMoveU_P1, 2, 0);
             this.tableLayoutPanel8.Controls.Add(this.rbtn_BlockMoveU_P2, 3, 0);
             this.tableLayoutPanel8.Controls.Add(this.rbtn_BlockMoveD_P1, 2, 1);
@@ -2239,23 +2266,23 @@
             this.lbl_ActPos_MoveD.Size = new System.Drawing.Size(130, 46);
             this.lbl_ActPos_MoveD.TabIndex = 21;
             // 
-            // label25
+            // lbl_Status_MoveU
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(3, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(27, 28);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "U";
+            this.lbl_Status_MoveU.AutoSize = true;
+            this.lbl_Status_MoveU.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Status_MoveU.Name = "lbl_Status_MoveU";
+            this.lbl_Status_MoveU.Size = new System.Drawing.Size(27, 28);
+            this.lbl_Status_MoveU.TabIndex = 0;
+            this.lbl_Status_MoveU.Text = "U";
             // 
-            // label26
+            // lbl_Status_MoveD
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(3, 45);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(27, 28);
-            this.label26.TabIndex = 1;
-            this.label26.Text = "D";
+            this.lbl_Status_MoveD.AutoSize = true;
+            this.lbl_Status_MoveD.Location = new System.Drawing.Point(3, 45);
+            this.lbl_Status_MoveD.Name = "lbl_Status_MoveD";
+            this.lbl_Status_MoveD.Size = new System.Drawing.Size(27, 28);
+            this.lbl_Status_MoveD.TabIndex = 1;
+            this.lbl_Status_MoveD.Text = "D";
             // 
             // rbtn_BlockMoveU_P1
             // 
@@ -2336,13 +2363,13 @@
             this.tableLayoutPanel7.Controls.Add(this.lbl_ActPos_RotateF, 1, 4);
             this.tableLayoutPanel7.Controls.Add(this.lbl_ActPos_RotateR, 1, 3);
             this.tableLayoutPanel7.Controls.Add(this.lbl_ActPos_RotateL, 1, 2);
-            this.tableLayoutPanel7.Controls.Add(this.label19, 0, 5);
-            this.tableLayoutPanel7.Controls.Add(this.label9, 0, 4);
-            this.tableLayoutPanel7.Controls.Add(this.label8, 0, 3);
-            this.tableLayoutPanel7.Controls.Add(this.label7, 0, 2);
+            this.tableLayoutPanel7.Controls.Add(this.lbl_Status_RotateB, 0, 5);
+            this.tableLayoutPanel7.Controls.Add(this.lbl_Status_RotateF, 0, 4);
+            this.tableLayoutPanel7.Controls.Add(this.lbl_Status_RotateR, 0, 3);
+            this.tableLayoutPanel7.Controls.Add(this.lbl_Status_RotateL, 0, 2);
             this.tableLayoutPanel7.Controls.Add(this.lbl_ActPos_RotateD, 1, 1);
-            this.tableLayoutPanel7.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.label5, 0, 1);
+            this.tableLayoutPanel7.Controls.Add(this.lbl_Status_RotateU, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.lbl_Status_RotateD, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.lbl_ActPos_RotateU, 1, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 30);
@@ -2393,41 +2420,41 @@
             this.lbl_ActPos_RotateL.Size = new System.Drawing.Size(122, 33);
             this.lbl_ActPos_RotateL.TabIndex = 26;
             // 
-            // label19
+            // lbl_Status_RotateB
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(3, 165);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(26, 28);
-            this.label19.TabIndex = 25;
-            this.label19.Text = "B";
+            this.lbl_Status_RotateB.AutoSize = true;
+            this.lbl_Status_RotateB.Location = new System.Drawing.Point(3, 165);
+            this.lbl_Status_RotateB.Name = "lbl_Status_RotateB";
+            this.lbl_Status_RotateB.Size = new System.Drawing.Size(26, 28);
+            this.lbl_Status_RotateB.TabIndex = 25;
+            this.lbl_Status_RotateB.Text = "B";
             // 
-            // label9
+            // lbl_Status_RotateF
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 132);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(23, 28);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "F";
+            this.lbl_Status_RotateF.AutoSize = true;
+            this.lbl_Status_RotateF.Location = new System.Drawing.Point(3, 132);
+            this.lbl_Status_RotateF.Name = "lbl_Status_RotateF";
+            this.lbl_Status_RotateF.Size = new System.Drawing.Size(23, 28);
+            this.lbl_Status_RotateF.TabIndex = 24;
+            this.lbl_Status_RotateF.Text = "F";
             // 
-            // label8
+            // lbl_Status_RotateR
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 99);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(26, 28);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "R";
+            this.lbl_Status_RotateR.AutoSize = true;
+            this.lbl_Status_RotateR.Location = new System.Drawing.Point(3, 99);
+            this.lbl_Status_RotateR.Name = "lbl_Status_RotateR";
+            this.lbl_Status_RotateR.Size = new System.Drawing.Size(26, 28);
+            this.lbl_Status_RotateR.TabIndex = 23;
+            this.lbl_Status_RotateR.Text = "R";
             // 
-            // label7
+            // lbl_Status_RotateL
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 66);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(23, 28);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "L";
+            this.lbl_Status_RotateL.AutoSize = true;
+            this.lbl_Status_RotateL.Location = new System.Drawing.Point(3, 66);
+            this.lbl_Status_RotateL.Name = "lbl_Status_RotateL";
+            this.lbl_Status_RotateL.Size = new System.Drawing.Size(23, 28);
+            this.lbl_Status_RotateL.TabIndex = 22;
+            this.lbl_Status_RotateL.Text = "L";
             // 
             // lbl_ActPos_RotateD
             // 
@@ -2438,23 +2465,23 @@
             this.lbl_ActPos_RotateD.Size = new System.Drawing.Size(122, 33);
             this.lbl_ActPos_RotateD.TabIndex = 21;
             // 
-            // label4
+            // lbl_Status_RotateU
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 28);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "U";
+            this.lbl_Status_RotateU.AutoSize = true;
+            this.lbl_Status_RotateU.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Status_RotateU.Name = "lbl_Status_RotateU";
+            this.lbl_Status_RotateU.Size = new System.Drawing.Size(27, 28);
+            this.lbl_Status_RotateU.TabIndex = 0;
+            this.lbl_Status_RotateU.Text = "U";
             // 
-            // label5
+            // lbl_Status_RotateD
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 33);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 28);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "D";
+            this.lbl_Status_RotateD.AutoSize = true;
+            this.lbl_Status_RotateD.Location = new System.Drawing.Point(3, 33);
+            this.lbl_Status_RotateD.Name = "lbl_Status_RotateD";
+            this.lbl_Status_RotateD.Size = new System.Drawing.Size(27, 28);
+            this.lbl_Status_RotateD.TabIndex = 1;
+            this.lbl_Status_RotateD.Text = "D";
             // 
             // lbl_ActPos_RotateU
             // 
@@ -2483,10 +2510,10 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Controls.Add(this.label10, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label11, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.label12, 0, 2);
-            this.tableLayoutPanel6.Controls.Add(this.label18, 0, 3);
+            this.tableLayoutPanel6.Controls.Add(this.lbl_Status_GrabL, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.lbl_Status_GrabR, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.lbl_Status_GrabF, 0, 2);
+            this.tableLayoutPanel6.Controls.Add(this.lbl_Status_GrabB, 0, 3);
             this.tableLayoutPanel6.Controls.Add(this.rbtn_GrabL_P1, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.rbtn_GrabL_P2, 2, 0);
             this.tableLayoutPanel6.Controls.Add(this.rbtn_GrabR_P1, 1, 1);
@@ -2506,41 +2533,41 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(264, 167);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
-            // label10
+            // lbl_Status_GrabL
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(23, 28);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "L";
+            this.lbl_Status_GrabL.AutoSize = true;
+            this.lbl_Status_GrabL.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Status_GrabL.Name = "lbl_Status_GrabL";
+            this.lbl_Status_GrabL.Size = new System.Drawing.Size(23, 28);
+            this.lbl_Status_GrabL.TabIndex = 2;
+            this.lbl_Status_GrabL.Text = "L";
             // 
-            // label11
+            // lbl_Status_GrabR
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 41);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(26, 28);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "R";
+            this.lbl_Status_GrabR.AutoSize = true;
+            this.lbl_Status_GrabR.Location = new System.Drawing.Point(3, 41);
+            this.lbl_Status_GrabR.Name = "lbl_Status_GrabR";
+            this.lbl_Status_GrabR.Size = new System.Drawing.Size(26, 28);
+            this.lbl_Status_GrabR.TabIndex = 3;
+            this.lbl_Status_GrabR.Text = "R";
             // 
-            // label12
+            // lbl_Status_GrabF
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 82);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(23, 28);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "F";
+            this.lbl_Status_GrabF.AutoSize = true;
+            this.lbl_Status_GrabF.Location = new System.Drawing.Point(3, 82);
+            this.lbl_Status_GrabF.Name = "lbl_Status_GrabF";
+            this.lbl_Status_GrabF.Size = new System.Drawing.Size(23, 28);
+            this.lbl_Status_GrabF.TabIndex = 4;
+            this.lbl_Status_GrabF.Text = "F";
             // 
-            // label18
+            // lbl_Status_GrabB
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(3, 123);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(26, 28);
-            this.label18.TabIndex = 5;
-            this.label18.Text = "B";
+            this.lbl_Status_GrabB.AutoSize = true;
+            this.lbl_Status_GrabB.Location = new System.Drawing.Point(3, 123);
+            this.lbl_Status_GrabB.Name = "lbl_Status_GrabB";
+            this.lbl_Status_GrabB.Size = new System.Drawing.Size(26, 28);
+            this.lbl_Status_GrabB.TabIndex = 5;
+            this.lbl_Status_GrabB.Text = "B";
             // 
             // rbtn_GrabL_P1
             // 
@@ -2654,6 +2681,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
+            this.tableLayoutPanel5.Controls.Add(this.lbl_Status_Rotate, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.rbtn_Rotate_P1, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.rbtn_Rotate_P2, 2, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2709,11 +2737,11 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Controls.Add(this.label13, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label14, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.label15, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.label16, 0, 3);
-            this.tableLayoutPanel4.Controls.Add(this.label17, 0, 4);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_Status_MovCamD, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_Status_MovCamL, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_Status_MovCamR, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_Status_MovCamF, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_Status_MovCamB, 0, 4);
             this.tableLayoutPanel4.Controls.Add(this.rbtn_MoveD_P1, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.rbtn_MoveD_P2, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.rbtn_MoveL_P1, 1, 1);
@@ -2736,50 +2764,50 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(270, 242);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
-            // label13
+            // lbl_Status_MovCamD
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(27, 28);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "D";
+            this.lbl_Status_MovCamD.AutoSize = true;
+            this.lbl_Status_MovCamD.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Status_MovCamD.Name = "lbl_Status_MovCamD";
+            this.lbl_Status_MovCamD.Size = new System.Drawing.Size(27, 28);
+            this.lbl_Status_MovCamD.TabIndex = 1;
+            this.lbl_Status_MovCamD.Text = "D";
             // 
-            // label14
+            // lbl_Status_MovCamL
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 48);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(23, 28);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "L";
+            this.lbl_Status_MovCamL.AutoSize = true;
+            this.lbl_Status_MovCamL.Location = new System.Drawing.Point(3, 48);
+            this.lbl_Status_MovCamL.Name = "lbl_Status_MovCamL";
+            this.lbl_Status_MovCamL.Size = new System.Drawing.Size(23, 28);
+            this.lbl_Status_MovCamL.TabIndex = 2;
+            this.lbl_Status_MovCamL.Text = "L";
             // 
-            // label15
+            // lbl_Status_MovCamR
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(3, 96);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(26, 28);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "R";
+            this.lbl_Status_MovCamR.AutoSize = true;
+            this.lbl_Status_MovCamR.Location = new System.Drawing.Point(3, 96);
+            this.lbl_Status_MovCamR.Name = "lbl_Status_MovCamR";
+            this.lbl_Status_MovCamR.Size = new System.Drawing.Size(26, 28);
+            this.lbl_Status_MovCamR.TabIndex = 3;
+            this.lbl_Status_MovCamR.Text = "R";
             // 
-            // label16
+            // lbl_Status_MovCamF
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(3, 144);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(23, 28);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "F";
+            this.lbl_Status_MovCamF.AutoSize = true;
+            this.lbl_Status_MovCamF.Location = new System.Drawing.Point(3, 144);
+            this.lbl_Status_MovCamF.Name = "lbl_Status_MovCamF";
+            this.lbl_Status_MovCamF.Size = new System.Drawing.Size(23, 28);
+            this.lbl_Status_MovCamF.TabIndex = 4;
+            this.lbl_Status_MovCamF.Text = "F";
             // 
-            // label17
+            // lbl_Status_MovCamB
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(3, 192);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(26, 28);
-            this.label17.TabIndex = 5;
-            this.label17.Text = "B";
+            this.lbl_Status_MovCamB.AutoSize = true;
+            this.lbl_Status_MovCamB.Location = new System.Drawing.Point(3, 192);
+            this.lbl_Status_MovCamB.Name = "lbl_Status_MovCamB";
+            this.lbl_Status_MovCamB.Size = new System.Drawing.Size(26, 28);
+            this.lbl_Status_MovCamB.TabIndex = 5;
+            this.lbl_Status_MovCamB.Text = "B";
             // 
             // rbtn_MoveD_P1
             // 
@@ -2920,8 +2948,8 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
             this.tableLayoutPanel3.Controls.Add(this.lbl_ActPos_GrabD, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label2, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_Status_GrabU, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_Status_GrabD, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.rbtn_GrabU_P1, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.rbtn_GrabU_P2, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.rbtn_GrabU_P3, 4, 0);
@@ -2951,23 +2979,23 @@
             this.lbl_ActPos_GrabD.Size = new System.Drawing.Size(126, 37);
             this.lbl_ActPos_GrabD.TabIndex = 21;
             // 
-            // label1
+            // lbl_Status_GrabU
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "U";
+            this.lbl_Status_GrabU.AutoSize = true;
+            this.lbl_Status_GrabU.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Status_GrabU.Name = "lbl_Status_GrabU";
+            this.lbl_Status_GrabU.Size = new System.Drawing.Size(27, 28);
+            this.lbl_Status_GrabU.TabIndex = 0;
+            this.lbl_Status_GrabU.Text = "U";
             // 
-            // label2
+            // lbl_Status_GrabD
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 28);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "D";
+            this.lbl_Status_GrabD.AutoSize = true;
+            this.lbl_Status_GrabD.Location = new System.Drawing.Point(3, 36);
+            this.lbl_Status_GrabD.Name = "lbl_Status_GrabD";
+            this.lbl_Status_GrabD.Size = new System.Drawing.Size(27, 28);
+            this.lbl_Status_GrabD.TabIndex = 1;
+            this.lbl_Status_GrabD.Text = "D";
             // 
             // rbtn_GrabU_P1
             // 
@@ -3120,6 +3148,42 @@
             this.imageList1.Images.SetKeyName(0, "未就绪.png");
             this.imageList1.Images.SetKeyName(1, "使用中.png");
             this.imageList1.Images.SetKeyName(2, "就绪.png");
+            // 
+            // imageList_Status
+            // 
+            this.imageList_Status.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_Status.ImageStream")));
+            this.imageList_Status.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList_Status.Images.SetKeyName(0, "status-offline.png");
+            this.imageList_Status.Images.SetKeyName(1, "status.png");
+            // 
+            // imageList_Error
+            // 
+            this.imageList_Error.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_Error.ImageStream")));
+            this.imageList_Error.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList_Error.Images.SetKeyName(0, "status-offline.png");
+            this.imageList_Error.Images.SetKeyName(1, "status-busy.png");
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lbl_Status_Rotate
+            // 
+            this.lbl_Status_Rotate.AutoSize = true;
+            this.lbl_Status_Rotate.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Status_Rotate.Name = "lbl_Status_Rotate";
+            this.lbl_Status_Rotate.Size = new System.Drawing.Size(21, 35);
+            this.lbl_Status_Rotate.TabIndex = 11;
+            this.lbl_Status_Rotate.Text = " ";
+            // 
+            // lbl_Status_Feeding
+            // 
+            this.lbl_Status_Feeding.AutoSize = true;
+            this.lbl_Status_Feeding.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Status_Feeding.Name = "lbl_Status_Feeding";
+            this.lbl_Status_Feeding.Size = new System.Drawing.Size(17, 28);
+            this.lbl_Status_Feeding.TabIndex = 21;
+            this.lbl_Status_Feeding.Text = " ";
             // 
             // Form_Manual
             // 
@@ -3315,8 +3379,8 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_Status_GrabU;
+        private System.Windows.Forms.Label lbl_Status_GrabD;
         private System.Windows.Forms.RadioButton rbtn_GrabU_P1;
         private System.Windows.Forms.RadioButton rbtn_GrabU_P2;
         private System.Windows.Forms.RadioButton rbtn_GrabU_P3;
@@ -3327,11 +3391,11 @@
         private System.Windows.Forms.Label lbl_ActPos_GrabU;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lbl_Status_MovCamD;
+        private System.Windows.Forms.Label lbl_Status_MovCamL;
+        private System.Windows.Forms.Label lbl_Status_MovCamR;
+        private System.Windows.Forms.Label lbl_Status_MovCamF;
+        private System.Windows.Forms.Label lbl_Status_MovCamB;
         private System.Windows.Forms.RadioButton rbtn_MoveD_P1;
         private System.Windows.Forms.RadioButton rbtn_MoveD_P2;
         private System.Windows.Forms.RadioButton rbtn_MoveL_P1;
@@ -3348,10 +3412,10 @@
         private System.Windows.Forms.RadioButton rbtn_Rotate_P2;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lbl_Status_GrabL;
+        private System.Windows.Forms.Label lbl_Status_GrabR;
+        private System.Windows.Forms.Label lbl_Status_GrabF;
+        private System.Windows.Forms.Label lbl_Status_GrabB;
         private System.Windows.Forms.RadioButton rbtn_GrabL_P1;
         private System.Windows.Forms.RadioButton rbtn_GrabL_P2;
         private System.Windows.Forms.RadioButton rbtn_GrabR_P1;
@@ -3366,13 +3430,13 @@
         private System.Windows.Forms.Label lbl_ActPos_RotateF;
         private System.Windows.Forms.Label lbl_ActPos_RotateR;
         private System.Windows.Forms.Label lbl_ActPos_RotateL;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbl_Status_RotateB;
+        private System.Windows.Forms.Label lbl_Status_RotateF;
+        private System.Windows.Forms.Label lbl_Status_RotateR;
+        private System.Windows.Forms.Label lbl_Status_RotateL;
         private System.Windows.Forms.Label lbl_ActPos_RotateD;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbl_Status_RotateU;
+        private System.Windows.Forms.Label lbl_Status_RotateD;
         private System.Windows.Forms.Label lbl_ActPos_RotateU;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
@@ -3382,8 +3446,8 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Label lbl_ActPos_MoveD;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label lbl_Status_MoveU;
+        private System.Windows.Forms.Label lbl_Status_MoveD;
         private System.Windows.Forms.RadioButton rbtn_BlockMoveU_P1;
         private System.Windows.Forms.RadioButton rbtn_BlockMoveU_P2;
         private System.Windows.Forms.RadioButton rbtn_BlockMoveD_P1;
@@ -3428,5 +3492,10 @@
         private System.Windows.Forms.Label lbl_IOlink_Grab;
         private System.Windows.Forms.Label lbl_IOlink_Rotate;
         private System.Windows.Forms.Label lbl_IOlink_Move_Cam;
+        private System.Windows.Forms.ImageList imageList_Status;
+        private System.Windows.Forms.ImageList imageList_Error;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lbl_Status_Rotate;
+        private System.Windows.Forms.Label lbl_Status_Feeding;
     }
 }
