@@ -691,6 +691,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                     XmlNode ServoNode = xmlnode.SelectSingleNode("Feeding");
                     if (ServoNode != null)
                     {
+                        CurrentParas.mPLC.servo_Feeding.ID = ServoNode.Name;
                         CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
                         CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
                         CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
@@ -1295,6 +1296,7 @@ namespace Festo_Rubik_s_Cube_Explorer
 
     public struct ServoParas
     {
+        public string ID;
         public ServoNodeID mServoNodeID;//变量在PLC中的节点名
         public double P1;
         public double P2;
@@ -1325,6 +1327,7 @@ namespace Festo_Rubik_s_Cube_Explorer
     }
     public struct IOlinkNodeID
     {
+        public string ID;
         public string NodeID_i_In;
         public string NodeID_i_Out;
         public string NodeID_i_Move;

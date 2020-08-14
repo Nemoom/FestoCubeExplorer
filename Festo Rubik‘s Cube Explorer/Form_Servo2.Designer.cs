@@ -34,13 +34,14 @@
             this.imageList_Error = new System.Windows.Forms.ImageList(this.components);
             this.lbl_ServoName = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_i_Device = new System.Windows.Forms.Label();
-            this.lbl_i_Move = new System.Windows.Forms.Label();
-            this.lbl_i_In = new System.Windows.Forms.Label();
-            this.btn_o_QuitError = new System.Windows.Forms.Button();
-            this.btn_o_Out = new System.Windows.Forms.Button();
-            this.btn_o_In = new System.Windows.Forms.Button();
             this.lbl_i_Out = new System.Windows.Forms.Label();
+            this.btn_o_In = new System.Windows.Forms.Button();
+            this.btn_o_Out = new System.Windows.Forms.Button();
+            this.btn_o_QuitError = new System.Windows.Forms.Button();
+            this.lbl_i_In = new System.Windows.Forms.Label();
+            this.lbl_i_Move = new System.Windows.Forms.Label();
+            this.lbl_i_Device = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,31 +96,51 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(260, 134);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // lbl_i_Device
+            // lbl_i_Out
             // 
-            this.lbl_i_Device.Image = ((System.Drawing.Image)(resources.GetObject("lbl_i_Device.Image")));
-            this.lbl_i_Device.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_i_Device.Location = new System.Drawing.Point(4, 99);
-            this.lbl_i_Device.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_i_Device.Name = "lbl_i_Device";
-            this.lbl_i_Device.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.lbl_i_Device.Size = new System.Drawing.Size(96, 31);
-            this.lbl_i_Device.TabIndex = 18;
-            this.lbl_i_Device.Text = "Device";
-            this.lbl_i_Device.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_i_Out.Image = ((System.Drawing.Image)(resources.GetObject("lbl_i_Out.Image")));
+            this.lbl_i_Out.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_i_Out.Location = new System.Drawing.Point(4, 33);
+            this.lbl_i_Out.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_i_Out.Name = "lbl_i_Out";
+            this.lbl_i_Out.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.lbl_i_Out.Size = new System.Drawing.Size(77, 26);
+            this.lbl_i_Out.TabIndex = 19;
+            this.lbl_i_Out.Text = "Out";
+            this.lbl_i_Out.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lbl_i_Move
+            // btn_o_In
             // 
-            this.lbl_i_Move.Image = ((System.Drawing.Image)(resources.GetObject("lbl_i_Move.Image")));
-            this.lbl_i_Move.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_i_Move.Location = new System.Drawing.Point(4, 66);
-            this.lbl_i_Move.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_i_Move.Name = "lbl_i_Move";
-            this.lbl_i_Move.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.lbl_i_Move.Size = new System.Drawing.Size(134, 31);
-            this.lbl_i_Move.TabIndex = 8;
-            this.lbl_i_Move.Text = "Move";
-            this.lbl_i_Move.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_o_In.Location = new System.Drawing.Point(160, 3);
+            this.btn_o_In.Name = "btn_o_In";
+            this.btn_o_In.Size = new System.Drawing.Size(75, 23);
+            this.btn_o_In.TabIndex = 102;
+            this.btn_o_In.Text = "In";
+            this.btn_o_In.UseVisualStyleBackColor = true;
+            this.btn_o_In.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_o_In_MouseDown);
+            this.btn_o_In.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_o_In_MouseUp);
+            // 
+            // btn_o_Out
+            // 
+            this.btn_o_Out.Location = new System.Drawing.Point(160, 36);
+            this.btn_o_Out.Name = "btn_o_Out";
+            this.btn_o_Out.Size = new System.Drawing.Size(75, 23);
+            this.btn_o_Out.TabIndex = 96;
+            this.btn_o_Out.Text = "Out";
+            this.btn_o_Out.UseVisualStyleBackColor = true;
+            this.btn_o_Out.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_o_Out_MouseDown);
+            this.btn_o_Out.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_o_Out_MouseUp);
+            // 
+            // btn_o_QuitError
+            // 
+            this.btn_o_QuitError.Location = new System.Drawing.Point(160, 69);
+            this.btn_o_QuitError.Name = "btn_o_QuitError";
+            this.btn_o_QuitError.Size = new System.Drawing.Size(75, 23);
+            this.btn_o_QuitError.TabIndex = 97;
+            this.btn_o_QuitError.Text = "QuitError";
+            this.btn_o_QuitError.UseVisualStyleBackColor = true;
+            this.btn_o_QuitError.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_o_QuitError_MouseDown);
+            this.btn_o_QuitError.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_o_QuitError_MouseUp);
             // 
             // lbl_i_In
             // 
@@ -134,45 +155,35 @@
             this.lbl_i_In.Text = "In";
             this.lbl_i_In.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_o_QuitError
+            // lbl_i_Move
             // 
-            this.btn_o_QuitError.Location = new System.Drawing.Point(160, 69);
-            this.btn_o_QuitError.Name = "btn_o_QuitError";
-            this.btn_o_QuitError.Size = new System.Drawing.Size(75, 23);
-            this.btn_o_QuitError.TabIndex = 97;
-            this.btn_o_QuitError.Text = "QuitError";
-            this.btn_o_QuitError.UseVisualStyleBackColor = true;
+            this.lbl_i_Move.Image = ((System.Drawing.Image)(resources.GetObject("lbl_i_Move.Image")));
+            this.lbl_i_Move.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_i_Move.Location = new System.Drawing.Point(4, 66);
+            this.lbl_i_Move.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_i_Move.Name = "lbl_i_Move";
+            this.lbl_i_Move.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.lbl_i_Move.Size = new System.Drawing.Size(134, 31);
+            this.lbl_i_Move.TabIndex = 8;
+            this.lbl_i_Move.Text = "Move";
+            this.lbl_i_Move.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_o_Out
+            // lbl_i_Device
             // 
-            this.btn_o_Out.Location = new System.Drawing.Point(160, 36);
-            this.btn_o_Out.Name = "btn_o_Out";
-            this.btn_o_Out.Size = new System.Drawing.Size(75, 23);
-            this.btn_o_Out.TabIndex = 96;
-            this.btn_o_Out.Text = "Out";
-            this.btn_o_Out.UseVisualStyleBackColor = true;
+            this.lbl_i_Device.Image = ((System.Drawing.Image)(resources.GetObject("lbl_i_Device.Image")));
+            this.lbl_i_Device.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_i_Device.Location = new System.Drawing.Point(4, 99);
+            this.lbl_i_Device.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_i_Device.Name = "lbl_i_Device";
+            this.lbl_i_Device.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.lbl_i_Device.Size = new System.Drawing.Size(96, 31);
+            this.lbl_i_Device.TabIndex = 18;
+            this.lbl_i_Device.Text = "Device";
+            this.lbl_i_Device.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btn_o_In
+            // timer1
             // 
-            this.btn_o_In.Location = new System.Drawing.Point(160, 3);
-            this.btn_o_In.Name = "btn_o_In";
-            this.btn_o_In.Size = new System.Drawing.Size(75, 23);
-            this.btn_o_In.TabIndex = 102;
-            this.btn_o_In.Text = "In";
-            this.btn_o_In.UseVisualStyleBackColor = true;
-            // 
-            // lbl_i_Out
-            // 
-            this.lbl_i_Out.Image = ((System.Drawing.Image)(resources.GetObject("lbl_i_Out.Image")));
-            this.lbl_i_Out.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_i_Out.Location = new System.Drawing.Point(4, 33);
-            this.lbl_i_Out.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_i_Out.Name = "lbl_i_Out";
-            this.lbl_i_Out.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.lbl_i_Out.Size = new System.Drawing.Size(77, 26);
-            this.lbl_i_Out.TabIndex = 19;
-            this.lbl_i_Out.Text = "Out";
-            this.lbl_i_Out.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form_Servo2
             // 
@@ -203,5 +214,6 @@
         private System.Windows.Forms.Label lbl_i_In;
         private System.Windows.Forms.Label lbl_i_Move;
         private System.Windows.Forms.Label lbl_i_Device;
+        private System.Windows.Forms.Timer timer1;
     }
 }
