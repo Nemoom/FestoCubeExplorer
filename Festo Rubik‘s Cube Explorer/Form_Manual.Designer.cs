@@ -182,6 +182,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Status_Feeding = new System.Windows.Forms.Label();
             this.rbtn_Feeding_P1 = new System.Windows.Forms.RadioButton();
             this.rbtn_Feeding_P2 = new System.Windows.Forms.RadioButton();
             this.lbl_ActPos_Feeding = new System.Windows.Forms.Label();
@@ -225,6 +226,7 @@
             this.rbtn_GrabB_P2 = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Status_Rotate = new System.Windows.Forms.Label();
             this.rbtn_Rotate_P1 = new System.Windows.Forms.RadioButton();
             this.rbtn_Rotate_P2 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -267,8 +269,6 @@
             this.imageList_Status = new System.Windows.Forms.ImageList(this.components);
             this.imageList_Error = new System.Windows.Forms.ImageList(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lbl_Status_Rotate = new System.Windows.Forms.Label();
-            this.lbl_Status_Feeding = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage_Cam.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -328,7 +328,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1295, 895);
+            this.tabControl1.Size = new System.Drawing.Size(1299, 900);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 0;
             // 
@@ -341,7 +341,7 @@
             this.tabPage_Cam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage_Cam.Name = "tabPage_Cam";
             this.tabPage_Cam.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage_Cam.Size = new System.Drawing.Size(1287, 855);
+            this.tabPage_Cam.Size = new System.Drawing.Size(1291, 860);
             this.tabPage_Cam.TabIndex = 0;
             this.tabPage_Cam.Text = "Camera";
             this.tabPage_Cam.UseVisualStyleBackColor = true;
@@ -1148,7 +1148,7 @@
             this.tableLayoutPanel_CamControl.ColumnCount = 3;
             this.tableLayoutPanel_CamControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel_CamControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel_CamControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 159F));
+            this.tableLayoutPanel_CamControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
             this.tableLayoutPanel_CamControl.Controls.Add(this.lbl_Trigger, 0, 0);
             this.tableLayoutPanel_CamControl.Controls.Add(this.lbl_Light, 1, 0);
             this.tableLayoutPanel_CamControl.Controls.Add(this.lbl_Status, 2, 0);
@@ -1188,7 +1188,7 @@
             this.lbl_Trigger.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_Trigger.Location = new System.Drawing.Point(4, 1);
             this.lbl_Trigger.Name = "lbl_Trigger";
-            this.lbl_Trigger.Size = new System.Drawing.Size(79, 39);
+            this.lbl_Trigger.Size = new System.Drawing.Size(78, 39);
             this.lbl_Trigger.TabIndex = 1;
             this.lbl_Trigger.Text = "触发";
             this.lbl_Trigger.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1196,9 +1196,9 @@
             // lbl_Light
             // 
             this.lbl_Light.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Light.Location = new System.Drawing.Point(90, 1);
+            this.lbl_Light.Location = new System.Drawing.Point(89, 1);
             this.lbl_Light.Name = "lbl_Light";
-            this.lbl_Light.Size = new System.Drawing.Size(79, 39);
+            this.lbl_Light.Size = new System.Drawing.Size(78, 39);
             this.lbl_Light.TabIndex = 2;
             this.lbl_Light.Text = "光源";
             this.lbl_Light.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1206,9 +1206,9 @@
             // lbl_Status
             // 
             this.lbl_Status.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status.Location = new System.Drawing.Point(176, 1);
+            this.lbl_Status.Location = new System.Drawing.Point(174, 1);
             this.lbl_Status.Name = "lbl_Status";
-            this.lbl_Status.Size = new System.Drawing.Size(153, 39);
+            this.lbl_Status.Size = new System.Drawing.Size(155, 39);
             this.lbl_Status.TabIndex = 3;
             this.lbl_Status.Text = "状态";
             this.lbl_Status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1218,7 +1218,7 @@
             this.btn_U.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_U.Location = new System.Drawing.Point(4, 44);
             this.btn_U.Name = "btn_U";
-            this.btn_U.Size = new System.Drawing.Size(79, 33);
+            this.btn_U.Size = new System.Drawing.Size(78, 33);
             this.btn_U.TabIndex = 4;
             this.btn_U.Text = "U";
             this.btn_U.UseVisualStyleBackColor = true;
@@ -1228,7 +1228,7 @@
             this.btn_L.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_L.Location = new System.Drawing.Point(4, 84);
             this.btn_L.Name = "btn_L";
-            this.btn_L.Size = new System.Drawing.Size(79, 33);
+            this.btn_L.Size = new System.Drawing.Size(78, 33);
             this.btn_L.TabIndex = 5;
             this.btn_L.Text = "L";
             this.btn_L.UseVisualStyleBackColor = true;
@@ -1238,7 +1238,7 @@
             this.btn_F.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_F.Location = new System.Drawing.Point(4, 124);
             this.btn_F.Name = "btn_F";
-            this.btn_F.Size = new System.Drawing.Size(79, 33);
+            this.btn_F.Size = new System.Drawing.Size(78, 33);
             this.btn_F.TabIndex = 6;
             this.btn_F.Text = "F";
             this.btn_F.UseVisualStyleBackColor = true;
@@ -1248,7 +1248,7 @@
             this.btn_R.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_R.Location = new System.Drawing.Point(4, 164);
             this.btn_R.Name = "btn_R";
-            this.btn_R.Size = new System.Drawing.Size(79, 33);
+            this.btn_R.Size = new System.Drawing.Size(78, 33);
             this.btn_R.TabIndex = 7;
             this.btn_R.Text = "R";
             this.btn_R.UseVisualStyleBackColor = true;
@@ -1258,7 +1258,7 @@
             this.btn_B.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_B.Location = new System.Drawing.Point(4, 204);
             this.btn_B.Name = "btn_B";
-            this.btn_B.Size = new System.Drawing.Size(79, 33);
+            this.btn_B.Size = new System.Drawing.Size(78, 33);
             this.btn_B.TabIndex = 8;
             this.btn_B.Text = "B";
             this.btn_B.UseVisualStyleBackColor = true;
@@ -1268,7 +1268,7 @@
             this.btn_D.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_D.Location = new System.Drawing.Point(4, 244);
             this.btn_D.Name = "btn_D";
-            this.btn_D.Size = new System.Drawing.Size(79, 37);
+            this.btn_D.Size = new System.Drawing.Size(78, 37);
             this.btn_D.TabIndex = 9;
             this.btn_D.Text = "D";
             this.btn_D.UseVisualStyleBackColor = true;
@@ -1276,7 +1276,7 @@
             // pic_L_U
             // 
             this.pic_L_U.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_U.Location = new System.Drawing.Point(90, 44);
+            this.pic_L_U.Location = new System.Drawing.Point(89, 44);
             this.pic_L_U.Name = "pic_L_U";
             this.pic_L_U.Size = new System.Drawing.Size(39, 30);
             this.pic_L_U.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1286,7 +1286,7 @@
             // pic_L_L
             // 
             this.pic_L_L.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_L.Location = new System.Drawing.Point(90, 84);
+            this.pic_L_L.Location = new System.Drawing.Point(89, 84);
             this.pic_L_L.Name = "pic_L_L";
             this.pic_L_L.Size = new System.Drawing.Size(39, 30);
             this.pic_L_L.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1296,7 +1296,7 @@
             // pic_L_F
             // 
             this.pic_L_F.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_F.Location = new System.Drawing.Point(90, 124);
+            this.pic_L_F.Location = new System.Drawing.Point(89, 124);
             this.pic_L_F.Name = "pic_L_F";
             this.pic_L_F.Size = new System.Drawing.Size(39, 30);
             this.pic_L_F.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1306,7 +1306,7 @@
             // pic_L_R
             // 
             this.pic_L_R.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_R.Location = new System.Drawing.Point(90, 164);
+            this.pic_L_R.Location = new System.Drawing.Point(89, 164);
             this.pic_L_R.Name = "pic_L_R";
             this.pic_L_R.Size = new System.Drawing.Size(39, 30);
             this.pic_L_R.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1316,7 +1316,7 @@
             // pic_L_B
             // 
             this.pic_L_B.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_B.Location = new System.Drawing.Point(90, 204);
+            this.pic_L_B.Location = new System.Drawing.Point(89, 204);
             this.pic_L_B.Name = "pic_L_B";
             this.pic_L_B.Size = new System.Drawing.Size(39, 30);
             this.pic_L_B.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1326,7 +1326,7 @@
             // pic_L_D
             // 
             this.pic_L_D.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_D.Location = new System.Drawing.Point(90, 244);
+            this.pic_L_D.Location = new System.Drawing.Point(89, 244);
             this.pic_L_D.Name = "pic_L_D";
             this.pic_L_D.Size = new System.Drawing.Size(39, 33);
             this.pic_L_D.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1336,9 +1336,9 @@
             // lbl_Status_U
             // 
             this.lbl_Status_U.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_U.Location = new System.Drawing.Point(176, 41);
+            this.lbl_Status_U.Location = new System.Drawing.Point(174, 41);
             this.lbl_Status_U.Name = "lbl_Status_U";
-            this.lbl_Status_U.Size = new System.Drawing.Size(153, 39);
+            this.lbl_Status_U.Size = new System.Drawing.Size(155, 39);
             this.lbl_Status_U.TabIndex = 16;
             this.lbl_Status_U.Text = "已连接";
             this.lbl_Status_U.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1346,9 +1346,9 @@
             // lbl_Status_L
             // 
             this.lbl_Status_L.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_L.Location = new System.Drawing.Point(176, 81);
+            this.lbl_Status_L.Location = new System.Drawing.Point(174, 81);
             this.lbl_Status_L.Name = "lbl_Status_L";
-            this.lbl_Status_L.Size = new System.Drawing.Size(153, 39);
+            this.lbl_Status_L.Size = new System.Drawing.Size(155, 39);
             this.lbl_Status_L.TabIndex = 17;
             this.lbl_Status_L.Text = "已连接";
             this.lbl_Status_L.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1356,9 +1356,9 @@
             // lbl_Status_F
             // 
             this.lbl_Status_F.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_F.Location = new System.Drawing.Point(176, 121);
+            this.lbl_Status_F.Location = new System.Drawing.Point(174, 121);
             this.lbl_Status_F.Name = "lbl_Status_F";
-            this.lbl_Status_F.Size = new System.Drawing.Size(153, 39);
+            this.lbl_Status_F.Size = new System.Drawing.Size(155, 39);
             this.lbl_Status_F.TabIndex = 18;
             this.lbl_Status_F.Text = "已连接";
             this.lbl_Status_F.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1366,9 +1366,9 @@
             // lbl_Status_R
             // 
             this.lbl_Status_R.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_R.Location = new System.Drawing.Point(176, 161);
+            this.lbl_Status_R.Location = new System.Drawing.Point(174, 161);
             this.lbl_Status_R.Name = "lbl_Status_R";
-            this.lbl_Status_R.Size = new System.Drawing.Size(153, 39);
+            this.lbl_Status_R.Size = new System.Drawing.Size(155, 39);
             this.lbl_Status_R.TabIndex = 19;
             this.lbl_Status_R.Text = "已连接";
             this.lbl_Status_R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1376,9 +1376,9 @@
             // lbl_Status_B
             // 
             this.lbl_Status_B.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_B.Location = new System.Drawing.Point(176, 201);
+            this.lbl_Status_B.Location = new System.Drawing.Point(174, 201);
             this.lbl_Status_B.Name = "lbl_Status_B";
-            this.lbl_Status_B.Size = new System.Drawing.Size(153, 39);
+            this.lbl_Status_B.Size = new System.Drawing.Size(155, 39);
             this.lbl_Status_B.TabIndex = 20;
             this.lbl_Status_B.Text = "已连接";
             this.lbl_Status_B.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1386,9 +1386,9 @@
             // lbl_Status_D
             // 
             this.lbl_Status_D.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_D.Location = new System.Drawing.Point(176, 241);
+            this.lbl_Status_D.Location = new System.Drawing.Point(174, 241);
             this.lbl_Status_D.Name = "lbl_Status_D";
-            this.lbl_Status_D.Size = new System.Drawing.Size(153, 43);
+            this.lbl_Status_D.Size = new System.Drawing.Size(155, 43);
             this.lbl_Status_D.TabIndex = 21;
             this.lbl_Status_D.Text = "已连接";
             this.lbl_Status_D.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1762,7 +1762,7 @@
             this.tabPage_Step.Location = new System.Drawing.Point(4, 4);
             this.tabPage_Step.Name = "tabPage_Step";
             this.tabPage_Step.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Step.Size = new System.Drawing.Size(1287, 855);
+            this.tabPage_Step.Size = new System.Drawing.Size(1291, 860);
             this.tabPage_Step.TabIndex = 2;
             this.tabPage_Step.Text = "Step";
             this.tabPage_Step.UseVisualStyleBackColor = true;
@@ -1818,15 +1818,15 @@
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(1281, 159);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(1285, 164);
             this.tableLayoutPanel10.TabIndex = 1;
             // 
             // lbl_Servo_Rotate_R
             // 
             this.lbl_Servo_Rotate_R.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Servo_Rotate_R.Location = new System.Drawing.Point(1114, 118);
+            this.lbl_Servo_Rotate_R.Location = new System.Drawing.Point(1114, 121);
             this.lbl_Servo_Rotate_R.Name = "lbl_Servo_Rotate_R";
-            this.lbl_Servo_Rotate_R.Size = new System.Drawing.Size(163, 40);
+            this.lbl_Servo_Rotate_R.Size = new System.Drawing.Size(167, 42);
             this.lbl_Servo_Rotate_R.TabIndex = 31;
             this.lbl_Servo_Rotate_R.Text = "起始位";
             this.lbl_Servo_Rotate_R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1834,9 +1834,9 @@
             // lbl_Servo_Move_R
             // 
             this.lbl_Servo_Move_R.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Servo_Move_R.Location = new System.Drawing.Point(947, 118);
+            this.lbl_Servo_Move_R.Location = new System.Drawing.Point(947, 121);
             this.lbl_Servo_Move_R.Name = "lbl_Servo_Move_R";
-            this.lbl_Servo_Move_R.Size = new System.Drawing.Size(160, 40);
+            this.lbl_Servo_Move_R.Size = new System.Drawing.Size(160, 42);
             this.lbl_Servo_Move_R.TabIndex = 30;
             this.lbl_Servo_Move_R.Text = "旋转位";
             this.lbl_Servo_Move_R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1844,9 +1844,9 @@
             // lbl_Servo_Feeding_R
             // 
             this.lbl_Servo_Feeding_R.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Servo_Feeding_R.Location = new System.Drawing.Point(780, 118);
+            this.lbl_Servo_Feeding_R.Location = new System.Drawing.Point(780, 121);
             this.lbl_Servo_Feeding_R.Name = "lbl_Servo_Feeding_R";
-            this.lbl_Servo_Feeding_R.Size = new System.Drawing.Size(160, 40);
+            this.lbl_Servo_Feeding_R.Size = new System.Drawing.Size(160, 42);
             this.lbl_Servo_Feeding_R.TabIndex = 29;
             this.lbl_Servo_Feeding_R.Text = "工作位";
             this.lbl_Servo_Feeding_R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1854,9 +1854,9 @@
             // lbl_Servo_Grab_R
             // 
             this.lbl_Servo_Grab_R.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Servo_Grab_R.Location = new System.Drawing.Point(613, 118);
+            this.lbl_Servo_Grab_R.Location = new System.Drawing.Point(613, 121);
             this.lbl_Servo_Grab_R.Name = "lbl_Servo_Grab_R";
-            this.lbl_Servo_Grab_R.Size = new System.Drawing.Size(160, 40);
+            this.lbl_Servo_Grab_R.Size = new System.Drawing.Size(160, 42);
             this.lbl_Servo_Grab_R.TabIndex = 28;
             this.lbl_Servo_Grab_R.Text = "旋转位";
             this.lbl_Servo_Grab_R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1864,9 +1864,9 @@
             // lbl_IOlink_Grab_R
             // 
             this.lbl_IOlink_Grab_R.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_IOlink_Grab_R.Location = new System.Drawing.Point(446, 118);
+            this.lbl_IOlink_Grab_R.Location = new System.Drawing.Point(446, 121);
             this.lbl_IOlink_Grab_R.Name = "lbl_IOlink_Grab_R";
-            this.lbl_IOlink_Grab_R.Size = new System.Drawing.Size(160, 40);
+            this.lbl_IOlink_Grab_R.Size = new System.Drawing.Size(160, 42);
             this.lbl_IOlink_Grab_R.TabIndex = 27;
             this.lbl_IOlink_Grab_R.Text = "旋转位";
             this.lbl_IOlink_Grab_R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1874,9 +1874,9 @@
             // lbl_IOlink_Rotate_R
             // 
             this.lbl_IOlink_Rotate_R.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_IOlink_Rotate_R.Location = new System.Drawing.Point(279, 118);
+            this.lbl_IOlink_Rotate_R.Location = new System.Drawing.Point(279, 121);
             this.lbl_IOlink_Rotate_R.Name = "lbl_IOlink_Rotate_R";
-            this.lbl_IOlink_Rotate_R.Size = new System.Drawing.Size(160, 40);
+            this.lbl_IOlink_Rotate_R.Size = new System.Drawing.Size(160, 42);
             this.lbl_IOlink_Rotate_R.TabIndex = 26;
             this.lbl_IOlink_Rotate_R.Text = "旋转位";
             this.lbl_IOlink_Rotate_R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1884,9 +1884,9 @@
             // lbl_IOlink_Move_Cam_R
             // 
             this.lbl_IOlink_Move_Cam_R.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_IOlink_Move_Cam_R.Location = new System.Drawing.Point(112, 118);
+            this.lbl_IOlink_Move_Cam_R.Location = new System.Drawing.Point(112, 121);
             this.lbl_IOlink_Move_Cam_R.Name = "lbl_IOlink_Move_Cam_R";
-            this.lbl_IOlink_Move_Cam_R.Size = new System.Drawing.Size(160, 40);
+            this.lbl_IOlink_Move_Cam_R.Size = new System.Drawing.Size(160, 42);
             this.lbl_IOlink_Move_Cam_R.TabIndex = 25;
             this.lbl_IOlink_Move_Cam_R.Text = "原位";
             this.lbl_IOlink_Move_Cam_R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1894,27 +1894,28 @@
             // lbl_P_Rotate
             // 
             this.lbl_P_Rotate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_P_Rotate.Location = new System.Drawing.Point(4, 118);
+            this.lbl_P_Rotate.Font = new System.Drawing.Font("MetaPlusLF", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_P_Rotate.Location = new System.Drawing.Point(4, 121);
             this.lbl_P_Rotate.Name = "lbl_P_Rotate";
-            this.lbl_P_Rotate.Size = new System.Drawing.Size(101, 40);
+            this.lbl_P_Rotate.Size = new System.Drawing.Size(101, 42);
             this.lbl_P_Rotate.TabIndex = 24;
             this.lbl_P_Rotate.Text = "Rotate";
             // 
             // lbl_Servo_Rotate_A
             // 
             this.lbl_Servo_Rotate_A.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Servo_Rotate_A.Location = new System.Drawing.Point(1114, 79);
+            this.lbl_Servo_Rotate_A.Location = new System.Drawing.Point(1114, 81);
             this.lbl_Servo_Rotate_A.Name = "lbl_Servo_Rotate_A";
-            this.lbl_Servo_Rotate_A.Size = new System.Drawing.Size(163, 38);
+            this.lbl_Servo_Rotate_A.Size = new System.Drawing.Size(167, 39);
             this.lbl_Servo_Rotate_A.TabIndex = 23;
             this.lbl_Servo_Rotate_A.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_Servo_Move_A
             // 
             this.lbl_Servo_Move_A.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Servo_Move_A.Location = new System.Drawing.Point(947, 79);
+            this.lbl_Servo_Move_A.Location = new System.Drawing.Point(947, 81);
             this.lbl_Servo_Move_A.Name = "lbl_Servo_Move_A";
-            this.lbl_Servo_Move_A.Size = new System.Drawing.Size(160, 38);
+            this.lbl_Servo_Move_A.Size = new System.Drawing.Size(160, 39);
             this.lbl_Servo_Move_A.TabIndex = 22;
             this.lbl_Servo_Move_A.Text = "取像位";
             this.lbl_Servo_Move_A.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1922,9 +1923,9 @@
             // lbl_Servo_Feeding_A
             // 
             this.lbl_Servo_Feeding_A.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Servo_Feeding_A.Location = new System.Drawing.Point(780, 79);
+            this.lbl_Servo_Feeding_A.Location = new System.Drawing.Point(780, 81);
             this.lbl_Servo_Feeding_A.Name = "lbl_Servo_Feeding_A";
-            this.lbl_Servo_Feeding_A.Size = new System.Drawing.Size(160, 38);
+            this.lbl_Servo_Feeding_A.Size = new System.Drawing.Size(160, 39);
             this.lbl_Servo_Feeding_A.TabIndex = 21;
             this.lbl_Servo_Feeding_A.Text = "工作位";
             this.lbl_Servo_Feeding_A.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1932,9 +1933,9 @@
             // lbl_Servo_Grab_A
             // 
             this.lbl_Servo_Grab_A.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Servo_Grab_A.Location = new System.Drawing.Point(613, 79);
+            this.lbl_Servo_Grab_A.Location = new System.Drawing.Point(613, 81);
             this.lbl_Servo_Grab_A.Name = "lbl_Servo_Grab_A";
-            this.lbl_Servo_Grab_A.Size = new System.Drawing.Size(160, 38);
+            this.lbl_Servo_Grab_A.Size = new System.Drawing.Size(160, 39);
             this.lbl_Servo_Grab_A.TabIndex = 20;
             this.lbl_Servo_Grab_A.Text = "原位";
             this.lbl_Servo_Grab_A.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1942,9 +1943,9 @@
             // lbl_IOlink_Grab_A
             // 
             this.lbl_IOlink_Grab_A.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_IOlink_Grab_A.Location = new System.Drawing.Point(446, 79);
+            this.lbl_IOlink_Grab_A.Location = new System.Drawing.Point(446, 81);
             this.lbl_IOlink_Grab_A.Name = "lbl_IOlink_Grab_A";
-            this.lbl_IOlink_Grab_A.Size = new System.Drawing.Size(160, 38);
+            this.lbl_IOlink_Grab_A.Size = new System.Drawing.Size(160, 39);
             this.lbl_IOlink_Grab_A.TabIndex = 19;
             this.lbl_IOlink_Grab_A.Text = "原位";
             this.lbl_IOlink_Grab_A.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1952,9 +1953,9 @@
             // lbl_IOlink_Rotate_A
             // 
             this.lbl_IOlink_Rotate_A.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_IOlink_Rotate_A.Location = new System.Drawing.Point(279, 79);
+            this.lbl_IOlink_Rotate_A.Location = new System.Drawing.Point(279, 81);
             this.lbl_IOlink_Rotate_A.Name = "lbl_IOlink_Rotate_A";
-            this.lbl_IOlink_Rotate_A.Size = new System.Drawing.Size(160, 38);
+            this.lbl_IOlink_Rotate_A.Size = new System.Drawing.Size(160, 39);
             this.lbl_IOlink_Rotate_A.TabIndex = 18;
             this.lbl_IOlink_Rotate_A.Text = "取像位";
             this.lbl_IOlink_Rotate_A.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1962,9 +1963,9 @@
             // lbl_IOlink_Move_Cam_A
             // 
             this.lbl_IOlink_Move_Cam_A.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_IOlink_Move_Cam_A.Location = new System.Drawing.Point(112, 79);
+            this.lbl_IOlink_Move_Cam_A.Location = new System.Drawing.Point(112, 81);
             this.lbl_IOlink_Move_Cam_A.Name = "lbl_IOlink_Move_Cam_A";
-            this.lbl_IOlink_Move_Cam_A.Size = new System.Drawing.Size(160, 38);
+            this.lbl_IOlink_Move_Cam_A.Size = new System.Drawing.Size(160, 39);
             this.lbl_IOlink_Move_Cam_A.TabIndex = 17;
             this.lbl_IOlink_Move_Cam_A.Text = "取像位";
             this.lbl_IOlink_Move_Cam_A.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1972,27 +1973,28 @@
             // lbl_P_Acquire
             // 
             this.lbl_P_Acquire.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_P_Acquire.Location = new System.Drawing.Point(4, 79);
+            this.lbl_P_Acquire.Font = new System.Drawing.Font("MetaPlusLF", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_P_Acquire.Location = new System.Drawing.Point(4, 81);
             this.lbl_P_Acquire.Name = "lbl_P_Acquire";
-            this.lbl_P_Acquire.Size = new System.Drawing.Size(101, 38);
+            this.lbl_P_Acquire.Size = new System.Drawing.Size(101, 39);
             this.lbl_P_Acquire.TabIndex = 16;
             this.lbl_P_Acquire.Text = "Acquire";
             // 
             // lbl_Servo_Rotate_S
             // 
             this.lbl_Servo_Rotate_S.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Servo_Rotate_S.Location = new System.Drawing.Point(1114, 40);
+            this.lbl_Servo_Rotate_S.Location = new System.Drawing.Point(1114, 41);
             this.lbl_Servo_Rotate_S.Name = "lbl_Servo_Rotate_S";
-            this.lbl_Servo_Rotate_S.Size = new System.Drawing.Size(163, 38);
+            this.lbl_Servo_Rotate_S.Size = new System.Drawing.Size(167, 39);
             this.lbl_Servo_Rotate_S.TabIndex = 15;
             this.lbl_Servo_Rotate_S.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_Servo_Move_S
             // 
             this.lbl_Servo_Move_S.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Servo_Move_S.Location = new System.Drawing.Point(947, 40);
+            this.lbl_Servo_Move_S.Location = new System.Drawing.Point(947, 41);
             this.lbl_Servo_Move_S.Name = "lbl_Servo_Move_S";
-            this.lbl_Servo_Move_S.Size = new System.Drawing.Size(160, 38);
+            this.lbl_Servo_Move_S.Size = new System.Drawing.Size(160, 39);
             this.lbl_Servo_Move_S.TabIndex = 14;
             this.lbl_Servo_Move_S.Text = "取像位";
             this.lbl_Servo_Move_S.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2000,9 +2002,9 @@
             // lbl_Servo_Feeding_S
             // 
             this.lbl_Servo_Feeding_S.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Servo_Feeding_S.Location = new System.Drawing.Point(780, 40);
+            this.lbl_Servo_Feeding_S.Location = new System.Drawing.Point(780, 41);
             this.lbl_Servo_Feeding_S.Name = "lbl_Servo_Feeding_S";
-            this.lbl_Servo_Feeding_S.Size = new System.Drawing.Size(160, 38);
+            this.lbl_Servo_Feeding_S.Size = new System.Drawing.Size(160, 39);
             this.lbl_Servo_Feeding_S.TabIndex = 13;
             this.lbl_Servo_Feeding_S.Text = "上料位";
             this.lbl_Servo_Feeding_S.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2010,9 +2012,9 @@
             // lbl_Servo_Grab_S
             // 
             this.lbl_Servo_Grab_S.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Servo_Grab_S.Location = new System.Drawing.Point(613, 40);
+            this.lbl_Servo_Grab_S.Location = new System.Drawing.Point(613, 41);
             this.lbl_Servo_Grab_S.Name = "lbl_Servo_Grab_S";
-            this.lbl_Servo_Grab_S.Size = new System.Drawing.Size(160, 38);
+            this.lbl_Servo_Grab_S.Size = new System.Drawing.Size(160, 39);
             this.lbl_Servo_Grab_S.TabIndex = 12;
             this.lbl_Servo_Grab_S.Text = "原位";
             this.lbl_Servo_Grab_S.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2020,9 +2022,9 @@
             // lbl_IOlink_Grab_S
             // 
             this.lbl_IOlink_Grab_S.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_IOlink_Grab_S.Location = new System.Drawing.Point(446, 40);
+            this.lbl_IOlink_Grab_S.Location = new System.Drawing.Point(446, 41);
             this.lbl_IOlink_Grab_S.Name = "lbl_IOlink_Grab_S";
-            this.lbl_IOlink_Grab_S.Size = new System.Drawing.Size(160, 38);
+            this.lbl_IOlink_Grab_S.Size = new System.Drawing.Size(160, 39);
             this.lbl_IOlink_Grab_S.TabIndex = 11;
             this.lbl_IOlink_Grab_S.Text = "原位";
             this.lbl_IOlink_Grab_S.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2030,9 +2032,9 @@
             // lbl_IOlink_Rotate_S
             // 
             this.lbl_IOlink_Rotate_S.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_IOlink_Rotate_S.Location = new System.Drawing.Point(279, 40);
+            this.lbl_IOlink_Rotate_S.Location = new System.Drawing.Point(279, 41);
             this.lbl_IOlink_Rotate_S.Name = "lbl_IOlink_Rotate_S";
-            this.lbl_IOlink_Rotate_S.Size = new System.Drawing.Size(160, 38);
+            this.lbl_IOlink_Rotate_S.Size = new System.Drawing.Size(160, 39);
             this.lbl_IOlink_Rotate_S.TabIndex = 10;
             this.lbl_IOlink_Rotate_S.Text = "取像位";
             this.lbl_IOlink_Rotate_S.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2040,9 +2042,9 @@
             // lbl_IOlink_Move_Cam_S
             // 
             this.lbl_IOlink_Move_Cam_S.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_IOlink_Move_Cam_S.Location = new System.Drawing.Point(112, 40);
+            this.lbl_IOlink_Move_Cam_S.Location = new System.Drawing.Point(112, 41);
             this.lbl_IOlink_Move_Cam_S.Name = "lbl_IOlink_Move_Cam_S";
-            this.lbl_IOlink_Move_Cam_S.Size = new System.Drawing.Size(160, 38);
+            this.lbl_IOlink_Move_Cam_S.Size = new System.Drawing.Size(160, 39);
             this.lbl_IOlink_Move_Cam_S.TabIndex = 9;
             this.lbl_IOlink_Move_Cam_S.Text = "原位";
             this.lbl_IOlink_Move_Cam_S.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2050,18 +2052,20 @@
             // lbl_P_Start
             // 
             this.lbl_P_Start.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_P_Start.Location = new System.Drawing.Point(4, 40);
+            this.lbl_P_Start.Font = new System.Drawing.Font("MetaPlusLF", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_P_Start.Location = new System.Drawing.Point(4, 41);
             this.lbl_P_Start.Name = "lbl_P_Start";
-            this.lbl_P_Start.Size = new System.Drawing.Size(101, 38);
+            this.lbl_P_Start.Size = new System.Drawing.Size(101, 39);
             this.lbl_P_Start.TabIndex = 8;
             this.lbl_P_Start.Text = "Start";
             // 
             // lbl_Servo_Rotate
             // 
             this.lbl_Servo_Rotate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Servo_Rotate.Font = new System.Drawing.Font("MetaPlusLF", 13F, System.Drawing.FontStyle.Bold);
             this.lbl_Servo_Rotate.Location = new System.Drawing.Point(1114, 1);
             this.lbl_Servo_Rotate.Name = "lbl_Servo_Rotate";
-            this.lbl_Servo_Rotate.Size = new System.Drawing.Size(163, 38);
+            this.lbl_Servo_Rotate.Size = new System.Drawing.Size(167, 39);
             this.lbl_Servo_Rotate.TabIndex = 7;
             this.lbl_Servo_Rotate.Text = "旋杆旋转";
             this.lbl_Servo_Rotate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2069,9 +2073,10 @@
             // lbl_Servo_Move
             // 
             this.lbl_Servo_Move.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Servo_Move.Font = new System.Drawing.Font("MetaPlusLF", 13F, System.Drawing.FontStyle.Bold);
             this.lbl_Servo_Move.Location = new System.Drawing.Point(947, 1);
             this.lbl_Servo_Move.Name = "lbl_Servo_Move";
-            this.lbl_Servo_Move.Size = new System.Drawing.Size(160, 38);
+            this.lbl_Servo_Move.Size = new System.Drawing.Size(160, 39);
             this.lbl_Servo_Move.TabIndex = 6;
             this.lbl_Servo_Move.Text = "模块水平移动";
             this.lbl_Servo_Move.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2079,9 +2084,10 @@
             // lbl_Servo_Feeding
             // 
             this.lbl_Servo_Feeding.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Servo_Feeding.Font = new System.Drawing.Font("MetaPlusLF", 13F, System.Drawing.FontStyle.Bold);
             this.lbl_Servo_Feeding.Location = new System.Drawing.Point(780, 1);
             this.lbl_Servo_Feeding.Name = "lbl_Servo_Feeding";
-            this.lbl_Servo_Feeding.Size = new System.Drawing.Size(160, 38);
+            this.lbl_Servo_Feeding.Size = new System.Drawing.Size(160, 39);
             this.lbl_Servo_Feeding.TabIndex = 5;
             this.lbl_Servo_Feeding.Text = "上下料";
             this.lbl_Servo_Feeding.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2089,9 +2095,10 @@
             // lbl_Servo_Grab
             // 
             this.lbl_Servo_Grab.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Servo_Grab.Font = new System.Drawing.Font("MetaPlusLF", 13F, System.Drawing.FontStyle.Bold);
             this.lbl_Servo_Grab.Location = new System.Drawing.Point(613, 1);
             this.lbl_Servo_Grab.Name = "lbl_Servo_Grab";
-            this.lbl_Servo_Grab.Size = new System.Drawing.Size(160, 38);
+            this.lbl_Servo_Grab.Size = new System.Drawing.Size(160, 39);
             this.lbl_Servo_Grab.TabIndex = 4;
             this.lbl_Servo_Grab.Text = "旋杆竖直移动";
             this.lbl_Servo_Grab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2099,9 +2106,10 @@
             // lbl_IOlink_Grab
             // 
             this.lbl_IOlink_Grab.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_IOlink_Grab.Font = new System.Drawing.Font("MetaPlusLF", 13F, System.Drawing.FontStyle.Bold);
             this.lbl_IOlink_Grab.Location = new System.Drawing.Point(446, 1);
             this.lbl_IOlink_Grab.Name = "lbl_IOlink_Grab";
-            this.lbl_IOlink_Grab.Size = new System.Drawing.Size(160, 38);
+            this.lbl_IOlink_Grab.Size = new System.Drawing.Size(160, 39);
             this.lbl_IOlink_Grab.TabIndex = 3;
             this.lbl_IOlink_Grab.Text = "旋杆前后移动";
             this.lbl_IOlink_Grab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2109,9 +2117,10 @@
             // lbl_IOlink_Rotate
             // 
             this.lbl_IOlink_Rotate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_IOlink_Rotate.Font = new System.Drawing.Font("MetaPlusLF", 13F, System.Drawing.FontStyle.Bold);
             this.lbl_IOlink_Rotate.Location = new System.Drawing.Point(279, 1);
             this.lbl_IOlink_Rotate.Name = "lbl_IOlink_Rotate";
-            this.lbl_IOlink_Rotate.Size = new System.Drawing.Size(160, 38);
+            this.lbl_IOlink_Rotate.Size = new System.Drawing.Size(160, 39);
             this.lbl_IOlink_Rotate.TabIndex = 2;
             this.lbl_IOlink_Rotate.Text = "魔方姿态";
             this.lbl_IOlink_Rotate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2119,9 +2128,10 @@
             // lbl_IOlink_Move_Cam
             // 
             this.lbl_IOlink_Move_Cam.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_IOlink_Move_Cam.Font = new System.Drawing.Font("MetaPlusLF", 13F, System.Drawing.FontStyle.Bold);
             this.lbl_IOlink_Move_Cam.Location = new System.Drawing.Point(112, 1);
             this.lbl_IOlink_Move_Cam.Name = "lbl_IOlink_Move_Cam";
-            this.lbl_IOlink_Move_Cam.Size = new System.Drawing.Size(160, 38);
+            this.lbl_IOlink_Move_Cam.Size = new System.Drawing.Size(160, 39);
             this.lbl_IOlink_Move_Cam.TabIndex = 1;
             this.lbl_IOlink_Move_Cam.Text = "相机上下移动";
             this.lbl_IOlink_Move_Cam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2130,7 +2140,7 @@
             // 
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 162);
+            this.splitContainer1.Location = new System.Drawing.Point(3, 167);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -2153,8 +2163,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.btn_2_P_Acquire);
             this.splitContainer1.Panel2.Controls.Add(this.btn_2_P_Rotate);
             this.splitContainer1.Panel2.Controls.Add(this.btn_2_P_Start);
-            this.splitContainer1.Size = new System.Drawing.Size(1281, 690);
-            this.splitContainer1.SplitterDistance = 715;
+            this.splitContainer1.Size = new System.Drawing.Size(1285, 690);
+            this.splitContainer1.SplitterDistance = 717;
             this.splitContainer1.TabIndex = 0;
             // 
             // groupBox7
@@ -2185,6 +2195,15 @@
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel9.Size = new System.Drawing.Size(396, 48);
             this.tableLayoutPanel9.TabIndex = 0;
+            // 
+            // lbl_Status_Feeding
+            // 
+            this.lbl_Status_Feeding.AutoSize = true;
+            this.lbl_Status_Feeding.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Status_Feeding.Name = "lbl_Status_Feeding";
+            this.lbl_Status_Feeding.Size = new System.Drawing.Size(17, 28);
+            this.lbl_Status_Feeding.TabIndex = 21;
+            this.lbl_Status_Feeding.Text = " ";
             // 
             // rbtn_Feeding_P1
             // 
@@ -2696,6 +2715,15 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(270, 39);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
+            // lbl_Status_Rotate
+            // 
+            this.lbl_Status_Rotate.AutoSize = true;
+            this.lbl_Status_Rotate.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Status_Rotate.Name = "lbl_Status_Rotate";
+            this.lbl_Status_Rotate.Size = new System.Drawing.Size(17, 28);
+            this.lbl_Status_Rotate.TabIndex = 11;
+            this.lbl_Status_Rotate.Text = " ";
+            // 
             // rbtn_Rotate_P1
             // 
             this.rbtn_Rotate_P1.AutoSize = true;
@@ -3166,24 +3194,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // lbl_Status_Rotate
-            // 
-            this.lbl_Status_Rotate.AutoSize = true;
-            this.lbl_Status_Rotate.Location = new System.Drawing.Point(3, 0);
-            this.lbl_Status_Rotate.Name = "lbl_Status_Rotate";
-            this.lbl_Status_Rotate.Size = new System.Drawing.Size(21, 35);
-            this.lbl_Status_Rotate.TabIndex = 11;
-            this.lbl_Status_Rotate.Text = " ";
-            // 
-            // lbl_Status_Feeding
-            // 
-            this.lbl_Status_Feeding.AutoSize = true;
-            this.lbl_Status_Feeding.Location = new System.Drawing.Point(3, 0);
-            this.lbl_Status_Feeding.Name = "lbl_Status_Feeding";
-            this.lbl_Status_Feeding.Size = new System.Drawing.Size(17, 28);
-            this.lbl_Status_Feeding.TabIndex = 21;
-            this.lbl_Status_Feeding.Text = " ";
             // 
             // Form_Manual
             // 
