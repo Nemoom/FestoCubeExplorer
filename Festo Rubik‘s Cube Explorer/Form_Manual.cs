@@ -17,7 +17,10 @@ namespace Festo_Rubik_s_Cube_Explorer
             InitializeComponent();
         }
         #region tabPage_Cam
-
+        private void btn_ColorLearning_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning().Show();
+        }
         #endregion
 
         #region tabPage_Step
@@ -343,117 +346,7 @@ namespace Festo_Rubik_s_Cube_Explorer
 
             }
             return true;
-        } 
-        #endregion
-
-        #region tabPage_Servo
-        private void btn_Rotate_Click(object sender, EventArgs e)
-        {
-            Form_Servo2 mForm_Servo2 = new Form_Servo2("IOlink_Rotate");
-            mForm_Servo2.Show();
         }
-
-        private void btn_L_Move_Cam_Click(object sender, EventArgs e)
-        {
-            new Form_Servo2("IOlink_L_Move_Cam").Show();
-        }
-
-        private void btn_F_Move_Cam_Click(object sender, EventArgs e)
-        {
-            new Form_Servo2("IOlink_F_Move_Cam").Show();
-        }
-
-        private void btn_R_Move_Cam_Click(object sender, EventArgs e)
-        {
-            new Form_Servo2("IOlink_R_Move_Cam").Show();
-        }
-
-        private void btn_B__Move_Cam_Click(object sender, EventArgs e)
-        {
-            new Form_Servo2("IOlink_B_Move_Cam").Show();
-        }
-
-        private void btn_D_Move_Cam_Click(object sender, EventArgs e)
-        {
-            new Form_Servo2("IOlink_D_Move_Cam").Show();
-        }
-
-        private void btn_L_Grab_Click(object sender, EventArgs e)
-        {
-            new Form_Servo2("IOlink_L_Grab").Show();
-        }
-
-        private void btn_F_Grab_Click(object sender, EventArgs e)
-        {
-            new Form_Servo2("IOlink_F_Grab").Show();
-        }
-
-        private void btn_R_Grab_Click(object sender, EventArgs e)
-        {
-            new Form_Servo2("IOlink_R_Grab").Show();
-        }
-
-        private void btn_B_Grab_Click(object sender, EventArgs e)
-        {
-            new Form_Servo2("IOlink_B_Grab").Show();
-        }
-
-        private void btn_Feeding_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_Feeding").Show();
-        }
-
-        private void btn_U_Grab_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_U_Grab").Show();
-        }
-
-        private void btn_D_Grab_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_D_Grab").Show();
-        }
-
-        private void btn_U_Move_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_U_Move").Show();
-        }
-
-        private void btn_D_Move_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_D_Move").Show();
-        }
-
-        private void btn_U_Rotate_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_U_Rotate").Show();
-        }
-
-        private void btn_L_Rotate_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_L_Rotate").Show();
-        }
-
-        private void btn_F_Rotate_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_F_Rotate").Show();
-        }
-
-        private void btn_R_Rotate_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_R_Rotate").Show();
-        }
-
-        private void btn_B_Rotate_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_B_Rotate").Show();
-        }
-
-        private void btn_D_Rotate_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_D_Rotate").Show();
-        }
-        #endregion
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             #region 更新所有IOlink轴的状态
@@ -779,7 +672,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 tags.Add(GlobalVariables.CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_i_ActPos);
                 tags.Add(GlobalVariables.CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_ActPos);
                 tags.Add(GlobalVariables.CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_ActPos);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_ActPos); 
+                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_ActPos);
                 tags.Add(GlobalVariables.CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_i_ActPos);
                 tags.Add(GlobalVariables.CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_i_ActPos);
                 tags.Add(GlobalVariables.CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_i_ActPos);
@@ -804,6 +697,161 @@ namespace Festo_Rubik_s_Cube_Explorer
                 MessageBox.Show(ex.ToString());
             }
             #endregion
+        }
+        #endregion
+
+        #region tabPage_Servo
+        private void btn_Rotate_Click(object sender, EventArgs e)
+        {
+            Form_Servo2 mForm_Servo2 = new Form_Servo2("IOlink_Rotate");
+            mForm_Servo2.Show();
+        }
+
+        private void btn_L_Move_Cam_Click(object sender, EventArgs e)
+        {
+            new Form_Servo2("IOlink_L_Move_Cam").Show();
+        }
+
+        private void btn_F_Move_Cam_Click(object sender, EventArgs e)
+        {
+            new Form_Servo2("IOlink_F_Move_Cam").Show();
+        }
+
+        private void btn_R_Move_Cam_Click(object sender, EventArgs e)
+        {
+            new Form_Servo2("IOlink_R_Move_Cam").Show();
+        }
+
+        private void btn_B__Move_Cam_Click(object sender, EventArgs e)
+        {
+            new Form_Servo2("IOlink_B_Move_Cam").Show();
+        }
+
+        private void btn_D_Move_Cam_Click(object sender, EventArgs e)
+        {
+            new Form_Servo2("IOlink_D_Move_Cam").Show();
+        }
+
+        private void btn_L_Grab_Click(object sender, EventArgs e)
+        {
+            new Form_Servo2("IOlink_L_Grab").Show();
+        }
+
+        private void btn_F_Grab_Click(object sender, EventArgs e)
+        {
+            new Form_Servo2("IOlink_F_Grab").Show();
+        }
+
+        private void btn_R_Grab_Click(object sender, EventArgs e)
+        {
+            new Form_Servo2("IOlink_R_Grab").Show();
+        }
+
+        private void btn_B_Grab_Click(object sender, EventArgs e)
+        {
+            new Form_Servo2("IOlink_B_Grab").Show();
+        }
+
+        private void btn_Feeding_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_Feeding").Show();
+        }
+
+        private void btn_U_Grab_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_U_Grab").Show();
+        }
+
+        private void btn_D_Grab_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_D_Grab").Show();
+        }
+
+        private void btn_U_Move_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_U_Move").Show();
+        }
+
+        private void btn_D_Move_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_D_Move").Show();
+        }
+
+        private void btn_U_Rotate_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_U_Rotate").Show();
+        }
+
+        private void btn_L_Rotate_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_L_Rotate").Show();
+        }
+
+        private void btn_F_Rotate_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_F_Rotate").Show();
+        }
+
+        private void btn_R_Rotate_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_R_Rotate").Show();
+        }
+
+        private void btn_B_Rotate_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_B_Rotate").Show();
+        }
+
+        private void btn_D_Rotate_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_D_Rotate").Show();
+        }
+
+        #endregion
+
+        private void btn_L8_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("L").Show();
+        }
+
+        private void btn_L2_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("L").Show();
+        }
+
+        private void btn_L3_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("L").Show();
+        }
+
+        private void btn_L4_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("L").Show();
+        }
+
+        private void btn_L5_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("L").Show();
+        }
+
+        private void btn_L6_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("L").Show();
+        }
+
+        private void btn_L7_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("L").Show();
+        }
+
+        private void btn_L1_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("L").Show();
+        }
+
+        private void btn_L9_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("L").Show();
         }
     }
 }

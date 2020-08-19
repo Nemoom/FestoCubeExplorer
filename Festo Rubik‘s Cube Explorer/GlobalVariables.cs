@@ -1204,6 +1204,25 @@ namespace Festo_Rubik_s_Cube_Explorer
             }
             return str_CheckXML;
         }
+
+        public static void SetXMLNodeValue(string XMLNodePath,string value)
+        {
+            XmlDocument xmldoc; //XML文档操作句柄
+            XmlNode xmlnode;
+            xmldoc = new XmlDocument();
+            string strFilename = GlobalVariables.ProjectPath + "Cube.xml";
+            try
+            {
+                xmldoc.Load(strFilename);               
+                xmlnode = xmldoc.SelectSingleNode(XMLNodePath);
+                xmlnode.InnerText = value;
+                xmldoc.Save(GlobalVariables.ProjectPath + "Cube.xml");
+            }
+            catch (Exception ex)
+            {
+               
+            }
+        }
     }
 
     #region XML中的参数

@@ -62,8 +62,10 @@
             // lbl_ServoName
             // 
             this.lbl_ServoName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbl_ServoName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ServoName.Location = new System.Drawing.Point(0, 0);
             this.lbl_ServoName.Name = "lbl_ServoName";
+            this.lbl_ServoName.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.lbl_ServoName.Size = new System.Drawing.Size(260, 37);
             this.lbl_ServoName.TabIndex = 1;
             this.lbl_ServoName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

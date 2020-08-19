@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="gb2312"?>
 <Cube> 
-  <CamU IP="127.0.0.1">
+  <CamU IP="192.168.1.91">
     <ColorMatch>
       <Red>
         <R_min>0</R_min>
@@ -52,17 +52,17 @@
       </Yellow>
     </ColorMatch>
   </CamU>
-  <CamD IP="192.168.9.112">
+  <CamD IP="192.168.1.92">
   </CamD>
-  <CamL IP="192.168.9.113">
+  <CamL IP="192.168.1.93">
   </CamL>
-  <CamR IP="192.168.9.114">
+  <CamR IP="192.168.1.94">
   </CamR>
-  <CamF IP="192.168.9.115">
+  <CamF IP="192.168.1.95">
   </CamF>
-  <CamB IP="192.168.9.116">
+  <CamB IP="192.168.1.96">
   </CamB>
-  <PLC IP="192.168.9.110">
+  <PLC IP="192.168.1.110">
 	<!--上料位/下料位-->
 	<Feeding>
 		<i_Enable></i_Enable>

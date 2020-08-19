@@ -28,24 +28,24 @@ namespace Festo_Rubik_s_Cube_Explorer
             //tcpClient_CamR = new TcpClient();
             //tcpClient_CamF = new TcpClient();
             //tcpClient_CamB = new TcpClient();
-            tcpClient_CamU.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamU.str_IP), 502));
-            //tcpClient_CamD.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamD.str_IP), 502));
-            //tcpClient_CamL.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamL.str_IP), 502));
-            //tcpClient_CamR.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamR.str_IP), 502));
-            //tcpClient_CamF.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamF.str_IP), 502));
-            //tcpClient_CamB.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamB.str_IP), 502));
-            tcpClient_CamU.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            //tcpClient_CamD.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            //tcpClient_CamL.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            //tcpClient_CamR.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            //tcpClient_CamF.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            //tcpClient_CamB.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            m_Master_CamU = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamU);
-            //m_Master_CamD = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamD);
-            //m_Master_CamL = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamL);
-            //m_Master_CamR = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamR);
-            //m_Master_CamF = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamF);
-            //m_Master_CamB = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamB);
+            //tcpClient_CamU.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamU.str_IP), 502));
+            ////tcpClient_CamD.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamD.str_IP), 502));
+            ////tcpClient_CamL.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamL.str_IP), 502));
+            ////tcpClient_CamR.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamR.str_IP), 502));
+            ////tcpClient_CamF.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamF.str_IP), 502));
+            ////tcpClient_CamB.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamB.str_IP), 502));
+            //tcpClient_CamU.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            ////tcpClient_CamD.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            ////tcpClient_CamL.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            ////tcpClient_CamR.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            ////tcpClient_CamF.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            ////tcpClient_CamB.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            //m_Master_CamU = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamU);
+            ////m_Master_CamD = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamD);
+            ////m_Master_CamL = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamL);
+            ////m_Master_CamR = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamR);
+            ////m_Master_CamF = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamF);
+            ////m_Master_CamB = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamB);
         }
 
         public static OpcUaClient m_OpcUaClient;
@@ -1242,6 +1242,11 @@ namespace Festo_Rubik_s_Cube_Explorer
             {
                 // 写入失败，一个失败即为失败
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new Form_Manual().Show();
         }
     }
 }

@@ -31,41 +31,41 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.numericUpDown36 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown35 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown34 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown33 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown32 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown31 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown30 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown29 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown28 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown27 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown26 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown25 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown24 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown23 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown22 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown21 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown20 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown19 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown18 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown17 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown16 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown15 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown14 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown13 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.nud_Yellow_B_Max = new System.Windows.Forms.NumericUpDown();
+            this.nud_Yellow_B_Min = new System.Windows.Forms.NumericUpDown();
+            this.nud_Yellow_G_Max = new System.Windows.Forms.NumericUpDown();
+            this.nud_Yellow_G_Min = new System.Windows.Forms.NumericUpDown();
+            this.nud_Yellow_R_Max = new System.Windows.Forms.NumericUpDown();
+            this.nud_Yellow_R_Min = new System.Windows.Forms.NumericUpDown();
+            this.nud_Orange_B_Max = new System.Windows.Forms.NumericUpDown();
+            this.nud_Orange_B_Min = new System.Windows.Forms.NumericUpDown();
+            this.nud_Orange_G_Max = new System.Windows.Forms.NumericUpDown();
+            this.nud_Orange_G_Min = new System.Windows.Forms.NumericUpDown();
+            this.nud_Orange_R_Max = new System.Windows.Forms.NumericUpDown();
+            this.nud_Orange_R_Min = new System.Windows.Forms.NumericUpDown();
+            this.nud_White_B_Max = new System.Windows.Forms.NumericUpDown();
+            this.nud_White_B_Min = new System.Windows.Forms.NumericUpDown();
+            this.nud_White_G_Max = new System.Windows.Forms.NumericUpDown();
+            this.nud_White_G_Min = new System.Windows.Forms.NumericUpDown();
+            this.nud_White_R_Max = new System.Windows.Forms.NumericUpDown();
+            this.nud_White_R_Min = new System.Windows.Forms.NumericUpDown();
+            this.nud_Blue_B_Max = new System.Windows.Forms.NumericUpDown();
+            this.nud_Blue_B_Min = new System.Windows.Forms.NumericUpDown();
+            this.nud_Blue_G_Max = new System.Windows.Forms.NumericUpDown();
+            this.nud_Blue_G_Min = new System.Windows.Forms.NumericUpDown();
+            this.nud_Blue_R_Max = new System.Windows.Forms.NumericUpDown();
+            this.nud_Blue_R_Min = new System.Windows.Forms.NumericUpDown();
+            this.nud_Green_B_Max = new System.Windows.Forms.NumericUpDown();
+            this.nud_Green_B_Min = new System.Windows.Forms.NumericUpDown();
+            this.nud_Green_G_Max = new System.Windows.Forms.NumericUpDown();
+            this.nud_Green_G_Min = new System.Windows.Forms.NumericUpDown();
+            this.nud_Green_R_Max = new System.Windows.Forms.NumericUpDown();
+            this.nud_Green_R_Min = new System.Windows.Forms.NumericUpDown();
+            this.nud_Red_B_Max = new System.Windows.Forms.NumericUpDown();
+            this.nud_Red_B_Min = new System.Windows.Forms.NumericUpDown();
+            this.nud_Red_G_Max = new System.Windows.Forms.NumericUpDown();
+            this.nud_Red_G_Min = new System.Windows.Forms.NumericUpDown();
+            this.nud_Red_R_Max = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -81,48 +81,48 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.lbl_Save = new System.Windows.Forms.Label();
+            this.nud_Red_R_Min = new System.Windows.Forms.NumericUpDown();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown36)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown35)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown34)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown33)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown32)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown31)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown30)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown29)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown28)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown26)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Yellow_B_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Yellow_B_Min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Yellow_G_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Yellow_G_Min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Yellow_R_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Yellow_R_Min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Orange_B_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Orange_B_Min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Orange_G_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Orange_G_Min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Orange_R_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Orange_R_Min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_White_B_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_White_B_Min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_White_G_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_White_G_Min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_White_R_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_White_R_Min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Blue_B_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Blue_B_Min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Blue_G_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Blue_G_Min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Blue_R_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Blue_R_Min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Green_B_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Green_B_Min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Green_G_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Green_G_Min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Green_R_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Green_R_Min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Red_B_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Red_B_Min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Red_G_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Red_G_Min)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Red_R_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Red_R_Min)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -159,41 +159,41 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown36, 6, 7);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown35, 5, 7);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown34, 4, 7);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown33, 3, 7);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown32, 2, 7);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown31, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown30, 6, 6);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown29, 5, 6);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown28, 4, 6);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown27, 3, 6);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown26, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown25, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown24, 6, 5);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown23, 5, 5);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown22, 4, 5);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown21, 3, 5);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown20, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown19, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown18, 6, 4);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown17, 5, 4);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown16, 4, 4);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown15, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown14, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown13, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown12, 6, 3);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown11, 5, 3);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown10, 4, 3);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown9, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown8, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown7, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown6, 6, 2);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown5, 5, 2);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown4, 4, 2);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown3, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown2, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Yellow_B_Max, 6, 7);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Yellow_B_Min, 5, 7);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Yellow_G_Max, 4, 7);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Yellow_G_Min, 3, 7);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Yellow_R_Max, 2, 7);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Yellow_R_Min, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Orange_B_Max, 6, 6);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Orange_B_Min, 5, 6);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Orange_G_Max, 4, 6);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Orange_G_Min, 3, 6);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Orange_R_Max, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Orange_R_Min, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.nud_White_B_Max, 6, 5);
+            this.tableLayoutPanel1.Controls.Add(this.nud_White_B_Min, 5, 5);
+            this.tableLayoutPanel1.Controls.Add(this.nud_White_G_Max, 4, 5);
+            this.tableLayoutPanel1.Controls.Add(this.nud_White_G_Min, 3, 5);
+            this.tableLayoutPanel1.Controls.Add(this.nud_White_R_Max, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.nud_White_R_Min, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Blue_B_Max, 6, 4);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Blue_B_Min, 5, 4);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Blue_G_Max, 4, 4);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Blue_G_Min, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Blue_R_Max, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Blue_R_Min, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Green_B_Max, 6, 3);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Green_B_Min, 5, 3);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Green_G_Max, 4, 3);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Green_G_Min, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Green_R_Max, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Green_R_Min, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Red_B_Max, 6, 2);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Red_B_Min, 5, 2);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Red_G_Max, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Red_G_Min, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Red_R_Max, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.label3, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
@@ -209,8 +209,8 @@
             this.tableLayoutPanel1.Controls.Add(this.label13, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label14, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label15, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.label16, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown1, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_Save, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.nud_Red_R_Min, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -227,285 +227,460 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(544, 281);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // numericUpDown36
-            // 
-            this.numericUpDown36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown36.Location = new System.Drawing.Point(464, 243);
-            this.numericUpDown36.Name = "numericUpDown36";
-            this.numericUpDown36.Size = new System.Drawing.Size(77, 22);
-            this.numericUpDown36.TabIndex = 51;
-            // 
-            // numericUpDown35
-            // 
-            this.numericUpDown35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown35.Location = new System.Drawing.Point(385, 243);
-            this.numericUpDown35.Name = "numericUpDown35";
-            this.numericUpDown35.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown35.TabIndex = 50;
-            // 
-            // numericUpDown34
-            // 
-            this.numericUpDown34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown34.Location = new System.Drawing.Point(306, 243);
-            this.numericUpDown34.Name = "numericUpDown34";
-            this.numericUpDown34.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown34.TabIndex = 49;
-            // 
-            // numericUpDown33
-            // 
-            this.numericUpDown33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown33.Location = new System.Drawing.Point(227, 243);
-            this.numericUpDown33.Name = "numericUpDown33";
-            this.numericUpDown33.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown33.TabIndex = 48;
-            // 
-            // numericUpDown32
-            // 
-            this.numericUpDown32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown32.Location = new System.Drawing.Point(148, 243);
-            this.numericUpDown32.Name = "numericUpDown32";
-            this.numericUpDown32.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown32.TabIndex = 47;
-            // 
-            // numericUpDown31
-            // 
-            this.numericUpDown31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown31.Location = new System.Drawing.Point(69, 243);
-            this.numericUpDown31.Name = "numericUpDown31";
-            this.numericUpDown31.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown31.TabIndex = 46;
-            // 
-            // numericUpDown30
-            // 
-            this.numericUpDown30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown30.Location = new System.Drawing.Point(464, 203);
-            this.numericUpDown30.Name = "numericUpDown30";
-            this.numericUpDown30.Size = new System.Drawing.Size(77, 22);
-            this.numericUpDown30.TabIndex = 45;
-            // 
-            // numericUpDown29
-            // 
-            this.numericUpDown29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown29.Location = new System.Drawing.Point(385, 203);
-            this.numericUpDown29.Name = "numericUpDown29";
-            this.numericUpDown29.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown29.TabIndex = 44;
-            // 
-            // numericUpDown28
-            // 
-            this.numericUpDown28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown28.Location = new System.Drawing.Point(306, 203);
-            this.numericUpDown28.Name = "numericUpDown28";
-            this.numericUpDown28.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown28.TabIndex = 43;
-            // 
-            // numericUpDown27
-            // 
-            this.numericUpDown27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown27.Location = new System.Drawing.Point(227, 203);
-            this.numericUpDown27.Name = "numericUpDown27";
-            this.numericUpDown27.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown27.TabIndex = 42;
-            // 
-            // numericUpDown26
-            // 
-            this.numericUpDown26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown26.Location = new System.Drawing.Point(148, 203);
-            this.numericUpDown26.Name = "numericUpDown26";
-            this.numericUpDown26.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown26.TabIndex = 41;
-            // 
-            // numericUpDown25
-            // 
-            this.numericUpDown25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown25.Location = new System.Drawing.Point(69, 203);
-            this.numericUpDown25.Name = "numericUpDown25";
-            this.numericUpDown25.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown25.TabIndex = 40;
-            // 
-            // numericUpDown24
-            // 
-            this.numericUpDown24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown24.Location = new System.Drawing.Point(464, 163);
-            this.numericUpDown24.Name = "numericUpDown24";
-            this.numericUpDown24.Size = new System.Drawing.Size(77, 22);
-            this.numericUpDown24.TabIndex = 39;
-            // 
-            // numericUpDown23
-            // 
-            this.numericUpDown23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown23.Location = new System.Drawing.Point(385, 163);
-            this.numericUpDown23.Name = "numericUpDown23";
-            this.numericUpDown23.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown23.TabIndex = 38;
-            // 
-            // numericUpDown22
-            // 
-            this.numericUpDown22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown22.Location = new System.Drawing.Point(306, 163);
-            this.numericUpDown22.Name = "numericUpDown22";
-            this.numericUpDown22.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown22.TabIndex = 37;
-            // 
-            // numericUpDown21
-            // 
-            this.numericUpDown21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown21.Location = new System.Drawing.Point(227, 163);
-            this.numericUpDown21.Name = "numericUpDown21";
-            this.numericUpDown21.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown21.TabIndex = 36;
-            // 
-            // numericUpDown20
-            // 
-            this.numericUpDown20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown20.Location = new System.Drawing.Point(148, 163);
-            this.numericUpDown20.Name = "numericUpDown20";
-            this.numericUpDown20.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown20.TabIndex = 35;
-            // 
-            // numericUpDown19
-            // 
-            this.numericUpDown19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown19.Location = new System.Drawing.Point(69, 163);
-            this.numericUpDown19.Name = "numericUpDown19";
-            this.numericUpDown19.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown19.TabIndex = 34;
-            // 
-            // numericUpDown18
-            // 
-            this.numericUpDown18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown18.Location = new System.Drawing.Point(464, 123);
-            this.numericUpDown18.Name = "numericUpDown18";
-            this.numericUpDown18.Size = new System.Drawing.Size(77, 22);
-            this.numericUpDown18.TabIndex = 33;
-            // 
-            // numericUpDown17
-            // 
-            this.numericUpDown17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown17.Location = new System.Drawing.Point(385, 123);
-            this.numericUpDown17.Name = "numericUpDown17";
-            this.numericUpDown17.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown17.TabIndex = 32;
-            // 
-            // numericUpDown16
-            // 
-            this.numericUpDown16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown16.Location = new System.Drawing.Point(306, 123);
-            this.numericUpDown16.Name = "numericUpDown16";
-            this.numericUpDown16.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown16.TabIndex = 31;
-            // 
-            // numericUpDown15
-            // 
-            this.numericUpDown15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown15.Location = new System.Drawing.Point(227, 123);
-            this.numericUpDown15.Name = "numericUpDown15";
-            this.numericUpDown15.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown15.TabIndex = 30;
-            // 
-            // numericUpDown14
-            // 
-            this.numericUpDown14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown14.Location = new System.Drawing.Point(148, 123);
-            this.numericUpDown14.Name = "numericUpDown14";
-            this.numericUpDown14.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown14.TabIndex = 29;
-            // 
-            // numericUpDown13
-            // 
-            this.numericUpDown13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown13.Location = new System.Drawing.Point(69, 123);
-            this.numericUpDown13.Name = "numericUpDown13";
-            this.numericUpDown13.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown13.TabIndex = 28;
-            // 
-            // numericUpDown12
-            // 
-            this.numericUpDown12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown12.Location = new System.Drawing.Point(464, 83);
-            this.numericUpDown12.Name = "numericUpDown12";
-            this.numericUpDown12.Size = new System.Drawing.Size(77, 22);
-            this.numericUpDown12.TabIndex = 27;
-            // 
-            // numericUpDown11
-            // 
-            this.numericUpDown11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown11.Location = new System.Drawing.Point(385, 83);
-            this.numericUpDown11.Name = "numericUpDown11";
-            this.numericUpDown11.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown11.TabIndex = 26;
-            // 
-            // numericUpDown10
-            // 
-            this.numericUpDown10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown10.Location = new System.Drawing.Point(306, 83);
-            this.numericUpDown10.Name = "numericUpDown10";
-            this.numericUpDown10.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown10.TabIndex = 25;
-            // 
-            // numericUpDown9
-            // 
-            this.numericUpDown9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown9.Location = new System.Drawing.Point(227, 83);
-            this.numericUpDown9.Name = "numericUpDown9";
-            this.numericUpDown9.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown9.TabIndex = 24;
-            // 
-            // numericUpDown8
-            // 
-            this.numericUpDown8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown8.Location = new System.Drawing.Point(148, 83);
-            this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown8.TabIndex = 23;
-            // 
-            // numericUpDown7
-            // 
-            this.numericUpDown7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown7.Location = new System.Drawing.Point(69, 83);
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown7.TabIndex = 22;
-            // 
-            // numericUpDown6
-            // 
-            this.numericUpDown6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown6.Location = new System.Drawing.Point(464, 43);
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(77, 22);
-            this.numericUpDown6.TabIndex = 21;
-            // 
-            // numericUpDown5
-            // 
-            this.numericUpDown5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown5.Location = new System.Drawing.Point(385, 43);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown5.TabIndex = 20;
-            // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown4.Location = new System.Drawing.Point(306, 43);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown4.TabIndex = 19;
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown3.Location = new System.Drawing.Point(227, 43);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown3.TabIndex = 18;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown2.Location = new System.Drawing.Point(148, 43);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown2.TabIndex = 17;
+            // nud_Yellow_B_Max
+            // 
+            this.nud_Yellow_B_Max.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Yellow_B_Max.Location = new System.Drawing.Point(464, 243);
+            this.nud_Yellow_B_Max.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Yellow_B_Max.Name = "nud_Yellow_B_Max";
+            this.nud_Yellow_B_Max.Size = new System.Drawing.Size(77, 22);
+            this.nud_Yellow_B_Max.TabIndex = 51;
+            // 
+            // nud_Yellow_B_Min
+            // 
+            this.nud_Yellow_B_Min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Yellow_B_Min.Location = new System.Drawing.Point(385, 243);
+            this.nud_Yellow_B_Min.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Yellow_B_Min.Name = "nud_Yellow_B_Min";
+            this.nud_Yellow_B_Min.Size = new System.Drawing.Size(73, 22);
+            this.nud_Yellow_B_Min.TabIndex = 50;
+            // 
+            // nud_Yellow_G_Max
+            // 
+            this.nud_Yellow_G_Max.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Yellow_G_Max.Location = new System.Drawing.Point(306, 243);
+            this.nud_Yellow_G_Max.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Yellow_G_Max.Name = "nud_Yellow_G_Max";
+            this.nud_Yellow_G_Max.Size = new System.Drawing.Size(73, 22);
+            this.nud_Yellow_G_Max.TabIndex = 49;
+            // 
+            // nud_Yellow_G_Min
+            // 
+            this.nud_Yellow_G_Min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Yellow_G_Min.Location = new System.Drawing.Point(227, 243);
+            this.nud_Yellow_G_Min.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Yellow_G_Min.Name = "nud_Yellow_G_Min";
+            this.nud_Yellow_G_Min.Size = new System.Drawing.Size(73, 22);
+            this.nud_Yellow_G_Min.TabIndex = 48;
+            // 
+            // nud_Yellow_R_Max
+            // 
+            this.nud_Yellow_R_Max.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Yellow_R_Max.Location = new System.Drawing.Point(148, 243);
+            this.nud_Yellow_R_Max.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Yellow_R_Max.Name = "nud_Yellow_R_Max";
+            this.nud_Yellow_R_Max.Size = new System.Drawing.Size(73, 22);
+            this.nud_Yellow_R_Max.TabIndex = 47;
+            // 
+            // nud_Yellow_R_Min
+            // 
+            this.nud_Yellow_R_Min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Yellow_R_Min.Location = new System.Drawing.Point(69, 243);
+            this.nud_Yellow_R_Min.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Yellow_R_Min.Name = "nud_Yellow_R_Min";
+            this.nud_Yellow_R_Min.Size = new System.Drawing.Size(73, 22);
+            this.nud_Yellow_R_Min.TabIndex = 46;
+            // 
+            // nud_Orange_B_Max
+            // 
+            this.nud_Orange_B_Max.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Orange_B_Max.Location = new System.Drawing.Point(464, 203);
+            this.nud_Orange_B_Max.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Orange_B_Max.Name = "nud_Orange_B_Max";
+            this.nud_Orange_B_Max.Size = new System.Drawing.Size(77, 22);
+            this.nud_Orange_B_Max.TabIndex = 45;
+            // 
+            // nud_Orange_B_Min
+            // 
+            this.nud_Orange_B_Min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Orange_B_Min.Location = new System.Drawing.Point(385, 203);
+            this.nud_Orange_B_Min.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Orange_B_Min.Name = "nud_Orange_B_Min";
+            this.nud_Orange_B_Min.Size = new System.Drawing.Size(73, 22);
+            this.nud_Orange_B_Min.TabIndex = 44;
+            // 
+            // nud_Orange_G_Max
+            // 
+            this.nud_Orange_G_Max.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Orange_G_Max.Location = new System.Drawing.Point(306, 203);
+            this.nud_Orange_G_Max.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Orange_G_Max.Name = "nud_Orange_G_Max";
+            this.nud_Orange_G_Max.Size = new System.Drawing.Size(73, 22);
+            this.nud_Orange_G_Max.TabIndex = 43;
+            // 
+            // nud_Orange_G_Min
+            // 
+            this.nud_Orange_G_Min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Orange_G_Min.Location = new System.Drawing.Point(227, 203);
+            this.nud_Orange_G_Min.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Orange_G_Min.Name = "nud_Orange_G_Min";
+            this.nud_Orange_G_Min.Size = new System.Drawing.Size(73, 22);
+            this.nud_Orange_G_Min.TabIndex = 42;
+            // 
+            // nud_Orange_R_Max
+            // 
+            this.nud_Orange_R_Max.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Orange_R_Max.Location = new System.Drawing.Point(148, 203);
+            this.nud_Orange_R_Max.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Orange_R_Max.Name = "nud_Orange_R_Max";
+            this.nud_Orange_R_Max.Size = new System.Drawing.Size(73, 22);
+            this.nud_Orange_R_Max.TabIndex = 41;
+            // 
+            // nud_Orange_R_Min
+            // 
+            this.nud_Orange_R_Min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Orange_R_Min.Location = new System.Drawing.Point(69, 203);
+            this.nud_Orange_R_Min.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Orange_R_Min.Name = "nud_Orange_R_Min";
+            this.nud_Orange_R_Min.Size = new System.Drawing.Size(73, 22);
+            this.nud_Orange_R_Min.TabIndex = 40;
+            // 
+            // nud_White_B_Max
+            // 
+            this.nud_White_B_Max.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_White_B_Max.Location = new System.Drawing.Point(464, 163);
+            this.nud_White_B_Max.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_White_B_Max.Name = "nud_White_B_Max";
+            this.nud_White_B_Max.Size = new System.Drawing.Size(77, 22);
+            this.nud_White_B_Max.TabIndex = 39;
+            // 
+            // nud_White_B_Min
+            // 
+            this.nud_White_B_Min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_White_B_Min.Location = new System.Drawing.Point(385, 163);
+            this.nud_White_B_Min.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_White_B_Min.Name = "nud_White_B_Min";
+            this.nud_White_B_Min.Size = new System.Drawing.Size(73, 22);
+            this.nud_White_B_Min.TabIndex = 38;
+            // 
+            // nud_White_G_Max
+            // 
+            this.nud_White_G_Max.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_White_G_Max.Location = new System.Drawing.Point(306, 163);
+            this.nud_White_G_Max.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_White_G_Max.Name = "nud_White_G_Max";
+            this.nud_White_G_Max.Size = new System.Drawing.Size(73, 22);
+            this.nud_White_G_Max.TabIndex = 37;
+            // 
+            // nud_White_G_Min
+            // 
+            this.nud_White_G_Min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_White_G_Min.Location = new System.Drawing.Point(227, 163);
+            this.nud_White_G_Min.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_White_G_Min.Name = "nud_White_G_Min";
+            this.nud_White_G_Min.Size = new System.Drawing.Size(73, 22);
+            this.nud_White_G_Min.TabIndex = 36;
+            // 
+            // nud_White_R_Max
+            // 
+            this.nud_White_R_Max.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_White_R_Max.Location = new System.Drawing.Point(148, 163);
+            this.nud_White_R_Max.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_White_R_Max.Name = "nud_White_R_Max";
+            this.nud_White_R_Max.Size = new System.Drawing.Size(73, 22);
+            this.nud_White_R_Max.TabIndex = 35;
+            // 
+            // nud_White_R_Min
+            // 
+            this.nud_White_R_Min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_White_R_Min.Location = new System.Drawing.Point(69, 163);
+            this.nud_White_R_Min.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_White_R_Min.Name = "nud_White_R_Min";
+            this.nud_White_R_Min.Size = new System.Drawing.Size(73, 22);
+            this.nud_White_R_Min.TabIndex = 34;
+            // 
+            // nud_Blue_B_Max
+            // 
+            this.nud_Blue_B_Max.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Blue_B_Max.Location = new System.Drawing.Point(464, 123);
+            this.nud_Blue_B_Max.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Blue_B_Max.Name = "nud_Blue_B_Max";
+            this.nud_Blue_B_Max.Size = new System.Drawing.Size(77, 22);
+            this.nud_Blue_B_Max.TabIndex = 33;
+            // 
+            // nud_Blue_B_Min
+            // 
+            this.nud_Blue_B_Min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Blue_B_Min.Location = new System.Drawing.Point(385, 123);
+            this.nud_Blue_B_Min.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Blue_B_Min.Name = "nud_Blue_B_Min";
+            this.nud_Blue_B_Min.Size = new System.Drawing.Size(73, 22);
+            this.nud_Blue_B_Min.TabIndex = 32;
+            // 
+            // nud_Blue_G_Max
+            // 
+            this.nud_Blue_G_Max.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Blue_G_Max.Location = new System.Drawing.Point(306, 123);
+            this.nud_Blue_G_Max.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Blue_G_Max.Name = "nud_Blue_G_Max";
+            this.nud_Blue_G_Max.Size = new System.Drawing.Size(73, 22);
+            this.nud_Blue_G_Max.TabIndex = 31;
+            // 
+            // nud_Blue_G_Min
+            // 
+            this.nud_Blue_G_Min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Blue_G_Min.Location = new System.Drawing.Point(227, 123);
+            this.nud_Blue_G_Min.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Blue_G_Min.Name = "nud_Blue_G_Min";
+            this.nud_Blue_G_Min.Size = new System.Drawing.Size(73, 22);
+            this.nud_Blue_G_Min.TabIndex = 30;
+            // 
+            // nud_Blue_R_Max
+            // 
+            this.nud_Blue_R_Max.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Blue_R_Max.Location = new System.Drawing.Point(148, 123);
+            this.nud_Blue_R_Max.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Blue_R_Max.Name = "nud_Blue_R_Max";
+            this.nud_Blue_R_Max.Size = new System.Drawing.Size(73, 22);
+            this.nud_Blue_R_Max.TabIndex = 29;
+            // 
+            // nud_Blue_R_Min
+            // 
+            this.nud_Blue_R_Min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Blue_R_Min.Location = new System.Drawing.Point(69, 123);
+            this.nud_Blue_R_Min.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Blue_R_Min.Name = "nud_Blue_R_Min";
+            this.nud_Blue_R_Min.Size = new System.Drawing.Size(73, 22);
+            this.nud_Blue_R_Min.TabIndex = 28;
+            // 
+            // nud_Green_B_Max
+            // 
+            this.nud_Green_B_Max.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Green_B_Max.Location = new System.Drawing.Point(464, 83);
+            this.nud_Green_B_Max.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Green_B_Max.Name = "nud_Green_B_Max";
+            this.nud_Green_B_Max.Size = new System.Drawing.Size(77, 22);
+            this.nud_Green_B_Max.TabIndex = 27;
+            // 
+            // nud_Green_B_Min
+            // 
+            this.nud_Green_B_Min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Green_B_Min.Location = new System.Drawing.Point(385, 83);
+            this.nud_Green_B_Min.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Green_B_Min.Name = "nud_Green_B_Min";
+            this.nud_Green_B_Min.Size = new System.Drawing.Size(73, 22);
+            this.nud_Green_B_Min.TabIndex = 26;
+            // 
+            // nud_Green_G_Max
+            // 
+            this.nud_Green_G_Max.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Green_G_Max.Location = new System.Drawing.Point(306, 83);
+            this.nud_Green_G_Max.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Green_G_Max.Name = "nud_Green_G_Max";
+            this.nud_Green_G_Max.Size = new System.Drawing.Size(73, 22);
+            this.nud_Green_G_Max.TabIndex = 25;
+            // 
+            // nud_Green_G_Min
+            // 
+            this.nud_Green_G_Min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Green_G_Min.Location = new System.Drawing.Point(227, 83);
+            this.nud_Green_G_Min.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Green_G_Min.Name = "nud_Green_G_Min";
+            this.nud_Green_G_Min.Size = new System.Drawing.Size(73, 22);
+            this.nud_Green_G_Min.TabIndex = 24;
+            // 
+            // nud_Green_R_Max
+            // 
+            this.nud_Green_R_Max.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Green_R_Max.Location = new System.Drawing.Point(148, 83);
+            this.nud_Green_R_Max.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Green_R_Max.Name = "nud_Green_R_Max";
+            this.nud_Green_R_Max.Size = new System.Drawing.Size(73, 22);
+            this.nud_Green_R_Max.TabIndex = 23;
+            // 
+            // nud_Green_R_Min
+            // 
+            this.nud_Green_R_Min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Green_R_Min.Location = new System.Drawing.Point(69, 83);
+            this.nud_Green_R_Min.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Green_R_Min.Name = "nud_Green_R_Min";
+            this.nud_Green_R_Min.Size = new System.Drawing.Size(73, 22);
+            this.nud_Green_R_Min.TabIndex = 22;
+            // 
+            // nud_Red_B_Max
+            // 
+            this.nud_Red_B_Max.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Red_B_Max.Location = new System.Drawing.Point(464, 43);
+            this.nud_Red_B_Max.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Red_B_Max.Name = "nud_Red_B_Max";
+            this.nud_Red_B_Max.Size = new System.Drawing.Size(77, 22);
+            this.nud_Red_B_Max.TabIndex = 21;
+            // 
+            // nud_Red_B_Min
+            // 
+            this.nud_Red_B_Min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Red_B_Min.Location = new System.Drawing.Point(385, 43);
+            this.nud_Red_B_Min.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Red_B_Min.Name = "nud_Red_B_Min";
+            this.nud_Red_B_Min.Size = new System.Drawing.Size(73, 22);
+            this.nud_Red_B_Min.TabIndex = 20;
+            // 
+            // nud_Red_G_Max
+            // 
+            this.nud_Red_G_Max.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Red_G_Max.Location = new System.Drawing.Point(306, 43);
+            this.nud_Red_G_Max.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Red_G_Max.Name = "nud_Red_G_Max";
+            this.nud_Red_G_Max.Size = new System.Drawing.Size(73, 22);
+            this.nud_Red_G_Max.TabIndex = 19;
+            // 
+            // nud_Red_G_Min
+            // 
+            this.nud_Red_G_Min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Red_G_Min.Location = new System.Drawing.Point(227, 43);
+            this.nud_Red_G_Min.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Red_G_Min.Name = "nud_Red_G_Min";
+            this.nud_Red_G_Min.Size = new System.Drawing.Size(73, 22);
+            this.nud_Red_G_Min.TabIndex = 18;
+            // 
+            // nud_Red_R_Max
+            // 
+            this.nud_Red_R_Max.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Red_R_Max.Location = new System.Drawing.Point(148, 43);
+            this.nud_Red_R_Max.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Red_R_Max.Name = "nud_Red_R_Max";
+            this.nud_Red_R_Max.Size = new System.Drawing.Size(73, 22);
+            this.nud_Red_R_Max.TabIndex = 17;
             // 
             // label3
             // 
@@ -690,24 +865,30 @@
             this.label15.Text = "Yellow";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label16
+            // lbl_Save
             // 
-            this.label16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Location = new System.Drawing.Point(0, 0);
-            this.label16.Margin = new System.Windows.Forms.Padding(0);
-            this.label16.Name = "label16";
-            this.tableLayoutPanel1.SetRowSpan(this.label16, 2);
-            this.label16.Size = new System.Drawing.Size(66, 40);
-            this.label16.TabIndex = 15;
+            this.lbl_Save.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_Save.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Save.Location = new System.Drawing.Point(0, 0);
+            this.lbl_Save.Margin = new System.Windows.Forms.Padding(0);
+            this.lbl_Save.Name = "lbl_Save";
+            this.tableLayoutPanel1.SetRowSpan(this.lbl_Save, 2);
+            this.lbl_Save.Size = new System.Drawing.Size(66, 40);
+            this.lbl_Save.TabIndex = 15;
+            this.lbl_Save.DoubleClick += new System.EventHandler(this.lbl_Save_DoubleClick);
             // 
-            // numericUpDown1
+            // nud_Red_R_Min
             // 
-            this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown1.Location = new System.Drawing.Point(69, 43);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(73, 22);
-            this.numericUpDown1.TabIndex = 16;
+            this.nud_Red_R_Min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nud_Red_R_Min.Location = new System.Drawing.Point(69, 43);
+            this.nud_Red_R_Min.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_Red_R_Min.Name = "nud_Red_R_Min";
+            this.nud_Red_R_Min.Size = new System.Drawing.Size(73, 22);
+            this.nud_Red_R_Min.TabIndex = 16;
             // 
             // tabPage2
             // 
@@ -727,45 +908,46 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Form_ColorLearning";
             this.Text = "Form_ColorLearning";
+            this.Load += new System.EventHandler(this.Form_ColorLearning_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown36)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown35)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown34)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown33)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown32)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown31)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown30)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown29)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown28)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown26)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Yellow_B_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Yellow_B_Min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Yellow_G_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Yellow_G_Min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Yellow_R_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Yellow_R_Min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Orange_B_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Orange_B_Min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Orange_G_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Orange_G_Min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Orange_R_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Orange_R_Min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_White_B_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_White_B_Min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_White_G_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_White_G_Min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_White_R_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_White_R_Min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Blue_B_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Blue_B_Min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Blue_G_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Blue_G_Min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Blue_R_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Blue_R_Min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Green_B_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Green_B_Min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Green_G_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Green_G_Min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Green_R_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Green_R_Min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Red_B_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Red_B_Min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Red_G_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Red_G_Min)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Red_R_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Red_R_Min)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -791,42 +973,42 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.NumericUpDown numericUpDown36;
-        private System.Windows.Forms.NumericUpDown numericUpDown35;
-        private System.Windows.Forms.NumericUpDown numericUpDown34;
-        private System.Windows.Forms.NumericUpDown numericUpDown33;
-        private System.Windows.Forms.NumericUpDown numericUpDown32;
-        private System.Windows.Forms.NumericUpDown numericUpDown31;
-        private System.Windows.Forms.NumericUpDown numericUpDown30;
-        private System.Windows.Forms.NumericUpDown numericUpDown29;
-        private System.Windows.Forms.NumericUpDown numericUpDown28;
-        private System.Windows.Forms.NumericUpDown numericUpDown27;
-        private System.Windows.Forms.NumericUpDown numericUpDown26;
-        private System.Windows.Forms.NumericUpDown numericUpDown25;
-        private System.Windows.Forms.NumericUpDown numericUpDown24;
-        private System.Windows.Forms.NumericUpDown numericUpDown23;
-        private System.Windows.Forms.NumericUpDown numericUpDown22;
-        private System.Windows.Forms.NumericUpDown numericUpDown21;
-        private System.Windows.Forms.NumericUpDown numericUpDown20;
-        private System.Windows.Forms.NumericUpDown numericUpDown19;
-        private System.Windows.Forms.NumericUpDown numericUpDown18;
-        private System.Windows.Forms.NumericUpDown numericUpDown17;
-        private System.Windows.Forms.NumericUpDown numericUpDown16;
-        private System.Windows.Forms.NumericUpDown numericUpDown15;
-        private System.Windows.Forms.NumericUpDown numericUpDown14;
-        private System.Windows.Forms.NumericUpDown numericUpDown13;
-        private System.Windows.Forms.NumericUpDown numericUpDown12;
-        private System.Windows.Forms.NumericUpDown numericUpDown11;
-        private System.Windows.Forms.NumericUpDown numericUpDown10;
-        private System.Windows.Forms.NumericUpDown numericUpDown9;
-        private System.Windows.Forms.NumericUpDown numericUpDown8;
-        private System.Windows.Forms.NumericUpDown numericUpDown7;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label lbl_Save;
+        private System.Windows.Forms.NumericUpDown nud_Yellow_B_Max;
+        private System.Windows.Forms.NumericUpDown nud_Yellow_B_Min;
+        private System.Windows.Forms.NumericUpDown nud_Yellow_G_Max;
+        private System.Windows.Forms.NumericUpDown nud_Yellow_G_Min;
+        private System.Windows.Forms.NumericUpDown nud_Yellow_R_Max;
+        private System.Windows.Forms.NumericUpDown nud_Yellow_R_Min;
+        private System.Windows.Forms.NumericUpDown nud_Orange_B_Max;
+        private System.Windows.Forms.NumericUpDown nud_Orange_B_Min;
+        private System.Windows.Forms.NumericUpDown nud_Orange_G_Max;
+        private System.Windows.Forms.NumericUpDown nud_Orange_G_Min;
+        private System.Windows.Forms.NumericUpDown nud_Orange_R_Max;
+        private System.Windows.Forms.NumericUpDown nud_Orange_R_Min;
+        private System.Windows.Forms.NumericUpDown nud_White_B_Max;
+        private System.Windows.Forms.NumericUpDown nud_White_B_Min;
+        private System.Windows.Forms.NumericUpDown nud_White_G_Max;
+        private System.Windows.Forms.NumericUpDown nud_White_G_Min;
+        private System.Windows.Forms.NumericUpDown nud_White_R_Max;
+        private System.Windows.Forms.NumericUpDown nud_White_R_Min;
+        private System.Windows.Forms.NumericUpDown nud_Blue_B_Max;
+        private System.Windows.Forms.NumericUpDown nud_Blue_B_Min;
+        private System.Windows.Forms.NumericUpDown nud_Blue_G_Max;
+        private System.Windows.Forms.NumericUpDown nud_Blue_G_Min;
+        private System.Windows.Forms.NumericUpDown nud_Blue_R_Max;
+        private System.Windows.Forms.NumericUpDown nud_Blue_R_Min;
+        private System.Windows.Forms.NumericUpDown nud_Green_B_Max;
+        private System.Windows.Forms.NumericUpDown nud_Green_B_Min;
+        private System.Windows.Forms.NumericUpDown nud_Green_G_Max;
+        private System.Windows.Forms.NumericUpDown nud_Green_G_Min;
+        private System.Windows.Forms.NumericUpDown nud_Green_R_Max;
+        private System.Windows.Forms.NumericUpDown nud_Green_R_Min;
+        private System.Windows.Forms.NumericUpDown nud_Red_B_Max;
+        private System.Windows.Forms.NumericUpDown nud_Red_B_Min;
+        private System.Windows.Forms.NumericUpDown nud_Red_G_Max;
+        private System.Windows.Forms.NumericUpDown nud_Red_G_Min;
+        private System.Windows.Forms.NumericUpDown nud_Red_R_Max;
+        private System.Windows.Forms.NumericUpDown nud_Red_R_Min;
     }
 }
