@@ -75,12 +75,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         XmlNode xmlnode_Color = ColorMatchNode.SelectSingleNode("Red");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamU.mColorMatch.c_Red.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Red.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Red.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Red.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Red.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Red.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamU.mColorMatch.c_Red.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Red.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Red.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Red.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Red.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Red.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -89,12 +89,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Green");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamU.mColorMatch.c_Green.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Green.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Green.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Green.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Green.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Green.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamU.mColorMatch.c_Green.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Green.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Green.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Green.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Green.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Green.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -103,12 +103,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Blue");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamU.mColorMatch.c_Blue.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Blue.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Blue.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Blue.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Blue.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Blue.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamU.mColorMatch.c_Blue.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Blue.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Blue.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Blue.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Blue.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Blue.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -117,12 +117,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("White");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamU.mColorMatch.c_White.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_White.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_White.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_White.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_White.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_White.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamU.mColorMatch.c_White.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_White.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_White.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_White.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_White.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_White.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -131,12 +131,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Orange");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamU.mColorMatch.c_Orange.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Orange.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Orange.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Orange.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Orange.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Orange.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamU.mColorMatch.c_Orange.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Orange.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Orange.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Orange.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Orange.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Orange.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -145,12 +145,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Yellow");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamU.mColorMatch.c_Yellow.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Yellow.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Yellow.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Yellow.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Yellow.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamU.mColorMatch.c_Yellow.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamU.mColorMatch.c_Yellow.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Yellow.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Yellow.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Yellow.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Yellow.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Yellow.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -178,12 +178,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         XmlNode xmlnode_Color = ColorMatchNode.SelectSingleNode("Red");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamD.mColorMatch.c_Red.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Red.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Red.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Red.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Red.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Red.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamD.mColorMatch.c_Red.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Red.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Red.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Red.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Red.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Red.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -192,12 +192,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Green");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamD.mColorMatch.c_Green.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Green.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Green.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Green.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Green.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Green.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamD.mColorMatch.c_Green.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Green.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Green.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Green.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Green.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Green.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -206,12 +206,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Blue");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamD.mColorMatch.c_Blue.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Blue.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Blue.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Blue.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Blue.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Blue.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamD.mColorMatch.c_Blue.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Blue.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Blue.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Blue.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Blue.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Blue.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -220,12 +220,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("White");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamD.mColorMatch.c_White.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_White.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_White.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_White.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_White.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_White.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamD.mColorMatch.c_White.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_White.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_White.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_White.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_White.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_White.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -234,12 +234,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Orange");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamD.mColorMatch.c_Orange.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Orange.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Orange.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Orange.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Orange.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Orange.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamD.mColorMatch.c_Orange.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Orange.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Orange.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Orange.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Orange.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Orange.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -248,12 +248,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Yellow");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamD.mColorMatch.c_Yellow.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Yellow.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Yellow.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Yellow.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Yellow.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamD.mColorMatch.c_Yellow.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamD.mColorMatch.c_Yellow.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Yellow.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Yellow.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Yellow.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Yellow.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Yellow.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -281,12 +281,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         XmlNode xmlnode_Color = ColorMatchNode.SelectSingleNode("Red");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamL.mColorMatch.c_Red.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Red.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Red.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Red.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Red.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Red.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamL.mColorMatch.c_Red.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Red.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Red.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Red.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Red.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Red.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -295,12 +295,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Green");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamL.mColorMatch.c_Green.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Green.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Green.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Green.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Green.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Green.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamL.mColorMatch.c_Green.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Green.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Green.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Green.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Green.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Green.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -309,12 +309,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Blue");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamL.mColorMatch.c_Blue.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Blue.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Blue.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Blue.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Blue.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Blue.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamL.mColorMatch.c_Blue.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Blue.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Blue.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Blue.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Blue.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Blue.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -323,12 +323,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("White");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamL.mColorMatch.c_White.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_White.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_White.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_White.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_White.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_White.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamL.mColorMatch.c_White.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_White.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_White.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_White.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_White.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_White.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -337,12 +337,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Orange");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamL.mColorMatch.c_Orange.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Orange.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Orange.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Orange.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Orange.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Orange.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamL.mColorMatch.c_Orange.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Orange.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Orange.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Orange.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Orange.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Orange.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -351,12 +351,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Yellow");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamL.mColorMatch.c_Yellow.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Yellow.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Yellow.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Yellow.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Yellow.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamL.mColorMatch.c_Yellow.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamL.mColorMatch.c_Yellow.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Yellow.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Yellow.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Yellow.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Yellow.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Yellow.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -384,12 +384,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         XmlNode xmlnode_Color = ColorMatchNode.SelectSingleNode("Red");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamR.mColorMatch.c_Red.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Red.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Red.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Red.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Red.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Red.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamR.mColorMatch.c_Red.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Red.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Red.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Red.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Red.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Red.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -398,12 +398,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Green");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamR.mColorMatch.c_Green.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Green.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Green.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Green.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Green.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Green.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamR.mColorMatch.c_Green.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Green.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Green.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Green.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Green.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Green.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -412,12 +412,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Blue");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamR.mColorMatch.c_Blue.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Blue.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Blue.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Blue.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Blue.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Blue.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamR.mColorMatch.c_Blue.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Blue.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Blue.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Blue.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Blue.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Blue.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -426,12 +426,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("White");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamR.mColorMatch.c_White.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_White.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_White.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_White.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_White.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_White.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamR.mColorMatch.c_White.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_White.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_White.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_White.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_White.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_White.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -440,12 +440,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Orange");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamR.mColorMatch.c_Orange.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Orange.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Orange.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Orange.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Orange.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Orange.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamR.mColorMatch.c_Orange.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Orange.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Orange.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Orange.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Orange.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Orange.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -454,12 +454,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Yellow");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamR.mColorMatch.c_Yellow.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Yellow.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Yellow.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Yellow.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Yellow.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamR.mColorMatch.c_Yellow.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamR.mColorMatch.c_Yellow.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Yellow.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Yellow.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Yellow.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Yellow.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Yellow.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -487,12 +487,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         XmlNode xmlnode_Color = ColorMatchNode.SelectSingleNode("Red");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamF.mColorMatch.c_Red.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Red.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Red.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Red.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Red.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Red.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamF.mColorMatch.c_Red.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Red.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Red.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Red.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Red.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Red.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -501,12 +501,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Green");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamF.mColorMatch.c_Green.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Green.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Green.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Green.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Green.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Green.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamF.mColorMatch.c_Green.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Green.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Green.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Green.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Green.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Green.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -515,12 +515,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Blue");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamF.mColorMatch.c_Blue.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Blue.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Blue.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Blue.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Blue.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Blue.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamF.mColorMatch.c_Blue.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Blue.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Blue.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Blue.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Blue.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Blue.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -529,12 +529,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("White");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamF.mColorMatch.c_White.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_White.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_White.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_White.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_White.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_White.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamF.mColorMatch.c_White.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_White.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_White.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_White.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_White.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_White.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -543,12 +543,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Orange");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamF.mColorMatch.c_Orange.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Orange.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Orange.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Orange.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Orange.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Orange.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamF.mColorMatch.c_Orange.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Orange.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Orange.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Orange.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Orange.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Orange.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -557,12 +557,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Yellow");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamF.mColorMatch.c_Yellow.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Yellow.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Yellow.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Yellow.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Yellow.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamF.mColorMatch.c_Yellow.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamF.mColorMatch.c_Yellow.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Yellow.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Yellow.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Yellow.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Yellow.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Yellow.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -590,12 +590,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         XmlNode xmlnode_Color = ColorMatchNode.SelectSingleNode("Red");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamB.mColorMatch.c_Red.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Red.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Red.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Red.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Red.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Red.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamB.mColorMatch.c_Red.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Red.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Red.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Red.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Red.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Red.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -604,12 +604,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Green");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamB.mColorMatch.c_Green.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Green.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Green.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Green.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Green.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Green.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamB.mColorMatch.c_Green.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Green.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Green.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Green.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Green.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Green.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -618,12 +618,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Blue");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamB.mColorMatch.c_Blue.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Blue.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Blue.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Blue.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Blue.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Blue.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamB.mColorMatch.c_Blue.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Blue.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Blue.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Blue.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Blue.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Blue.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -632,12 +632,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("White");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamB.mColorMatch.c_White.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_White.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_White.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_White.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_White.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_White.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamB.mColorMatch.c_White.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_White.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_White.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_White.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_White.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_White.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -646,12 +646,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Orange");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamB.mColorMatch.c_Orange.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Orange.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Orange.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Orange.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Orange.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Orange.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamB.mColorMatch.c_Orange.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Orange.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Orange.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Orange.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Orange.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Orange.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -660,12 +660,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         xmlnode_Color = ColorMatchNode.SelectSingleNode("Yellow");
                         if (xmlnode_Color != null)
                         {
-                            CurrentParas.CamB.mColorMatch.c_Yellow.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Yellow.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Yellow.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Yellow.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Yellow.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText);
-                            CurrentParas.CamB.mColorMatch.c_Yellow.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText);
+                            CurrentParas.CamB.mColorMatch.c_Yellow.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Yellow.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Yellow.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Yellow.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Yellow.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Yellow.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         }
                         else
                         {
@@ -692,26 +692,26 @@ namespace Festo_Rubik_s_Cube_Explorer
                     if (ServoNode != null)
                     {
                         CurrentParas.mPLC.servo_Feeding.ID = ServoNode.Name;
-                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
-                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
-                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
-                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText;
-                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText;
-                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText;
+                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
 
-                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText;
-                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText;
-                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText;
-                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText;
-                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText;
-                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText;
-                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText;
-                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText;
-                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText;
-                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText;
-                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
-                        CurrentParas.mPLC.servo_Feeding.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
-                        CurrentParas.mPLC.servo_Feeding.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
+                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        //CurrentParas.mPLC.servo_Feeding.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        //CurrentParas.mPLC.servo_Feeding.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
                     {
@@ -722,13 +722,13 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ServoNode = xmlnode.SelectSingleNode("Rotate");
                     if (ServoNode != null)
                     {
-                        CurrentParas.mPLC.IOlink_Rotate.NodeID_i_In = ServoNode.SelectSingleNode("i_In").InnerText;
-                        CurrentParas.mPLC.IOlink_Rotate.NodeID_i_Out = ServoNode.SelectSingleNode("i_Out").InnerText;
-                        CurrentParas.mPLC.IOlink_Rotate.NodeID_i_Move = ServoNode.SelectSingleNode("i_Move").InnerText;
-                        CurrentParas.mPLC.IOlink_Rotate.NodeID_i_Device = ServoNode.SelectSingleNode("i_Device").InnerText;
-                        CurrentParas.mPLC.IOlink_Rotate.NodeID_o_In = ServoNode.SelectSingleNode("o_In").InnerText;
-                        CurrentParas.mPLC.IOlink_Rotate.NodeID_o_Out = ServoNode.SelectSingleNode("o_Out").InnerText;
-                        CurrentParas.mPLC.IOlink_Rotate.NodeID_o_QuitError = ServoNode.SelectSingleNode("o_QuitError").InnerText;                       
+                        CurrentParas.mPLC.IOlink_Rotate.NodeID_i_In = ServoNode.SelectSingleNode("i_In").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_Rotate.NodeID_i_Out = ServoNode.SelectSingleNode("i_Out").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_Rotate.NodeID_i_Move = ServoNode.SelectSingleNode("i_Move").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_Rotate.NodeID_i_Device = ServoNode.SelectSingleNode("i_Device").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_Rotate.NodeID_o_In = ServoNode.SelectSingleNode("o_In").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_Rotate.NodeID_o_Out = ServoNode.SelectSingleNode("o_Out").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_Rotate.NodeID_o_QuitError = ServoNode.SelectSingleNode("o_QuitError").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");                       
                     }
                     else
                     {
@@ -739,26 +739,26 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ServoNode = xmlnode.SelectSingleNode("U_Move");
                     if (ServoNode != null)
                     {
-                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
-                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
-                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
-                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText;
-                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText;
-                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText;
+                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
 
-                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText;
-                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText;
-                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText;
-                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText;
-                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText;
-                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText;
-                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText;
-                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText;
-                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText;
-                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText;
-                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
-                        CurrentParas.mPLC.servo_U_Move.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
-                        CurrentParas.mPLC.servo_U_Move.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
+                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        //CurrentParas.mPLC.servo_U_Move.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        //CurrentParas.mPLC.servo_U_Move.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
                     {
@@ -769,26 +769,26 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ServoNode = xmlnode.SelectSingleNode("U_Grab");
                     if (ServoNode != null)
                     {
-                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
-                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
-                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
-                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText;
-                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText;
-                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText;
+                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
 
-                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText;
-                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText;
-                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText;
-                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText;
-                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText;
-                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText;
-                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText;
-                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText;
-                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText;
-                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText;
-                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
-                        CurrentParas.mPLC.servo_U_Grab.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
-                        CurrentParas.mPLC.servo_U_Grab.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
+                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        //CurrentParas.mPLC.servo_U_Grab.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        //CurrentParas.mPLC.servo_U_Grab.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
                     {
@@ -799,26 +799,26 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ServoNode = xmlnode.SelectSingleNode("U_Rotate");
                     if (ServoNode != null)
                     {
-                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
-                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
-                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
-                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText;
-                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText;
-                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText;
+                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
 
-                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText;
-                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText;
-                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText;
-                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText;
-                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText;
-                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText;
-                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText;
-                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText;
-                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText;
-                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText;
-                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
-                        CurrentParas.mPLC.servo_U_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
-                        CurrentParas.mPLC.servo_U_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
+                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        //CurrentParas.mPLC.servo_U_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        //CurrentParas.mPLC.servo_U_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
                     {
@@ -829,13 +829,13 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ServoNode = xmlnode.SelectSingleNode("F_Move_Cam");
                     if (ServoNode != null)
                     {
-                        CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_i_In = ServoNode.SelectSingleNode("i_In").InnerText;
-                        CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_i_Out = ServoNode.SelectSingleNode("i_Out").InnerText;
-                        CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_i_Move = ServoNode.SelectSingleNode("i_Move").InnerText;
-                        CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_i_Device = ServoNode.SelectSingleNode("i_Device").InnerText;
-                        CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_o_In = ServoNode.SelectSingleNode("o_In").InnerText;
-                        CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_o_Out = ServoNode.SelectSingleNode("o_Out").InnerText;
-                        CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_o_QuitError = ServoNode.SelectSingleNode("o_QuitError").InnerText;                       
+                        CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_i_In = ServoNode.SelectSingleNode("i_In").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_i_Out = ServoNode.SelectSingleNode("i_Out").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_i_Move = ServoNode.SelectSingleNode("i_Move").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_i_Device = ServoNode.SelectSingleNode("i_Device").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_o_In = ServoNode.SelectSingleNode("o_In").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_o_Out = ServoNode.SelectSingleNode("o_Out").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_o_QuitError = ServoNode.SelectSingleNode("o_QuitError").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");                       
                     }
                     else
                     {
@@ -846,13 +846,13 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ServoNode = xmlnode.SelectSingleNode("F_Grab");
                     if (ServoNode != null)
                     {
-                        CurrentParas.mPLC.IOlink_F_Grab.NodeID_i_In = ServoNode.SelectSingleNode("i_In").InnerText;
-                        CurrentParas.mPLC.IOlink_F_Grab.NodeID_i_Out = ServoNode.SelectSingleNode("i_Out").InnerText;
-                        CurrentParas.mPLC.IOlink_F_Grab.NodeID_i_Move = ServoNode.SelectSingleNode("i_Move").InnerText;
-                        CurrentParas.mPLC.IOlink_F_Grab.NodeID_i_Device = ServoNode.SelectSingleNode("i_Device").InnerText;
-                        CurrentParas.mPLC.IOlink_F_Grab.NodeID_o_In = ServoNode.SelectSingleNode("o_In").InnerText;
-                        CurrentParas.mPLC.IOlink_F_Grab.NodeID_o_Out = ServoNode.SelectSingleNode("o_Out").InnerText;
-                        CurrentParas.mPLC.IOlink_F_Grab.NodeID_o_QuitError = ServoNode.SelectSingleNode("o_QuitError").InnerText;
+                        CurrentParas.mPLC.IOlink_F_Grab.NodeID_i_In = ServoNode.SelectSingleNode("i_In").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_F_Grab.NodeID_i_Out = ServoNode.SelectSingleNode("i_Out").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_F_Grab.NodeID_i_Move = ServoNode.SelectSingleNode("i_Move").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_F_Grab.NodeID_i_Device = ServoNode.SelectSingleNode("i_Device").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_F_Grab.NodeID_o_In = ServoNode.SelectSingleNode("o_In").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_F_Grab.NodeID_o_Out = ServoNode.SelectSingleNode("o_Out").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_F_Grab.NodeID_o_QuitError = ServoNode.SelectSingleNode("o_QuitError").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                     }
                     else
                     {
@@ -863,26 +863,26 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ServoNode = xmlnode.SelectSingleNode("F_Rotate");
                     if (ServoNode != null)
                     {
-                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
-                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
-                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
-                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText;
-                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText;
-                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText;
+                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
 
-                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText;
-                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText;
-                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText;
-                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText;
-                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText;
-                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText;
-                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText;
-                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText;
-                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText;
-                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText;
-                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
-                        CurrentParas.mPLC.servo_F_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
-                        CurrentParas.mPLC.servo_F_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
+                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        //CurrentParas.mPLC.servo_F_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        //CurrentParas.mPLC.servo_F_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
                     {
@@ -893,13 +893,13 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ServoNode = xmlnode.SelectSingleNode("B_Move_Cam");
                     if (ServoNode != null)
                     {
-                        CurrentParas.mPLC.IOlink_B_Move_Cam.NodeID_i_In = ServoNode.SelectSingleNode("i_In").InnerText;
-                        CurrentParas.mPLC.IOlink_B_Move_Cam.NodeID_i_Out = ServoNode.SelectSingleNode("i_Out").InnerText;
-                        CurrentParas.mPLC.IOlink_B_Move_Cam.NodeID_i_Move = ServoNode.SelectSingleNode("i_Move").InnerText;
-                        CurrentParas.mPLC.IOlink_B_Move_Cam.NodeID_i_Device = ServoNode.SelectSingleNode("i_Device").InnerText;
-                        CurrentParas.mPLC.IOlink_B_Move_Cam.NodeID_o_In = ServoNode.SelectSingleNode("o_In").InnerText;
-                        CurrentParas.mPLC.IOlink_B_Move_Cam.NodeID_o_Out = ServoNode.SelectSingleNode("o_Out").InnerText;
-                        CurrentParas.mPLC.IOlink_B_Move_Cam.NodeID_o_QuitError = ServoNode.SelectSingleNode("o_QuitError").InnerText;
+                        CurrentParas.mPLC.IOlink_B_Move_Cam.NodeID_i_In = ServoNode.SelectSingleNode("i_In").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_B_Move_Cam.NodeID_i_Out = ServoNode.SelectSingleNode("i_Out").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_B_Move_Cam.NodeID_i_Move = ServoNode.SelectSingleNode("i_Move").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_B_Move_Cam.NodeID_i_Device = ServoNode.SelectSingleNode("i_Device").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_B_Move_Cam.NodeID_o_In = ServoNode.SelectSingleNode("o_In").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_B_Move_Cam.NodeID_o_Out = ServoNode.SelectSingleNode("o_Out").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_B_Move_Cam.NodeID_o_QuitError = ServoNode.SelectSingleNode("o_QuitError").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                       
                     }
                     else
@@ -911,13 +911,13 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ServoNode = xmlnode.SelectSingleNode("B_Grab");
                     if (ServoNode != null)
                     {
-                        CurrentParas.mPLC.IOlink_B_Grab.NodeID_i_In = ServoNode.SelectSingleNode("i_In").InnerText;
-                        CurrentParas.mPLC.IOlink_B_Grab.NodeID_i_Out = ServoNode.SelectSingleNode("i_Out").InnerText;
-                        CurrentParas.mPLC.IOlink_B_Grab.NodeID_i_Move = ServoNode.SelectSingleNode("i_Move").InnerText;
-                        CurrentParas.mPLC.IOlink_B_Grab.NodeID_i_Device = ServoNode.SelectSingleNode("i_Device").InnerText;
-                        CurrentParas.mPLC.IOlink_B_Grab.NodeID_o_In = ServoNode.SelectSingleNode("o_In").InnerText;
-                        CurrentParas.mPLC.IOlink_B_Grab.NodeID_o_Out = ServoNode.SelectSingleNode("o_Out").InnerText;
-                        CurrentParas.mPLC.IOlink_B_Grab.NodeID_o_QuitError = ServoNode.SelectSingleNode("o_QuitError").InnerText;
+                        CurrentParas.mPLC.IOlink_B_Grab.NodeID_i_In = ServoNode.SelectSingleNode("i_In").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_B_Grab.NodeID_i_Out = ServoNode.SelectSingleNode("i_Out").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_B_Grab.NodeID_i_Move = ServoNode.SelectSingleNode("i_Move").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_B_Grab.NodeID_i_Device = ServoNode.SelectSingleNode("i_Device").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_B_Grab.NodeID_o_In = ServoNode.SelectSingleNode("o_In").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_B_Grab.NodeID_o_Out = ServoNode.SelectSingleNode("o_Out").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_B_Grab.NodeID_o_QuitError = ServoNode.SelectSingleNode("o_QuitError").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                        
                     }
                     else
@@ -929,26 +929,26 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ServoNode = xmlnode.SelectSingleNode("B_Rotate");
                     if (ServoNode != null)
                     {
-                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
-                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
-                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
-                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText;
-                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText;
-                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText;
+                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
 
-                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText;
-                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText;
-                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText;
-                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText;
-                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText;
-                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText;
-                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText;
-                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText;
-                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText;
-                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText;
-                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
-                        CurrentParas.mPLC.servo_B_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
-                        CurrentParas.mPLC.servo_B_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
+                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        //CurrentParas.mPLC.servo_B_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        //CurrentParas.mPLC.servo_B_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
                     {
@@ -959,13 +959,13 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ServoNode = xmlnode.SelectSingleNode("L_Move_Cam");
                     if (ServoNode != null)
                     {
-                        CurrentParas.mPLC.IOlink_L_Move_Cam.NodeID_i_In = ServoNode.SelectSingleNode("i_In").InnerText;
-                        CurrentParas.mPLC.IOlink_L_Move_Cam.NodeID_i_Out = ServoNode.SelectSingleNode("i_Out").InnerText;
-                        CurrentParas.mPLC.IOlink_L_Move_Cam.NodeID_i_Move = ServoNode.SelectSingleNode("i_Move").InnerText;
-                        CurrentParas.mPLC.IOlink_L_Move_Cam.NodeID_i_Device = ServoNode.SelectSingleNode("i_Device").InnerText;
-                        CurrentParas.mPLC.IOlink_L_Move_Cam.NodeID_o_In = ServoNode.SelectSingleNode("o_In").InnerText;
-                        CurrentParas.mPLC.IOlink_L_Move_Cam.NodeID_o_Out = ServoNode.SelectSingleNode("o_Out").InnerText;
-                        CurrentParas.mPLC.IOlink_L_Move_Cam.NodeID_o_QuitError = ServoNode.SelectSingleNode("o_QuitError").InnerText;
+                        CurrentParas.mPLC.IOlink_L_Move_Cam.NodeID_i_In = ServoNode.SelectSingleNode("i_In").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_L_Move_Cam.NodeID_i_Out = ServoNode.SelectSingleNode("i_Out").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_L_Move_Cam.NodeID_i_Move = ServoNode.SelectSingleNode("i_Move").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_L_Move_Cam.NodeID_i_Device = ServoNode.SelectSingleNode("i_Device").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_L_Move_Cam.NodeID_o_In = ServoNode.SelectSingleNode("o_In").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_L_Move_Cam.NodeID_o_Out = ServoNode.SelectSingleNode("o_Out").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_L_Move_Cam.NodeID_o_QuitError = ServoNode.SelectSingleNode("o_QuitError").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                     }
                     else
                     {
@@ -976,13 +976,13 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ServoNode = xmlnode.SelectSingleNode("L_Grab");
                     if (ServoNode != null)
                     {
-                        CurrentParas.mPLC.IOlink_L_Grab.NodeID_i_In = ServoNode.SelectSingleNode("i_In").InnerText;
-                        CurrentParas.mPLC.IOlink_L_Grab.NodeID_i_Out = ServoNode.SelectSingleNode("i_Out").InnerText;
-                        CurrentParas.mPLC.IOlink_L_Grab.NodeID_i_Move = ServoNode.SelectSingleNode("i_Move").InnerText;
-                        CurrentParas.mPLC.IOlink_L_Grab.NodeID_i_Device = ServoNode.SelectSingleNode("i_Device").InnerText;
-                        CurrentParas.mPLC.IOlink_L_Grab.NodeID_o_In = ServoNode.SelectSingleNode("o_In").InnerText;
-                        CurrentParas.mPLC.IOlink_L_Grab.NodeID_o_Out = ServoNode.SelectSingleNode("o_Out").InnerText;
-                        CurrentParas.mPLC.IOlink_L_Grab.NodeID_o_QuitError = ServoNode.SelectSingleNode("o_QuitError").InnerText;
+                        CurrentParas.mPLC.IOlink_L_Grab.NodeID_i_In = ServoNode.SelectSingleNode("i_In").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_L_Grab.NodeID_i_Out = ServoNode.SelectSingleNode("i_Out").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_L_Grab.NodeID_i_Move = ServoNode.SelectSingleNode("i_Move").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_L_Grab.NodeID_i_Device = ServoNode.SelectSingleNode("i_Device").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_L_Grab.NodeID_o_In = ServoNode.SelectSingleNode("o_In").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_L_Grab.NodeID_o_Out = ServoNode.SelectSingleNode("o_Out").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_L_Grab.NodeID_o_QuitError = ServoNode.SelectSingleNode("o_QuitError").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                     }
                     else
                     {
@@ -993,26 +993,26 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ServoNode = xmlnode.SelectSingleNode("L_Rotate");
                     if (ServoNode != null)
                     {
-                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
-                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
-                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
-                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText;
-                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText;
-                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText;
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
 
-                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText;
-                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText;
-                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText;
-                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText;
-                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText;
-                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText;
-                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText;
-                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText;
-                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText;
-                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText;
-                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
-                        CurrentParas.mPLC.servo_L_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
-                        CurrentParas.mPLC.servo_L_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        //CurrentParas.mPLC.servo_L_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        //CurrentParas.mPLC.servo_L_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
                     {
@@ -1023,13 +1023,13 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ServoNode = xmlnode.SelectSingleNode("R_Move_Cam");
                     if (ServoNode != null)
                     {
-                        CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_i_In = ServoNode.SelectSingleNode("i_In").InnerText;
-                        CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_i_Out = ServoNode.SelectSingleNode("i_Out").InnerText;
-                        CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_i_Move = ServoNode.SelectSingleNode("i_Move").InnerText;
-                        CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_i_Device = ServoNode.SelectSingleNode("i_Device").InnerText;
-                        CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_o_In = ServoNode.SelectSingleNode("o_In").InnerText;
-                        CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_o_Out = ServoNode.SelectSingleNode("o_Out").InnerText;
-                        CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_o_QuitError = ServoNode.SelectSingleNode("o_QuitError").InnerText;
+                        CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_i_In = ServoNode.SelectSingleNode("i_In").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_i_Out = ServoNode.SelectSingleNode("i_Out").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_i_Move = ServoNode.SelectSingleNode("i_Move").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_i_Device = ServoNode.SelectSingleNode("i_Device").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_o_In = ServoNode.SelectSingleNode("o_In").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_o_Out = ServoNode.SelectSingleNode("o_Out").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_o_QuitError = ServoNode.SelectSingleNode("o_QuitError").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                     }
                     else
                     {
@@ -1040,13 +1040,13 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ServoNode = xmlnode.SelectSingleNode("R_Grab");
                     if (ServoNode != null)
                     {
-                        CurrentParas.mPLC.IOlink_R_Grab.NodeID_i_In = ServoNode.SelectSingleNode("i_In").InnerText;
-                        CurrentParas.mPLC.IOlink_R_Grab.NodeID_i_Out = ServoNode.SelectSingleNode("i_Out").InnerText;
-                        CurrentParas.mPLC.IOlink_R_Grab.NodeID_i_Move = ServoNode.SelectSingleNode("i_Move").InnerText;
-                        CurrentParas.mPLC.IOlink_R_Grab.NodeID_i_Device = ServoNode.SelectSingleNode("i_Device").InnerText;
-                        CurrentParas.mPLC.IOlink_R_Grab.NodeID_o_In = ServoNode.SelectSingleNode("o_In").InnerText;
-                        CurrentParas.mPLC.IOlink_R_Grab.NodeID_o_Out = ServoNode.SelectSingleNode("o_Out").InnerText;
-                        CurrentParas.mPLC.IOlink_R_Grab.NodeID_o_QuitError = ServoNode.SelectSingleNode("o_QuitError").InnerText;
+                        CurrentParas.mPLC.IOlink_R_Grab.NodeID_i_In = ServoNode.SelectSingleNode("i_In").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_R_Grab.NodeID_i_Out = ServoNode.SelectSingleNode("i_Out").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_R_Grab.NodeID_i_Move = ServoNode.SelectSingleNode("i_Move").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_R_Grab.NodeID_i_Device = ServoNode.SelectSingleNode("i_Device").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_R_Grab.NodeID_o_In = ServoNode.SelectSingleNode("o_In").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_R_Grab.NodeID_o_Out = ServoNode.SelectSingleNode("o_Out").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_R_Grab.NodeID_o_QuitError = ServoNode.SelectSingleNode("o_QuitError").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                     }
                     else
                     {
@@ -1057,26 +1057,26 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ServoNode = xmlnode.SelectSingleNode("R_Rotate");
                     if (ServoNode != null)
                     {
-                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
-                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
-                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
-                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText;
-                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText;
-                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText;
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
 
-                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText;
-                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText;
-                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText;
-                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText;
-                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText;
-                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText;
-                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText;
-                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText;
-                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText;
-                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText;
-                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
-                        CurrentParas.mPLC.servo_R_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
-                        CurrentParas.mPLC.servo_R_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        //CurrentParas.mPLC.servo_R_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        //CurrentParas.mPLC.servo_R_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
                     {
@@ -1087,26 +1087,26 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ServoNode = xmlnode.SelectSingleNode("D_Move");
                     if (ServoNode != null)
                     {
-                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
-                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
-                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
-                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText;
-                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText;
-                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText;
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
 
-                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText;
-                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText;
-                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText;
-                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText;
-                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText;
-                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText;
-                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText;
-                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText;
-                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText;
-                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText;
-                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
-                        CurrentParas.mPLC.servo_D_Move.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
-                        CurrentParas.mPLC.servo_D_Move.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        //CurrentParas.mPLC.servo_D_Move.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        //CurrentParas.mPLC.servo_D_Move.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
                     {
@@ -1117,13 +1117,13 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ServoNode = xmlnode.SelectSingleNode("D_Move_Cam");
                     if (ServoNode != null)
                     {
-                        CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_i_In = ServoNode.SelectSingleNode("i_In").InnerText;
-                        CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_i_Out = ServoNode.SelectSingleNode("i_Out").InnerText;
-                        CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_i_Move = ServoNode.SelectSingleNode("i_Move").InnerText;
-                        CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_i_Device = ServoNode.SelectSingleNode("i_Device").InnerText;
-                        CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_o_In = ServoNode.SelectSingleNode("o_In").InnerText;
-                        CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_o_Out = ServoNode.SelectSingleNode("o_Out").InnerText;
-                        CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_o_QuitError = ServoNode.SelectSingleNode("o_QuitError").InnerText;
+                        CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_i_In = ServoNode.SelectSingleNode("i_In").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_i_Out = ServoNode.SelectSingleNode("i_Out").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_i_Move = ServoNode.SelectSingleNode("i_Move").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_i_Device = ServoNode.SelectSingleNode("i_Device").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_o_In = ServoNode.SelectSingleNode("o_In").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_o_Out = ServoNode.SelectSingleNode("o_Out").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_o_QuitError = ServoNode.SelectSingleNode("o_QuitError").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                     }
                     else
                     {
@@ -1134,26 +1134,26 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ServoNode = xmlnode.SelectSingleNode("D_Grab");
                     if (ServoNode != null)
                     {
-                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
-                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
-                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
-                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText;
-                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText;
-                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText;
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
 
-                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText;
-                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText;
-                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText;
-                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText;
-                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText;
-                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText;
-                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText;
-                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText;
-                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText;
-                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText;
-                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
-                        CurrentParas.mPLC.servo_D_Grab.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
-                        CurrentParas.mPLC.servo_D_Grab.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        //CurrentParas.mPLC.servo_D_Grab.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        //CurrentParas.mPLC.servo_D_Grab.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
                     {
@@ -1164,26 +1164,26 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ServoNode = xmlnode.SelectSingleNode("D_Rotate");
                     if (ServoNode != null)
                     {
-                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText;
-                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText;
-                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText;
-                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText;
-                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText;
-                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText;
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_Enable = ServoNode.SelectSingleNode("i_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_Error = ServoNode.SelectSingleNode("i_Error").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_ErrorID = ServoNode.SelectSingleNode("i_ErrorID").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_Home = ServoNode.SelectSingleNode("i_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_MC = ServoNode.SelectSingleNode("i_MC").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_ActPos = ServoNode.SelectSingleNode("i_ActPos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
 
-                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText;
-                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText;
-                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText;
-                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText;
-                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText;
-                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText;
-                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText;
-                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText;
-                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText;
-                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText;
-                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText;
-                        CurrentParas.mPLC.servo_D_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText);
-                        CurrentParas.mPLC.servo_D_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText);
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Enable = ServoNode.SelectSingleNode("o_Enable").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Reset = ServoNode.SelectSingleNode("o_Reset").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Home = ServoNode.SelectSingleNode("o_Home").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_JogPositive = ServoNode.SelectSingleNode("o_JogPositive").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_JogNegative = ServoNode.SelectSingleNode("o_JogNegative").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Vel = ServoNode.SelectSingleNode("o_Vel").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Acc = ServoNode.SelectSingleNode("o_Acc").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Dec = ServoNode.SelectSingleNode("o_Dec").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        //CurrentParas.mPLC.servo_D_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        //CurrentParas.mPLC.servo_D_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
                     {

@@ -61,5 +61,190 @@ namespace Festo_Rubik_s_Cube_Explorer
         {
             lbl_ServoName.Text = AxisID;
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                List<Opc.Ua.NodeId> nodeIds = new List<Opc.Ua.NodeId>();
+                nodeIds.Add(mServoParas.mServoNodeID.NodeID_i_Enable);
+                nodeIds.Add(mServoParas.mServoNodeID.NodeID_i_Error);
+                nodeIds.Add(mServoParas.mServoNodeID.NodeID_i_Home);
+                nodeIds.Add(mServoParas.mServoNodeID.NodeID_i_MC);
+                nodeIds.Add(mServoParas.mServoNodeID.NodeID_i_ActPos);
+
+                // 按照顺序定义的值
+                List<Opc.Ua.DataValue> values = Form1.m_OpcUaClient.ReadNodes(nodeIds.ToArray());
+                if (values[0].ToString()=="1")
+                {
+                    lbl_i_Enable.Image = imageList_Status.Images[1];
+                }
+                else
+                {
+                    lbl_i_Enable.Image = imageList_Status.Images[0];
+                }
+                if (values[1].ToString() == "1")
+                {
+                    lbl_i_Error.Image = imageList_Status.Images[1];
+                }
+                else
+                {
+                    lbl_i_Error.Image = imageList_Status.Images[0];
+                }
+                if (values[2].ToString() == "1")
+                {
+                    lbl_i_Home.Image = imageList_Status.Images[1];
+                }
+                else
+                {
+                    lbl_i_Home.Image = imageList_Status.Images[0];
+                }
+                if (values[3].ToString() == "1")
+                {
+                    lbl_i_MC.Image = imageList_Error.Images[1];
+                }
+                else
+                {
+                    lbl_i_MC.Image = imageList_Error.Images[0];
+                }
+                txt_i_ActPos.Text = values[4].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void cbx_o_Enable_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cbx_o_Enable_Click(object sender, EventArgs e)
+        {
+            if (cbx_o_Enable.Checked)
+            {
+                cbx_o_Enable.Checked = false;
+                try
+                {
+                    Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_Enable, (short)0);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+            else
+            {
+                cbx_o_Enable.Checked = true;
+                try
+                {
+                    Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_Enable, (short)1);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+        }
+
+        private void btn_o_Reset_MouseDown(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_Reset, (short)1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btn_o_Reset_MouseUp(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_Reset, (short)0);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btn_o_JogNegative_MouseDown(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_JogNegative, (short)1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btn_o_JogNegative_MouseUp(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_JogNegative, (short)0);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btn_o_JogPositive_MouseDown(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_JogPositive, (short)1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btn_o_JogPositive_MouseUp(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_JogPositive, (short)0);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btn_o_Go_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Form1.m_OpcUaClient.WriteNodes(new string[] {
+                mServoParas.mServoNodeID.NodeID_o_Vel,
+                mServoParas.mServoNodeID.NodeID_o_Acc,
+                mServoParas.mServoNodeID.NodeID_o_Dec,
+                mServoParas.mServoNodeID.NodeID_o_Jerk,
+                mServoParas.mServoNodeID.NodeID_o_Pos},
+                new object[] {
+                    Convert.ToInt16(txt_o_Vel.Text),
+                    Convert.ToInt16(txt_o_Acc.Text),
+                    Convert.ToInt16(txt_o_Dec.Text),
+                    Convert.ToInt16(txt_o_Jerk.Text),
+                    Convert.ToSingle(txt_o_Pos.Text)
+                });
+                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_Go, (short)1);
+                System.Threading.Thread.Sleep(100);
+                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_Go, (short)0);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

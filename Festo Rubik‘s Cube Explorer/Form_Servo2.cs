@@ -58,7 +58,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         {
             try
             {                
-                Form1.m_OpcUaClient.WriteNode(mIOlinkNodeID.NodeID_o_In, (short)1);               
+                Form1.m_OpcUaClient.WriteNode(mIOlinkNodeID.NodeID_o_In, true);               
             }
             catch (Exception ex)
             {
@@ -70,7 +70,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         {
             try
             {
-                Form1.m_OpcUaClient.WriteNode(mIOlinkNodeID.NodeID_o_In, (short)0);
+                Form1.m_OpcUaClient.WriteNode(mIOlinkNodeID.NodeID_o_In, false);
             }
             catch (Exception ex)
             {
@@ -82,7 +82,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         {
             try
             {
-                Form1.m_OpcUaClient.WriteNode(mIOlinkNodeID.NodeID_o_Out, (short)1);
+                Form1.m_OpcUaClient.WriteNode(mIOlinkNodeID.NodeID_o_Out, true);
             }
             catch (Exception ex)
             {
@@ -94,7 +94,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         {
             try
             {
-                Form1.m_OpcUaClient.WriteNode(mIOlinkNodeID.NodeID_o_Out, (short)0);
+                Form1.m_OpcUaClient.WriteNode(mIOlinkNodeID.NodeID_o_Out, false);
             }
             catch (Exception ex)
             {
@@ -106,7 +106,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         {
             try
             {
-                Form1.m_OpcUaClient.WriteNode(mIOlinkNodeID.NodeID_o_QuitError, (short)1);
+                Form1.m_OpcUaClient.WriteNode(mIOlinkNodeID.NodeID_o_QuitError, true);
             }
             catch (Exception ex)
             {
@@ -118,7 +118,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         {
             try
             {
-                Form1.m_OpcUaClient.WriteNode(mIOlinkNodeID.NodeID_o_QuitError, (short)0);
+                Form1.m_OpcUaClient.WriteNode(mIOlinkNodeID.NodeID_o_QuitError, false);
             }
             catch (Exception ex)
             {
@@ -164,11 +164,11 @@ namespace Festo_Rubik_s_Cube_Explorer
                 }
                 if (values[3])
                 {
-                    lbl_i_Device.Image = imageList_Error.Images[1];
+                    lbl_i_Device.Image = imageList_Status.Images[1];
                 }
                 else
                 {
-                    lbl_i_Device.Image = imageList_Error.Images[0];
+                    lbl_i_Device.Image = imageList_Status.Images[0];
                 }
             }
             catch (Exception ex)
@@ -180,6 +180,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         private void Form_Servo2_Load(object sender, EventArgs e)
         {
             lbl_ServoName.Text = AxisID;
+            timer1.Enabled = true;
         }
     }
 }

@@ -76,16 +76,38 @@ namespace Festo_Rubik_s_Cube_Explorer
 
             m_OpcUaClient.ConnectComplete += M_OpcUaClient_ConnectComplete;
             m_OpcUaClient.OpcStatusChange += M_OpcUaClient_OpcStatusChange;
+           
         }
 
         private void M_OpcUaClient_OpcStatusChange(object sender, OpcUaStatusEventArgs e)
         {
-            throw new NotImplementedException();
+            if (m_OpcUaClient.Connected)
+            {
+                InvokeChangeButtonText(button4, "Disconnect");
+                //button1.Text = "Disconnect";
+            }
+            else
+            {
+                InvokeChangeButtonText(button4, "Connect");
+                //button1.Text = "Connect";
+            }
+            //throw new NotImplementedException();
         }
+        #region InvokeChangeButtonText
+        protected delegate void ChangeButtonTextHandler(Button buttonCtrl, string Txt);
+        void InvokeChangeButtonText(Button buttonCtrl, string Txt)
+        {
+            buttonCtrl.Invoke((ChangeButtonTextHandler)ChangeButtonCtrlText, buttonCtrl, Txt);
+        }
+        void ChangeButtonCtrlText(Button buttonCtrl, string Txt)
+        {
+            buttonCtrl.Text = Txt;
+        }
+        #endregion
 
         private void M_OpcUaClient_ConnectComplete(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         private void btn_KeyPress(object sender, KeyPressEventArgs e)
@@ -1247,6 +1269,19 @@ namespace Festo_Rubik_s_Cube_Explorer
         private void button3_Click(object sender, EventArgs e)
         {
             new Form_Manual().Show();
+        }
+
+        private async void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                await m_OpcUaClient.ConnectServer("opc.tcp://" + GlobalVariables.CurrentParas.mPLC.str_IP + ":4840");
+
+            }
+            catch (Exception ex)
+            {
+                ClientUtils.HandleException("Connected Failed", ex);
+            }
         }
     }
 }

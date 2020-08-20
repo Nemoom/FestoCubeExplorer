@@ -69,6 +69,7 @@
             this.imageList_Status = new System.Windows.Forms.ImageList(this.components);
             this.imageList_Error = new System.Windows.Forms.ImageList(this.components);
             this.lbl_ServoName = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -98,7 +99,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.89764F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.10236F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel1.Controls.Add(this.cbx_o_Enable, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.btn_o_Reset, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.btn_o_Home, 3, 2);
@@ -127,27 +128,32 @@
             // 
             // cbx_o_Enable
             // 
+            this.cbx_o_Enable.AutoCheck = false;
             this.cbx_o_Enable.AutoSize = true;
-            this.cbx_o_Enable.Location = new System.Drawing.Point(296, 3);
+            this.cbx_o_Enable.Location = new System.Drawing.Point(295, 3);
             this.cbx_o_Enable.Name = "cbx_o_Enable";
             this.cbx_o_Enable.Size = new System.Drawing.Size(74, 21);
             this.cbx_o_Enable.TabIndex = 78;
             this.cbx_o_Enable.Text = "Enable";
             this.cbx_o_Enable.UseVisualStyleBackColor = true;
+            this.cbx_o_Enable.CheckedChanged += new System.EventHandler(this.cbx_o_Enable_CheckedChanged);
+            this.cbx_o_Enable.Click += new System.EventHandler(this.cbx_o_Enable_Click);
             // 
             // btn_o_Reset
             // 
-            this.btn_o_Reset.Location = new System.Drawing.Point(296, 33);
+            this.btn_o_Reset.Location = new System.Drawing.Point(295, 33);
             this.btn_o_Reset.Name = "btn_o_Reset";
             this.btn_o_Reset.Size = new System.Drawing.Size(75, 23);
             this.btn_o_Reset.TabIndex = 96;
             this.btn_o_Reset.Text = "Reset";
             this.btn_o_Reset.UseVisualStyleBackColor = true;
+            this.btn_o_Reset.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_o_Reset_MouseDown);
+            this.btn_o_Reset.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_o_Reset_MouseUp);
             // 
             // btn_o_Home
             // 
             this.btn_o_Home.Enabled = false;
-            this.btn_o_Home.Location = new System.Drawing.Point(296, 63);
+            this.btn_o_Home.Location = new System.Drawing.Point(295, 63);
             this.btn_o_Home.Name = "btn_o_Home";
             this.btn_o_Home.Size = new System.Drawing.Size(75, 23);
             this.btn_o_Home.TabIndex = 97;
@@ -160,10 +166,10 @@
             this.panel2.Controls.Add(this.splitContainer1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(293, 90);
+            this.panel2.Location = new System.Drawing.Point(292, 90);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(323, 30);
+            this.panel2.Size = new System.Drawing.Size(322, 30);
             this.panel2.TabIndex = 98;
             // 
             // splitContainer1
@@ -179,8 +185,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.btn_o_JogPositive);
-            this.splitContainer1.Size = new System.Drawing.Size(284, 30);
-            this.splitContainer1.SplitterDistance = 86;
+            this.splitContainer1.Size = new System.Drawing.Size(283, 30);
+            this.splitContainer1.SplitterDistance = 85;
             this.splitContainer1.TabIndex = 101;
             // 
             // btn_o_JogNegative
@@ -191,6 +197,8 @@
             this.btn_o_JogNegative.TabIndex = 98;
             this.btn_o_JogNegative.Text = "<<";
             this.btn_o_JogNegative.UseVisualStyleBackColor = true;
+            this.btn_o_JogNegative.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_o_JogNegative_MouseDown);
+            this.btn_o_JogNegative.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_o_JogNegative_MouseUp);
             // 
             // btn_o_JogPositive
             // 
@@ -200,6 +208,8 @@
             this.btn_o_JogPositive.TabIndex = 99;
             this.btn_o_JogPositive.Text = ">>";
             this.btn_o_JogPositive.UseVisualStyleBackColor = true;
+            this.btn_o_JogPositive.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_o_JogPositive_MouseDown);
+            this.btn_o_JogPositive.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_o_JogPositive_MouseUp);
             // 
             // label4
             // 
@@ -231,7 +241,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(23, 33);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(247, 24);
+            this.panel3.Size = new System.Drawing.Size(246, 24);
             this.panel3.TabIndex = 99;
             // 
             // lbl_i_Error
@@ -253,7 +263,7 @@
             this.txt_i_ErrorID.Dock = System.Windows.Forms.DockStyle.Right;
             this.txt_i_ErrorID.Enabled = false;
             this.txt_i_ErrorID.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.txt_i_ErrorID.Location = new System.Drawing.Point(115, 0);
+            this.txt_i_ErrorID.Location = new System.Drawing.Point(114, 0);
             this.txt_i_ErrorID.Name = "txt_i_ErrorID";
             this.txt_i_ErrorID.Size = new System.Drawing.Size(132, 22);
             this.txt_i_ErrorID.TabIndex = 81;
@@ -329,11 +339,11 @@
             // 
             this.panel5.Controls.Add(this.tableLayoutPanel2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(293, 120);
+            this.panel5.Location = new System.Drawing.Point(292, 120);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
             this.tableLayoutPanel1.SetRowSpan(this.panel5, 4);
-            this.panel5.Size = new System.Drawing.Size(323, 120);
+            this.panel5.Size = new System.Drawing.Size(322, 120);
             this.panel5.TabIndex = 101;
             // 
             // tableLayoutPanel2
@@ -365,7 +375,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(323, 120);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(322, 120);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // btn_Save
@@ -395,6 +405,7 @@
             this.btn_o_Go.TabIndex = 103;
             this.btn_o_Go.Text = "Go";
             this.btn_o_Go.UseVisualStyleBackColor = true;
+            this.btn_o_Go.Click += new System.EventHandler(this.btn_o_Go_Click);
             // 
             // lbl_o_Jerk
             // 
@@ -413,6 +424,7 @@
             this.txt_o_Pos.Name = "txt_o_Pos";
             this.txt_o_Pos.Size = new System.Drawing.Size(91, 22);
             this.txt_o_Pos.TabIndex = 95;
+            this.txt_o_Pos.Text = "90";
             // 
             // cbx_P
             // 
@@ -429,6 +441,7 @@
             this.txt_o_Dec.Name = "txt_o_Dec";
             this.txt_o_Dec.Size = new System.Drawing.Size(91, 22);
             this.txt_o_Dec.TabIndex = 89;
+            this.txt_o_Dec.Text = "100";
             // 
             // lbl_o_Pos
             // 
@@ -447,6 +460,7 @@
             this.txt_o_Acc.Name = "txt_o_Acc";
             this.txt_o_Acc.Size = new System.Drawing.Size(91, 22);
             this.txt_o_Acc.TabIndex = 87;
+            this.txt_o_Acc.Text = "100";
             // 
             // lbl_P
             // 
@@ -465,6 +479,7 @@
             this.txt_o_Vel.Name = "txt_o_Vel";
             this.txt_o_Vel.Size = new System.Drawing.Size(90, 22);
             this.txt_o_Vel.TabIndex = 85;
+            this.txt_o_Vel.Text = "10000";
             // 
             // lbl_o_Dec
             // 
@@ -483,6 +498,7 @@
             this.txt_o_Jerk.Name = "txt_o_Jerk";
             this.txt_o_Jerk.Size = new System.Drawing.Size(90, 22);
             this.txt_o_Jerk.TabIndex = 93;
+            this.txt_o_Jerk.Text = "100000";
             // 
             // lbl_o_Acc
             // 
@@ -518,6 +534,10 @@
             this.lbl_ServoName.Size = new System.Drawing.Size(638, 72);
             this.lbl_ServoName.TabIndex = 1;
             this.lbl_ServoName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form_Servo
             // 
@@ -593,5 +613,6 @@
         private System.Windows.Forms.ComboBox cbx_P;
         private System.Windows.Forms.Label lbl_P;
         private System.Windows.Forms.Label lbl_ServoName;
+        private System.Windows.Forms.Timer timer1;
     }
 }
