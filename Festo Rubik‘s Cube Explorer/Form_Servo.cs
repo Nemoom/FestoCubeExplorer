@@ -60,6 +60,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         private void Form_Servo_Load(object sender, EventArgs e)
         {
             lbl_ServoName.Text = AxisID;
+            timer1.Enabled = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -75,7 +76,7 @@ namespace Festo_Rubik_s_Cube_Explorer
 
                 // 按照顺序定义的值
                 List<Opc.Ua.DataValue> values = Form1.m_OpcUaClient.ReadNodes(nodeIds.ToArray());
-                if (values[0].ToString()=="1")
+                if (values[0].ToString()=="True")
                 {
                     lbl_i_Enable.Image = imageList_Status.Images[1];
                 }
@@ -83,7 +84,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 {
                     lbl_i_Enable.Image = imageList_Status.Images[0];
                 }
-                if (values[1].ToString() == "1")
+                if (values[1].ToString() == "True")
                 {
                     lbl_i_Error.Image = imageList_Status.Images[1];
                 }
@@ -91,7 +92,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 {
                     lbl_i_Error.Image = imageList_Status.Images[0];
                 }
-                if (values[2].ToString() == "1")
+                if (values[2].ToString() == "True")
                 {
                     lbl_i_Home.Image = imageList_Status.Images[1];
                 }
@@ -99,13 +100,13 @@ namespace Festo_Rubik_s_Cube_Explorer
                 {
                     lbl_i_Home.Image = imageList_Status.Images[0];
                 }
-                if (values[3].ToString() == "1")
+                if (values[3].ToString() == "True")
                 {
-                    lbl_i_MC.Image = imageList_Error.Images[1];
+                    lbl_i_MC.Image = imageList_Status.Images[1];
                 }
                 else
                 {
-                    lbl_i_MC.Image = imageList_Error.Images[0];
+                    lbl_i_MC.Image = imageList_Status.Images[0];
                 }
                 txt_i_ActPos.Text = values[4].ToString();
             }
@@ -127,7 +128,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 cbx_o_Enable.Checked = false;
                 try
                 {
-                    Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_Enable, (short)0);
+                    Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_Enable, false);
                 }
                 catch (Exception ex)
                 {
@@ -139,7 +140,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 cbx_o_Enable.Checked = true;
                 try
                 {
-                    Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_Enable, (short)1);
+                    Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_Enable, true);
                 }
                 catch (Exception ex)
                 {
@@ -152,7 +153,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         {
             try
             {
-                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_Reset, (short)1);
+                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_Reset, true);
             }
             catch (Exception ex)
             {
@@ -164,7 +165,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         {
             try
             {
-                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_Reset, (short)0);
+                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_Reset, false);
             }
             catch (Exception ex)
             {
@@ -176,7 +177,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         {
             try
             {
-                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_JogNegative, (short)1);
+                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_JogNegative, true);
             }
             catch (Exception ex)
             {
@@ -188,7 +189,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         {
             try
             {
-                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_JogNegative, (short)0);
+                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_JogNegative, false);
             }
             catch (Exception ex)
             {
@@ -200,7 +201,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         {
             try
             {
-                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_JogPositive, (short)1);
+                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_JogPositive, true);
             }
             catch (Exception ex)
             {
@@ -212,7 +213,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         {
             try
             {
-                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_JogPositive, (short)0);
+                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_JogPositive, false);
             }
             catch (Exception ex)
             {
@@ -231,15 +232,16 @@ namespace Festo_Rubik_s_Cube_Explorer
                 mServoParas.mServoNodeID.NodeID_o_Jerk,
                 mServoParas.mServoNodeID.NodeID_o_Pos},
                 new object[] {
-                    Convert.ToInt16(txt_o_Vel.Text),
-                    Convert.ToInt16(txt_o_Acc.Text),
-                    Convert.ToInt16(txt_o_Dec.Text),
-                    Convert.ToInt16(txt_o_Jerk.Text),
+                    Convert.ToSingle(txt_o_Vel.Text),
+                    Convert.ToSingle(txt_o_Acc.Text),
+                    Convert.ToSingle(txt_o_Dec.Text),
+                    Convert.ToSingle(txt_o_Jerk.Text),
                     Convert.ToSingle(txt_o_Pos.Text)
                 });
-                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_Go, (short)1);
+                //Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_Vel, Convert.ToSingle(txt_o_Vel.Text));
+                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_Go, true);
                 System.Threading.Thread.Sleep(100);
-                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_Go, (short)0);
+                Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_Go, false);
             }
             catch (Exception ex)
             {

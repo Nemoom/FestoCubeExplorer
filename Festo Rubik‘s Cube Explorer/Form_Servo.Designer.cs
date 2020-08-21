@@ -99,7 +99,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.89764F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.10236F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.Controls.Add(this.cbx_o_Enable, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.btn_o_Reset, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.btn_o_Home, 3, 2);
@@ -130,7 +130,7 @@
             // 
             this.cbx_o_Enable.AutoCheck = false;
             this.cbx_o_Enable.AutoSize = true;
-            this.cbx_o_Enable.Location = new System.Drawing.Point(295, 3);
+            this.cbx_o_Enable.Location = new System.Drawing.Point(294, 3);
             this.cbx_o_Enable.Name = "cbx_o_Enable";
             this.cbx_o_Enable.Size = new System.Drawing.Size(74, 21);
             this.cbx_o_Enable.TabIndex = 78;
@@ -141,7 +141,7 @@
             // 
             // btn_o_Reset
             // 
-            this.btn_o_Reset.Location = new System.Drawing.Point(295, 33);
+            this.btn_o_Reset.Location = new System.Drawing.Point(294, 33);
             this.btn_o_Reset.Name = "btn_o_Reset";
             this.btn_o_Reset.Size = new System.Drawing.Size(75, 23);
             this.btn_o_Reset.TabIndex = 96;
@@ -153,7 +153,7 @@
             // btn_o_Home
             // 
             this.btn_o_Home.Enabled = false;
-            this.btn_o_Home.Location = new System.Drawing.Point(295, 63);
+            this.btn_o_Home.Location = new System.Drawing.Point(294, 63);
             this.btn_o_Home.Name = "btn_o_Home";
             this.btn_o_Home.Size = new System.Drawing.Size(75, 23);
             this.btn_o_Home.TabIndex = 97;
@@ -166,7 +166,7 @@
             this.panel2.Controls.Add(this.splitContainer1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(292, 90);
+            this.panel2.Location = new System.Drawing.Point(291, 90);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(322, 30);
@@ -241,7 +241,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(23, 33);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(246, 24);
+            this.panel3.Size = new System.Drawing.Size(245, 24);
             this.panel3.TabIndex = 99;
             // 
             // lbl_i_Error
@@ -263,7 +263,7 @@
             this.txt_i_ErrorID.Dock = System.Windows.Forms.DockStyle.Right;
             this.txt_i_ErrorID.Enabled = false;
             this.txt_i_ErrorID.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.txt_i_ErrorID.Location = new System.Drawing.Point(114, 0);
+            this.txt_i_ErrorID.Location = new System.Drawing.Point(113, 0);
             this.txt_i_ErrorID.Name = "txt_i_ErrorID";
             this.txt_i_ErrorID.Size = new System.Drawing.Size(132, 22);
             this.txt_i_ErrorID.TabIndex = 81;
@@ -339,7 +339,7 @@
             // 
             this.panel5.Controls.Add(this.tableLayoutPanel2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(292, 120);
+            this.panel5.Location = new System.Drawing.Point(291, 120);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
             this.tableLayoutPanel1.SetRowSpan(this.panel5, 4);
