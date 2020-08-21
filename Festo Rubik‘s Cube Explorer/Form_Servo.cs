@@ -60,6 +60,35 @@ namespace Festo_Rubik_s_Cube_Explorer
         private void Form_Servo_Load(object sender, EventArgs e)
         {
             lbl_ServoName.Text = AxisID;
+            try
+            {
+                List<Opc.Ua.NodeId> nodeIds = new List<Opc.Ua.NodeId>();
+                nodeIds.Add(mServoParas.mServoNodeID.NodeID_o_Vel);
+                nodeIds.Add(mServoParas.mServoNodeID.NodeID_o_Acc);
+                nodeIds.Add(mServoParas.mServoNodeID.NodeID_o_Dec);
+                nodeIds.Add(mServoParas.mServoNodeID.NodeID_o_Jerk);
+                nodeIds.Add(mServoParas.mServoNodeID.NodeID_o_Enable);
+
+                // 按照顺序定义的值
+                List<Opc.Ua.DataValue> values = Form1.m_OpcUaClient.ReadNodes(nodeIds.ToArray());
+                txt_o_Vel.Text = values[0].ToString();
+                txt_o_Acc.Text = values[1].ToString();
+                txt_o_Dec.Text = values[2].ToString();
+                txt_o_Jerk.Text = values[3].ToString();
+                if (values[4].ToString() == "True")
+                {
+                    cbx_o_Enable.Checked = true;
+                }
+                else
+                {
+                    cbx_o_Enable.Checked = false;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
             timer1.Enabled = true;
         }
 

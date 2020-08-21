@@ -687,6 +687,10 @@ namespace Festo_Rubik_s_Cube_Explorer
                 if (xmlnode != null)
                 {
                     CurrentParas.mPLC.str_IP = xmlnode.Attributes["IP"].Value;
+                    global_Vel = Convert.ToDouble(xmlnode.SelectSingleNode("Vel").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                    global_Acc = Convert.ToDouble(xmlnode.SelectSingleNode("Acc").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                    global_Dec = Convert.ToDouble(xmlnode.SelectSingleNode("Dec").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                    global_Jerk = Convert.ToDouble(xmlnode.SelectSingleNode("Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     #region 1-Feeding
                     XmlNode ServoNode = xmlnode.SelectSingleNode("Feeding");
                     if (ServoNode != null)
@@ -710,8 +714,8 @@ namespace Festo_Rubik_s_Cube_Explorer
                         CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
-                        //CurrentParas.mPLC.servo_Feeding.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
-                        //CurrentParas.mPLC.servo_Feeding.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        CurrentParas.mPLC.servo_Feeding.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        CurrentParas.mPLC.servo_Feeding.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
                     {
@@ -757,8 +761,8 @@ namespace Festo_Rubik_s_Cube_Explorer
                         CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
-                        //CurrentParas.mPLC.servo_U_Move.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
-                        //CurrentParas.mPLC.servo_U_Move.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        CurrentParas.mPLC.servo_U_Move.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P_1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        CurrentParas.mPLC.servo_U_Move.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P_2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
                     {
@@ -787,8 +791,9 @@ namespace Festo_Rubik_s_Cube_Explorer
                         CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
-                        //CurrentParas.mPLC.servo_U_Grab.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
-                        //CurrentParas.mPLC.servo_U_Grab.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        CurrentParas.mPLC.servo_U_Grab.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        CurrentParas.mPLC.servo_U_Grab.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        CurrentParas.mPLC.servo_U_Grab.P3 = Convert.ToDouble(ServoNode.SelectSingleNode("P3").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
                     {
@@ -1105,8 +1110,8 @@ namespace Festo_Rubik_s_Cube_Explorer
                         CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
-                        //CurrentParas.mPLC.servo_D_Move.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
-                        //CurrentParas.mPLC.servo_D_Move.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        CurrentParas.mPLC.servo_D_Move.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        CurrentParas.mPLC.servo_D_Move.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
                     {
@@ -1152,8 +1157,9 @@ namespace Festo_Rubik_s_Cube_Explorer
                         CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
-                        //CurrentParas.mPLC.servo_D_Grab.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
-                        //CurrentParas.mPLC.servo_D_Grab.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        CurrentParas.mPLC.servo_D_Grab.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        CurrentParas.mPLC.servo_D_Grab.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        CurrentParas.mPLC.servo_D_Grab.P3 = Convert.ToDouble(ServoNode.SelectSingleNode("P3").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
                     {

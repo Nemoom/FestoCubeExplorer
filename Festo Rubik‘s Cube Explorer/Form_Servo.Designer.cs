@@ -99,7 +99,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.89764F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.10236F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.Controls.Add(this.cbx_o_Enable, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.btn_o_Reset, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.btn_o_Home, 3, 2);
@@ -169,7 +169,7 @@
             this.panel2.Location = new System.Drawing.Point(291, 90);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(322, 30);
+            this.panel2.Size = new System.Drawing.Size(321, 30);
             this.panel2.TabIndex = 98;
             // 
             // splitContainer1
@@ -185,8 +185,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.btn_o_JogPositive);
-            this.splitContainer1.Size = new System.Drawing.Size(283, 30);
-            this.splitContainer1.SplitterDistance = 85;
+            this.splitContainer1.Size = new System.Drawing.Size(282, 30);
+            this.splitContainer1.SplitterDistance = 84;
             this.splitContainer1.TabIndex = 101;
             // 
             // btn_o_JogNegative
@@ -343,7 +343,7 @@
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
             this.tableLayoutPanel1.SetRowSpan(this.panel5, 4);
-            this.panel5.Size = new System.Drawing.Size(322, 120);
+            this.panel5.Size = new System.Drawing.Size(321, 120);
             this.panel5.TabIndex = 101;
             // 
             // tableLayoutPanel2
@@ -375,12 +375,12 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(322, 120);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(321, 120);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // btn_Save
             // 
-            this.btn_Save.Location = new System.Drawing.Point(210, 93);
+            this.btn_Save.Location = new System.Drawing.Point(209, 93);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(75, 23);
             this.btn_Save.TabIndex = 104;
@@ -420,7 +420,7 @@
             // txt_o_Pos
             // 
             this.txt_o_Pos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.txt_o_Pos.Location = new System.Drawing.Point(210, 63);
+            this.txt_o_Pos.Location = new System.Drawing.Point(209, 63);
             this.txt_o_Pos.Name = "txt_o_Pos";
             this.txt_o_Pos.Size = new System.Drawing.Size(91, 22);
             this.txt_o_Pos.TabIndex = 95;
@@ -437,7 +437,7 @@
             // txt_o_Dec
             // 
             this.txt_o_Dec.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.txt_o_Dec.Location = new System.Drawing.Point(210, 33);
+            this.txt_o_Dec.Location = new System.Drawing.Point(209, 33);
             this.txt_o_Dec.Name = "txt_o_Dec";
             this.txt_o_Dec.Size = new System.Drawing.Size(91, 22);
             this.txt_o_Dec.TabIndex = 89;
@@ -447,7 +447,7 @@
             // 
             this.lbl_o_Pos.AutoSize = true;
             this.lbl_o_Pos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.lbl_o_Pos.Location = new System.Drawing.Point(165, 60);
+            this.lbl_o_Pos.Location = new System.Drawing.Point(164, 60);
             this.lbl_o_Pos.Name = "lbl_o_Pos";
             this.lbl_o_Pos.Size = new System.Drawing.Size(36, 17);
             this.lbl_o_Pos.TabIndex = 94;
@@ -456,7 +456,7 @@
             // txt_o_Acc
             // 
             this.txt_o_Acc.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.txt_o_Acc.Location = new System.Drawing.Point(210, 3);
+            this.txt_o_Acc.Location = new System.Drawing.Point(209, 3);
             this.txt_o_Acc.Name = "txt_o_Acc";
             this.txt_o_Acc.Size = new System.Drawing.Size(91, 22);
             this.txt_o_Acc.TabIndex = 87;
@@ -485,7 +485,7 @@
             // 
             this.lbl_o_Dec.AutoSize = true;
             this.lbl_o_Dec.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.lbl_o_Dec.Location = new System.Drawing.Point(165, 30);
+            this.lbl_o_Dec.Location = new System.Drawing.Point(164, 30);
             this.lbl_o_Dec.Name = "lbl_o_Dec";
             this.lbl_o_Dec.Size = new System.Drawing.Size(33, 17);
             this.lbl_o_Dec.TabIndex = 88;
@@ -504,7 +504,7 @@
             // 
             this.lbl_o_Acc.AutoSize = true;
             this.lbl_o_Acc.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.lbl_o_Acc.Location = new System.Drawing.Point(165, 0);
+            this.lbl_o_Acc.Location = new System.Drawing.Point(164, 0);
             this.lbl_o_Acc.Name = "lbl_o_Acc";
             this.lbl_o_Acc.Size = new System.Drawing.Size(31, 17);
             this.lbl_o_Acc.TabIndex = 86;
