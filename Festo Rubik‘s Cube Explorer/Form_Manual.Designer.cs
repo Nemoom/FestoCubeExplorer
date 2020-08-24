@@ -259,6 +259,9 @@
             this.rbtn_GrabD_P2 = new System.Windows.Forms.RadioButton();
             this.rbtn_GrabD_P3 = new System.Windows.Forms.RadioButton();
             this.lbl_ActPos_GrabU = new System.Windows.Forms.Label();
+            this.btn_Stop = new System.Windows.Forms.Button();
+            this.btn_EnableAll = new System.Windows.Forms.Button();
+            this.btn_ResetAll = new System.Windows.Forms.Button();
             this.btn_CubeBack = new System.Windows.Forms.Button();
             this.btn_Solve = new System.Windows.Forms.Button();
             this.btn_Exit = new System.Windows.Forms.Button();
@@ -270,9 +273,6 @@
             this.imageList_Status = new System.Windows.Forms.ImageList(this.components);
             this.imageList_Error = new System.Windows.Forms.ImageList(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btn_ResetAll = new System.Windows.Forms.Button();
-            this.btn_EnableAll = new System.Windows.Forms.Button();
-            this.btn_Stop = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage_Cam.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -346,7 +346,7 @@
             this.tabPage_Cam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage_Cam.Name = "tabPage_Cam";
             this.tabPage_Cam.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage_Cam.Size = new System.Drawing.Size(1291, 860);
+            this.tabPage_Cam.Size = new System.Drawing.Size(1291, 715);
             this.tabPage_Cam.TabIndex = 0;
             this.tabPage_Cam.Text = "Camera";
             this.tabPage_Cam.UseVisualStyleBackColor = true;
@@ -1172,7 +1172,7 @@
             this.tableLayoutPanel_CamControl.ColumnCount = 3;
             this.tableLayoutPanel_CamControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel_CamControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel_CamControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166F));
+            this.tableLayoutPanel_CamControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 168F));
             this.tableLayoutPanel_CamControl.Controls.Add(this.lbl_Trigger, 0, 0);
             this.tableLayoutPanel_CamControl.Controls.Add(this.lbl_Light, 1, 0);
             this.tableLayoutPanel_CamControl.Controls.Add(this.lbl_Status, 2, 0);
@@ -1212,7 +1212,7 @@
             this.lbl_Trigger.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_Trigger.Location = new System.Drawing.Point(4, 1);
             this.lbl_Trigger.Name = "lbl_Trigger";
-            this.lbl_Trigger.Size = new System.Drawing.Size(75, 39);
+            this.lbl_Trigger.Size = new System.Drawing.Size(74, 39);
             this.lbl_Trigger.TabIndex = 1;
             this.lbl_Trigger.Text = "触发";
             this.lbl_Trigger.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1220,9 +1220,9 @@
             // lbl_Light
             // 
             this.lbl_Light.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Light.Location = new System.Drawing.Point(86, 1);
+            this.lbl_Light.Location = new System.Drawing.Point(85, 1);
             this.lbl_Light.Name = "lbl_Light";
-            this.lbl_Light.Size = new System.Drawing.Size(75, 39);
+            this.lbl_Light.Size = new System.Drawing.Size(74, 39);
             this.lbl_Light.TabIndex = 2;
             this.lbl_Light.Text = "光源";
             this.lbl_Light.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1230,9 +1230,9 @@
             // lbl_Status
             // 
             this.lbl_Status.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status.Location = new System.Drawing.Point(168, 1);
+            this.lbl_Status.Location = new System.Drawing.Point(166, 1);
             this.lbl_Status.Name = "lbl_Status";
-            this.lbl_Status.Size = new System.Drawing.Size(161, 39);
+            this.lbl_Status.Size = new System.Drawing.Size(163, 39);
             this.lbl_Status.TabIndex = 3;
             this.lbl_Status.Text = "状态";
             this.lbl_Status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1242,7 +1242,7 @@
             this.btn_U.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_U.Location = new System.Drawing.Point(4, 44);
             this.btn_U.Name = "btn_U";
-            this.btn_U.Size = new System.Drawing.Size(75, 33);
+            this.btn_U.Size = new System.Drawing.Size(74, 33);
             this.btn_U.TabIndex = 4;
             this.btn_U.Text = "U";
             this.btn_U.UseVisualStyleBackColor = true;
@@ -1252,7 +1252,7 @@
             this.btn_L.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_L.Location = new System.Drawing.Point(4, 84);
             this.btn_L.Name = "btn_L";
-            this.btn_L.Size = new System.Drawing.Size(75, 33);
+            this.btn_L.Size = new System.Drawing.Size(74, 33);
             this.btn_L.TabIndex = 5;
             this.btn_L.Text = "L";
             this.btn_L.UseVisualStyleBackColor = true;
@@ -1262,7 +1262,7 @@
             this.btn_F.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_F.Location = new System.Drawing.Point(4, 124);
             this.btn_F.Name = "btn_F";
-            this.btn_F.Size = new System.Drawing.Size(75, 33);
+            this.btn_F.Size = new System.Drawing.Size(74, 33);
             this.btn_F.TabIndex = 6;
             this.btn_F.Text = "F";
             this.btn_F.UseVisualStyleBackColor = true;
@@ -1272,7 +1272,7 @@
             this.btn_R.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_R.Location = new System.Drawing.Point(4, 164);
             this.btn_R.Name = "btn_R";
-            this.btn_R.Size = new System.Drawing.Size(75, 33);
+            this.btn_R.Size = new System.Drawing.Size(74, 33);
             this.btn_R.TabIndex = 7;
             this.btn_R.Text = "R";
             this.btn_R.UseVisualStyleBackColor = true;
@@ -1282,7 +1282,7 @@
             this.btn_B.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_B.Location = new System.Drawing.Point(4, 204);
             this.btn_B.Name = "btn_B";
-            this.btn_B.Size = new System.Drawing.Size(75, 33);
+            this.btn_B.Size = new System.Drawing.Size(74, 33);
             this.btn_B.TabIndex = 8;
             this.btn_B.Text = "B";
             this.btn_B.UseVisualStyleBackColor = true;
@@ -1292,7 +1292,7 @@
             this.btn_D.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_D.Location = new System.Drawing.Point(4, 244);
             this.btn_D.Name = "btn_D";
-            this.btn_D.Size = new System.Drawing.Size(75, 37);
+            this.btn_D.Size = new System.Drawing.Size(74, 37);
             this.btn_D.TabIndex = 9;
             this.btn_D.Text = "D";
             this.btn_D.UseVisualStyleBackColor = true;
@@ -1300,7 +1300,7 @@
             // pic_L_U
             // 
             this.pic_L_U.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_U.Location = new System.Drawing.Point(86, 44);
+            this.pic_L_U.Location = new System.Drawing.Point(85, 44);
             this.pic_L_U.Name = "pic_L_U";
             this.pic_L_U.Size = new System.Drawing.Size(39, 30);
             this.pic_L_U.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1310,7 +1310,7 @@
             // pic_L_L
             // 
             this.pic_L_L.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_L.Location = new System.Drawing.Point(86, 84);
+            this.pic_L_L.Location = new System.Drawing.Point(85, 84);
             this.pic_L_L.Name = "pic_L_L";
             this.pic_L_L.Size = new System.Drawing.Size(39, 30);
             this.pic_L_L.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1320,7 +1320,7 @@
             // pic_L_F
             // 
             this.pic_L_F.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_F.Location = new System.Drawing.Point(86, 124);
+            this.pic_L_F.Location = new System.Drawing.Point(85, 124);
             this.pic_L_F.Name = "pic_L_F";
             this.pic_L_F.Size = new System.Drawing.Size(39, 30);
             this.pic_L_F.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1330,7 +1330,7 @@
             // pic_L_R
             // 
             this.pic_L_R.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_R.Location = new System.Drawing.Point(86, 164);
+            this.pic_L_R.Location = new System.Drawing.Point(85, 164);
             this.pic_L_R.Name = "pic_L_R";
             this.pic_L_R.Size = new System.Drawing.Size(39, 30);
             this.pic_L_R.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1340,7 +1340,7 @@
             // pic_L_B
             // 
             this.pic_L_B.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_B.Location = new System.Drawing.Point(86, 204);
+            this.pic_L_B.Location = new System.Drawing.Point(85, 204);
             this.pic_L_B.Name = "pic_L_B";
             this.pic_L_B.Size = new System.Drawing.Size(39, 30);
             this.pic_L_B.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1350,7 +1350,7 @@
             // pic_L_D
             // 
             this.pic_L_D.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_D.Location = new System.Drawing.Point(86, 244);
+            this.pic_L_D.Location = new System.Drawing.Point(85, 244);
             this.pic_L_D.Name = "pic_L_D";
             this.pic_L_D.Size = new System.Drawing.Size(39, 33);
             this.pic_L_D.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1360,9 +1360,9 @@
             // lbl_Status_U
             // 
             this.lbl_Status_U.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_U.Location = new System.Drawing.Point(168, 41);
+            this.lbl_Status_U.Location = new System.Drawing.Point(166, 41);
             this.lbl_Status_U.Name = "lbl_Status_U";
-            this.lbl_Status_U.Size = new System.Drawing.Size(161, 39);
+            this.lbl_Status_U.Size = new System.Drawing.Size(163, 39);
             this.lbl_Status_U.TabIndex = 16;
             this.lbl_Status_U.Text = "已连接";
             this.lbl_Status_U.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1370,9 +1370,9 @@
             // lbl_Status_L
             // 
             this.lbl_Status_L.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_L.Location = new System.Drawing.Point(168, 81);
+            this.lbl_Status_L.Location = new System.Drawing.Point(166, 81);
             this.lbl_Status_L.Name = "lbl_Status_L";
-            this.lbl_Status_L.Size = new System.Drawing.Size(161, 39);
+            this.lbl_Status_L.Size = new System.Drawing.Size(163, 39);
             this.lbl_Status_L.TabIndex = 17;
             this.lbl_Status_L.Text = "已连接";
             this.lbl_Status_L.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1380,9 +1380,9 @@
             // lbl_Status_F
             // 
             this.lbl_Status_F.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_F.Location = new System.Drawing.Point(168, 121);
+            this.lbl_Status_F.Location = new System.Drawing.Point(166, 121);
             this.lbl_Status_F.Name = "lbl_Status_F";
-            this.lbl_Status_F.Size = new System.Drawing.Size(161, 39);
+            this.lbl_Status_F.Size = new System.Drawing.Size(163, 39);
             this.lbl_Status_F.TabIndex = 18;
             this.lbl_Status_F.Text = "已连接";
             this.lbl_Status_F.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1390,9 +1390,9 @@
             // lbl_Status_R
             // 
             this.lbl_Status_R.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_R.Location = new System.Drawing.Point(168, 161);
+            this.lbl_Status_R.Location = new System.Drawing.Point(166, 161);
             this.lbl_Status_R.Name = "lbl_Status_R";
-            this.lbl_Status_R.Size = new System.Drawing.Size(161, 39);
+            this.lbl_Status_R.Size = new System.Drawing.Size(163, 39);
             this.lbl_Status_R.TabIndex = 19;
             this.lbl_Status_R.Text = "已连接";
             this.lbl_Status_R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1400,9 +1400,9 @@
             // lbl_Status_B
             // 
             this.lbl_Status_B.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_B.Location = new System.Drawing.Point(168, 201);
+            this.lbl_Status_B.Location = new System.Drawing.Point(166, 201);
             this.lbl_Status_B.Name = "lbl_Status_B";
-            this.lbl_Status_B.Size = new System.Drawing.Size(161, 39);
+            this.lbl_Status_B.Size = new System.Drawing.Size(163, 39);
             this.lbl_Status_B.TabIndex = 20;
             this.lbl_Status_B.Text = "已连接";
             this.lbl_Status_B.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1410,9 +1410,9 @@
             // lbl_Status_D
             // 
             this.lbl_Status_D.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_D.Location = new System.Drawing.Point(168, 241);
+            this.lbl_Status_D.Location = new System.Drawing.Point(166, 241);
             this.lbl_Status_D.Name = "lbl_Status_D";
-            this.lbl_Status_D.Size = new System.Drawing.Size(161, 43);
+            this.lbl_Status_D.Size = new System.Drawing.Size(163, 43);
             this.lbl_Status_D.TabIndex = 21;
             this.lbl_Status_D.Text = "已连接";
             this.lbl_Status_D.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1424,7 +1424,7 @@
             this.tabPage_Servo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage_Servo.Name = "tabPage_Servo";
             this.tabPage_Servo.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage_Servo.Size = new System.Drawing.Size(1291, 860);
+            this.tabPage_Servo.Size = new System.Drawing.Size(1291, 715);
             this.tabPage_Servo.TabIndex = 1;
             this.tabPage_Servo.Text = "Servo";
             this.tabPage_Servo.UseVisualStyleBackColor = true;
@@ -3133,6 +3133,36 @@
             this.lbl_ActPos_GrabU.Size = new System.Drawing.Size(126, 36);
             this.lbl_ActPos_GrabU.TabIndex = 20;
             // 
+            // btn_Stop
+            // 
+            this.btn_Stop.Location = new System.Drawing.Point(218, 261);
+            this.btn_Stop.Name = "btn_Stop";
+            this.btn_Stop.Size = new System.Drawing.Size(139, 34);
+            this.btn_Stop.TabIndex = 11;
+            this.btn_Stop.Text = "急停";
+            this.btn_Stop.UseVisualStyleBackColor = true;
+            this.btn_Stop.Click += new System.EventHandler(this.btn_Stop_Click);
+            // 
+            // btn_EnableAll
+            // 
+            this.btn_EnableAll.Location = new System.Drawing.Point(218, 213);
+            this.btn_EnableAll.Name = "btn_EnableAll";
+            this.btn_EnableAll.Size = new System.Drawing.Size(139, 34);
+            this.btn_EnableAll.TabIndex = 10;
+            this.btn_EnableAll.Text = "使能";
+            this.btn_EnableAll.UseVisualStyleBackColor = true;
+            this.btn_EnableAll.Click += new System.EventHandler(this.btn_EnableAll_Click);
+            // 
+            // btn_ResetAll
+            // 
+            this.btn_ResetAll.Location = new System.Drawing.Point(218, 165);
+            this.btn_ResetAll.Name = "btn_ResetAll";
+            this.btn_ResetAll.Size = new System.Drawing.Size(139, 34);
+            this.btn_ResetAll.TabIndex = 9;
+            this.btn_ResetAll.Text = "异常复位";
+            this.btn_ResetAll.UseVisualStyleBackColor = true;
+            this.btn_ResetAll.Click += new System.EventHandler(this.btn_ResetAll_Click);
+            // 
             // btn_CubeBack
             // 
             this.btn_CubeBack.Location = new System.Drawing.Point(28, 331);
@@ -3177,6 +3207,7 @@
             this.btn_2_P_Acquire.TabIndex = 2;
             this.btn_2_P_Acquire.Text = "至拍照位";
             this.btn_2_P_Acquire.UseVisualStyleBackColor = true;
+            this.btn_2_P_Acquire.Click += new System.EventHandler(this.btn_2_P_Acquire_Click);
             // 
             // btn_2_P_Rotate
             // 
@@ -3222,36 +3253,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btn_ResetAll
-            // 
-            this.btn_ResetAll.Location = new System.Drawing.Point(218, 165);
-            this.btn_ResetAll.Name = "btn_ResetAll";
-            this.btn_ResetAll.Size = new System.Drawing.Size(139, 34);
-            this.btn_ResetAll.TabIndex = 9;
-            this.btn_ResetAll.Text = "异常复位";
-            this.btn_ResetAll.UseVisualStyleBackColor = true;
-            this.btn_ResetAll.Click += new System.EventHandler(this.btn_ResetAll_Click);
-            // 
-            // btn_EnableAll
-            // 
-            this.btn_EnableAll.Location = new System.Drawing.Point(218, 213);
-            this.btn_EnableAll.Name = "btn_EnableAll";
-            this.btn_EnableAll.Size = new System.Drawing.Size(139, 34);
-            this.btn_EnableAll.TabIndex = 10;
-            this.btn_EnableAll.Text = "使能";
-            this.btn_EnableAll.UseVisualStyleBackColor = true;
-            this.btn_EnableAll.Click += new System.EventHandler(this.btn_EnableAll_Click);
-            // 
-            // btn_Stop
-            // 
-            this.btn_Stop.Location = new System.Drawing.Point(218, 261);
-            this.btn_Stop.Name = "btn_Stop";
-            this.btn_Stop.Size = new System.Drawing.Size(139, 34);
-            this.btn_Stop.TabIndex = 11;
-            this.btn_Stop.Text = "急停";
-            this.btn_Stop.UseVisualStyleBackColor = true;
-            this.btn_Stop.Click += new System.EventHandler(this.btn_Stop_Click);
             // 
             // Form_Manual
             // 

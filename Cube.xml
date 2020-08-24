@@ -313,10 +313,22 @@
     </ColorMatch>
   </CamB>
   <PLC IP="192.168.1.110">
+	<Vel>
+	  10000
+	</Vel>
+	<Acc>
+	  100
+	</Acc>
+	<Dec>
+	  100
+	</Dec>
+	<Jerk>
+	  100000
+	</Jerk>
     <!--上料位/下料位-->
     <Feeding>
 		<i_Enable>
-			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db5.DriveEnabled
+			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db5.Ready
 		</i_Enable>
 		<i_Error>
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db5.Fault
@@ -365,8 +377,10 @@
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db5.StartTask
 		</o_Go>
       <P1>
+		  120
       </P1>
       <P2>
+		  346.175
       </P2>
     </Feeding>
     <!--魔方拍照位/旋转位-->
@@ -396,7 +410,7 @@
     <!--上方模块拍照位/旋转位-->
     <U_Move>
 		<i_Enable>
-			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db9.DriveEnabled
+			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db9.Ready
 		</i_Enable>
 		<i_Error>
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db9.Fault
@@ -445,16 +459,16 @@
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db9.StartTask
 		</o_Go>
 		<P_1>
+			120
 		</P_1>
 		<P_2>
-		</P_2>
-		<P_3>
-		</P_3>
+			123
+		</P_2>		
     </U_Move>
     <!--上方旋杆儿上/下-->
     <U_Grab>
 		<i_Enable>
-			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db11.DriveEnabled
+			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db11.Ready
 		</i_Enable>
 		<i_Error>
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db11.Fault
@@ -503,16 +517,19 @@
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db11.StartTask
 		</o_Go>
 		<P_1>
+			0
 		</P_1>
 		<P_2>
+			0
 		</P_2>
 		<P_3>
+			0
 		</P_3>
     </U_Grab>
     <!--上方拧-->
     <U_Rotate>
 		<i_Enable>
-			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db8.DriveEnabled
+			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db8.Ready
 		</i_Enable>
 		<i_Error>
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db8.Fault
@@ -618,7 +635,7 @@
     <!--前侧拧-->
     <F_Rotate>
 		<i_Enable>
-			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db2.DriveEnabled
+			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db2.Ready
 		</i_Enable>
 		<i_Error>
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db2.Fault
@@ -724,7 +741,7 @@
     <!--后侧拧-->
     <B_Rotate>
 		<i_Enable>
-			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db4.DriveEnabled
+			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db4.Ready
 		</i_Enable>
 		<i_Error>
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db4.Fault
@@ -830,7 +847,7 @@
     <!--左侧拧-->
     <L_Rotate>
 		<i_Enable>
-			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db1.DriveEnabled
+			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db1.Ready
 		</i_Enable>
 		<i_Error>
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db1.Fault
@@ -936,7 +953,7 @@
     <!--右侧拧-->
     <R_Rotate>
 		<i_Enable>
-			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db3.DriveEnabled
+			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db3.Ready
 		</i_Enable>
 		<i_Error>
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db3.Fault
@@ -994,7 +1011,7 @@
     <!--下方模块拍照位/旋转位-->
     <D_Move>
 		<i_Enable>
-			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db6.DriveEnabled
+			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db6.Ready
 		</i_Enable>
 		<i_Error>
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db6.Fault
@@ -1043,8 +1060,10 @@
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db6.StartTask
 		</o_Go>
 		<P_1>
+			50
 		</P_1>
 		<P_2>
+			34
 		</P_2>		
     </D_Move>
     <!--下方相机上/下-->
@@ -1074,7 +1093,7 @@
     <!--下方旋杆儿上/下-->
     <D_Grab>
 		<i_Enable>
-			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db10.DriveEnabled
+			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db10.Ready
 		</i_Enable>
 		<i_Error>
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db10.Fault
@@ -1123,16 +1142,19 @@
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db10.StartTask
 		</o_Go>
 		<P_1>
+			0
 		</P_1>
 		<P_2>
+			0
 		</P_2>
 		<P_3>
+			0
 		</P_3>
     </D_Grab>
     <!--下方拧-->
     <D_Rotate>
 		<i_Enable>
-			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db7.DriveEnabled
+			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db7.Ready
 		</i_Enable>
 		<i_Error>
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db7.Fault

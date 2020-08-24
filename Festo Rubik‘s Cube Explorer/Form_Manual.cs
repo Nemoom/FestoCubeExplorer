@@ -340,6 +340,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             }
             return true;
         }
+        //尝试让下面的相机不伸出
         public static bool IOlinkAxisOut(int AxisCount)
         {
             switch (AxisCount)
@@ -411,13 +412,19 @@ namespace Festo_Rubik_s_Cube_Explorer
         GlobalVariables.CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_o_In,
         GlobalVariables.CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_o_In},
         new object[] { false, false, false, false, false });
+        //                Form1.m_OpcUaClient.WriteNodes(new string[] {
+        //GlobalVariables.CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_o_Out,
+        //GlobalVariables.CurrentParas.mPLC.IOlink_B_Move_Cam.NodeID_o_Out,
+        //GlobalVariables.CurrentParas.mPLC.IOlink_L_Move_Cam.NodeID_o_Out,
+        //GlobalVariables.CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_o_Out,
+        //GlobalVariables.CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_o_Out},
+        //new object[] { true, true, true, true, true });
                         Form1.m_OpcUaClient.WriteNodes(new string[] {
         GlobalVariables.CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_o_Out,
         GlobalVariables.CurrentParas.mPLC.IOlink_B_Move_Cam.NodeID_o_Out,
         GlobalVariables.CurrentParas.mPLC.IOlink_L_Move_Cam.NodeID_o_Out,
-        GlobalVariables.CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_o_Out,
-        GlobalVariables.CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_o_Out},
-        new object[] { true, true, true, true, true });
+        GlobalVariables.CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_o_Out},
+       new object[] { true, true, true, true });
                         List<string> tags = new List<string>();
                         tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_i_Out);
                         tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_B_Move_Cam.NodeID_i_Out);
@@ -426,7 +433,11 @@ namespace Festo_Rubik_s_Cube_Explorer
                         tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_i_Out);
                         List<bool> values = Form1.m_OpcUaClient.ReadNodes<bool>(tags.ToArray());
 
-                        while (!(values[0] && values[1] && values[2] && values[3] && values[4]))
+                        //while (!(values[0] && values[1] && values[2] && values[3] && values[4]))
+                        //{
+                        //    Thread.Sleep(100);
+                        //}
+                        while (!(values[0] && values[1] && values[2] && values[3]))
                         {
                             Thread.Sleep(100);
                         }
@@ -871,9 +882,653 @@ namespace Festo_Rubik_s_Cube_Explorer
             }
             #endregion
         }
+        public static void updateAxisStatus()
+        {
+            #region 更新所有IOlink轴的状态
+            try
+            {
+                List<string> tags = new List<string>();
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_i_In);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_i_Out);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_i_Device);
 
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_i_In);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_i_Out);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_i_Device);
+
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_B_Move_Cam.NodeID_i_In);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_B_Move_Cam.NodeID_i_Out);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_B_Move_Cam.NodeID_i_Device);
+
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_L_Move_Cam.NodeID_i_In);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_L_Move_Cam.NodeID_i_Out);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_L_Move_Cam.NodeID_i_Device);
+
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_i_In);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_i_Out);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_i_Device);
+
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_i_In);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_i_Out);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_i_Device);
+
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_F_Grab.NodeID_i_In);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_F_Grab.NodeID_i_Out);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_F_Grab.NodeID_i_Device);
+
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_B_Grab.NodeID_i_In);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_B_Grab.NodeID_i_Out);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_B_Grab.NodeID_i_Device);
+
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_L_Grab.NodeID_i_In);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_L_Grab.NodeID_i_Out);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_L_Grab.NodeID_i_Device);
+
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_R_Grab.NodeID_i_In);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_R_Grab.NodeID_i_Out);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_R_Grab.NodeID_i_Device);
+
+
+                // 按照顺序定义的值
+                List<bool> values = Form1.m_OpcUaClient.ReadNodes<bool>(tags.ToArray());
+                #region Rotate
+                if (values[0])
+                {
+                    GlobalVariables.IOlink_Rotate.i_In = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_Rotate.i_In = false;
+                }
+                if (values[1])
+                {
+                    GlobalVariables.IOlink_Rotate.i_Out = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_Rotate.i_Out = false;
+                }
+                if (values[2])
+                {
+                    GlobalVariables.IOlink_Rotate.i_Device = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_Rotate.i_Device = false;
+                }
+                #endregion
+                #region F_Move_Cam
+                if (values[1 * 3 + 0])
+                {
+                    GlobalVariables.IOlink_F_Move_Cam.i_In = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_F_Move_Cam.i_In = false;
+                }
+                if (values[1 * 3 + 1])
+                {
+                    GlobalVariables.IOlink_F_Move_Cam.i_Out = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_F_Move_Cam.i_Out = false;
+                }
+                if (values[1 * 3 + 2])
+                {
+                    GlobalVariables.IOlink_F_Move_Cam.i_Device = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_F_Move_Cam.i_Device = false;
+                }
+                #endregion
+                #region B_Move_Cam
+                if (values[2 * 3 + 0])
+                {
+                    GlobalVariables.IOlink_B_Move_Cam.i_In = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_B_Move_Cam.i_In = false;
+                }
+                if (values[2 * 3 + 1])
+                {
+                    GlobalVariables.IOlink_B_Move_Cam.i_Out = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_B_Move_Cam.i_Out = false;
+                }
+                if (values[2 * 3 + 2])
+                {
+                    GlobalVariables.IOlink_B_Move_Cam.i_Device = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_B_Move_Cam.i_Device = false;
+                }
+                #endregion
+                #region L_Move_Cam
+                if (values[3 * 3 + 0])
+                {
+                    GlobalVariables.IOlink_L_Move_Cam.i_In = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_L_Move_Cam.i_In = false;
+                }
+                if (values[3 * 3 + 1])
+                {
+                    GlobalVariables.IOlink_L_Move_Cam.i_Out = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_L_Move_Cam.i_Out = false;
+                }
+                if (values[3 * 3 + 2])
+                {
+                    GlobalVariables.IOlink_L_Move_Cam.i_Device = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_L_Move_Cam.i_Device = false;
+                }
+                #endregion
+                #region R_Move_Cam
+                if (values[4 * 3 + 0])
+                {
+                    GlobalVariables.IOlink_R_Move_Cam.i_In = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_R_Move_Cam.i_In = false;
+                }
+                if (values[4 * 3 + 1])
+                {
+                    GlobalVariables.IOlink_R_Move_Cam.i_Out = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_R_Move_Cam.i_Out = false;
+                }
+                if (values[4 * 3 + 2])
+                {
+                    GlobalVariables.IOlink_R_Move_Cam.i_Device = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_R_Move_Cam.i_Device = false;
+                }
+                #endregion
+                #region D_Move_Cam
+                if (values[5 * 3 + 0])
+                {
+                    GlobalVariables.IOlink_D_Move_Cam.i_In = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_D_Move_Cam.i_In = false;
+                }
+                if (values[5 * 3 + 1])
+                {
+                    GlobalVariables.IOlink_D_Move_Cam.i_Out = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_D_Move_Cam.i_Out = false;
+                }
+                if (values[5 * 3 + 2])
+                {
+                    GlobalVariables.IOlink_D_Move_Cam.i_Device = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_D_Move_Cam.i_Device = false;
+                }
+                #endregion
+                #region F_Grab
+                if (values[6 * 3 + 0])
+                {
+                    GlobalVariables.IOlink_F_Grab.i_In = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_F_Grab.i_In = false;
+                }
+                if (values[6 * 3 + 1])
+                {
+                    GlobalVariables.IOlink_F_Grab.i_Out = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_F_Grab.i_Out = false;
+                }
+                if (values[6 * 3 + 2])
+                {
+                    GlobalVariables.IOlink_F_Grab.i_Device = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_F_Grab.i_Device = false;
+                }
+                #endregion
+                #region B_Grab
+                if (values[7 * 3 + 0])
+                {
+                    GlobalVariables.IOlink_B_Grab.i_In = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_B_Grab.i_In = false;
+                }
+                if (values[7 * 3 + 1])
+                {
+                    GlobalVariables.IOlink_B_Grab.i_Out = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_B_Grab.i_Out = false;
+                }
+                if (values[7 * 3 + 2])
+                {
+                    GlobalVariables.IOlink_B_Grab.i_Device = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_B_Grab.i_Device = false;
+                }
+                #endregion
+                #region L_Grab
+                if (values[8 * 3 + 0])
+                {
+                    GlobalVariables.IOlink_L_Grab.i_In = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_L_Grab.i_In = false;
+                }
+                if (values[8 * 3 + 1])
+                {
+                    GlobalVariables.IOlink_L_Grab.i_Out = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_L_Grab.i_Out = false;
+                }
+                if (values[8 * 3 + 2])
+                {
+                    GlobalVariables.IOlink_L_Grab.i_Device = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_L_Grab.i_Device = false;
+                }
+                #endregion
+                #region R_Grab
+                if (values[9 * 3 + 0])
+                {
+                    GlobalVariables.IOlink_R_Grab.i_In = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_R_Grab.i_In = false;
+                }
+                if (values[9 * 3 + 1])
+                {
+                    GlobalVariables.IOlink_R_Grab.i_Out = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_R_Grab.i_Out = false;
+                }
+                if (values[9 * 3 + 2])
+                {
+                    GlobalVariables.IOlink_R_Grab.i_Device = true;
+                }
+                else
+                {
+                    GlobalVariables.IOlink_R_Grab.i_Device = false;
+                }
+                #endregion
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            #endregion
+            #region 更新Servo的当前位置信息
+            try
+            {
+                List<string> tags = new List<string>();
+                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_i_ActPos);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_ActPos);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_i_ActPos);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_ActPos);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_ActPos);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_ActPos);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_i_ActPos);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_i_ActPos);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_i_ActPos);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_ActPos);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_i_ActPos);
+                // 按照顺序定义的值
+                List<float> values = Form1.m_OpcUaClient.ReadNodes<float>(tags.ToArray());
+              
+                GlobalVariables.servo_U_Grab.i_ActPos = Convert.ToDouble(values[0].ToString());
+                GlobalVariables.servo_D_Grab.i_ActPos = Convert.ToDouble(values[1].ToString());
+                GlobalVariables.servo_U_Rotate.i_ActPos = Convert.ToDouble(values[2].ToString());
+                GlobalVariables.servo_D_Rotate.i_ActPos = Convert.ToDouble(values[3].ToString());
+                GlobalVariables.servo_L_Rotate.i_ActPos = Convert.ToDouble(values[4].ToString());
+                GlobalVariables.servo_R_Rotate.i_ActPos = Convert.ToDouble(values[5].ToString());
+                GlobalVariables.servo_F_Rotate.i_ActPos = Convert.ToDouble(values[6].ToString());
+                GlobalVariables.servo_B_Rotate.i_ActPos = Convert.ToDouble(values[7].ToString());
+                GlobalVariables.servo_U_Move.i_ActPos = Convert.ToDouble(values[8].ToString());
+                GlobalVariables.servo_D_Move.i_ActPos = Convert.ToDouble(values[9].ToString());
+                GlobalVariables.servo_Feeding.i_ActPos = Convert.ToDouble(values[10].ToString());
+
+                #region servo_U_Grab
+                if (GlobalVariables.servo_U_Grab.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_U_Grab.P1 - GlobalVariables.positionTolerance &&
+                      GlobalVariables.servo_U_Grab.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_U_Grab.P1 + GlobalVariables.positionTolerance)
+                {
+                    GlobalVariables.servo_U_Grab.b_P1 = true;
+                    GlobalVariables.servo_U_Grab.b_P2 = false;
+                    GlobalVariables.servo_U_Grab.b_P3 = false;
+                }
+                else if (GlobalVariables.servo_U_Grab.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_U_Grab.P2 - GlobalVariables.positionTolerance &&
+                    GlobalVariables.servo_U_Grab.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_U_Grab.P2 + GlobalVariables.positionTolerance)
+                {
+                    GlobalVariables.servo_U_Grab.b_P1 = false;
+                    GlobalVariables.servo_U_Grab.b_P2 = true;
+                    GlobalVariables.servo_U_Grab.b_P3 = false;
+                }
+                else if (GlobalVariables.servo_U_Grab.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_U_Grab.P3 - GlobalVariables.positionTolerance &&
+                    GlobalVariables.servo_U_Grab.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_U_Grab.P3 + GlobalVariables.positionTolerance)
+                {
+                    GlobalVariables.servo_U_Grab.b_P1 = false;
+                    GlobalVariables.servo_U_Grab.b_P2 = false;
+                    GlobalVariables.servo_U_Grab.b_P3 = true;
+                }
+                #endregion
+
+                #region servo_D_Grab
+                if (GlobalVariables.servo_D_Grab.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_D_Grab.P1 - GlobalVariables.positionTolerance &&
+                           GlobalVariables.servo_D_Grab.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_D_Grab.P1 + GlobalVariables.positionTolerance)
+                {
+                    GlobalVariables.servo_D_Grab.b_P1 = true;
+                    GlobalVariables.servo_D_Grab.b_P2 = false;
+                    GlobalVariables.servo_D_Grab.b_P3 = false;
+                }
+                else if (GlobalVariables.servo_D_Grab.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_D_Grab.P2 - GlobalVariables.positionTolerance &&
+                    GlobalVariables.servo_D_Grab.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_D_Grab.P2 + GlobalVariables.positionTolerance)
+                {
+                    GlobalVariables.servo_D_Grab.b_P1 = false;
+                    GlobalVariables.servo_D_Grab.b_P2 = true;
+                    GlobalVariables.servo_D_Grab.b_P3 = false;
+                }
+                else if (GlobalVariables.servo_D_Grab.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_D_Grab.P3 - GlobalVariables.positionTolerance &&
+                    GlobalVariables.servo_D_Grab.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_D_Grab.P3 + GlobalVariables.positionTolerance)
+                {
+                    GlobalVariables.servo_D_Grab.b_P1 = false;
+                    GlobalVariables.servo_D_Grab.b_P2 = false;
+                    GlobalVariables.servo_D_Grab.b_P3 = true;
+                }
+                #endregion
+
+                #region servo_U_Move
+                if (GlobalVariables.servo_U_Move.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_U_Move.P1 - GlobalVariables.positionTolerance &&
+                      GlobalVariables.servo_U_Move.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_U_Move.P1 + GlobalVariables.positionTolerance)
+                {
+                    GlobalVariables.servo_U_Move.b_P1 = true;
+                    GlobalVariables.servo_U_Move.b_P2 = false;
+                    GlobalVariables.servo_U_Move.b_P3 = false;
+                }
+                else if (GlobalVariables.servo_U_Move.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_U_Move.P2 - GlobalVariables.positionTolerance &&
+                    GlobalVariables.servo_U_Move.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_U_Move.P2 + GlobalVariables.positionTolerance)
+                {
+                    GlobalVariables.servo_U_Move.b_P1 = false;
+                    GlobalVariables.servo_U_Move.b_P2 = true;
+                    GlobalVariables.servo_U_Move.b_P3 = false;
+                }
+                else if (GlobalVariables.servo_U_Move.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_U_Move.P3 - GlobalVariables.positionTolerance &&
+                    GlobalVariables.servo_U_Move.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_U_Move.P3 + GlobalVariables.positionTolerance)
+                {
+                    GlobalVariables.servo_U_Move.b_P1 = false;
+                    GlobalVariables.servo_U_Move.b_P2 = false;
+                    GlobalVariables.servo_U_Move.b_P3 = true;
+                }
+                #endregion
+
+                #region servo_D_Move
+                if (GlobalVariables.servo_D_Move.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_D_Move.P1 - GlobalVariables.positionTolerance &&
+                      GlobalVariables.servo_D_Move.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_D_Move.P1 + GlobalVariables.positionTolerance)
+                {
+                    GlobalVariables.servo_D_Move.b_P1 = true;
+                    GlobalVariables.servo_D_Move.b_P2 = false;
+                    GlobalVariables.servo_D_Move.b_P3 = false;
+                }
+                else if (GlobalVariables.servo_D_Move.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_D_Move.P2 - GlobalVariables.positionTolerance &&
+                    GlobalVariables.servo_D_Move.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_D_Move.P2 + GlobalVariables.positionTolerance)
+                {
+                    GlobalVariables.servo_D_Move.b_P1 = false;
+                    GlobalVariables.servo_D_Move.b_P2 = true;
+                    GlobalVariables.servo_D_Move.b_P3 = false;
+                }
+                else if (GlobalVariables.servo_D_Move.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_D_Move.P3 - GlobalVariables.positionTolerance &&
+                    GlobalVariables.servo_D_Move.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_D_Move.P3 + GlobalVariables.positionTolerance)
+                {
+                    GlobalVariables.servo_D_Move.b_P1 = false;
+                    GlobalVariables.servo_D_Move.b_P2 = false;
+                    GlobalVariables.servo_D_Move.b_P3 = true;
+                }
+                #endregion
+
+                #region servo_Feeding
+                if (GlobalVariables.servo_Feeding.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_Feeding.P1 - GlobalVariables.positionTolerance &&
+                      GlobalVariables.servo_Feeding.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_Feeding.P1 + GlobalVariables.positionTolerance)
+                {
+                    GlobalVariables.servo_Feeding.b_P1 = true;
+                    GlobalVariables.servo_Feeding.b_P2 = false;
+                    GlobalVariables.servo_Feeding.b_P3 = false;
+                }
+                else if (GlobalVariables.servo_Feeding.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_Feeding.P2 - GlobalVariables.positionTolerance &&
+                    GlobalVariables.servo_Feeding.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_Feeding.P2 + GlobalVariables.positionTolerance)
+                {
+                    GlobalVariables.servo_Feeding.b_P1 = false;
+                    GlobalVariables.servo_Feeding.b_P2 = true;
+                    GlobalVariables.servo_Feeding.b_P3 = false;
+                }
+                else if (GlobalVariables.servo_Feeding.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_Feeding.P3 - GlobalVariables.positionTolerance &&
+                    GlobalVariables.servo_Feeding.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_Feeding.P3 + GlobalVariables.positionTolerance)
+                {
+                    GlobalVariables.servo_Feeding.b_P1 = false;
+                    GlobalVariables.servo_Feeding.b_P2 = false;
+                    GlobalVariables.servo_Feeding.b_P3 = true;
+                }
+                #endregion
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            #endregion
+        }
+        public void updateForm()
+        {
+            updateAxisStatus();
+            #region 更新所有IOlink轴的状态
+            try
+            {
+                #region Rotate
+                rbtn_Rotate_P1.Checked = GlobalVariables.IOlink_Rotate.i_In;
+                rbtn_Rotate_P2.Checked = GlobalVariables.IOlink_Rotate.i_Out;
+                if (GlobalVariables.IOlink_Rotate.i_Device)
+                {                    
+                    lbl_Status_Rotate.BackColor = Color.Transparent;
+                }
+                else
+                {                    
+                    lbl_Status_Rotate.BackColor = Color.Transparent;
+                }
+                #endregion
+                #region F_Move_Cam
+                rbtn_MoveF_P1.Checked = GlobalVariables.IOlink_F_Move_Cam.i_In;
+                rbtn_MoveF_P2.Checked = GlobalVariables.IOlink_F_Move_Cam.i_Out;
+                if (GlobalVariables.IOlink_F_Move_Cam.i_Device)
+                {
+                    lbl_Status_MovCamF.BackColor = Color.Transparent;
+                }
+                else
+                {
+                    lbl_Status_MovCamF.BackColor = Color.Transparent;
+                }
+                #endregion
+                #region B_Move_Cam
+                rbtn_MoveB_P1.Checked = GlobalVariables.IOlink_B_Move_Cam.i_In;
+                rbtn_MoveB_P2.Checked = GlobalVariables.IOlink_B_Move_Cam.i_Out;
+                if (GlobalVariables.IOlink_B_Move_Cam.i_Device)
+                {
+                    lbl_Status_MovCamB.BackColor = Color.Transparent;
+                }
+                else
+                {
+                    lbl_Status_MovCamB.BackColor = Color.Transparent;
+                }
+                #endregion
+                #region L_Move_Cam
+                rbtn_MoveL_P1.Checked = GlobalVariables.IOlink_L_Move_Cam.i_In;
+                rbtn_MoveL_P2.Checked = GlobalVariables.IOlink_L_Move_Cam.i_Out;
+                if (GlobalVariables.IOlink_L_Move_Cam.i_Device)
+                {
+                    lbl_Status_MovCamL.BackColor = Color.Transparent;
+                }
+                else
+                {
+                    lbl_Status_MovCamL.BackColor = Color.Transparent;
+                }
+                #endregion
+                #region R_Move_Cam
+                rbtn_MoveR_P1.Checked = GlobalVariables.IOlink_R_Move_Cam.i_In;
+                rbtn_MoveR_P2.Checked = GlobalVariables.IOlink_R_Move_Cam.i_Out;
+                if (GlobalVariables.IOlink_R_Move_Cam.i_Device)
+                {
+                    lbl_Status_MovCamR.BackColor = Color.Transparent;
+                }
+                else
+                {
+                    lbl_Status_MovCamR.BackColor = Color.Transparent;
+                }
+                #endregion
+                #region D_Move_Cam
+                rbtn_MoveD_P1.Checked = GlobalVariables.IOlink_D_Move_Cam.i_In;
+                rbtn_MoveD_P2.Checked = GlobalVariables.IOlink_D_Move_Cam.i_Out;
+                if (GlobalVariables.IOlink_D_Move_Cam.i_Device)
+                {
+                    lbl_Status_MovCamD.BackColor = Color.Transparent;
+                }
+                else
+                {
+                    lbl_Status_MovCamD.BackColor = Color.Transparent;
+                }
+                #endregion
+                #region F_Grab
+                rbtn_GrabF_P1.Checked = GlobalVariables.IOlink_F_Grab.i_In;
+                rbtn_GrabF_P2.Checked = GlobalVariables.IOlink_F_Grab.i_Out;
+                if (GlobalVariables.IOlink_F_Grab.i_Device)
+                {
+                    lbl_Status_GrabF.BackColor = Color.Transparent;
+                }
+                else
+                {
+                    lbl_Status_GrabF.BackColor = Color.Transparent;
+                }
+                #endregion
+                #region B_Grab
+                rbtn_GrabB_P1.Checked = GlobalVariables.IOlink_B_Grab.i_In;
+                rbtn_GrabB_P2.Checked = GlobalVariables.IOlink_B_Grab.i_Out;
+                if (GlobalVariables.IOlink_B_Grab.i_Device)
+                {
+                    lbl_Status_GrabB.BackColor = Color.Transparent;
+                }
+                else
+                {
+                    lbl_Status_GrabB.BackColor = Color.Transparent;
+                }
+                #endregion
+                #region L_Grab
+                rbtn_GrabL_P1.Checked = GlobalVariables.IOlink_L_Grab.i_In;
+                rbtn_GrabL_P2.Checked = GlobalVariables.IOlink_L_Grab.i_Out;
+                if (GlobalVariables.IOlink_L_Grab.i_Device)
+                {
+                    lbl_Status_GrabL.BackColor = Color.Transparent;
+                }
+                else
+                {
+                    lbl_Status_GrabL.BackColor = Color.Transparent;
+                }
+                #endregion
+                #region R_Grab
+                rbtn_GrabR_P1.Checked = GlobalVariables.IOlink_R_Grab.i_In;
+                rbtn_GrabR_P2.Checked = GlobalVariables.IOlink_R_Grab.i_Out;
+                if (GlobalVariables.IOlink_R_Grab.i_Device)
+                {
+                    lbl_Status_GrabR.BackColor = Color.Green;
+                }
+                else
+                {
+                    lbl_Status_GrabR.BackColor = Color.Transparent;
+                }
+                #endregion
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            #endregion
+            #region 更新Servo的当前位置信息
+            try
+            {               
+                lbl_ActPos_GrabU.Text = GlobalVariables.servo_U_Grab.i_ActPos.ToString();
+                lbl_ActPos_GrabD.Text = GlobalVariables.servo_D_Grab.i_ActPos.ToString();
+                lbl_ActPos_RotateU.Text = GlobalVariables.servo_U_Rotate.i_ActPos.ToString();
+                lbl_ActPos_RotateD.Text = GlobalVariables.servo_D_Rotate.i_ActPos.ToString();
+                lbl_ActPos_RotateL.Text = GlobalVariables.servo_L_Rotate.i_ActPos.ToString();
+                lbl_ActPos_RotateR.Text = GlobalVariables.servo_R_Rotate.i_ActPos.ToString();
+                lbl_ActPos_RotateF.Text = GlobalVariables.servo_F_Rotate.i_ActPos.ToString();
+                lbl_ActPos_RotateB.Text = GlobalVariables.servo_B_Rotate.i_ActPos.ToString();
+                lbl_ActPos_MoveU.Text = GlobalVariables.servo_U_Move.i_ActPos.ToString();
+                lbl_ActPos_MoveD.Text = GlobalVariables.servo_D_Move.i_ActPos.ToString();
+                lbl_ActPos_Feeding.Text = GlobalVariables.servo_Feeding.i_ActPos.ToString();
+
+                rbtn_GrabU_P1.Checked = GlobalVariables.servo_U_Grab.b_P1;
+                rbtn_GrabU_P2.Checked = GlobalVariables.servo_U_Grab.b_P2;
+                rbtn_GrabU_P3.Checked = GlobalVariables.servo_U_Grab.b_P3;
+
+                rbtn_GrabD_P1.Checked = GlobalVariables.servo_D_Grab.b_P1;
+                rbtn_GrabD_P2.Checked = GlobalVariables.servo_D_Grab.b_P2;
+                rbtn_GrabD_P3.Checked = GlobalVariables.servo_D_Grab.b_P3;
+
+                rbtn_BlockMoveU_P1.Checked = GlobalVariables.servo_U_Move.b_P1;
+                rbtn_BlockMoveU_P2.Checked = GlobalVariables.servo_U_Move.b_P2;
+
+                rbtn_BlockMoveD_P1.Checked = GlobalVariables.servo_D_Move.b_P1;
+                rbtn_BlockMoveD_P2.Checked = GlobalVariables.servo_D_Move.b_P2;
+
+                rbtn_Feeding_P1.Checked = GlobalVariables.servo_Feeding.b_P1;
+                rbtn_Feeding_P2.Checked = GlobalVariables.servo_Feeding.b_P2;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            #endregion
+
+        }
         public static bool ServoGoto(string AxisID,int PointIndex)
         {
+            updateAxisStatus();
             ServoParas mServoParas = new ServoParas();
             double TargetPosition = 0;
             switch (AxisID)
@@ -895,7 +1550,15 @@ namespace Festo_Rubik_s_Cube_Explorer
                             TargetPosition = mServoParas.P2;
                             break;
                     }
-                    break;
+                    //确定D相机，D杆都在原位
+                    if (GlobalVariables.servo_D_Grab.b_P1 && GlobalVariables.IOlink_D_Move_Cam.i_In)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        return false;
+                    }                    
                 case "servo_D_Rotate":
                     mServoParas = GlobalVariables.CurrentParas.mPLC.servo_D_Rotate;
                     break;
@@ -910,7 +1573,15 @@ namespace Festo_Rubik_s_Cube_Explorer
                             TargetPosition = mServoParas.P2;
                             break;
                     }
-                    break;
+                    //确定D相机，D杆都在原位
+                    if (GlobalVariables.servo_D_Grab.b_P1 && GlobalVariables.IOlink_D_Move_Cam.i_In)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 case "servo_F_Rotate":
                     mServoParas = GlobalVariables.CurrentParas.mPLC.servo_F_Rotate;
                     break;
@@ -934,7 +1605,15 @@ namespace Festo_Rubik_s_Cube_Explorer
                             TargetPosition = mServoParas.P2;
                             break;
                     }
-                    break;
+                    //确定U杆都在原位
+                    if (GlobalVariables.servo_U_Grab.b_P1)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 case "servo_U_Rotate":
                     mServoParas = GlobalVariables.CurrentParas.mPLC.servo_U_Rotate;
                     break;
@@ -969,6 +1648,7 @@ namespace Festo_Rubik_s_Cube_Explorer
 
         public static bool ServoGoHome(string AxisID)
         {
+            updateAxisStatus();
             ServoParas mServoParas = new ServoParas();
             double TargetPosition = 0;
             switch (AxisID)
@@ -980,15 +1660,23 @@ namespace Festo_Rubik_s_Cube_Explorer
                     mServoParas = GlobalVariables.CurrentParas.mPLC.servo_D_Grab;
                     break;
                 case "servo_D_Move":
-                    mServoParas = GlobalVariables.CurrentParas.mPLC.servo_D_Move;                    
-                    break;
+                    mServoParas = GlobalVariables.CurrentParas.mPLC.servo_D_Move;
+                    //确定D相机，D杆都在原位
+                    if (GlobalVariables.servo_D_Grab.b_P1 && GlobalVariables.IOlink_D_Move_Cam.i_In)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 case "servo_D_Rotate":
                     mServoParas = GlobalVariables.CurrentParas.mPLC.servo_D_Rotate;
                     break;
                 case "servo_Feeding":
                     mServoParas = GlobalVariables.CurrentParas.mPLC.servo_Feeding;
                     //确定D相机，D杆都在原位
-                    if (true)
+                    if (GlobalVariables.servo_D_Grab.b_P1 && GlobalVariables.IOlink_D_Move_Cam.i_In)
                     {
                         break;
                     }
@@ -1335,12 +2023,13 @@ namespace Festo_Rubik_s_Cube_Explorer
             ServoGoHome("servo_R_Rotate");
             ServoGoHome("servo_F_Rotate");
             ServoGoHome("servo_B_Rotate");
-            
+            ServoGoHome("servo_U_Grab");
             ServoGoHome("servo_D_Grab");//魔方落回台子上
             ServoGoHome("servo_U_Rotate");
             ServoGoHome("servo_D_Rotate");
             IOlinkAxisIn(1);//魔方姿态回0位拍照位
             //确定D相机，D杆都在原位
+            ServoGoHome("servo_Feeding");
         }
 
         private void btn_Stop_Click(object sender, EventArgs e)
@@ -1358,6 +2047,40 @@ namespace Festo_Rubik_s_Cube_Explorer
             GlobalVariables.CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Enable,
             GlobalVariables.CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Enable},
         new object[] { false, false, false, false, false, false, false, false, false, false, false });
+        }
+
+        private void btn_2_P_Acquire_Click(object sender, EventArgs e)
+        {
+            updateAxisStatus();
+
+            if (GlobalVariables.IOlink_F_Grab.i_In && GlobalVariables.IOlink_B_Grab.i_In
+                && GlobalVariables.IOlink_L_Grab.i_In && GlobalVariables.IOlink_R_Grab.i_In
+                 && GlobalVariables.servo_U_Grab.b_P1 && GlobalVariables.servo_D_Grab.b_P1)
+            {
+                if (GlobalVariables.IOlink_B_Move_Cam .i_In && GlobalVariables.IOlink_F_Move_Cam.i_In && GlobalVariables.IOlink_B_Move_Cam.i_In
+                && GlobalVariables.IOlink_L_Move_Cam.i_In && GlobalVariables.IOlink_R_Move_Cam.i_In)
+                {
+                    //线缆未到，屏蔽
+                    //if (GlobalVariables.IOlink_Rotate.i_In)
+                    //{
+
+                    //}
+                    ServoGoto("servo_Feeding", 2);
+                    ServoGoto("servo_U_Move", 1);
+                    ServoGoto("servo_D_Move", 1);
+                    IOlinkAxisOut(5);//5个相机回原位  
+                }
+                else
+                {
+                    IOlinkAxisIn(5);//5个相机回原位  
+                }
+            }
+            else
+            {
+                ServoGoHome("servo_U_Grab");
+                ServoGoHome("servo_D_Grab");
+                IOlinkAxisIn(4);//4个旋转杆回原位  
+            }
         }
     }
 }
