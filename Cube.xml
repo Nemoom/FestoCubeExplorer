@@ -378,10 +378,10 @@
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db5.StartTask
 		</o_Go>
       <P1>
-		  120
+		  0
       </P1>
       <P2>
-		  346.175
+		  344
       </P2>
     </Feeding>
     <!--魔方拍照位/旋转位-->
@@ -460,10 +460,10 @@
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db9.StartTask
 		</o_Go>
 		<P_1>
-			120
+			297.252
 		</P_1>
 		<P_2>
-			123
+			122.94
 		</P_2>		
     </U_Move>
     <!--上方旋杆儿上/下-->
@@ -521,10 +521,10 @@
 			0
 		</P_1>
 		<P_2>
-			0
+			50.056
 		</P_2>
 		<P_3>
-			0
+			119.678
 		</P_3>
     </U_Grab>
     <!--上方拧-->
@@ -1061,10 +1061,10 @@
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db6.StartTask
 		</o_Go>
 		<P_1>
-			50
+			214.77
 		</P_1>
 		<P_2>
-			34
+			35
 		</P_2>		
     </D_Move>
     <!--下方相机上/下-->
@@ -1146,10 +1146,10 @@
 			0
 		</P_1>
 		<P_2>
-			0
+			182
 		</P_2>
 		<P_3>
-			0
+			113.578
 		</P_3>
     </D_Grab>
     <!--下方拧-->
