@@ -99,7 +99,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.89764F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.10236F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanel1.Controls.Add(this.cbx_o_Enable, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.btn_o_Reset, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.btn_o_Home, 3, 2);
@@ -169,7 +169,7 @@
             this.panel2.Location = new System.Drawing.Point(291, 90);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(321, 30);
+            this.panel2.Size = new System.Drawing.Size(320, 30);
             this.panel2.TabIndex = 98;
             // 
             // splitContainer1
@@ -185,8 +185,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.btn_o_JogPositive);
-            this.splitContainer1.Size = new System.Drawing.Size(282, 30);
-            this.splitContainer1.SplitterDistance = 84;
+            this.splitContainer1.Size = new System.Drawing.Size(281, 30);
+            this.splitContainer1.SplitterDistance = 83;
             this.splitContainer1.TabIndex = 101;
             // 
             // btn_o_JogNegative
@@ -343,7 +343,7 @@
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
             this.tableLayoutPanel1.SetRowSpan(this.panel5, 4);
-            this.panel5.Size = new System.Drawing.Size(321, 120);
+            this.panel5.Size = new System.Drawing.Size(320, 120);
             this.panel5.TabIndex = 101;
             // 
             // tableLayoutPanel2
@@ -375,7 +375,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(321, 120);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(320, 120);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // btn_Save

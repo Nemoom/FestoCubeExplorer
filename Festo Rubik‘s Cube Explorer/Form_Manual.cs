@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Opc.Ua;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -239,10 +240,11 @@ namespace Festo_Rubik_s_Cube_Explorer
                     {
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_o_Out, false);
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_o_In, true);
-                        while (!Form1.m_OpcUaClient.ReadNode<bool>(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_i_In))
-                        {
-                            Thread.Sleep(100);
-                        }                        
+                        //while (!Form1.m_OpcUaClient.ReadNode<bool>(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_i_In))
+                        //{
+                        //    Thread.Sleep(100);
+                        //}              
+                        Thread.Sleep(100);
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_o_In, false);
                     }
                     catch (Exception ex)
@@ -273,9 +275,16 @@ namespace Festo_Rubik_s_Cube_Explorer
                         tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_R_Grab.NodeID_i_In);
                         List<bool> values = Form1.m_OpcUaClient.ReadNodes<bool>(tags.ToArray());
 
+                        int n = 0;
                         while (!(values[0] && values[1] && values[2] && values[3]))
                         {
                             Thread.Sleep(100);
+                            values = Form1.m_OpcUaClient.ReadNodes<bool>(tags.ToArray());
+                            n++;
+                            if (n>50)
+                            {
+                                break;
+                            }
                         }
 
                         Form1.m_OpcUaClient.WriteNodes(new string[] {
@@ -319,6 +328,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                         while (!(values[0] && values[1] && values[2] && values[3] && values[4]))
                         {
                             Thread.Sleep(100);
+                            values = Form1.m_OpcUaClient.ReadNodes<bool>(tags.ToArray());
                         }
 
                         Form1.m_OpcUaClient.WriteNodes(new string[] {
@@ -351,10 +361,11 @@ namespace Festo_Rubik_s_Cube_Explorer
                     {
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_o_In, false);
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_o_Out, true);
-                        while (!Form1.m_OpcUaClient.ReadNode<bool>(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_i_Out))
-                        {
-                            Thread.Sleep(100);
-                        }
+                        //while (!Form1.m_OpcUaClient.ReadNode<bool>(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_i_Out))
+                        //{
+                        //    Thread.Sleep(100);
+                        //}
+                        Thread.Sleep(100);
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_o_Out, false);
                     }
                     catch (Exception ex)
@@ -388,6 +399,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                         while (!(values[0] && values[1] && values[2] && values[3]))
                         {
                             Thread.Sleep(100);
+                            values = Form1.m_OpcUaClient.ReadNodes<bool>(tags.ToArray());
                         }
                         Form1.m_OpcUaClient.WriteNodes(new string[] {
         GlobalVariables.CurrentParas.mPLC.IOlink_F_Grab.NodeID_o_Out,
@@ -402,7 +414,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                     }
                     break;
                 case 5:
-                    //5个相机上下
+                    //5个相机上下，确认F相机是否与Feeding轴干涉
                     try
                     {
                         Form1.m_OpcUaClient.WriteNodes(new string[] {
@@ -440,6 +452,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                         while (!(values[0] && values[1] && values[2] && values[3]))
                         {
                             Thread.Sleep(100);
+                            values = Form1.m_OpcUaClient.ReadNodes<bool>(tags.ToArray());
                         }
                         Form1.m_OpcUaClient.WriteNodes(new string[] {
         GlobalVariables.CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_o_Out,
@@ -839,42 +852,42 @@ namespace Festo_Rubik_s_Cube_Explorer
             #region 更新Servo的当前位置信息
             try
             {
-                List<string> tags = new List<string>();
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_i_ActPos);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_ActPos);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_i_ActPos);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_ActPos);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_ActPos);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_ActPos);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_i_ActPos);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_i_ActPos);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_i_ActPos);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_ActPos);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_i_ActPos);
+                List<NodeId> nodeIds = new List<NodeId>();
+                nodeIds.Add(new NodeId( GlobalVariables.CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_i_ActPos));
+                nodeIds.Add(new NodeId( GlobalVariables.CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_ActPos));
+                nodeIds.Add(new NodeId( GlobalVariables.CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_i_ActPos));
+                nodeIds.Add(new NodeId( GlobalVariables.CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_ActPos));
+                nodeIds.Add(new NodeId( GlobalVariables.CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_ActPos));
+                nodeIds.Add(new NodeId( GlobalVariables.CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_ActPos));
+                nodeIds.Add(new NodeId( GlobalVariables.CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_i_ActPos));
+                nodeIds.Add(new NodeId( GlobalVariables.CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_i_ActPos));
+                nodeIds.Add(new NodeId( GlobalVariables.CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_i_ActPos));
+                nodeIds.Add(new NodeId( GlobalVariables.CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_ActPos));
+                nodeIds.Add(new NodeId(GlobalVariables.CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_i_ActPos));
                 // 按照顺序定义的值
-                List<float> values = Form1.m_OpcUaClient.ReadNodes<float>(tags.ToArray());
-                lbl_ActPos_GrabU.Text = values[0].ToString();
-                lbl_ActPos_GrabD.Text = values[1].ToString();
-                lbl_ActPos_RotateU.Text = values[2].ToString();
-                lbl_ActPos_RotateD.Text = values[3].ToString();
-                lbl_ActPos_RotateL.Text = values[4].ToString();
-                lbl_ActPos_RotateR.Text = values[5].ToString();
-                lbl_ActPos_RotateF.Text = values[6].ToString();
-                lbl_ActPos_RotateB.Text = values[7].ToString();
-                lbl_ActPos_MoveU.Text = values[8].ToString();
-                lbl_ActPos_MoveD.Text = values[9].ToString();
-                lbl_ActPos_Feeding.Text = values[10].ToString();
-                GlobalVariables.servo_U_Grab.i_ActPos = Convert.ToDouble(values[0].ToString());
-                GlobalVariables.servo_D_Grab.i_ActPos = Convert.ToDouble(values[1].ToString());
-                GlobalVariables.servo_U_Rotate.i_ActPos = Convert.ToDouble(values[2].ToString());
-                GlobalVariables.servo_D_Rotate.i_ActPos = Convert.ToDouble(values[3].ToString());
-                GlobalVariables.servo_L_Rotate.i_ActPos = Convert.ToDouble(values[4].ToString());
-                GlobalVariables.servo_R_Rotate.i_ActPos = Convert.ToDouble(values[5].ToString());
-                GlobalVariables.servo_F_Rotate.i_ActPos = Convert.ToDouble(values[6].ToString());
-                GlobalVariables.servo_B_Rotate.i_ActPos = Convert.ToDouble(values[7].ToString());
-                GlobalVariables.servo_U_Move.i_ActPos = Convert.ToDouble(values[8].ToString());
-                GlobalVariables.servo_D_Move.i_ActPos = Convert.ToDouble(values[9].ToString());
-                GlobalVariables.servo_Feeding.i_ActPos = Convert.ToDouble(values[10].ToString());
+                List<DataValue> dataValues = Form1.m_OpcUaClient.ReadNodes(nodeIds.ToArray());
+                lbl_ActPos_GrabU.Text = dataValues[0].ToString();
+                lbl_ActPos_GrabD.Text = dataValues[1].ToString();
+                lbl_ActPos_RotateU.Text = dataValues[2].ToString();
+                lbl_ActPos_RotateD.Text = dataValues[3].ToString();
+                lbl_ActPos_RotateL.Text = dataValues[4].ToString();
+                lbl_ActPos_RotateR.Text = dataValues[5].ToString();
+                lbl_ActPos_RotateF.Text = dataValues[6].ToString();
+                lbl_ActPos_RotateB.Text = dataValues[7].ToString();
+                lbl_ActPos_MoveU.Text = dataValues[8].ToString();
+                lbl_ActPos_MoveD.Text = dataValues[9].ToString();
+                lbl_ActPos_Feeding.Text = dataValues[10].ToString();
+                GlobalVariables.servo_U_Grab.i_ActPos = Convert.ToDouble(dataValues[0].ToString());
+                GlobalVariables.servo_D_Grab.i_ActPos = Convert.ToDouble(dataValues[1].ToString());
+                GlobalVariables.servo_U_Rotate.i_ActPos = Convert.ToDouble(dataValues[2].ToString());
+                GlobalVariables.servo_D_Rotate.i_ActPos = Convert.ToDouble(dataValues[3].ToString());
+                GlobalVariables.servo_L_Rotate.i_ActPos = Convert.ToDouble(dataValues[4].ToString());
+                GlobalVariables.servo_R_Rotate.i_ActPos = Convert.ToDouble(dataValues[5].ToString());
+                GlobalVariables.servo_F_Rotate.i_ActPos = Convert.ToDouble(dataValues[6].ToString());
+                GlobalVariables.servo_B_Rotate.i_ActPos = Convert.ToDouble(dataValues[7].ToString());
+                GlobalVariables.servo_U_Move.i_ActPos = Convert.ToDouble(dataValues[8].ToString());
+                GlobalVariables.servo_D_Move.i_ActPos = Convert.ToDouble(dataValues[9].ToString());
+                GlobalVariables.servo_Feeding.i_ActPos = Convert.ToDouble(dataValues[10].ToString());
             }
             catch (Exception ex)
             {
@@ -1201,21 +1214,21 @@ namespace Festo_Rubik_s_Cube_Explorer
             #region 更新Servo的当前位置信息
             try
             {
-                List<string> tags = new List<string>();
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_i_ActPos);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_ActPos);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_i_ActPos);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_ActPos);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_ActPos);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_ActPos);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_i_ActPos);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_i_ActPos);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_i_ActPos);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_ActPos);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_i_ActPos);
+                List<NodeId> nodeIds = new List<NodeId>();
+                nodeIds.Add(new NodeId(GlobalVariables.CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_i_ActPos));
+                nodeIds.Add(new NodeId(GlobalVariables.CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_ActPos));
+                nodeIds.Add(new NodeId(GlobalVariables.CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_i_ActPos));
+                nodeIds.Add(new NodeId(GlobalVariables.CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_ActPos));
+                nodeIds.Add(new NodeId(GlobalVariables.CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_ActPos));
+                nodeIds.Add(new NodeId(GlobalVariables.CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_ActPos));
+                nodeIds.Add(new NodeId(GlobalVariables.CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_i_ActPos));
+                nodeIds.Add(new NodeId(GlobalVariables.CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_i_ActPos));
+                nodeIds.Add(new NodeId(GlobalVariables.CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_i_ActPos));
+                nodeIds.Add(new NodeId(GlobalVariables.CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_ActPos));
+                nodeIds.Add(new NodeId(GlobalVariables.CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_i_ActPos));
                 // 按照顺序定义的值
-                List<float> values = Form1.m_OpcUaClient.ReadNodes<float>(tags.ToArray());
-              
+                List<DataValue> values = Form1.m_OpcUaClient.ReadNodes(nodeIds.ToArray());
+
                 GlobalVariables.servo_U_Grab.i_ActPos = Convert.ToDouble(values[0].ToString());
                 GlobalVariables.servo_D_Grab.i_ActPos = Convert.ToDouble(values[1].ToString());
                 GlobalVariables.servo_U_Rotate.i_ActPos = Convert.ToDouble(values[2].ToString());
@@ -1573,8 +1586,8 @@ namespace Festo_Rubik_s_Cube_Explorer
                             TargetPosition = mServoParas.P2;
                             break;
                     }
-                    //确定D相机，D杆都在原位
-                    if (GlobalVariables.servo_D_Grab.b_P1 && GlobalVariables.IOlink_D_Move_Cam.i_In)
+                    //确定F相机，D相机，D杆都在原位
+                    if (GlobalVariables.servo_D_Grab.b_P1 && GlobalVariables.IOlink_D_Move_Cam.i_In && GlobalVariables.IOlink_F_Move_Cam.i_In)
                     {
                         break;
                     }
@@ -1676,7 +1689,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 case "servo_Feeding":
                     mServoParas = GlobalVariables.CurrentParas.mPLC.servo_Feeding;
                     //确定D相机，D杆都在原位
-                    if (GlobalVariables.servo_D_Grab.b_P1 && GlobalVariables.IOlink_D_Move_Cam.i_In)
+                    if (GlobalVariables.servo_D_Grab.b_P1 && GlobalVariables.IOlink_D_Move_Cam.i_In && GlobalVariables.IOlink_F_Move_Cam.i_In)
                     {
                         break;
                     }
@@ -2051,10 +2064,11 @@ namespace Festo_Rubik_s_Cube_Explorer
 
         private void btn_2_P_Acquire_Click(object sender, EventArgs e)
         {
+            timer1.Enabled = false;
             updateAxisStatus();
 
-            if (GlobalVariables.IOlink_F_Grab.i_In && GlobalVariables.IOlink_B_Grab.i_In
-                && GlobalVariables.IOlink_L_Grab.i_In && GlobalVariables.IOlink_R_Grab.i_In
+            if (!GlobalVariables.IOlink_F_Grab.i_Out && !GlobalVariables.IOlink_B_Grab.i_Out
+                && !GlobalVariables.IOlink_L_Grab.i_Out && !GlobalVariables.IOlink_R_Grab.i_Out
                  && GlobalVariables.servo_U_Grab.b_P1 && GlobalVariables.servo_D_Grab.b_P1)
             {
                 if (GlobalVariables.IOlink_B_Move_Cam .i_In && GlobalVariables.IOlink_F_Move_Cam.i_In && GlobalVariables.IOlink_B_Move_Cam.i_In
@@ -2068,7 +2082,20 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ServoGoto("servo_Feeding", 2);
                     ServoGoto("servo_U_Move", 1);
                     ServoGoto("servo_D_Move", 1);
-                    IOlinkAxisOut(5);//5个相机回原位  
+                    while (!GlobalVariables.servo_Feeding.b_P2)
+                    {
+                        Thread.Sleep(1000);
+                        updateAxisStatus();
+                    }
+                    if (GlobalVariables.servo_Feeding.b_P2)
+                    {
+                        IOlinkAxisOut(5);//5个相机工作位  
+                    }
+                    else
+                    {
+                        MessageBox.Show("上料轴未到拍照位，相机不能升起");
+                    }
+                    
                 }
                 else
                 {
@@ -2081,6 +2108,84 @@ namespace Festo_Rubik_s_Cube_Explorer
                 ServoGoHome("servo_D_Grab");
                 IOlinkAxisIn(4);//4个旋转杆回原位  
             }
+            timer1.Enabled = true;
+        }
+
+        private void btn_2_P_Rotate_Click(object sender, EventArgs e)
+        {
+            updateAxisStatus();
+            IOlinkAxisIn(5);//5个相机回原位  
+            if (GlobalVariables.IOlink_F_Grab.i_In && GlobalVariables.IOlink_B_Grab.i_In
+                && GlobalVariables.IOlink_L_Grab.i_In && GlobalVariables.IOlink_R_Grab.i_In
+                 && GlobalVariables.servo_U_Grab.b_P1 && GlobalVariables.servo_D_Grab.b_P1)
+            {
+
+            }
+            else
+            {
+                ServoGoHome("servo_U_Grab");
+                ServoGoHome("servo_D_Grab");
+                IOlinkAxisIn(4);//4个旋转杆回原位  
+            }
+
+            //旋转杆归零
+            ServoGoHome("servo_L_Rotate");
+            ServoGoHome("servo_R_Rotate");
+            ServoGoHome("servo_F_Rotate");
+            ServoGoHome("servo_B_Rotate");
+            ServoGoHome("servo_U_Rotate");
+            ServoGoHome("servo_D_Rotate");
+
+            IOlinkAxisOut(1);//魔方姿态至45度
+
+            //UD模块至旋转位
+            ServoGoto("servo_U_Move", 2);
+            ServoGoto("servo_D_Move", 2);
+
+            updateAxisStatus();
+            if (GlobalVariables.servo_U_Rotate.i_ActPos >= 0 - GlobalVariables.positionTolerance &&
+                     GlobalVariables.servo_U_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
+                     GlobalVariables.servo_D_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
+                     GlobalVariables.servo_D_Rotate.i_ActPos <= GlobalVariables.positionTolerance)
+            {
+                //UD杆至取料位
+                ServoGoto("servo_U_Grab", 3);
+                ServoGoto("servo_D_Grab", 3);
+            }
+            else
+            {
+                MessageBox.Show("上下旋杆儿捅进魔方有风险");
+            }
+            //UD杆至旋转位，U先上，而后D上，避免顶到
+            ServoGoto("servo_U_Grab", 2);
+            ServoGoto("servo_D_Grab", 2);
+            if (GlobalVariables.servo_F_Rotate.i_ActPos >= 0 - GlobalVariables.positionTolerance &&
+                    GlobalVariables.servo_F_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
+                    GlobalVariables.servo_B_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
+                    GlobalVariables.servo_B_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
+                    GlobalVariables.servo_L_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
+                    GlobalVariables.servo_L_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
+                    GlobalVariables.servo_R_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
+                    GlobalVariables.servo_R_Rotate.i_ActPos <= GlobalVariables.positionTolerance)
+            {
+                //FBLR杆伸出至旋转位
+                IOlinkAxisOut(4);
+            }
+            else
+            {
+                MessageBox.Show("上下旋杆儿捅进魔方有风险");
+            }
+        }
+
+        private void btn_CubeBack_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void Form_Manual_Load(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
         }
     }
 }

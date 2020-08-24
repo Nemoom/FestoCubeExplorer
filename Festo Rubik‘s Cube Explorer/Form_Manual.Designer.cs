@@ -3171,6 +3171,7 @@
             this.btn_CubeBack.TabIndex = 8;
             this.btn_CubeBack.Text = "放回魔方";
             this.btn_CubeBack.UseVisualStyleBackColor = true;
+            this.btn_CubeBack.Click += new System.EventHandler(this.btn_CubeBack_Click);
             // 
             // btn_Solve
             // 
@@ -3217,6 +3218,7 @@
             this.btn_2_P_Rotate.TabIndex = 1;
             this.btn_2_P_Rotate.Text = "至旋转位";
             this.btn_2_P_Rotate.UseVisualStyleBackColor = true;
+            this.btn_2_P_Rotate.Click += new System.EventHandler(this.btn_2_P_Rotate_Click);
             // 
             // btn_2_P_Start
             // 
@@ -3268,6 +3270,7 @@
             this.Name = "Form_Manual";
             this.Padding = new System.Windows.Forms.Padding(8);
             this.Text = "Form_Manual";
+            this.Load += new System.EventHandler(this.Form_Manual_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage_Cam.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

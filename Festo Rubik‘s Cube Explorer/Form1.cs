@@ -76,7 +76,8 @@ namespace Festo_Rubik_s_Cube_Explorer
 
             m_OpcUaClient.ConnectComplete += M_OpcUaClient_ConnectComplete;
             m_OpcUaClient.OpcStatusChange += M_OpcUaClient_OpcStatusChange;
-           
+
+            button4_Click(sender, e);
         }
 
         private void M_OpcUaClient_OpcStatusChange(object sender, OpcUaStatusEventArgs e)
