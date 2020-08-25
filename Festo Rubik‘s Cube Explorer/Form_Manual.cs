@@ -2167,6 +2167,11 @@ namespace Festo_Rubik_s_Cube_Explorer
             ServoGoto("servo_D_Move", 2);
 
             updateAxisStatus();
+            while (!(GlobalVariables.servo_U_Move.b_P2 && GlobalVariables.servo_D_Move.b_P2))
+            {
+                Thread.Sleep(100);
+                updateAxisStatus();
+            }
             if (GlobalVariables.servo_U_Rotate.i_ActPos >= 0 - GlobalVariables.positionTolerance &&
                      GlobalVariables.servo_U_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
                      GlobalVariables.servo_D_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
@@ -2180,9 +2185,19 @@ namespace Festo_Rubik_s_Cube_Explorer
             {
                 MessageBox.Show("上下旋杆儿捅进魔方有风险");
             }
+            while (!(GlobalVariables.servo_U_Grab.b_P3 && GlobalVariables.servo_D_Grab.b_P3))
+            {
+                Thread.Sleep(100);
+                updateAxisStatus();
+            }
             //UD杆至旋转位，U先上，而后D上，避免顶到
             ServoGoto("servo_U_Grab", 2);
             ServoGoto("servo_D_Grab", 2);
+            while (!(GlobalVariables.servo_U_Grab.b_P2 && GlobalVariables.servo_D_Grab.b_P2))
+            {
+                Thread.Sleep(100);
+                updateAxisStatus();
+            }
             if (GlobalVariables.servo_F_Rotate.i_ActPos >= 0 - GlobalVariables.positionTolerance &&
                     GlobalVariables.servo_F_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
                     GlobalVariables.servo_B_Rotate.i_ActPos >= 0 - GlobalVariables.positionTolerance &&
