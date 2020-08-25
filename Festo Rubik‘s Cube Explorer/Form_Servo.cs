@@ -75,6 +75,13 @@ namespace Festo_Rubik_s_Cube_Explorer
                 txt_o_Acc.Text = values[1].ToString();
                 txt_o_Dec.Text = values[2].ToString();
                 txt_o_Jerk.Text = values[3].ToString();
+                if (values[3].ToString() == "0")
+                {
+                    txt_o_Vel.Text = GlobalVariables.global_Vel.ToString();
+                    txt_o_Acc.Text = GlobalVariables.global_Acc.ToString();
+                    txt_o_Dec.Text = GlobalVariables.global_Dec.ToString();
+                    txt_o_Jerk.Text = GlobalVariables.global_Jerk.ToString();
+                }
                 if (values[4].ToString() == "True")
                 {
                     cbx_o_Enable.Checked = true;
@@ -254,19 +261,39 @@ namespace Festo_Rubik_s_Cube_Explorer
         {
             try
             {
-                Form1.m_OpcUaClient.WriteNodes(new string[] {
+                if (checkBox1.Checked)
+                {
+                    //相对运动
+                    Form1.m_OpcUaClient.WriteNodes(new string[] {
                 mServoParas.mServoNodeID.NodeID_o_Vel,
                 mServoParas.mServoNodeID.NodeID_o_Acc,
                 mServoParas.mServoNodeID.NodeID_o_Dec,
                 mServoParas.mServoNodeID.NodeID_o_Jerk,
                 mServoParas.mServoNodeID.NodeID_o_Pos},
-                new object[] {
+               new object[] {
+                    Convert.ToSingle(txt_o_Vel.Text),
+                    Convert.ToSingle(txt_o_Acc.Text),
+                    Convert.ToSingle(txt_o_Dec.Text),
+                    Convert.ToSingle(txt_o_Jerk.Text),
+                    Convert.ToSingle(txt_o_Pos.Text)+Convert.ToSingle(txt_i_ActPos.Text)
+               });
+                }
+                else
+                {
+                    Form1.m_OpcUaClient.WriteNodes(new string[] {
+                mServoParas.mServoNodeID.NodeID_o_Vel,
+                mServoParas.mServoNodeID.NodeID_o_Acc,
+                mServoParas.mServoNodeID.NodeID_o_Dec,
+                mServoParas.mServoNodeID.NodeID_o_Jerk,
+                mServoParas.mServoNodeID.NodeID_o_Pos},
+               new object[] {
                     Convert.ToSingle(txt_o_Vel.Text),
                     Convert.ToSingle(txt_o_Acc.Text),
                     Convert.ToSingle(txt_o_Dec.Text),
                     Convert.ToSingle(txt_o_Jerk.Text),
                     Convert.ToSingle(txt_o_Pos.Text)
-                });
+               });
+                }
                 //Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_Vel, Convert.ToSingle(txt_o_Vel.Text));
                 Form1.m_OpcUaClient.WriteNode(mServoParas.mServoNodeID.NodeID_o_Go, true);
                 System.Threading.Thread.Sleep(100);

@@ -1551,6 +1551,18 @@ namespace Festo_Rubik_s_Cube_Explorer
                     break;
                 case "servo_D_Grab":
                     mServoParas = GlobalVariables.CurrentParas.mPLC.servo_D_Grab;
+                    switch (PointIndex)
+                    {
+                        case 1:
+                            TargetPosition = mServoParas.P1;
+                            break;
+                        case 2:
+                            TargetPosition = mServoParas.P2;
+                            break;
+                        case 3:
+                            TargetPosition = mServoParas.P3;
+                            break;
+                    }
                     break;
                 case "servo_D_Move":
                     mServoParas = GlobalVariables.CurrentParas.mPLC.servo_D_Move;
@@ -1606,6 +1618,18 @@ namespace Festo_Rubik_s_Cube_Explorer
                     break;
                 case "servo_U_Grab":
                     mServoParas = GlobalVariables.CurrentParas.mPLC.servo_U_Grab;
+                    switch (PointIndex)
+                    {
+                        case 1:
+                            TargetPosition = mServoParas.P1;
+                            break;
+                        case 2:
+                            TargetPosition = mServoParas.P2;
+                            break;
+                        case 3:
+                            TargetPosition = mServoParas.P3;
+                            break;
+                    }
                     break;
                 case "servo_U_Move":
                     mServoParas = GlobalVariables.CurrentParas.mPLC.servo_U_Move;
@@ -2161,11 +2185,11 @@ namespace Festo_Rubik_s_Cube_Explorer
             ServoGoto("servo_D_Grab", 2);
             if (GlobalVariables.servo_F_Rotate.i_ActPos >= 0 - GlobalVariables.positionTolerance &&
                     GlobalVariables.servo_F_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
+                    GlobalVariables.servo_B_Rotate.i_ActPos >= 0 - GlobalVariables.positionTolerance &&
                     GlobalVariables.servo_B_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
-                    GlobalVariables.servo_B_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
+                    GlobalVariables.servo_L_Rotate.i_ActPos >= 0 - GlobalVariables.positionTolerance &&
                     GlobalVariables.servo_L_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
-                    GlobalVariables.servo_L_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
-                    GlobalVariables.servo_R_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
+                    GlobalVariables.servo_R_Rotate.i_ActPos >= 0 - GlobalVariables.positionTolerance &&
                     GlobalVariables.servo_R_Rotate.i_ActPos <= GlobalVariables.positionTolerance)
             {
                 //FBLR杆伸出至旋转位
@@ -2179,8 +2203,29 @@ namespace Festo_Rubik_s_Cube_Explorer
 
         private void btn_CubeBack_Click(object sender, EventArgs e)
         {
-
-
+            //判断魔方是否是正方体，不是则弹出手动页面微调
+            IOlinkAxisIn(4);//4个旋转杆回原位  
+            IOlinkAxisIn(5);//5个相机回原位  
+            IOlinkAxisOut(1);//托盘位置至45度位
+            ServoGoto("servo_D_Grab", 3);
+            Thread.Sleep(100);
+            ServoGoto("servo_U_Grab", 3);
+            updateAxisStatus();
+            while(!(GlobalVariables.servo_D_Grab.b_P3 && GlobalVariables.servo_U_Grab.b_P3))
+            { 
+                Thread.Sleep(100);
+                updateAxisStatus();
+            }
+            ServoGoto("servo_U_Grab", 1);
+            ServoGoto("servo_D_Grab", 1);
+            updateAxisStatus();
+            while (!(GlobalVariables.servo_D_Grab.b_P1 && GlobalVariables.servo_U_Grab.b_P1))
+            {
+                Thread.Sleep(100);
+                updateAxisStatus();
+            }
+            IOlinkAxisIn(1);//托盘位置至0度位
+            ServoGoto("servo_Feeding", 1);
         }
 
         private void Form_Manual_Load(object sender, EventArgs e)

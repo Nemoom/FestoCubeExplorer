@@ -18,6 +18,8 @@ namespace Festo_Rubik_s_Cube_Explorer
         public static double global_Acc;
         public static double global_Dec;
         public static double global_Jerk;
+        public static double CWgap;
+        public static double CCWgap;
         public static ServoStatus servo_Feeding;
         public static IOlinkStatus IOlink_Rotate;
         public static ServoStatus servo_U_Move;
@@ -693,6 +695,8 @@ namespace Festo_Rubik_s_Cube_Explorer
                     global_Acc = Convert.ToDouble(xmlnode.SelectSingleNode("Acc").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     global_Dec = Convert.ToDouble(xmlnode.SelectSingleNode("Dec").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     global_Jerk = Convert.ToDouble(xmlnode.SelectSingleNode("Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                    CWgap = Convert.ToDouble(xmlnode.SelectSingleNode("CWgap").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                    CCWgap = Convert.ToDouble(xmlnode.SelectSingleNode("CCWgap").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     #region 1-Feeding
                     XmlNode ServoNode = xmlnode.SelectSingleNode("Feeding");
                     if (ServoNode != null)
