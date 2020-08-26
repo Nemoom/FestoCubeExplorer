@@ -829,8 +829,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                         CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
-                        //CurrentParas.mPLC.servo_U_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
-                        //CurrentParas.mPLC.servo_U_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        CurrentParas.mPLC.servo_U_Rotate.P_0 = Convert.ToDouble(ServoNode.SelectSingleNode("P_0").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
                     {
@@ -893,7 +892,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                         CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
-                        //CurrentParas.mPLC.servo_F_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        CurrentParas.mPLC.servo_F_Rotate.P_0 = Convert.ToDouble(ServoNode.SelectSingleNode("P_0").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         //CurrentParas.mPLC.servo_F_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
@@ -959,7 +958,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                         CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
-                        //CurrentParas.mPLC.servo_B_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        CurrentParas.mPLC.servo_B_Rotate.P_0 = Convert.ToDouble(ServoNode.SelectSingleNode("P_0").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         //CurrentParas.mPLC.servo_B_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
@@ -1023,7 +1022,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                         CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
-                        //CurrentParas.mPLC.servo_L_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        CurrentParas.mPLC.servo_L_Rotate.P_0 = Convert.ToDouble(ServoNode.SelectSingleNode("P_0").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         //CurrentParas.mPLC.servo_L_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
@@ -1087,7 +1086,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                         CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
-                        //CurrentParas.mPLC.servo_R_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        CurrentParas.mPLC.servo_R_Rotate.P_0 = Convert.ToDouble(ServoNode.SelectSingleNode("P_0").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         //CurrentParas.mPLC.servo_R_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
@@ -1195,7 +1194,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                         CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Jerk = ServoNode.SelectSingleNode("o_Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Pos = ServoNode.SelectSingleNode("o_Pos").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
                         CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_o_Go = ServoNode.SelectSingleNode("o_Go").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
-                        //CurrentParas.mPLC.servo_D_Rotate.P1 = Convert.ToDouble(ServoNode.SelectSingleNode("P_1").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        CurrentParas.mPLC.servo_D_Rotate.P_0 = Convert.ToDouble(ServoNode.SelectSingleNode("P_0").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                         //CurrentParas.mPLC.servo_D_Rotate.P2 = Convert.ToDouble(ServoNode.SelectSingleNode("P_2").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     }
                     else
@@ -1362,6 +1361,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         public double P1;
         public double P2;
         public double P3;
+        public double P_0;
         public double P_90;
         public double P_180;
         public double P_270;

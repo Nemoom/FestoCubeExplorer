@@ -1973,7 +1973,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             #endregion
 
         }
-        public static bool ServoGoto(string AxisID,int PointIndex)
+        public static bool ServoGoto(string AxisID,int PointIndex,bool b_FirstRotate=false,bool b_ChangeDirection=false)
         {
             updateAxisStatus();
             ServoParas mServoParas = new ServoParas();
@@ -1984,6 +1984,37 @@ namespace Festo_Rubik_s_Cube_Explorer
                 case "servo_B_Rotate":
                     mServoParas = GlobalVariables.CurrentParas.mPLC.servo_B_Rotate;
                     mServoStatus = GlobalVariables.servo_B_Rotate;
+                    switch (PointIndex)
+                    {
+                        case 0:
+                            TargetPosition = mServoParas.P_0;
+                            break;
+                        case 90:
+                        case 180:
+                        case 270:
+                            TargetPosition = mServoStatus.i_ActPos + PointIndex;
+                            if (b_FirstRotate)
+                            {
+                                TargetPosition = TargetPosition + GlobalVariables.CWgap;
+                            }
+                            if (b_ChangeDirection)
+                            {
+                                TargetPosition = TargetPosition + GlobalVariables.CCWgap;
+                            }
+                            break;                        
+                        case -90:
+                            TargetPosition = mServoStatus.i_ActPos + PointIndex;
+                            if (b_FirstRotate)
+                            {
+                                TargetPosition = TargetPosition - GlobalVariables.CCWgap;
+                            }
+                            if (b_ChangeDirection)
+                            {
+                                TargetPosition = TargetPosition - GlobalVariables.CWgap;
+                            }
+                            break;
+                    }
+
                     break;
                 case "servo_D_Grab":
                     mServoParas = GlobalVariables.CurrentParas.mPLC.servo_D_Grab;
@@ -2025,6 +2056,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                 case "servo_D_Rotate":
                     mServoParas = GlobalVariables.CurrentParas.mPLC.servo_D_Rotate;
                     mServoStatus = GlobalVariables.servo_D_Rotate;
+                    switch (PointIndex)
+                    {
+                        case 0:
+                            TargetPosition = mServoParas.P_0;
+                            break;                        
+                    }
                     break;
                 case "servo_Feeding":
                     mServoParas = GlobalVariables.CurrentParas.mPLC.servo_Feeding;
@@ -2050,14 +2087,32 @@ namespace Festo_Rubik_s_Cube_Explorer
                 case "servo_F_Rotate":
                     mServoParas = GlobalVariables.CurrentParas.mPLC.servo_F_Rotate;
                     mServoStatus = GlobalVariables.servo_F_Rotate;
+                    switch (PointIndex)
+                    {
+                        case 0:
+                            TargetPosition = mServoParas.P_0;
+                            break;
+                    }
                     break;
                 case "servo_L_Rotate":
                     mServoParas = GlobalVariables.CurrentParas.mPLC.servo_L_Rotate;
                     mServoStatus = GlobalVariables.servo_L_Rotate;
+                    switch (PointIndex)
+                    {
+                        case 0:
+                            TargetPosition = mServoParas.P_0;
+                            break;
+                    }
                     break;
                 case "servo_R_Rotate":
                     mServoParas = GlobalVariables.CurrentParas.mPLC.servo_R_Rotate;
                     mServoStatus = GlobalVariables.servo_R_Rotate;
+                    switch (PointIndex)
+                    {
+                        case 0:
+                            TargetPosition = mServoParas.P_0;
+                            break;
+                    }
                     break;
                 case "servo_U_Grab":
                     mServoParas = GlobalVariables.CurrentParas.mPLC.servo_U_Grab;
@@ -2099,6 +2154,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                 case "servo_U_Rotate":
                     mServoStatus = GlobalVariables.servo_U_Rotate;
                     mServoParas = GlobalVariables.CurrentParas.mPLC.servo_U_Rotate;
+                    switch (PointIndex)
+                    {
+                        case 0:
+                            TargetPosition = mServoParas.P_0;
+                            break;
+                    }
                     break;
                 default:
                     break;
@@ -2443,14 +2504,14 @@ namespace Festo_Rubik_s_Cube_Explorer
             IOlinkAxisIn(5);//5个相机回原位
             IOlinkAxisOut(1);//魔方姿态45度
             IOlinkAxisIn(4);//4个旋转杆回原位           
-            ServoGoHome("servo_L_Rotate");
-            ServoGoHome("servo_R_Rotate");
-            ServoGoHome("servo_F_Rotate");
-            ServoGoHome("servo_B_Rotate");
+            ServoGoto("servo_L_Rotate",0);
+            ServoGoto("servo_R_Rotate",0);
+            ServoGoto("servo_F_Rotate",0);
+            ServoGoto("servo_B_Rotate",0);
             ServoGoHome("servo_U_Grab");
             ServoGoHome("servo_D_Grab");//魔方落回台子上
-            ServoGoHome("servo_U_Rotate");
-            ServoGoHome("servo_D_Rotate");
+            ServoGoto("servo_U_Rotate",0);
+            ServoGoto("servo_D_Rotate",0);
             IOlinkAxisIn(1);//魔方姿态回0位拍照位
             //确定D相机，D杆都在原位
             ServoGoto("servo_Feeding",1);
@@ -2542,12 +2603,12 @@ namespace Festo_Rubik_s_Cube_Explorer
             }
 
             //旋转杆归零
-            ServoGoHome("servo_L_Rotate");
-            ServoGoHome("servo_R_Rotate");
-            ServoGoHome("servo_F_Rotate");
-            ServoGoHome("servo_B_Rotate");
-            ServoGoHome("servo_U_Rotate");
-            ServoGoHome("servo_D_Rotate");
+            ServoGoto("servo_L_Rotate",0);
+            ServoGoto("servo_R_Rotate",0);
+            ServoGoto("servo_F_Rotate",0);
+            ServoGoto("servo_B_Rotate",0);
+            ServoGoto("servo_U_Rotate",0);
+            ServoGoto("servo_D_Rotate",0);
 
             IOlinkAxisOut(1);//魔方姿态至45度
 
@@ -2561,48 +2622,49 @@ namespace Festo_Rubik_s_Cube_Explorer
                 Thread.Sleep(100);
                 updateAxisStatus();
             }
-            if (GlobalVariables.servo_U_Rotate.i_ActPos >= 0 - GlobalVariables.positionTolerance &&
-                     GlobalVariables.servo_U_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
-                     GlobalVariables.servo_D_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
-                     GlobalVariables.servo_D_Rotate.i_ActPos <= GlobalVariables.positionTolerance)
+            if (GlobalVariables.servo_U_Rotate.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_U_Rotate.P_0 - GlobalVariables.positionTolerance &&
+                     GlobalVariables.servo_U_Rotate.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_U_Rotate.P_0 + GlobalVariables.positionTolerance &&
+                     GlobalVariables.servo_D_Rotate.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_D_Rotate.P_0 - GlobalVariables.positionTolerance &&
+                     GlobalVariables.servo_D_Rotate.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_D_Rotate.P_0 + GlobalVariables.positionTolerance)
             {
                 //UD杆至取料位
                 ServoGoto("servo_U_Grab", 3);
                 ServoGoto("servo_D_Grab", 3);
+                while (!(GlobalVariables.servo_U_Grab.b_P3 && GlobalVariables.servo_D_Grab.b_P3))
+                {
+                    Thread.Sleep(100);
+                    updateAxisStatus();
+                }
+                //UD杆至旋转位，U先上，而后D上，避免顶到
+                ServoGoto("servo_U_Grab", 2);
+                ServoGoto("servo_D_Grab", 2);
+                while (!(GlobalVariables.servo_U_Grab.b_P2 && GlobalVariables.servo_D_Grab.b_P2))
+                {
+                    Thread.Sleep(100);
+                    updateAxisStatus();
+                }
+                if (GlobalVariables.servo_F_Rotate.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_F_Rotate.P_0 - GlobalVariables.positionTolerance &&
+                        GlobalVariables.servo_F_Rotate.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_F_Rotate.P_0 + GlobalVariables.positionTolerance &&
+                        GlobalVariables.servo_B_Rotate.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_B_Rotate.P_0 - GlobalVariables.positionTolerance &&
+                        GlobalVariables.servo_B_Rotate.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_B_Rotate.P_0 + GlobalVariables.positionTolerance &&
+                        GlobalVariables.servo_L_Rotate.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_L_Rotate.P_0 - GlobalVariables.positionTolerance &&
+                        GlobalVariables.servo_L_Rotate.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_L_Rotate.P_0 + GlobalVariables.positionTolerance &&
+                        GlobalVariables.servo_R_Rotate.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_R_Rotate.P_0 - GlobalVariables.positionTolerance &&
+                        GlobalVariables.servo_R_Rotate.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_R_Rotate.P_0 + GlobalVariables.positionTolerance)
+                {
+                    //FBLR杆伸出至旋转位
+                    IOlinkAxisOut(4);
+                }
+                else
+                {
+                    MessageBox.Show("上下旋杆儿捅进魔方有风险");
+                }
             }
             else
             {
                 MessageBox.Show("上下旋杆儿捅进魔方有风险");
             }
-            while (!(GlobalVariables.servo_U_Grab.b_P3 && GlobalVariables.servo_D_Grab.b_P3))
-            {
-                Thread.Sleep(100);
-                updateAxisStatus();
-            }
-            //UD杆至旋转位，U先上，而后D上，避免顶到
-            ServoGoto("servo_U_Grab", 2);
-            ServoGoto("servo_D_Grab", 2);
-            while (!(GlobalVariables.servo_U_Grab.b_P2 && GlobalVariables.servo_D_Grab.b_P2))
-            {
-                Thread.Sleep(100);
-                updateAxisStatus();
-            }
-            if (GlobalVariables.servo_F_Rotate.i_ActPos >= 0 - GlobalVariables.positionTolerance &&
-                    GlobalVariables.servo_F_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
-                    GlobalVariables.servo_B_Rotate.i_ActPos >= 0 - GlobalVariables.positionTolerance &&
-                    GlobalVariables.servo_B_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
-                    GlobalVariables.servo_L_Rotate.i_ActPos >= 0 - GlobalVariables.positionTolerance &&
-                    GlobalVariables.servo_L_Rotate.i_ActPos <= GlobalVariables.positionTolerance &&
-                    GlobalVariables.servo_R_Rotate.i_ActPos >= 0 - GlobalVariables.positionTolerance &&
-                    GlobalVariables.servo_R_Rotate.i_ActPos <= GlobalVariables.positionTolerance)
-            {
-                //FBLR杆伸出至旋转位
-                IOlinkAxisOut(4);
-            }
-            else
-            {
-                MessageBox.Show("上下旋杆儿捅进魔方有风险");
-            }
+            
         }
 
         private void btn_CubeBack_Click(object sender, EventArgs e)

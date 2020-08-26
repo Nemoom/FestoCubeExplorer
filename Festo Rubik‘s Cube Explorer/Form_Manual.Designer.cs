@@ -3308,6 +3308,7 @@
             this.MinimizeBox = false;
             this.Name = "Form_Manual";
             this.Padding = new System.Windows.Forms.Padding(8);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Manual";
             this.Load += new System.EventHandler(this.Form_Manual_Load);
             this.tabControl1.ResumeLayout(false);
