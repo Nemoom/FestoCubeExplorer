@@ -18,6 +18,78 @@ namespace Festo_Rubik_s_Cube_Explorer
             InitializeComponent();
         }
         #region tabPage_Cam
+        public static void updateLightStatus()
+        {
+            #region 更新所有光源的状态
+            try
+            {
+                List<string> tags = new List<string>();
+                tags.Add(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_U);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_D);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_L);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_R);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_F);
+                tags.Add(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_B);
+
+                // 按照顺序定义的值
+                List<bool> values = Form1.m_OpcUaClient.ReadNodes<bool>(tags.ToArray());
+
+                if (values[0])
+                {
+                    GlobalVariables.lightStatus.o_U = true;
+                }
+                else
+                {
+                    GlobalVariables.lightStatus.o_U = false;
+                }
+                if (values[1])
+                {
+                    GlobalVariables.lightStatus.o_D = true;
+                }
+                else
+                {
+                    GlobalVariables.lightStatus.o_D = false;
+                }
+                if (values[2])
+                {
+                    GlobalVariables.lightStatus.o_L = true;
+                }
+                else
+                {
+                    GlobalVariables.lightStatus.o_L = false;
+                }
+                if (values[3])
+                {
+                    GlobalVariables.lightStatus.o_R = true;
+                }
+                else
+                {
+                    GlobalVariables.lightStatus.o_R = false;
+                }
+                if (values[4])
+                {
+                    GlobalVariables.lightStatus.o_F = true;
+                }
+                else
+                {
+                    GlobalVariables.lightStatus.o_F = false;
+                }
+                if (values[5])
+                {
+                    GlobalVariables.lightStatus.o_B = true;
+                }
+                else
+                {
+                    GlobalVariables.lightStatus.o_B = false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            #endregion
+        }
         private void btn_ColorLearning_Click(object sender, EventArgs e)
         {
             new Form_ColorLearning().Show();
@@ -67,10 +139,119 @@ namespace Festo_Rubik_s_Cube_Explorer
         {
             new Form_ColorLearning("L").Show();
         }
+        private void pic_L_U_Click(object sender, EventArgs e)
+        {
+            updateLightStatus();
+            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_U, !GlobalVariables.lightStatus.o_U);
+            updateLightStatus();
+            if (GlobalVariables.lightStatus.o_U)
+            {
+                pic_L_U.Image = imageList1.Images[1];
+            }
+            else
+            {
+                pic_L_U.Image = imageList1.Images[0];
+            }
+        }
+
+        private void pic_L_L_Click(object sender, EventArgs e)
+        {
+            updateLightStatus();
+            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_L, !GlobalVariables.lightStatus.o_L);
+            updateLightStatus();
+            if (GlobalVariables.lightStatus.o_L)
+            {
+                pic_L_L.Image = imageList1.Images[1];
+            }
+            else
+            {
+                pic_L_L.Image = imageList1.Images[0];
+            }
+        }
+
+        private void pic_L_F_Click(object sender, EventArgs e)
+        {
+            updateLightStatus();
+            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_F, !GlobalVariables.lightStatus.o_F);
+            updateLightStatus();
+            if (GlobalVariables.lightStatus.o_F)
+            {
+                pic_L_F.Image = imageList1.Images[1];
+            }
+            else
+            {
+                pic_L_F.Image = imageList1.Images[0];
+            }
+        }
+
+        private void pic_L_R_Click(object sender, EventArgs e)
+        {
+            updateLightStatus();
+            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_R, !GlobalVariables.lightStatus.o_R);
+            updateLightStatus();
+            if (GlobalVariables.lightStatus.o_R)
+            {
+                pic_L_R.Image = imageList1.Images[1];
+            }
+            else
+            {
+                pic_L_R.Image = imageList1.Images[0];
+            }
+        }
+
+        private void pic_L_B_Click(object sender, EventArgs e)
+        {
+            updateLightStatus();
+            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_B, !GlobalVariables.lightStatus.o_B);
+            updateLightStatus();
+            if (GlobalVariables.lightStatus.o_B)
+            {
+                pic_L_B.Image = imageList1.Images[1];
+            }
+            else
+            {
+                pic_L_B.Image = imageList1.Images[0];
+            }
+        }
+
+        private void pic_L_D_Click(object sender, EventArgs e)
+        {
+            updateLightStatus();
+            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_D, !GlobalVariables.lightStatus.o_D);
+            updateLightStatus();
+            if (GlobalVariables.lightStatus.o_D)
+            {
+                pic_L_D.Image = imageList1.Images[1];
+            }
+            else
+            {
+                pic_L_D.Image = imageList1.Images[0];
+            }
+        }
 
         #endregion
 
         #region tabPage_Step
+        public static void AllLightOn()
+        {
+            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_U, true);
+            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_D, true);
+            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_L, true);
+            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_R, true);
+            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_F, true);
+            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_B, true);
+        }
+        public static void AllLightOff()
+        {
+            Form1.m_OpcUaClient.WriteNodes(new string[] {
+        GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_U,
+        GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_D,
+        GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_L,
+        GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_R,
+        GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_F,
+        GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_B},
+        new object[] { false, false, false, false, false, false });
+        }
         public static bool IOlinkAxisIn(string AxisID)
         {
             IOlinkNodeID mIOlinkNodeID = new IOlinkNodeID();
@@ -240,11 +421,10 @@ namespace Festo_Rubik_s_Cube_Explorer
                     {
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_o_Out, false);
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_o_In, true);
-                        //while (!Form1.m_OpcUaClient.ReadNode<bool>(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_i_In))
-                        //{
-                        //    Thread.Sleep(100);
-                        //}              
-                        Thread.Sleep(100);
+                        while (!Form1.m_OpcUaClient.ReadNode<bool>(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_i_In))
+                        {
+                            Thread.Sleep(100);
+                        }
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_o_In, false);
                     }
                     catch (Exception ex)
@@ -361,11 +541,10 @@ namespace Festo_Rubik_s_Cube_Explorer
                     {
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_o_In, false);
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_o_Out, true);
-                        //while (!Form1.m_OpcUaClient.ReadNode<bool>(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_i_Out))
-                        //{
-                        //    Thread.Sleep(100);
-                        //}
-                        Thread.Sleep(100);
+                        while (!Form1.m_OpcUaClient.ReadNode<bool>(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_i_Out))
+                        {
+                            Thread.Sleep(100);
+                        }
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_o_Out, false);
                     }
                     catch (Exception ex)
@@ -894,6 +1073,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 MessageBox.Show(ex.ToString());
             }
             #endregion
+            
         }
         public static void updateAxisStatus()
         {
@@ -1767,118 +1947,6 @@ namespace Festo_Rubik_s_Cube_Explorer
             }
             return true;
         }
-        #endregion
-
-        #region tabPage_Servo
-        private void btn_Rotate_Click(object sender, EventArgs e)
-        {
-            Form_Servo2 mForm_Servo2 = new Form_Servo2("IOlink_Rotate");
-            mForm_Servo2.Show();
-        }
-
-        private void btn_L_Move_Cam_Click(object sender, EventArgs e)
-        {
-            new Form_Servo2("IOlink_L_Move_Cam").Show();
-        }
-
-        private void btn_F_Move_Cam_Click(object sender, EventArgs e)
-        {
-            new Form_Servo2("IOlink_F_Move_Cam").Show();
-        }
-
-        private void btn_R_Move_Cam_Click(object sender, EventArgs e)
-        {
-            new Form_Servo2("IOlink_R_Move_Cam").Show();
-        }
-
-        private void btn_B__Move_Cam_Click(object sender, EventArgs e)
-        {
-            new Form_Servo2("IOlink_B_Move_Cam").Show();
-        }
-
-        private void btn_D_Move_Cam_Click(object sender, EventArgs e)
-        {
-            new Form_Servo2("IOlink_D_Move_Cam").Show();
-        }
-
-        private void btn_L_Grab_Click(object sender, EventArgs e)
-        {
-            new Form_Servo2("IOlink_L_Grab").Show();
-        }
-
-        private void btn_F_Grab_Click(object sender, EventArgs e)
-        {
-            new Form_Servo2("IOlink_F_Grab").Show();
-        }
-
-        private void btn_R_Grab_Click(object sender, EventArgs e)
-        {
-            new Form_Servo2("IOlink_R_Grab").Show();
-        }
-
-        private void btn_B_Grab_Click(object sender, EventArgs e)
-        {
-            new Form_Servo2("IOlink_B_Grab").Show();
-        }
-
-        private void btn_Feeding_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_Feeding").Show();
-        }
-
-        private void btn_U_Grab_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_U_Grab").Show();
-        }
-
-        private void btn_D_Grab_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_D_Grab").Show();
-        }
-
-        private void btn_U_Move_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_U_Move").Show();
-        }
-
-        private void btn_D_Move_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_D_Move").Show();
-        }
-
-        private void btn_U_Rotate_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_U_Rotate").Show();
-        }
-
-        private void btn_L_Rotate_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_L_Rotate").Show();
-        }
-
-        private void btn_F_Rotate_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_F_Rotate").Show();
-        }
-
-        private void btn_R_Rotate_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_R_Rotate").Show();
-        }
-
-        private void btn_B_Rotate_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_B_Rotate").Show();
-        }
-
-        private void btn_D_Rotate_Click(object sender, EventArgs e)
-        {
-            new Form_Servo("servo_D_Rotate").Show();
-        }
-
-
-        #endregion
-
         private void btn_ResetAll_Click(object sender, EventArgs e)
         {
             List<string> tags = new List<string>();
@@ -2035,6 +2103,7 @@ namespace Festo_Rubik_s_Cube_Explorer
 
         private void btn_EnableAll_Click(object sender, EventArgs e)
         {
+            btn_ResetAll_Click(sender, e);
             Form1.m_OpcUaClient.WriteNodes(new string[] {
             GlobalVariables.CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_o_Enable,
             GlobalVariables.CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_o_Enable,
@@ -2066,7 +2135,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             ServoGoHome("servo_D_Rotate");
             IOlinkAxisIn(1);//魔方姿态回0位拍照位
             //确定D相机，D杆都在原位
-            ServoGoHome("servo_Feeding");
+            ServoGoto("servo_Feeding",1);
         }
 
         private void btn_Stop_Click(object sender, EventArgs e)
@@ -2111,6 +2180,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                         Thread.Sleep(1000);
                         updateAxisStatus();
                     }
+                    AllLightOn();
                     if (GlobalVariables.servo_Feeding.b_P2)
                     {
                         IOlinkAxisOut(5);//5个相机工作位  
@@ -2138,6 +2208,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         private void btn_2_P_Rotate_Click(object sender, EventArgs e)
         {
             updateAxisStatus();
+            AllLightOff();
             IOlinkAxisIn(5);//5个相机回原位  
             if (GlobalVariables.IOlink_F_Grab.i_In && GlobalVariables.IOlink_B_Grab.i_In
                 && GlobalVariables.IOlink_L_Grab.i_In && GlobalVariables.IOlink_R_Grab.i_In
@@ -2243,9 +2314,172 @@ namespace Festo_Rubik_s_Cube_Explorer
             ServoGoto("servo_Feeding", 1);
         }
 
+        #endregion
+
+        #region tabPage_Servo
+        private void btn_Rotate_Click(object sender, EventArgs e)
+        {
+            Form_Servo2 mForm_Servo2 = new Form_Servo2("IOlink_Rotate");
+            mForm_Servo2.Show();
+        }
+
+        private void btn_L_Move_Cam_Click(object sender, EventArgs e)
+        {
+            new Form_Servo2("IOlink_L_Move_Cam").Show();
+        }
+
+        private void btn_F_Move_Cam_Click(object sender, EventArgs e)
+        {
+            new Form_Servo2("IOlink_F_Move_Cam").Show();
+        }
+
+        private void btn_R_Move_Cam_Click(object sender, EventArgs e)
+        {
+            new Form_Servo2("IOlink_R_Move_Cam").Show();
+        }
+
+        private void btn_B__Move_Cam_Click(object sender, EventArgs e)
+        {
+            new Form_Servo2("IOlink_B_Move_Cam").Show();
+        }
+
+        private void btn_D_Move_Cam_Click(object sender, EventArgs e)
+        {
+            new Form_Servo2("IOlink_D_Move_Cam").Show();
+        }
+
+        private void btn_L_Grab_Click(object sender, EventArgs e)
+        {
+            new Form_Servo2("IOlink_L_Grab").Show();
+        }
+
+        private void btn_F_Grab_Click(object sender, EventArgs e)
+        {
+            new Form_Servo2("IOlink_F_Grab").Show();
+        }
+
+        private void btn_R_Grab_Click(object sender, EventArgs e)
+        {
+            new Form_Servo2("IOlink_R_Grab").Show();
+        }
+
+        private void btn_B_Grab_Click(object sender, EventArgs e)
+        {
+            new Form_Servo2("IOlink_B_Grab").Show();
+        }
+
+        private void btn_Feeding_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_Feeding").Show();
+        }
+
+        private void btn_U_Grab_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_U_Grab").Show();
+        }
+
+        private void btn_D_Grab_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_D_Grab").Show();
+        }
+
+        private void btn_U_Move_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_U_Move").Show();
+        }
+
+        private void btn_D_Move_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_D_Move").Show();
+        }
+
+        private void btn_U_Rotate_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_U_Rotate").Show();
+        }
+
+        private void btn_L_Rotate_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_L_Rotate").Show();
+        }
+
+        private void btn_F_Rotate_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_F_Rotate").Show();
+        }
+
+        private void btn_R_Rotate_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_R_Rotate").Show();
+        }
+
+        private void btn_B_Rotate_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_B_Rotate").Show();
+        }
+
+        private void btn_D_Rotate_Click(object sender, EventArgs e)
+        {
+            new Form_Servo("servo_D_Rotate").Show();
+        }
+
+
+        #endregion
+
+
         private void Form_Manual_Load(object sender, EventArgs e)
         {
+            updateLightStatus();
+            if (GlobalVariables.lightStatus.o_U)
+            {
+                pic_L_U.Image = imageList1.Images[1];
+            }
+            else
+            {
+                pic_L_U.Image = imageList1.Images[0];
+            }
+            if (GlobalVariables.lightStatus.o_D)
+            {
+                pic_L_D.Image = imageList1.Images[1];
+            }
+            else
+            {
+                pic_L_D.Image = imageList1.Images[0];
+            }
+            if (GlobalVariables.lightStatus.o_L)
+            {
+                pic_L_L.Image = imageList1.Images[1];
+            }
+            else
+            {
+                pic_L_L.Image = imageList1.Images[0];
+            }
+            if (GlobalVariables.lightStatus.o_R)
+            {
+                pic_L_R.Image = imageList1.Images[1];
+            }
+            else
+            {
+                pic_L_R.Image = imageList1.Images[0];
+            }
+            if (GlobalVariables.lightStatus.o_F)
+            {
+                pic_L_F.Image = imageList1.Images[1];
+            }
+            else
+            {
+                pic_L_F.Image = imageList1.Images[0];
+            }
+            if (GlobalVariables.lightStatus.o_B)
+            {
+                pic_L_B.Image = imageList1.Images[1];
+            }
+            else
+            {
+                pic_L_B.Image = imageList1.Images[0];
+            }
             timer1.Enabled = true;
         }
+
     }
 }

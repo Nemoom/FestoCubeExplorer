@@ -41,6 +41,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         public static IOlinkStatus IOlink_D_Move_Cam;
         public static ServoStatus servo_D_Grab;
         public static ServoStatus servo_D_Rotate;
+        public static LightStatus lightStatus;
 
         public static string LoadParasFromXML()
         {
@@ -1202,6 +1203,23 @@ namespace Festo_Rubik_s_Cube_Explorer
                         return XMLCheckResult.ErrorPLC.ToString();
                     }
                     #endregion
+                    #region LightControl
+                    ServoNode = xmlnode.SelectSingleNode("LightControl");
+                    if (ServoNode != null)
+                    {
+                        CurrentParas.mPLC.LightControl.NodeID_U = ServoNode.SelectSingleNode("U").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.LightControl.NodeID_D = ServoNode.SelectSingleNode("D").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.LightControl.NodeID_L = ServoNode.SelectSingleNode("L").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.LightControl.NodeID_R = ServoNode.SelectSingleNode("R").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.LightControl.NodeID_F = ServoNode.SelectSingleNode("F").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.LightControl.NodeID_B = ServoNode.SelectSingleNode("B").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                    }
+                    else
+                    {
+                        return XMLCheckResult.ErrorPLC.ToString();
+                    }
+                    #endregion
+
                 }
                 else
                 {
@@ -1297,6 +1315,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         public ServoParas servo_D_Grab;
         public ServoParas servo_D_Rotate;
         public CubeResultNodeID CubeResult;
+        public LightControlNodeID LightControl;
     }
 
     //PC写给PLC的参数
@@ -1324,6 +1343,17 @@ namespace Festo_Rubik_s_Cube_Explorer
         public string NodeID_Step20;
         public string NodeID_Step21;
     }
+
+    public struct LightControlNodeID
+    {
+        public string NodeID_U;
+        public string NodeID_D;
+        public string NodeID_L;
+        public string NodeID_R;
+        public string NodeID_F;
+        public string NodeID_B;        
+    }
+
 
     public struct ServoParas
     {
@@ -1404,6 +1434,16 @@ namespace Festo_Rubik_s_Cube_Explorer
         public bool o_Out;
         public bool o_QuitError;
     }
+    public struct LightStatus
+    {
+        public bool o_U;
+        public bool o_D;
+        public bool o_L;
+        public bool o_R;
+        public bool o_F;
+        public bool o_B;
+    }
+
 
     public enum CamID
     {
