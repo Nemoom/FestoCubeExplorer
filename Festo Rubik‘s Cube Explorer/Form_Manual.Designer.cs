@@ -2240,6 +2240,7 @@
             // 
             // rbtn_Feeding_P1
             // 
+            this.rbtn_Feeding_P1.AutoCheck = false;
             this.rbtn_Feeding_P1.AutoSize = true;
             this.rbtn_Feeding_P1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_Feeding_P1.Location = new System.Drawing.Point(173, 3);
@@ -2252,6 +2253,7 @@
             // 
             // rbtn_Feeding_P2
             // 
+            this.rbtn_Feeding_P2.AutoCheck = false;
             this.rbtn_Feeding_P2.AutoSize = true;
             this.rbtn_Feeding_P2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_Feeding_P2.Location = new System.Drawing.Point(286, 3);
@@ -2338,6 +2340,7 @@
             // 
             // rbtn_BlockMoveU_P1
             // 
+            this.rbtn_BlockMoveU_P1.AutoCheck = false;
             this.rbtn_BlockMoveU_P1.AutoSize = true;
             this.rbtn_BlockMoveU_P1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_BlockMoveU_P1.Location = new System.Drawing.Point(173, 3);
@@ -2350,6 +2353,7 @@
             // 
             // rbtn_BlockMoveU_P2
             // 
+            this.rbtn_BlockMoveU_P2.AutoCheck = false;
             this.rbtn_BlockMoveU_P2.AutoSize = true;
             this.rbtn_BlockMoveU_P2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_BlockMoveU_P2.Location = new System.Drawing.Point(286, 3);
@@ -2362,6 +2366,7 @@
             // 
             // rbtn_BlockMoveD_P1
             // 
+            this.rbtn_BlockMoveD_P1.AutoCheck = false;
             this.rbtn_BlockMoveD_P1.AutoSize = true;
             this.rbtn_BlockMoveD_P1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_BlockMoveD_P1.Location = new System.Drawing.Point(173, 48);
@@ -2374,6 +2379,7 @@
             // 
             // rbtn_BlockMoveD_P2
             // 
+            this.rbtn_BlockMoveD_P2.AutoCheck = false;
             this.rbtn_BlockMoveD_P2.AutoSize = true;
             this.rbtn_BlockMoveD_P2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_BlockMoveD_P2.Location = new System.Drawing.Point(286, 48);
@@ -2623,6 +2629,7 @@
             // 
             // rbtn_GrabL_P1
             // 
+            this.rbtn_GrabL_P1.AutoCheck = false;
             this.rbtn_GrabL_P1.AutoSize = true;
             this.rbtn_GrabL_P1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_GrabL_P1.Location = new System.Drawing.Point(37, 3);
@@ -2635,6 +2642,7 @@
             // 
             // rbtn_GrabL_P2
             // 
+            this.rbtn_GrabL_P2.AutoCheck = false;
             this.rbtn_GrabL_P2.AutoSize = true;
             this.rbtn_GrabL_P2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_GrabL_P2.Location = new System.Drawing.Point(150, 3);
@@ -2647,6 +2655,7 @@
             // 
             // rbtn_GrabR_P1
             // 
+            this.rbtn_GrabR_P1.AutoCheck = false;
             this.rbtn_GrabR_P1.AutoSize = true;
             this.rbtn_GrabR_P1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_GrabR_P1.Location = new System.Drawing.Point(37, 44);
@@ -2659,6 +2668,7 @@
             // 
             // rbtn_GrabR_P2
             // 
+            this.rbtn_GrabR_P2.AutoCheck = false;
             this.rbtn_GrabR_P2.AutoSize = true;
             this.rbtn_GrabR_P2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_GrabR_P2.Location = new System.Drawing.Point(150, 44);
@@ -2671,6 +2681,7 @@
             // 
             // rbtn_GrabF_P1
             // 
+            this.rbtn_GrabF_P1.AutoCheck = false;
             this.rbtn_GrabF_P1.AutoSize = true;
             this.rbtn_GrabF_P1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_GrabF_P1.Location = new System.Drawing.Point(37, 85);
@@ -2683,6 +2694,7 @@
             // 
             // rbtn_GrabF_P2
             // 
+            this.rbtn_GrabF_P2.AutoCheck = false;
             this.rbtn_GrabF_P2.AutoSize = true;
             this.rbtn_GrabF_P2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_GrabF_P2.Location = new System.Drawing.Point(150, 85);
@@ -2695,6 +2707,7 @@
             // 
             // rbtn_GrabB_P1
             // 
+            this.rbtn_GrabB_P1.AutoCheck = false;
             this.rbtn_GrabB_P1.AutoSize = true;
             this.rbtn_GrabB_P1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_GrabB_P1.Location = new System.Drawing.Point(37, 126);
@@ -2707,6 +2720,7 @@
             // 
             // rbtn_GrabB_P2
             // 
+            this.rbtn_GrabB_P2.AutoCheck = false;
             this.rbtn_GrabB_P2.AutoSize = true;
             this.rbtn_GrabB_P2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_GrabB_P2.Location = new System.Drawing.Point(150, 126);
@@ -2759,6 +2773,7 @@
             // 
             // rbtn_Rotate_P1
             // 
+            this.rbtn_Rotate_P1.AutoCheck = false;
             this.rbtn_Rotate_P1.AutoSize = true;
             this.rbtn_Rotate_P1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_Rotate_P1.Location = new System.Drawing.Point(37, 3);
@@ -2771,6 +2786,7 @@
             // 
             // rbtn_Rotate_P2
             // 
+            this.rbtn_Rotate_P2.AutoCheck = false;
             this.rbtn_Rotate_P2.AutoSize = true;
             this.rbtn_Rotate_P2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_Rotate_P2.Location = new System.Drawing.Point(150, 3);
@@ -2872,6 +2888,7 @@
             // 
             // rbtn_MoveD_P1
             // 
+            this.rbtn_MoveD_P1.AutoCheck = false;
             this.rbtn_MoveD_P1.AutoSize = true;
             this.rbtn_MoveD_P1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_MoveD_P1.Location = new System.Drawing.Point(37, 3);
@@ -2884,6 +2901,7 @@
             // 
             // rbtn_MoveD_P2
             // 
+            this.rbtn_MoveD_P2.AutoCheck = false;
             this.rbtn_MoveD_P2.AutoSize = true;
             this.rbtn_MoveD_P2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_MoveD_P2.Location = new System.Drawing.Point(150, 3);
@@ -2896,6 +2914,7 @@
             // 
             // rbtn_MoveL_P1
             // 
+            this.rbtn_MoveL_P1.AutoCheck = false;
             this.rbtn_MoveL_P1.AutoSize = true;
             this.rbtn_MoveL_P1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_MoveL_P1.Location = new System.Drawing.Point(37, 51);
@@ -2908,6 +2927,7 @@
             // 
             // rbtn_MoveL_P2
             // 
+            this.rbtn_MoveL_P2.AutoCheck = false;
             this.rbtn_MoveL_P2.AutoSize = true;
             this.rbtn_MoveL_P2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_MoveL_P2.Location = new System.Drawing.Point(150, 51);
@@ -2920,6 +2940,7 @@
             // 
             // rbtn_MoveR_P1
             // 
+            this.rbtn_MoveR_P1.AutoCheck = false;
             this.rbtn_MoveR_P1.AutoSize = true;
             this.rbtn_MoveR_P1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_MoveR_P1.Location = new System.Drawing.Point(37, 99);
@@ -2932,6 +2953,7 @@
             // 
             // rbtn_MoveR_P2
             // 
+            this.rbtn_MoveR_P2.AutoCheck = false;
             this.rbtn_MoveR_P2.AutoSize = true;
             this.rbtn_MoveR_P2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_MoveR_P2.Location = new System.Drawing.Point(150, 99);
@@ -2944,6 +2966,7 @@
             // 
             // rbtn_MoveF_P1
             // 
+            this.rbtn_MoveF_P1.AutoCheck = false;
             this.rbtn_MoveF_P1.AutoSize = true;
             this.rbtn_MoveF_P1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_MoveF_P1.Location = new System.Drawing.Point(37, 147);
@@ -2956,6 +2979,7 @@
             // 
             // rbtn_MoveF_P2
             // 
+            this.rbtn_MoveF_P2.AutoCheck = false;
             this.rbtn_MoveF_P2.AutoSize = true;
             this.rbtn_MoveF_P2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_MoveF_P2.Location = new System.Drawing.Point(150, 147);
@@ -2968,6 +2992,7 @@
             // 
             // rbtn_MoveB_P1
             // 
+            this.rbtn_MoveB_P1.AutoCheck = false;
             this.rbtn_MoveB_P1.AutoSize = true;
             this.rbtn_MoveB_P1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_MoveB_P1.Location = new System.Drawing.Point(37, 195);
@@ -2980,6 +3005,7 @@
             // 
             // rbtn_MoveB_P2
             // 
+            this.rbtn_MoveB_P2.AutoCheck = false;
             this.rbtn_MoveB_P2.AutoSize = true;
             this.rbtn_MoveB_P2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_MoveB_P2.Location = new System.Drawing.Point(150, 195);
@@ -3060,6 +3086,7 @@
             // 
             // rbtn_GrabU_P1
             // 
+            this.rbtn_GrabU_P1.AutoCheck = false;
             this.rbtn_GrabU_P1.AutoSize = true;
             this.rbtn_GrabU_P1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_GrabU_P1.Location = new System.Drawing.Point(169, 3);
@@ -3072,6 +3099,7 @@
             // 
             // rbtn_GrabU_P2
             // 
+            this.rbtn_GrabU_P2.AutoCheck = false;
             this.rbtn_GrabU_P2.AutoSize = true;
             this.rbtn_GrabU_P2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_GrabU_P2.Location = new System.Drawing.Point(277, 3);
@@ -3084,6 +3112,7 @@
             // 
             // rbtn_GrabU_P3
             // 
+            this.rbtn_GrabU_P3.AutoCheck = false;
             this.rbtn_GrabU_P3.AutoSize = true;
             this.rbtn_GrabU_P3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_GrabU_P3.Location = new System.Drawing.Point(395, 3);
@@ -3096,6 +3125,7 @@
             // 
             // rbtn_GrabD_P1
             // 
+            this.rbtn_GrabD_P1.AutoCheck = false;
             this.rbtn_GrabD_P1.AutoSize = true;
             this.rbtn_GrabD_P1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_GrabD_P1.Location = new System.Drawing.Point(169, 39);
@@ -3108,6 +3138,7 @@
             // 
             // rbtn_GrabD_P2
             // 
+            this.rbtn_GrabD_P2.AutoCheck = false;
             this.rbtn_GrabD_P2.AutoSize = true;
             this.rbtn_GrabD_P2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_GrabD_P2.Location = new System.Drawing.Point(277, 39);
@@ -3120,6 +3151,7 @@
             // 
             // rbtn_GrabD_P3
             // 
+            this.rbtn_GrabD_P3.AutoCheck = false;
             this.rbtn_GrabD_P3.AutoSize = true;
             this.rbtn_GrabD_P3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rbtn_GrabD_P3.Location = new System.Drawing.Point(395, 39);
@@ -3260,6 +3292,7 @@
             // 
             // timer1
             // 
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form_Manual
