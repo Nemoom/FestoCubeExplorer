@@ -313,7 +313,15 @@
     </ColorMatch>
   </CamB>
   <PLC IP="192.168.1.110">
-	  <positionTolerance>3</positionTolerance>
+	  <positionTolerance>
+		  2
+	  </positionTolerance>
+	  <CWgap>
+		  2
+	  </CWgap>
+	  <CCWgap>
+		  2
+	  </CCWgap>
 	<Vel>
 	  10000
 	</Vel>
@@ -378,7 +386,7 @@
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db5.StartTask
 		</o_Go>
       <P1>
-		  0
+		  20.5
       </P1>
       <P2>
 		  344
@@ -521,7 +529,7 @@
 			0
 		</P_1>
 		<P_2>
-			50.056
+			52.072
 		</P_2>
 		<P_3>
 			119.678
@@ -578,7 +586,10 @@
 		<o_Go>
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db8.StartTask
 		</o_Go>
-      <P_90>
+		<P_0>
+			36
+		</P_0>
+		<P_90>
       </P_90>
       <P_180>
       </P_180>
@@ -684,6 +695,9 @@
 		<o_Go>
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db2.StartTask
 		</o_Go>
+		<P_0>
+			188
+		</P_0>
 		<P_90>
 		</P_90>
 		<P_180>
@@ -790,6 +804,9 @@
 		<o_Go>
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db4.StartTask
 		</o_Go>
+		<P_0>
+			32
+		</P_0>
 		<P_90>
 		</P_90>
 		<P_180>
@@ -896,6 +913,9 @@
 		<o_Go>
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db1.StartTask
 		</o_Go>
+		<P_0>
+			4
+		</P_0>
 		<P_90>
 		</P_90>
 		<P_180>
@@ -1002,6 +1022,9 @@
 		<o_Go>
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db3.StartTask
 		</o_Go>
+		<P_0>
+			55
+		</P_0>
 		<P_90>
 		</P_90>
 		<P_180>
@@ -1146,7 +1169,7 @@
 			0
 		</P_1>
 		<P_2>
-			182
+			183.2
 		</P_2>
 		<P_3>
 			113.578
@@ -1203,6 +1226,9 @@
 		<o_Go>
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db7.StartTask
 		</o_Go>
+		<P_0>
+			0
+		</P_0>
 		<P_90>
 		</P_90>
 		<P_180>
@@ -1210,7 +1236,24 @@
 		<P_270>
 		</P_270>
     </D_Rotate>
-    <CubeResult>
+	  <LightControl>
+		  <F>ns=4;s=|var|CPX-E-CEC-M1-PN.Application.SMSGVL.do4</F>
+		  <B>ns=4;s=|var|CPX-E-CEC-M1-PN.Application.SMSGVL.do2</B>
+		  <U>ns=4;s=|var|CPX-E-CEC-M1-PN.Application.SMSGVL.do1</U>
+		  <D>ns=4;s=|var|CPX-E-CEC-M1-PN.Application.SMSGVL.do0</D>
+		  <L>ns=4;s=|var|CPX-E-CEC-M1-PN.Application.SMSGVL.do5</L>
+		  <R>ns=4;s=|var|CPX-E-CEC-M1-PN.Application.SMSGVL.do3</R>
+	  </LightControl>
+	  <CamControl>
+		  <F>ns=4;s=|var|CPX-E-CEC-M1-PN.Application.SMSGVL.do_C1</F>
+		  <B>ns=4;s=|var|CPX-E-CEC-M1-PN.Application.SMSGVL.do_C3</B>
+		  <U>ns=4;s=|var|CPX-E-CEC-M1-PN.Application.SMSGVL.do_C5</U>
+		  <D>ns=4;s=|var|CPX-E-CEC-M1-PN.Application.SMSGVL.do_C4</D>
+		  <L>ns=4;s=|var|CPX-E-CEC-M1-PN.Application.SMSGVL.do_C0</L>
+		  <R>ns=4;s=|var|CPX-E-CEC-M1-PN.Application.SMSGVL.do_C2</R>
+	  </CamControl>
+
+	  <CubeResult>
       <Step1>
       </Step1>
       <Step2>

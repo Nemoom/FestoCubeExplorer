@@ -2694,6 +2694,61 @@ namespace Festo_Rubik_s_Cube_Explorer
             ServoGoto("servo_Feeding", 1);
         }
 
+        public static bool RotateTo(string str_Rotate, bool b_FirstRotate = false, bool b_ChangeDirection = false)
+        {
+            try
+            {
+                string str_ServoName = "";
+                switch (str_Rotate.Substring(0, 1))
+                {
+                    case "U":
+                        str_ServoName = "servo_U_Rotate";
+                        break;
+                    case "D":
+                        str_ServoName = "servo_D_Rotate";
+                        break;
+                    case "L":
+                        str_ServoName = "servo_L_Rotate";
+                        break;
+                    case "R":
+                        str_ServoName = "servo_R_Rotate";
+                        break;
+                    case "F":
+                        str_ServoName = "servo_F_Rotate";
+                        break;
+                    case "B":
+                        str_ServoName = "servo_B_Rotate";
+                        break;
+                    default:
+                        break;
+                }
+                int PointIndex = 0;
+                if (str_Rotate.Length == 1)
+                {
+                    PointIndex = 90;
+                }
+                else
+                {
+                    switch (str_Rotate.Substring(1, 1))
+                    {
+                        case "'":
+                            PointIndex = 270;
+                            break;
+                        case "2":
+                            PointIndex = 180;
+                            break;
+                    }
+                }
+                ServoGoto(str_ServoName, PointIndex, b_FirstRotate, b_ChangeDirection);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+        }
+
         #endregion
 
         #region tabPage_Servo
@@ -2861,5 +2916,89 @@ namespace Festo_Rubik_s_Cube_Explorer
             timer1.Enabled = true;
         }
 
+        private void btn_U_Click(object sender, EventArgs e)
+        {
+            Form1.CamTrigger(CamID.CamU);
+            btn_U1.BackColor = Form1.GetRGBvalue(CamID.CamU, 9);
+            btn_U2.BackColor = Form1.GetRGBvalue(CamID.CamU, 8);
+            btn_U3.BackColor = Form1.GetRGBvalue(CamID.CamU, 7);
+            btn_U4.BackColor = Form1.GetRGBvalue(CamID.CamU, 6);
+            btn_U5.BackColor = Form1.GetRGBvalue(CamID.CamU, 5);
+            btn_U6.BackColor = Form1.GetRGBvalue(CamID.CamU, 4);
+            btn_U7.BackColor = Form1.GetRGBvalue(CamID.CamU, 3);
+            btn_U8.BackColor = Form1.GetRGBvalue(CamID.CamU, 2);
+            btn_U9.BackColor = Form1.GetRGBvalue(CamID.CamU, 1);
+           
+        }
+
+        private void btn_L_Click(object sender, EventArgs e)
+        {
+            Form1.CamTrigger(CamID.CamL);
+            btn_L1.BackColor = Form1.GetRGBvalue(CamID.CamL, 1);
+            btn_L2.BackColor = Form1.GetRGBvalue(CamID.CamL, 2);
+            btn_L3.BackColor = Form1.GetRGBvalue(CamID.CamL, 3);
+            btn_L4.BackColor = Form1.GetRGBvalue(CamID.CamL, 4);
+            btn_L5.BackColor = Form1.GetRGBvalue(CamID.CamL, 5);
+            btn_L6.BackColor = Form1.GetRGBvalue(CamID.CamL, 6);
+            btn_L7.BackColor = Form1.GetRGBvalue(CamID.CamL, 7);
+            btn_L8.BackColor = Form1.GetRGBvalue(CamID.CamL, 8);
+            btn_L9.BackColor = Form1.GetRGBvalue(CamID.CamL, 9);
+        }
+
+        private void btn_F_Click(object sender, EventArgs e)
+        {
+            Form1.CamTrigger(CamID.CamF);
+            btn_F1.BackColor = Form1.GetRGBvalue(CamID.CamF, 1);
+            btn_F2.BackColor = Form1.GetRGBvalue(CamID.CamF, 2);
+            btn_F3.BackColor = Form1.GetRGBvalue(CamID.CamF, 3);
+            btn_F4.BackColor = Form1.GetRGBvalue(CamID.CamF, 4);
+            btn_F5.BackColor = Form1.GetRGBvalue(CamID.CamF, 5);
+            btn_F6.BackColor = Form1.GetRGBvalue(CamID.CamF, 6);
+            btn_F7.BackColor = Form1.GetRGBvalue(CamID.CamF, 7);
+            btn_F8.BackColor = Form1.GetRGBvalue(CamID.CamF, 8);
+            btn_F9.BackColor = Form1.GetRGBvalue(CamID.CamF, 9);
+        }
+
+        private void btn_R_Click(object sender, EventArgs e)
+        {
+            Form1.CamTrigger(CamID.CamR);
+            btn_R1.BackColor = Form1.GetRGBvalue(CamID.CamR, 1);
+            btn_R2.BackColor = Form1.GetRGBvalue(CamID.CamR, 2);
+            btn_R3.BackColor = Form1.GetRGBvalue(CamID.CamR, 3);
+            btn_R4.BackColor = Form1.GetRGBvalue(CamID.CamR, 4);
+            btn_R5.BackColor = Form1.GetRGBvalue(CamID.CamR, 5);
+            btn_R6.BackColor = Form1.GetRGBvalue(CamID.CamR, 6);
+            btn_R7.BackColor = Form1.GetRGBvalue(CamID.CamR, 7);
+            btn_R8.BackColor = Form1.GetRGBvalue(CamID.CamR, 8);
+            btn_R9.BackColor = Form1.GetRGBvalue(CamID.CamR, 9);
+        }
+
+        private void btn_B_Click(object sender, EventArgs e)
+        {
+            Form1.CamTrigger(CamID.CamB);
+            btn_B1.BackColor = Form1.GetRGBvalue(CamID.CamB, 1);
+            btn_B2.BackColor = Form1.GetRGBvalue(CamID.CamB, 2);
+            btn_B3.BackColor = Form1.GetRGBvalue(CamID.CamB, 3);
+            btn_B4.BackColor = Form1.GetRGBvalue(CamID.CamB, 4);
+            btn_B5.BackColor = Form1.GetRGBvalue(CamID.CamB, 5);
+            btn_B6.BackColor = Form1.GetRGBvalue(CamID.CamB, 6);
+            btn_B7.BackColor = Form1.GetRGBvalue(CamID.CamB, 7);
+            btn_B8.BackColor = Form1.GetRGBvalue(CamID.CamB, 8);
+            btn_B9.BackColor = Form1.GetRGBvalue(CamID.CamB, 9);
+        }
+
+        private void btn_D_Click(object sender, EventArgs e)
+        {
+            Form1.CamTrigger(CamID.CamD);
+            btn_D1.BackColor = Form1.GetRGBvalue(CamID.CamD, 1);
+            btn_D2.BackColor = Form1.GetRGBvalue(CamID.CamD, 2);
+            btn_D3.BackColor = Form1.GetRGBvalue(CamID.CamD, 3);
+            btn_D4.BackColor = Form1.GetRGBvalue(CamID.CamD, 4);
+            btn_D5.BackColor = Form1.GetRGBvalue(CamID.CamD, 5);
+            btn_D6.BackColor = Form1.GetRGBvalue(CamID.CamD, 6);
+            btn_D7.BackColor = Form1.GetRGBvalue(CamID.CamD, 7);
+            btn_D8.BackColor = Form1.GetRGBvalue(CamID.CamD, 8);
+            btn_D9.BackColor = Form1.GetRGBvalue(CamID.CamD, 9);
+        }
     }
 }

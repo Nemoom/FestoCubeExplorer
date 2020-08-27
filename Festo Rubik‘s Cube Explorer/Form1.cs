@@ -23,29 +23,29 @@ namespace Festo_Rubik_s_Cube_Explorer
             InitializeComponent();
             GlobalVariables.LoadParasFromXML();
             tcpClient_CamU = new TcpClient();
-            //tcpClient_CamD = new TcpClient();
-            //tcpClient_CamL = new TcpClient();
-            //tcpClient_CamR = new TcpClient();
-            //tcpClient_CamF = new TcpClient();
-            //tcpClient_CamB = new TcpClient();
-            //tcpClient_CamU.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamU.str_IP), 502));
-            ////tcpClient_CamD.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamD.str_IP), 502));
-            ////tcpClient_CamL.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamL.str_IP), 502));
-            ////tcpClient_CamR.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamR.str_IP), 502));
-            ////tcpClient_CamF.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamF.str_IP), 502));
-            ////tcpClient_CamB.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamB.str_IP), 502));
-            //tcpClient_CamU.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            ////tcpClient_CamD.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            ////tcpClient_CamL.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            ////tcpClient_CamR.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            ////tcpClient_CamF.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            ////tcpClient_CamB.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            //m_Master_CamU = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamU);
-            ////m_Master_CamD = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamD);
-            ////m_Master_CamL = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamL);
-            ////m_Master_CamR = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamR);
-            ////m_Master_CamF = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamF);
-            ////m_Master_CamB = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamB);
+            tcpClient_CamD = new TcpClient();
+            tcpClient_CamL = new TcpClient();
+            tcpClient_CamR = new TcpClient();
+            tcpClient_CamF = new TcpClient();
+            tcpClient_CamB = new TcpClient();
+            tcpClient_CamU.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamU.str_IP), 502));
+            tcpClient_CamD.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamD.str_IP), 502));
+            tcpClient_CamL.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamL.str_IP), 502));
+            tcpClient_CamR.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamR.str_IP), 502));
+            tcpClient_CamF.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamF.str_IP), 502));
+            tcpClient_CamB.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamB.str_IP), 502));
+            tcpClient_CamU.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            tcpClient_CamD.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            tcpClient_CamL.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            tcpClient_CamR.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            tcpClient_CamF.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            tcpClient_CamB.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+            m_Master_CamU = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamU);
+            m_Master_CamD = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamD);
+            m_Master_CamL = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamL);
+            m_Master_CamR = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamR);
+            m_Master_CamF = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamF);
+            m_Master_CamB = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamB);
         }
 
         public static OpcUaClient m_OpcUaClient;
@@ -78,6 +78,12 @@ namespace Festo_Rubik_s_Cube_Explorer
             m_OpcUaClient.OpcStatusChange += M_OpcUaClient_OpcStatusChange;
 
             button4_Click(sender, e);
+            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_U, false);
+            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_D, false);
+            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_L, false);
+            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_R, false);
+            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_F, false);
+            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_B, false);
         }
 
         private void M_OpcUaClient_OpcStatusChange(object sender, OpcUaStatusEventArgs e)
@@ -491,8 +497,9 @@ namespace Festo_Rubik_s_Cube_Explorer
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ushort[] m = m_Master_CamU.ReadHoldingRegisters(1, 0, 10);
-            CamTrigger(CamID.CamU);
+            //ushort[] m = m_Master_CamR.ReadHoldingRegisters(1, 10079, 10);
+            //button2.Text = m[0].ToString();
+            CamTrigger(CamID.CamR);
         }
 
         /// <summary>
@@ -501,35 +508,83 @@ namespace Festo_Rubik_s_Cube_Explorer
         /// <param name="mCamID"></param>
         public static void CamTrigger(CamID mCamID)
         {
-            ModbusIpMaster m_Master_Cam = null;
-            switch (mCamID)
+            try
             {
-                case CamID.CamU:
-                    m_Master_Cam = m_Master_CamU;
-                    break;
-                case CamID.CamD:
-                    m_Master_Cam = m_Master_CamD;
-                    break;
-                case CamID.CamL:
-                    m_Master_Cam = m_Master_CamL;
-                    break;
-                case CamID.CamR:
-                    m_Master_Cam = m_Master_CamR;
-                    break;
-                case CamID.CamF:
-                    m_Master_Cam = m_Master_CamF;
-                    break;
-                case CamID.CamB:
-                    m_Master_Cam = m_Master_CamB;
-                    break;
+                switch (mCamID)
+                {
+                    case CamID.CamU:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_U, true);
+                        //Thread.Sleep(100);
+                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_U, false);
+                        break;
+                    case CamID.CamD:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_D, true);
+                        //Thread.Sleep(100);
+                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_D, false);
+                        break;
+                    case CamID.CamL:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_L, true);
+                        //Thread.Sleep(100);
+                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_L, false);
+                        break;
+                    case CamID.CamR:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_R, true);
+                        //Thread.Sleep(100);
+                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_R, false);
+                        break;
+                    case CamID.CamF:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_F, true);
+                        //Thread.Sleep(100);
+                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_F, false);
+                        break;
+                    case CamID.CamB:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_B, true);
+                        //Thread.Sleep(100);
+                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_B, false);
+                        break;
+                }
             }
-            if (m_Master_Cam != null)
+            catch (Exception ex)
             {
-                m_Master_Cam.WriteSingleRegister(1, 0, 1);//0:Trigger signal置1
-                //延时，等待拍照完成
-                Thread.Sleep(100);
-                m_Master_Cam.WriteSingleRegister(1, 0, 0);//0:Trigger signal清0
+                MessageBox.Show(ex.ToString());
             }
+            
+            //ModbusIpMaster m_Master_Cam = null;
+            //switch (mCamID)
+            //{
+            //    case CamID.CamU:
+            //        m_Master_Cam = m_Master_CamU;
+            //        break;
+            //    case CamID.CamD:
+            //        m_Master_Cam = m_Master_CamD;
+            //        break;
+            //    case CamID.CamL:
+            //        m_Master_Cam = m_Master_CamL;
+            //        break;
+            //    case CamID.CamR:
+            //        m_Master_Cam = m_Master_CamR;
+            //        break;
+            //    case CamID.CamF:
+            //        m_Master_Cam = m_Master_CamF;
+            //        break;
+            //    case CamID.CamB:
+            //        m_Master_Cam = m_Master_CamB;
+            //        break;
+            //}
+            //if (m_Master_Cam != null)
+            //{
+            //    try
+            //    {
+            //        m_Master_Cam.ReadHoldingRegisters(1, 0, 10);
+            //        m_Master_Cam.WriteSingleRegister(1, 0, 1);//0:Trigger signal置1
+            //        Thread.Sleep(100);                        //延时，等待拍照完成
+            //        m_Master_Cam.WriteSingleRegister(1, 0, 0);//0:Trigger signal清0
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.ToString());
+            //    }
+            //}
         }
 
         /// <summary>
@@ -569,10 +624,50 @@ namespace Festo_Rubik_s_Cube_Explorer
             if (m_Master_Cam != null)
             {
                 ushort startAddress = (ushort)(10000 + (BlockID - 1) * 3 * 100);
-                ushort[] m_R = m_Master_CamU.ReadHoldingRegisters(1, (ushort)(startAddress + 79), 1);
-                ushort[] m_G = m_Master_CamU.ReadHoldingRegisters(1, (ushort)(startAddress + 179), 1);
-                ushort[] m_B = m_Master_CamU.ReadHoldingRegisters(1, (ushort)(startAddress + 279), 1);
+                ushort[] m_R = m_Master_Cam.ReadHoldingRegisters(1, (ushort)(startAddress + 79), 1);
+                ushort[] m_G = m_Master_Cam.ReadHoldingRegisters(1, (ushort)(startAddress + 179), 1);
+                ushort[] m_B = m_Master_Cam.ReadHoldingRegisters(1, (ushort)(startAddress + 279), 1);
                 r_Color = Color.FromArgb(m_R[0], m_G[0], m_B[0]);
+            }
+            try
+            {
+                switch (mCamID)
+                {
+                    case CamID.CamU:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_U, false);
+                        //Thread.Sleep(100);
+                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_U, false);
+                        break;
+                    case CamID.CamD:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_D, false);
+                        //Thread.Sleep(100);
+                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_D, false);
+                        break;
+                    case CamID.CamL:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_L, false);
+                        //Thread.Sleep(100);
+                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_L, false);
+                        break;
+                    case CamID.CamR:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_R, false);
+                        //Thread.Sleep(100);
+                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_R, false);
+                        break;
+                    case CamID.CamF:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_F, false);
+                        //Thread.Sleep(100);
+                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_F, false);
+                        break;
+                    case CamID.CamB:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_B, false);
+                        //Thread.Sleep(100);
+                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_B, false);
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
             return r_Color;
         }

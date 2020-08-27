@@ -1218,6 +1218,23 @@ namespace Festo_Rubik_s_Cube_Explorer
                         return XMLCheckResult.ErrorPLC.ToString();
                     }
                     #endregion
+                    #region CamControl
+                    ServoNode = xmlnode.SelectSingleNode("CamControl");
+                    if (ServoNode != null)
+                    {
+                        CurrentParas.mPLC.CamControl.NodeID_U = ServoNode.SelectSingleNode("U").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.CamControl.NodeID_D = ServoNode.SelectSingleNode("D").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.CamControl.NodeID_L = ServoNode.SelectSingleNode("L").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.CamControl.NodeID_R = ServoNode.SelectSingleNode("R").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.CamControl.NodeID_F = ServoNode.SelectSingleNode("F").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                        CurrentParas.mPLC.CamControl.NodeID_B = ServoNode.SelectSingleNode("B").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+                    }
+                    else
+                    {
+                        return XMLCheckResult.ErrorPLC.ToString();
+                    }
+                    #endregion
+
 
                 }
                 else
@@ -1315,6 +1332,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         public ServoParas servo_D_Rotate;
         public CubeResultNodeID CubeResult;
         public LightControlNodeID LightControl;
+        public CamControlNodeID CamControl;
     }
 
     //PC写给PLC的参数
@@ -1352,7 +1370,15 @@ namespace Festo_Rubik_s_Cube_Explorer
         public string NodeID_F;
         public string NodeID_B;        
     }
-
+    public struct CamControlNodeID
+    {
+        public string NodeID_U;
+        public string NodeID_D;
+        public string NodeID_L;
+        public string NodeID_R;
+        public string NodeID_F;
+        public string NodeID_B;
+    }
 
     public struct ServoParas
     {
