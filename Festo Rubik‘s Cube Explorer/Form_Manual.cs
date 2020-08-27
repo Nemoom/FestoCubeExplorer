@@ -13,9 +13,11 @@ namespace Festo_Rubik_s_Cube_Explorer
 {
     public partial class Form_Manual : Form
     {
-        public Form_Manual()
+        Form1 form1;
+        public Form_Manual(Form1 mform1)
         {
             InitializeComponent();
+            form1 = mform1;
         }
         #region tabPage_Cam
         public static void updateLightStatus()
@@ -95,6 +97,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             new Form_ColorLearning().Show();
         }
 
+        #region L Setting
         private void btn_L8_Click(object sender, EventArgs e)
         {
             new Form_ColorLearning("L").Show();
@@ -138,7 +141,245 @@ namespace Festo_Rubik_s_Cube_Explorer
         private void btn_L9_Click(object sender, EventArgs e)
         {
             new Form_ColorLearning("L").Show();
+        } 
+        #endregion
+
+        #region U Setting
+        private void btn_U9_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("U").Show();
         }
+
+        private void btn_U2_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("U").Show();
+        }
+
+        private void btn_U3_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("U").Show();
+        }
+
+        private void btn_U4_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("U").Show();
+        }
+
+        private void btn_U5_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("U").Show();
+        }
+
+        private void btn_U6_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("U").Show();
+        }
+
+        private void btn_U7_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("U").Show();
+        }
+
+        private void btn_U8_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("U").Show();
+        }
+
+        private void btn_U1_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("U").Show();
+        }
+        #endregion
+
+        #region B Setting
+        private void btn_B9_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("B").Show();
+        }
+
+        private void btn_B1_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("B").Show();
+        }
+
+        private void btn_B2_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("B").Show();
+        }
+
+        private void btn_B4_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("B").Show();
+        }
+
+        private void btn_B5_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("B").Show();
+        }
+
+        private void btn_B6_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("B").Show();
+        }
+
+        private void btn_B7_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("B").Show();
+        }
+
+        private void btn_B8_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("B").Show();
+        }
+
+        private void btn_B3_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("B").Show();
+        }
+        #endregion
+
+        #region R Setting
+        private void btn_R9_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("R").Show();
+        }
+
+        private void btn_R2_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("R").Show();
+        }
+
+        private void btn_R3_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("R").Show();
+        }
+
+        private void btn_R4_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("R").Show();
+        }
+
+        private void btn_R5_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("R").Show();
+        }
+
+        private void btn_R6_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("R").Show();
+        }
+
+        private void btn_R7_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("R").Show();
+        }
+
+        private void btn_R8_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("R").Show();
+        }
+
+        private void btn_R1_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("R").Show();
+        }
+        #endregion
+
+        #region F Setting
+        private void btn_F9_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("F").Show();
+        }
+
+        private void btn_F2_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("F").Show();
+        }
+
+        private void btn_F3_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("F").Show();
+        }
+
+        private void btn_F4_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("F").Show();
+        }
+
+        private void btn_F5_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("F").Show();
+        }
+
+        private void btn_F6_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("F").Show();
+        }
+
+        private void btn_F7_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("F").Show();
+        }
+
+        private void btn_F8_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("F").Show();
+        }
+
+        private void btn_F1_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("F").Show();
+        }
+        #endregion
+
+        #region D Setting
+        private void btn_D9_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("D").Show();
+        }
+
+        private void btn_D2_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("D").Show();
+        }
+
+        private void btn_D3_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("D").Show();
+        }
+
+        private void btn_D4_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("D").Show();
+        }
+
+        private void btn_D5_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("D").Show();
+        }
+
+        private void btn_D6_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("D").Show();
+        }
+
+        private void btn_D7_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("D").Show();
+        }
+
+        private void btn_D8_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("D").Show();
+        }
+
+        private void btn_D1_Click(object sender, EventArgs e)
+        {
+            new Form_ColorLearning("D").Show();
+        } 
+        #endregion
+
+        #region LightControl
         private void pic_L_U_Click(object sender, EventArgs e)
         {
             updateLightStatus();
@@ -227,7 +468,149 @@ namespace Festo_Rubik_s_Cube_Explorer
             {
                 pic_L_D.Image = imageList1.Images[0];
             }
+        } 
+        #endregion
+
+        #region 6 Camera trigger
+        private void btn_U_Click(object sender, EventArgs e)
+        {
+            Form1.CamTrigger(CamID.CamU);
+            btn_U1.BackColor = Form1.GetRGBvalue(CamID.CamU, 9);
+            btn_U2.BackColor = Form1.GetRGBvalue(CamID.CamU, 8);
+            btn_U3.BackColor = Form1.GetRGBvalue(CamID.CamU, 7);
+            btn_U4.BackColor = Form1.GetRGBvalue(CamID.CamU, 6);
+            btn_U5.BackColor = Form1.GetRGBvalue(CamID.CamU, 5);
+            btn_U6.BackColor = Form1.GetRGBvalue(CamID.CamU, 4);
+            btn_U7.BackColor = Form1.GetRGBvalue(CamID.CamU, 3);
+            btn_U8.BackColor = Form1.GetRGBvalue(CamID.CamU, 2);
+            btn_U9.BackColor = Form1.GetRGBvalue(CamID.CamU, 1);
+            btn_U1.Text = btn_U1.BackColor.R.ToString() + "\n" + btn_U1.BackColor.G.ToString() + "\n" + btn_U1.BackColor.B.ToString();
+            btn_U2.Text = btn_U2.BackColor.R.ToString() + "\n" + btn_U2.BackColor.G.ToString() + "\n" + btn_U2.BackColor.B.ToString();
+            btn_U3.Text = btn_U3.BackColor.R.ToString() + "\n" + btn_U3.BackColor.G.ToString() + "\n" + btn_U3.BackColor.B.ToString();
+            btn_U4.Text = btn_U4.BackColor.R.ToString() + "\n" + btn_U4.BackColor.G.ToString() + "\n" + btn_U4.BackColor.B.ToString();
+            btn_U5.Text = btn_U5.BackColor.R.ToString() + "\n" + btn_U5.BackColor.G.ToString() + "\n" + btn_U5.BackColor.B.ToString();
+            btn_U6.Text = btn_U6.BackColor.R.ToString() + "\n" + btn_U6.BackColor.G.ToString() + "\n" + btn_U6.BackColor.B.ToString();
+            btn_U7.Text = btn_U7.BackColor.R.ToString() + "\n" + btn_U7.BackColor.G.ToString() + "\n" + btn_U7.BackColor.B.ToString();
+            btn_U8.Text = btn_U8.BackColor.R.ToString() + "\n" + btn_U8.BackColor.G.ToString() + "\n" + btn_U8.BackColor.B.ToString();
+            btn_U9.Text = btn_U9.BackColor.R.ToString() + "\n" + btn_U9.BackColor.G.ToString() + "\n" + btn_U9.BackColor.B.ToString();
         }
+
+        private void btn_L_Click(object sender, EventArgs e)
+        {
+            Form1.CamTrigger(CamID.CamL);
+            btn_L1.BackColor = Form1.GetRGBvalue(CamID.CamL, 1);
+            btn_L2.BackColor = Form1.GetRGBvalue(CamID.CamL, 2);
+            btn_L3.BackColor = Form1.GetRGBvalue(CamID.CamL, 3);
+            btn_L4.BackColor = Form1.GetRGBvalue(CamID.CamL, 4);
+            btn_L5.BackColor = Form1.GetRGBvalue(CamID.CamL, 5);
+            btn_L6.BackColor = Form1.GetRGBvalue(CamID.CamL, 6);
+            btn_L7.BackColor = Form1.GetRGBvalue(CamID.CamL, 7);
+            btn_L8.BackColor = Form1.GetRGBvalue(CamID.CamL, 8);
+            btn_L9.BackColor = Form1.GetRGBvalue(CamID.CamL, 9);
+            btn_L1.Text = btn_L1.BackColor.R.ToString() + "\n" + btn_L1.BackColor.G.ToString() + "\n" + btn_L1.BackColor.B.ToString();
+            btn_L2.Text = btn_L2.BackColor.R.ToString() + "\n" + btn_L2.BackColor.G.ToString() + "\n" + btn_L2.BackColor.B.ToString();
+            btn_L3.Text = btn_L3.BackColor.R.ToString() + "\n" + btn_L3.BackColor.G.ToString() + "\n" + btn_L3.BackColor.B.ToString();
+            btn_L4.Text = btn_L4.BackColor.R.ToString() + "\n" + btn_L4.BackColor.G.ToString() + "\n" + btn_L4.BackColor.B.ToString();
+            btn_L5.Text = btn_L5.BackColor.R.ToString() + "\n" + btn_L5.BackColor.G.ToString() + "\n" + btn_L5.BackColor.B.ToString();
+            btn_L6.Text = btn_L6.BackColor.R.ToString() + "\n" + btn_L6.BackColor.G.ToString() + "\n" + btn_L6.BackColor.B.ToString();
+            btn_L7.Text = btn_L7.BackColor.R.ToString() + "\n" + btn_L7.BackColor.G.ToString() + "\n" + btn_L7.BackColor.B.ToString();
+            btn_L8.Text = btn_L8.BackColor.R.ToString() + "\n" + btn_L8.BackColor.G.ToString() + "\n" + btn_L8.BackColor.B.ToString();
+            btn_L9.Text = btn_L9.BackColor.R.ToString() + "\n" + btn_L9.BackColor.G.ToString() + "\n" + btn_L9.BackColor.B.ToString();
+        }
+
+        private void btn_F_Click(object sender, EventArgs e)
+        {
+            Form1.CamTrigger(CamID.CamF);
+            btn_F1.BackColor = Form1.GetRGBvalue(CamID.CamF, 1);
+            btn_F2.BackColor = Form1.GetRGBvalue(CamID.CamF, 2);
+            btn_F3.BackColor = Form1.GetRGBvalue(CamID.CamF, 3);
+            btn_F4.BackColor = Form1.GetRGBvalue(CamID.CamF, 4);
+            btn_F5.BackColor = Form1.GetRGBvalue(CamID.CamF, 5);
+            btn_F6.BackColor = Form1.GetRGBvalue(CamID.CamF, 6);
+            btn_F7.BackColor = Form1.GetRGBvalue(CamID.CamF, 7);
+            btn_F8.BackColor = Form1.GetRGBvalue(CamID.CamF, 8);
+            btn_F9.BackColor = Form1.GetRGBvalue(CamID.CamF, 9);
+            btn_F1.Text = btn_F1.BackColor.R.ToString() + "\n" + btn_F1.BackColor.G.ToString() + "\n" + btn_F1.BackColor.B.ToString();
+            btn_F2.Text = btn_F2.BackColor.R.ToString() + "\n" + btn_F2.BackColor.G.ToString() + "\n" + btn_F2.BackColor.B.ToString();
+            btn_F3.Text = btn_F3.BackColor.R.ToString() + "\n" + btn_F3.BackColor.G.ToString() + "\n" + btn_F3.BackColor.B.ToString();
+            btn_F4.Text = btn_F4.BackColor.R.ToString() + "\n" + btn_F4.BackColor.G.ToString() + "\n" + btn_F4.BackColor.B.ToString();
+            btn_F5.Text = btn_F5.BackColor.R.ToString() + "\n" + btn_F5.BackColor.G.ToString() + "\n" + btn_F5.BackColor.B.ToString();
+            btn_F6.Text = btn_F6.BackColor.R.ToString() + "\n" + btn_F6.BackColor.G.ToString() + "\n" + btn_F6.BackColor.B.ToString();
+            btn_F7.Text = btn_F7.BackColor.R.ToString() + "\n" + btn_F7.BackColor.G.ToString() + "\n" + btn_F7.BackColor.B.ToString();
+            btn_F8.Text = btn_F8.BackColor.R.ToString() + "\n" + btn_F8.BackColor.G.ToString() + "\n" + btn_F8.BackColor.B.ToString();
+            btn_F9.Text = btn_F9.BackColor.R.ToString() + "\n" + btn_F9.BackColor.G.ToString() + "\n" + btn_F9.BackColor.B.ToString();
+        }
+
+        private void btn_R_Click(object sender, EventArgs e)
+        {
+            Form1.CamTrigger(CamID.CamR);
+            btn_R1.BackColor = Form1.GetRGBvalue(CamID.CamR, 1);
+            btn_R2.BackColor = Form1.GetRGBvalue(CamID.CamR, 2);
+            btn_R3.BackColor = Form1.GetRGBvalue(CamID.CamR, 3);
+            btn_R4.BackColor = Form1.GetRGBvalue(CamID.CamR, 4);
+            btn_R5.BackColor = Form1.GetRGBvalue(CamID.CamR, 5);
+            btn_R6.BackColor = Form1.GetRGBvalue(CamID.CamR, 6);
+            btn_R7.BackColor = Form1.GetRGBvalue(CamID.CamR, 7);
+            btn_R8.BackColor = Form1.GetRGBvalue(CamID.CamR, 8);
+            btn_R9.BackColor = Form1.GetRGBvalue(CamID.CamR, 9);
+            btn_R1.Text = btn_R1.BackColor.R.ToString() + "\n" + btn_R1.BackColor.G.ToString() + "\n" + btn_R1.BackColor.B.ToString();
+            btn_R2.Text = btn_R2.BackColor.R.ToString() + "\n" + btn_R2.BackColor.G.ToString() + "\n" + btn_R2.BackColor.B.ToString();
+            btn_R3.Text = btn_R3.BackColor.R.ToString() + "\n" + btn_R3.BackColor.G.ToString() + "\n" + btn_R3.BackColor.B.ToString();
+            btn_R4.Text = btn_R4.BackColor.R.ToString() + "\n" + btn_R4.BackColor.G.ToString() + "\n" + btn_R4.BackColor.B.ToString();
+            btn_R5.Text = btn_R5.BackColor.R.ToString() + "\n" + btn_R5.BackColor.G.ToString() + "\n" + btn_R5.BackColor.B.ToString();
+            btn_R6.Text = btn_R6.BackColor.R.ToString() + "\n" + btn_R6.BackColor.G.ToString() + "\n" + btn_R6.BackColor.B.ToString();
+            btn_R7.Text = btn_R7.BackColor.R.ToString() + "\n" + btn_R7.BackColor.G.ToString() + "\n" + btn_R7.BackColor.B.ToString();
+            btn_R8.Text = btn_R8.BackColor.R.ToString() + "\n" + btn_R8.BackColor.G.ToString() + "\n" + btn_R8.BackColor.B.ToString();
+            btn_R9.Text = btn_R9.BackColor.R.ToString() + "\n" + btn_R9.BackColor.G.ToString() + "\n" + btn_R9.BackColor.B.ToString();
+        }
+
+        private void btn_B_Click(object sender, EventArgs e)
+        {
+            Form1.CamTrigger(CamID.CamB);
+            btn_B1.BackColor = Form1.GetRGBvalue(CamID.CamB, 1);
+            btn_B2.BackColor = Form1.GetRGBvalue(CamID.CamB, 2);
+            btn_B3.BackColor = Form1.GetRGBvalue(CamID.CamB, 3);
+            btn_B4.BackColor = Form1.GetRGBvalue(CamID.CamB, 4);
+            btn_B5.BackColor = Form1.GetRGBvalue(CamID.CamB, 5);
+            btn_B6.BackColor = Form1.GetRGBvalue(CamID.CamB, 6);
+            btn_B7.BackColor = Form1.GetRGBvalue(CamID.CamB, 7);
+            btn_B8.BackColor = Form1.GetRGBvalue(CamID.CamB, 8);
+            btn_B9.BackColor = Form1.GetRGBvalue(CamID.CamB, 9);
+            btn_B1.Text = btn_B1.BackColor.R.ToString() + "\n" + btn_B1.BackColor.G.ToString() + "\n" + btn_B1.BackColor.B.ToString();
+            btn_B2.Text = btn_B2.BackColor.R.ToString() + "\n" + btn_B2.BackColor.G.ToString() + "\n" + btn_B2.BackColor.B.ToString();
+            btn_B3.Text = btn_B3.BackColor.R.ToString() + "\n" + btn_B3.BackColor.G.ToString() + "\n" + btn_B3.BackColor.B.ToString();
+            btn_B4.Text = btn_B4.BackColor.R.ToString() + "\n" + btn_B4.BackColor.G.ToString() + "\n" + btn_B4.BackColor.B.ToString();
+            btn_B5.Text = btn_B5.BackColor.R.ToString() + "\n" + btn_B5.BackColor.G.ToString() + "\n" + btn_B5.BackColor.B.ToString();
+            btn_B6.Text = btn_B6.BackColor.R.ToString() + "\n" + btn_B6.BackColor.G.ToString() + "\n" + btn_B6.BackColor.B.ToString();
+            btn_B7.Text = btn_B7.BackColor.R.ToString() + "\n" + btn_B7.BackColor.G.ToString() + "\n" + btn_B7.BackColor.B.ToString();
+            btn_B8.Text = btn_B8.BackColor.R.ToString() + "\n" + btn_B8.BackColor.G.ToString() + "\n" + btn_B8.BackColor.B.ToString();
+            btn_B9.Text = btn_B9.BackColor.R.ToString() + "\n" + btn_B9.BackColor.G.ToString() + "\n" + btn_B9.BackColor.B.ToString();
+        }
+
+        private void btn_D_Click(object sender, EventArgs e)
+        {
+            Form1.CamTrigger(CamID.CamD);
+            btn_D1.BackColor = Form1.GetRGBvalue(CamID.CamD, 1);
+            btn_D2.BackColor = Form1.GetRGBvalue(CamID.CamD, 2);
+            btn_D3.BackColor = Form1.GetRGBvalue(CamID.CamD, 3);
+            btn_D4.BackColor = Form1.GetRGBvalue(CamID.CamD, 4);
+            btn_D5.BackColor = Form1.GetRGBvalue(CamID.CamD, 5);
+            btn_D6.BackColor = Form1.GetRGBvalue(CamID.CamD, 6);
+            btn_D7.BackColor = Form1.GetRGBvalue(CamID.CamD, 7);
+            btn_D8.BackColor = Form1.GetRGBvalue(CamID.CamD, 8);
+            btn_D9.BackColor = Form1.GetRGBvalue(CamID.CamD, 9);
+            btn_D1.Text = btn_D1.BackColor.R.ToString() + "\n" + btn_D1.BackColor.G.ToString() + "\n" + btn_D1.BackColor.B.ToString();
+            btn_D2.Text = btn_D2.BackColor.R.ToString() + "\n" + btn_D2.BackColor.G.ToString() + "\n" + btn_D2.BackColor.B.ToString();
+            btn_D3.Text = btn_D3.BackColor.R.ToString() + "\n" + btn_D3.BackColor.G.ToString() + "\n" + btn_D3.BackColor.B.ToString();
+            btn_D4.Text = btn_D4.BackColor.R.ToString() + "\n" + btn_D4.BackColor.G.ToString() + "\n" + btn_D4.BackColor.B.ToString();
+            btn_D5.Text = btn_D5.BackColor.R.ToString() + "\n" + btn_D5.BackColor.G.ToString() + "\n" + btn_D5.BackColor.B.ToString();
+            btn_D6.Text = btn_D6.BackColor.R.ToString() + "\n" + btn_D6.BackColor.G.ToString() + "\n" + btn_D6.BackColor.B.ToString();
+            btn_D7.Text = btn_D7.BackColor.R.ToString() + "\n" + btn_D7.BackColor.G.ToString() + "\n" + btn_D7.BackColor.B.ToString();
+            btn_D8.Text = btn_D8.BackColor.R.ToString() + "\n" + btn_D8.BackColor.G.ToString() + "\n" + btn_D8.BackColor.B.ToString();
+            btn_D9.Text = btn_D9.BackColor.R.ToString() + "\n" + btn_D9.BackColor.G.ToString() + "\n" + btn_D9.BackColor.B.ToString();
+        }
+
+        #endregion
 
         #endregion
 
@@ -1992,25 +2375,25 @@ namespace Festo_Rubik_s_Cube_Explorer
                         case 90:
                         case 180:
                         case 270:
-                            TargetPosition = mServoStatus.i_ActPos + PointIndex;
+                            TargetPosition = mServoStatus.i_ActPos - PointIndex;
                             if (b_FirstRotate)
                             {
-                                TargetPosition = TargetPosition + GlobalVariables.CWgap;
+                                TargetPosition = TargetPosition - GlobalVariables.CWgap;
                             }
                             if (b_ChangeDirection)
-                            {
-                                TargetPosition = TargetPosition + GlobalVariables.CCWgap;
-                            }
-                            break;                        
-                        case -90:
-                            TargetPosition = mServoStatus.i_ActPos + PointIndex;
-                            if (b_FirstRotate)
                             {
                                 TargetPosition = TargetPosition - GlobalVariables.CCWgap;
                             }
+                            break;                        
+                        case -90:
+                            TargetPosition = mServoStatus.i_ActPos - PointIndex;
+                            if (b_FirstRotate)
+                            {
+                                TargetPosition = TargetPosition + GlobalVariables.CCWgap;
+                            }
                             if (b_ChangeDirection)
                             {
-                                TargetPosition = TargetPosition - GlobalVariables.CWgap;
+                                TargetPosition = TargetPosition + GlobalVariables.CWgap;
                             }
                             break;
                     }
@@ -2060,7 +2443,31 @@ namespace Festo_Rubik_s_Cube_Explorer
                     {
                         case 0:
                             TargetPosition = mServoParas.P_0;
-                            break;                        
+                            break;
+                        case 90:
+                        case 180:
+                        case 270:
+                            TargetPosition = mServoStatus.i_ActPos - PointIndex;
+                            if (b_FirstRotate)
+                            {
+                                TargetPosition = TargetPosition - GlobalVariables.CWgap;
+                            }
+                            if (b_ChangeDirection)
+                            {
+                                TargetPosition = TargetPosition - GlobalVariables.CCWgap;
+                            }
+                            break;
+                        case -90:
+                            TargetPosition = mServoStatus.i_ActPos - PointIndex;
+                            if (b_FirstRotate)
+                            {
+                                TargetPosition = TargetPosition + GlobalVariables.CCWgap;
+                            }
+                            if (b_ChangeDirection)
+                            {
+                                TargetPosition = TargetPosition + GlobalVariables.CWgap;
+                            }
+                            break;
                     }
                     break;
                 case "servo_Feeding":
@@ -2092,6 +2499,30 @@ namespace Festo_Rubik_s_Cube_Explorer
                         case 0:
                             TargetPosition = mServoParas.P_0;
                             break;
+                        case 90:
+                        case 180:
+                        case 270:
+                            TargetPosition = mServoStatus.i_ActPos - PointIndex;
+                            if (b_FirstRotate)
+                            {
+                                TargetPosition = TargetPosition - GlobalVariables.CWgap;
+                            }
+                            if (b_ChangeDirection)
+                            {
+                                TargetPosition = TargetPosition - GlobalVariables.CCWgap;
+                            }
+                            break;
+                        case -90:
+                            TargetPosition = mServoStatus.i_ActPos - PointIndex;
+                            if (b_FirstRotate)
+                            {
+                                TargetPosition = TargetPosition + GlobalVariables.CCWgap;
+                            }
+                            if (b_ChangeDirection)
+                            {
+                                TargetPosition = TargetPosition + GlobalVariables.CWgap;
+                            }
+                            break;
                     }
                     break;
                 case "servo_L_Rotate":
@@ -2102,6 +2533,30 @@ namespace Festo_Rubik_s_Cube_Explorer
                         case 0:
                             TargetPosition = mServoParas.P_0;
                             break;
+                        case 90:
+                        case 180:
+                        case 270:
+                            TargetPosition = mServoStatus.i_ActPos - PointIndex;
+                            if (b_FirstRotate)
+                            {
+                                TargetPosition = TargetPosition - GlobalVariables.CWgap;
+                            }
+                            if (b_ChangeDirection)
+                            {
+                                TargetPosition = TargetPosition - GlobalVariables.CCWgap;
+                            }
+                            break;
+                        case -90:
+                            TargetPosition = mServoStatus.i_ActPos - PointIndex;
+                            if (b_FirstRotate)
+                            {
+                                TargetPosition = TargetPosition + GlobalVariables.CCWgap;
+                            }
+                            if (b_ChangeDirection)
+                            {
+                                TargetPosition = TargetPosition + GlobalVariables.CWgap;
+                            }
+                            break;
                     }
                     break;
                 case "servo_R_Rotate":
@@ -2111,6 +2566,30 @@ namespace Festo_Rubik_s_Cube_Explorer
                     {
                         case 0:
                             TargetPosition = mServoParas.P_0;
+                            break;
+                        case 90:
+                        case 180:
+                        case 270:
+                            TargetPosition = mServoStatus.i_ActPos - PointIndex;
+                            if (b_FirstRotate)
+                            {
+                                TargetPosition = TargetPosition - GlobalVariables.CWgap;
+                            }
+                            if (b_ChangeDirection)
+                            {
+                                TargetPosition = TargetPosition - GlobalVariables.CCWgap;
+                            }
+                            break;
+                        case -90:
+                            TargetPosition = mServoStatus.i_ActPos - PointIndex;
+                            if (b_FirstRotate)
+                            {
+                                TargetPosition = TargetPosition + GlobalVariables.CCWgap;
+                            }
+                            if (b_ChangeDirection)
+                            {
+                                TargetPosition = TargetPosition + GlobalVariables.CWgap;
+                            }
                             break;
                     }
                     break;
@@ -2159,6 +2638,30 @@ namespace Festo_Rubik_s_Cube_Explorer
                         case 0:
                             TargetPosition = mServoParas.P_0;
                             break;
+                        case 90:
+                        case 180:
+                        case 270:
+                            TargetPosition = mServoStatus.i_ActPos - PointIndex;
+                            if (b_FirstRotate)
+                            {
+                                TargetPosition = TargetPosition - GlobalVariables.CWgap;
+                            }
+                            if (b_ChangeDirection)
+                            {
+                                TargetPosition = TargetPosition - GlobalVariables.CCWgap;
+                            }
+                            break;
+                        case -90:
+                            TargetPosition = mServoStatus.i_ActPos - PointIndex;
+                            if (b_FirstRotate)
+                            {
+                                TargetPosition = TargetPosition + GlobalVariables.CCWgap;
+                            }
+                            if (b_ChangeDirection)
+                            {
+                                TargetPosition = TargetPosition + GlobalVariables.CWgap;
+                            }
+                            break;
                     }
                     break;
                 default:
@@ -2201,6 +2704,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 else
                 {
                     MessageBox.Show(AxisID + " Error");
+                    return false;
                 }
             }
             catch (Exception ex)
@@ -2613,58 +3117,67 @@ namespace Festo_Rubik_s_Cube_Explorer
             IOlinkAxisOut(1);//魔方姿态至45度
 
             //UD模块至旋转位
-            ServoGoto("servo_U_Move", 2);
-            ServoGoto("servo_D_Move", 2);
-
-            updateAxisStatus();
-            while (!(GlobalVariables.servo_U_Move.b_P2 && GlobalVariables.servo_D_Move.b_P2))
+            if (ServoGoto("servo_U_Move", 2))
             {
-                Thread.Sleep(100);
-                updateAxisStatus();
-            }
-            if (GlobalVariables.servo_U_Rotate.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_U_Rotate.P_0 - GlobalVariables.positionTolerance &&
-                     GlobalVariables.servo_U_Rotate.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_U_Rotate.P_0 + GlobalVariables.positionTolerance &&
-                     GlobalVariables.servo_D_Rotate.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_D_Rotate.P_0 - GlobalVariables.positionTolerance &&
-                     GlobalVariables.servo_D_Rotate.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_D_Rotate.P_0 + GlobalVariables.positionTolerance)
-            {
-                //UD杆至取料位
-                ServoGoto("servo_U_Grab", 3);
-                ServoGoto("servo_D_Grab", 3);
-                while (!(GlobalVariables.servo_U_Grab.b_P3 && GlobalVariables.servo_D_Grab.b_P3))
+                if (ServoGoto("servo_D_Move", 2))
                 {
-                    Thread.Sleep(100);
                     updateAxisStatus();
-                }
-                //UD杆至旋转位，U先上，而后D上，避免顶到
-                ServoGoto("servo_U_Grab", 2);
-                ServoGoto("servo_D_Grab", 2);
-                while (!(GlobalVariables.servo_U_Grab.b_P2 && GlobalVariables.servo_D_Grab.b_P2))
-                {
-                    Thread.Sleep(100);
-                    updateAxisStatus();
-                }
-                if (GlobalVariables.servo_F_Rotate.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_F_Rotate.P_0 - GlobalVariables.positionTolerance &&
-                        GlobalVariables.servo_F_Rotate.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_F_Rotate.P_0 + GlobalVariables.positionTolerance &&
-                        GlobalVariables.servo_B_Rotate.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_B_Rotate.P_0 - GlobalVariables.positionTolerance &&
-                        GlobalVariables.servo_B_Rotate.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_B_Rotate.P_0 + GlobalVariables.positionTolerance &&
-                        GlobalVariables.servo_L_Rotate.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_L_Rotate.P_0 - GlobalVariables.positionTolerance &&
-                        GlobalVariables.servo_L_Rotate.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_L_Rotate.P_0 + GlobalVariables.positionTolerance &&
-                        GlobalVariables.servo_R_Rotate.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_R_Rotate.P_0 - GlobalVariables.positionTolerance &&
-                        GlobalVariables.servo_R_Rotate.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_R_Rotate.P_0 + GlobalVariables.positionTolerance)
-                {
-                    //FBLR杆伸出至旋转位
-                    IOlinkAxisOut(4);
-                }
-                else
-                {
-                    MessageBox.Show("上下旋杆儿捅进魔方有风险");
+                    while (!(GlobalVariables.servo_U_Move.b_P2 && GlobalVariables.servo_D_Move.b_P2))
+                    {
+                        Thread.Sleep(100);
+                        updateAxisStatus();
+                    }
+                    if (GlobalVariables.servo_U_Rotate.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_U_Rotate.P_0 - GlobalVariables.positionTolerance &&
+                             GlobalVariables.servo_U_Rotate.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_U_Rotate.P_0 + GlobalVariables.positionTolerance &&
+                             GlobalVariables.servo_D_Rotate.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_D_Rotate.P_0 - GlobalVariables.positionTolerance &&
+                             GlobalVariables.servo_D_Rotate.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_D_Rotate.P_0 + GlobalVariables.positionTolerance)
+                    {
+                        //UD杆至取料位
+                        ServoGoto("servo_U_Grab", 3);
+                        ServoGoto("servo_D_Grab", 3);
+                        while (!(GlobalVariables.servo_U_Grab.b_P3 && GlobalVariables.servo_D_Grab.b_P3))
+                        {
+                            Thread.Sleep(100);
+                            updateAxisStatus();
+                        }
+                        //UD杆至旋转位，U先上，而后D上，避免顶到
+                        ServoGoto("servo_U_Grab", 2);
+                        ServoGoto("servo_D_Grab", 2);
+                        while (!(GlobalVariables.servo_U_Grab.b_P2 && GlobalVariables.servo_D_Grab.b_P2))
+                        {
+                            Thread.Sleep(100);
+                            updateAxisStatus();
+                        }
+                        if (GlobalVariables.servo_F_Rotate.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_F_Rotate.P_0 - GlobalVariables.positionTolerance &&
+                                GlobalVariables.servo_F_Rotate.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_F_Rotate.P_0 + GlobalVariables.positionTolerance &&
+                                GlobalVariables.servo_B_Rotate.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_B_Rotate.P_0 - GlobalVariables.positionTolerance &&
+                                GlobalVariables.servo_B_Rotate.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_B_Rotate.P_0 + GlobalVariables.positionTolerance &&
+                                GlobalVariables.servo_L_Rotate.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_L_Rotate.P_0 - GlobalVariables.positionTolerance &&
+                                GlobalVariables.servo_L_Rotate.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_L_Rotate.P_0 + GlobalVariables.positionTolerance &&
+                                GlobalVariables.servo_R_Rotate.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_R_Rotate.P_0 - GlobalVariables.positionTolerance &&
+                                GlobalVariables.servo_R_Rotate.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_R_Rotate.P_0 + GlobalVariables.positionTolerance)
+                        {
+                            //FBLR杆伸出至旋转位
+                            IOlinkAxisOut(4);
+                        }
+                        else
+                        {
+                            MessageBox.Show("上下旋杆儿捅进魔方有风险");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("上下旋杆儿捅进魔方有风险");
+                    }
                 }
             }
-            else
-            {
-                MessageBox.Show("上下旋杆儿捅进魔方有风险");
-            }
-            
+            stepIndex = 0;
+            b_First_U = true;
+            b_First_D = true;
+            b_First_L = true;
+            b_First_R = true;
+            b_First_F = true;
+            b_First_B = true;
         }
 
         private void btn_CubeBack_Click(object sender, EventArgs e)
@@ -2916,89 +3429,369 @@ namespace Festo_Rubik_s_Cube_Explorer
             timer1.Enabled = true;
         }
 
-        private void btn_U_Click(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            Form1.CamTrigger(CamID.CamU);
-            btn_U1.BackColor = Form1.GetRGBvalue(CamID.CamU, 9);
-            btn_U2.BackColor = Form1.GetRGBvalue(CamID.CamU, 8);
-            btn_U3.BackColor = Form1.GetRGBvalue(CamID.CamU, 7);
-            btn_U4.BackColor = Form1.GetRGBvalue(CamID.CamU, 6);
-            btn_U5.BackColor = Form1.GetRGBvalue(CamID.CamU, 5);
-            btn_U6.BackColor = Form1.GetRGBvalue(CamID.CamU, 4);
-            btn_U7.BackColor = Form1.GetRGBvalue(CamID.CamU, 3);
-            btn_U8.BackColor = Form1.GetRGBvalue(CamID.CamU, 2);
-            btn_U9.BackColor = Form1.GetRGBvalue(CamID.CamU, 1);
-           
+            if (checkBox1.Checked)
+            {
+                //enable color match
+                ColorDisplay(CamID.CamU, 1, Form1.ColorMatch(CamID.CamU, Form1.GetRGBvalue(CamID.CamU, 9)));
+                ColorDisplay(CamID.CamU, 2, Form1.ColorMatch(CamID.CamU, Form1.GetRGBvalue(CamID.CamU, 8)));
+                ColorDisplay(CamID.CamU, 3, Form1.ColorMatch(CamID.CamU, Form1.GetRGBvalue(CamID.CamU, 7)));
+                ColorDisplay(CamID.CamU, 4, Form1.ColorMatch(CamID.CamU, Form1.GetRGBvalue(CamID.CamU, 6)));
+                ColorDisplay(CamID.CamU, 5, Form1.ColorMatch(CamID.CamU, Form1.GetRGBvalue(CamID.CamU, 5)));
+                ColorDisplay(CamID.CamU, 6, Form1.ColorMatch(CamID.CamU, Form1.GetRGBvalue(CamID.CamU, 4)));
+                ColorDisplay(CamID.CamU, 7, Form1.ColorMatch(CamID.CamU, Form1.GetRGBvalue(CamID.CamU, 3)));
+                ColorDisplay(CamID.CamU, 8, Form1.ColorMatch(CamID.CamU, Form1.GetRGBvalue(CamID.CamU, 2)));
+                ColorDisplay(CamID.CamU, 9, Form1.ColorMatch(CamID.CamU, Form1.GetRGBvalue(CamID.CamU, 1)));
+
+                ColorDisplay(CamID.CamD, 1, Form1.ColorMatch(CamID.CamD, Form1.GetRGBvalue(CamID.CamD, 1)));
+                ColorDisplay(CamID.CamD, 2, Form1.ColorMatch(CamID.CamD, Form1.GetRGBvalue(CamID.CamD, 2)));
+                ColorDisplay(CamID.CamD, 3, Form1.ColorMatch(CamID.CamD, Form1.GetRGBvalue(CamID.CamD, 3)));
+                ColorDisplay(CamID.CamD, 4, Form1.ColorMatch(CamID.CamD, Form1.GetRGBvalue(CamID.CamD, 4)));
+                ColorDisplay(CamID.CamD, 5, Form1.ColorMatch(CamID.CamD, Form1.GetRGBvalue(CamID.CamD, 5)));
+                ColorDisplay(CamID.CamD, 6, Form1.ColorMatch(CamID.CamD, Form1.GetRGBvalue(CamID.CamD, 6)));
+                ColorDisplay(CamID.CamD, 7, Form1.ColorMatch(CamID.CamD, Form1.GetRGBvalue(CamID.CamD, 7)));
+                ColorDisplay(CamID.CamD, 8, Form1.ColorMatch(CamID.CamD, Form1.GetRGBvalue(CamID.CamD, 8)));
+                ColorDisplay(CamID.CamD, 9, Form1.ColorMatch(CamID.CamD, Form1.GetRGBvalue(CamID.CamD, 9)));
+                ColorDisplay(CamID.CamL, 1, Form1.ColorMatch(CamID.CamL, Form1.GetRGBvalue(CamID.CamL, 1)));
+                ColorDisplay(CamID.CamL, 2, Form1.ColorMatch(CamID.CamL, Form1.GetRGBvalue(CamID.CamL, 2)));
+                ColorDisplay(CamID.CamL, 3, Form1.ColorMatch(CamID.CamL, Form1.GetRGBvalue(CamID.CamL, 3)));
+                ColorDisplay(CamID.CamL, 4, Form1.ColorMatch(CamID.CamL, Form1.GetRGBvalue(CamID.CamL, 4)));
+                ColorDisplay(CamID.CamL, 5, Form1.ColorMatch(CamID.CamL, Form1.GetRGBvalue(CamID.CamL, 5)));
+                ColorDisplay(CamID.CamL, 6, Form1.ColorMatch(CamID.CamL, Form1.GetRGBvalue(CamID.CamL, 6)));
+                ColorDisplay(CamID.CamL, 7, Form1.ColorMatch(CamID.CamL, Form1.GetRGBvalue(CamID.CamL, 7)));
+                ColorDisplay(CamID.CamL, 8, Form1.ColorMatch(CamID.CamL, Form1.GetRGBvalue(CamID.CamL, 8)));
+                ColorDisplay(CamID.CamL, 9, Form1.ColorMatch(CamID.CamL, Form1.GetRGBvalue(CamID.CamL, 9)));
+                ColorDisplay(CamID.CamR, 1, Form1.ColorMatch(CamID.CamR, Form1.GetRGBvalue(CamID.CamR, 1)));
+                ColorDisplay(CamID.CamR, 2, Form1.ColorMatch(CamID.CamR, Form1.GetRGBvalue(CamID.CamR, 2)));
+                ColorDisplay(CamID.CamR, 3, Form1.ColorMatch(CamID.CamR, Form1.GetRGBvalue(CamID.CamR, 3)));
+                ColorDisplay(CamID.CamR, 4, Form1.ColorMatch(CamID.CamR, Form1.GetRGBvalue(CamID.CamR, 4)));
+                ColorDisplay(CamID.CamR, 5, Form1.ColorMatch(CamID.CamR, Form1.GetRGBvalue(CamID.CamR, 5)));
+                ColorDisplay(CamID.CamR, 6, Form1.ColorMatch(CamID.CamR, Form1.GetRGBvalue(CamID.CamR, 6)));
+                ColorDisplay(CamID.CamR, 7, Form1.ColorMatch(CamID.CamR, Form1.GetRGBvalue(CamID.CamR, 7)));
+                ColorDisplay(CamID.CamR, 8, Form1.ColorMatch(CamID.CamR, Form1.GetRGBvalue(CamID.CamR, 8)));
+                ColorDisplay(CamID.CamR, 9, Form1.ColorMatch(CamID.CamR, Form1.GetRGBvalue(CamID.CamR, 9)));
+
+                ColorDisplay(CamID.CamF, 1, Form1.ColorMatch(CamID.CamF, Form1.GetRGBvalue(CamID.CamF, 1)));
+                ColorDisplay(CamID.CamF, 2, Form1.ColorMatch(CamID.CamF, Form1.GetRGBvalue(CamID.CamF, 2)));
+                ColorDisplay(CamID.CamF, 3, Form1.ColorMatch(CamID.CamF, Form1.GetRGBvalue(CamID.CamF, 3)));
+                ColorDisplay(CamID.CamF, 4, Form1.ColorMatch(CamID.CamF, Form1.GetRGBvalue(CamID.CamF, 4)));
+                ColorDisplay(CamID.CamF, 5, Form1.ColorMatch(CamID.CamF, Form1.GetRGBvalue(CamID.CamF, 5)));
+                ColorDisplay(CamID.CamF, 6, Form1.ColorMatch(CamID.CamF, Form1.GetRGBvalue(CamID.CamF, 6)));
+                ColorDisplay(CamID.CamF, 7, Form1.ColorMatch(CamID.CamF, Form1.GetRGBvalue(CamID.CamF, 7)));
+                ColorDisplay(CamID.CamF, 8, Form1.ColorMatch(CamID.CamF, Form1.GetRGBvalue(CamID.CamF, 8)));
+                ColorDisplay(CamID.CamF, 9, Form1.ColorMatch(CamID.CamF, Form1.GetRGBvalue(CamID.CamF, 9)));
+
+                ColorDisplay(CamID.CamB, 1, Form1.ColorMatch(CamID.CamB, Form1.GetRGBvalue(CamID.CamB, 1)));
+                ColorDisplay(CamID.CamB, 2, Form1.ColorMatch(CamID.CamB, Form1.GetRGBvalue(CamID.CamB, 2)));
+                ColorDisplay(CamID.CamB, 3, Form1.ColorMatch(CamID.CamB, Form1.GetRGBvalue(CamID.CamB, 3)));
+                ColorDisplay(CamID.CamB, 4, Form1.ColorMatch(CamID.CamB, Form1.GetRGBvalue(CamID.CamB, 4)));
+                ColorDisplay(CamID.CamB, 5, Form1.ColorMatch(CamID.CamB, Form1.GetRGBvalue(CamID.CamB, 5)));
+                ColorDisplay(CamID.CamB, 6, Form1.ColorMatch(CamID.CamB, Form1.GetRGBvalue(CamID.CamB, 6)));
+                ColorDisplay(CamID.CamB, 7, Form1.ColorMatch(CamID.CamB, Form1.GetRGBvalue(CamID.CamB, 7)));
+                ColorDisplay(CamID.CamB, 8, Form1.ColorMatch(CamID.CamB, Form1.GetRGBvalue(CamID.CamB, 8)));
+                ColorDisplay(CamID.CamB, 9, Form1.ColorMatch(CamID.CamB, Form1.GetRGBvalue(CamID.CamB, 9)));
+            }
+            else
+            {
+                btn_U_Click(sender, e);
+                btn_D_Click(sender, e);
+                btn_L_Click(sender, e);
+                btn_R_Click(sender, e);
+                btn_F_Click(sender, e);
+                btn_B_Click(sender, e);
+            }
         }
 
-        private void btn_L_Click(object sender, EventArgs e)
+        public void ColorDisplay(CamID mCamID, int BlockID, FaceColor mFaceColor)
         {
-            Form1.CamTrigger(CamID.CamL);
-            btn_L1.BackColor = Form1.GetRGBvalue(CamID.CamL, 1);
-            btn_L2.BackColor = Form1.GetRGBvalue(CamID.CamL, 2);
-            btn_L3.BackColor = Form1.GetRGBvalue(CamID.CamL, 3);
-            btn_L4.BackColor = Form1.GetRGBvalue(CamID.CamL, 4);
-            btn_L5.BackColor = Form1.GetRGBvalue(CamID.CamL, 5);
-            btn_L6.BackColor = Form1.GetRGBvalue(CamID.CamL, 6);
-            btn_L7.BackColor = Form1.GetRGBvalue(CamID.CamL, 7);
-            btn_L8.BackColor = Form1.GetRGBvalue(CamID.CamL, 8);
-            btn_L9.BackColor = Form1.GetRGBvalue(CamID.CamL, 9);
+            Button mBtn = new Button();
+            switch (mCamID)
+            {
+                case CamID.CamU:
+                    switch (BlockID)
+                    {
+                        case 1:
+                            mBtn = btn_U1;
+                            break;
+                        case 2:
+                            mBtn = btn_U2;
+                            break;
+                        case 3:
+                            mBtn = btn_U3;
+                            break;
+                        case 4:
+                            mBtn = btn_U4;
+                            break;
+                        case 5:
+                            mBtn = btn_U5;
+                            break;
+                        case 6:
+                            mBtn = btn_U6;
+                            break;
+                        case 7:
+                            mBtn = btn_U7;
+                            break;
+                        case 8:
+                            mBtn = btn_U8;
+                            break;
+                        case 9:
+                            mBtn = btn_U9;
+                            break;
+                    }
+                    break;
+                case CamID.CamD:
+                    switch (BlockID)
+                    {
+                        case 1:
+                            mBtn = btn_D1;
+                            break;
+                        case 2:
+                            mBtn = btn_D2;
+                            break;
+                        case 3:
+                            mBtn = btn_D3;
+                            break;
+                        case 4:
+                            mBtn = btn_D4;
+                            break;
+                        case 5:
+                            mBtn = btn_D5;
+                            break;
+                        case 6:
+                            mBtn = btn_D6;
+                            break;
+                        case 7:
+                            mBtn = btn_D7;
+                            break;
+                        case 8:
+                            mBtn = btn_D8;
+                            break;
+                        case 9:
+                            mBtn = btn_D9;
+                            break;
+                    }
+                    break;
+                case CamID.CamL:
+                    switch (BlockID)
+                    {
+                        case 1:
+                            mBtn = btn_L1;
+                            break;
+                        case 2:
+                            mBtn = btn_L2;
+                            break;
+                        case 3:
+                            mBtn = btn_L3;
+                            break;
+                        case 4:
+                            mBtn = btn_L4;
+                            break;
+                        case 5:
+                            mBtn = btn_L5;
+                            break;
+                        case 6:
+                            mBtn = btn_L6;
+                            break;
+                        case 7:
+                            mBtn = btn_L7;
+                            break;
+                        case 8:
+                            mBtn = btn_L8;
+                            break;
+                        case 9:
+                            mBtn = btn_L9;
+                            break;
+                    }
+                    break;
+                case CamID.CamR:
+                    switch (BlockID)
+                    {
+                        case 1:
+                            mBtn = btn_R1;
+                            break;
+                        case 2:
+                            mBtn = btn_R2;
+                            break;
+                        case 3:
+                            mBtn = btn_R3;
+                            break;
+                        case 4:
+                            mBtn = btn_R4;
+                            break;
+                        case 5:
+                            mBtn = btn_R5;
+                            break;
+                        case 6:
+                            mBtn = btn_R6;
+                            break;
+                        case 7:
+                            mBtn = btn_R7;
+                            break;
+                        case 8:
+                            mBtn = btn_R8;
+                            break;
+                        case 9:
+                            mBtn = btn_R9;
+                            break;
+                    }
+                    break;
+                case CamID.CamF:
+                    switch (BlockID)
+                    {
+                        case 1:
+                            mBtn = btn_F1;
+                            break;
+                        case 2:
+                            mBtn = btn_F2;
+                            break;
+                        case 3:
+                            mBtn = btn_F3;
+                            break;
+                        case 4:
+                            mBtn = btn_F4;
+                            break;
+                        case 5:
+                            mBtn = btn_F5;
+                            break;
+                        case 6:
+                            mBtn = btn_F6;
+                            break;
+                        case 7:
+                            mBtn = btn_F7;
+                            break;
+                        case 8:
+                            mBtn = btn_F8;
+                            break;
+                        case 9:
+                            mBtn = btn_F9;
+                            break;
+                    }
+                    break;
+                case CamID.CamB:
+                    switch (BlockID)
+                    {
+                        case 1:
+                            mBtn = btn_B1;
+                            break;
+                        case 2:
+                            mBtn = btn_B2;
+                            break;
+                        case 3:
+                            mBtn = btn_B3;
+                            break;
+                        case 4:
+                            mBtn = btn_B4;
+                            break;
+                        case 5:
+                            mBtn = btn_B5;
+                            break;
+                        case 6:
+                            mBtn = btn_B6;
+                            break;
+                        case 7:
+                            mBtn = btn_B7;
+                            break;
+                        case 8:
+                            mBtn = btn_B8;
+                            break;
+                        case 9:
+                            mBtn = btn_B9;
+                            break;
+                    }
+                    break;
+            }
+            switch (mFaceColor)
+            {
+                case FaceColor.Red:
+                    mBtn.BackColor = Color.Red;
+                    break;
+                case FaceColor.Green:
+                    mBtn.BackColor = Color.Green;
+                    break;
+                case FaceColor.Blue:
+                    mBtn.BackColor = Color.Blue;
+                    break;
+                case FaceColor.White:
+                    mBtn.BackColor = Color.White;
+                    break;
+                case FaceColor.Orange:
+                    mBtn.BackColor = Color.Orange;
+                    break;
+                case FaceColor.Yellow:
+                    mBtn.BackColor = Color.Yellow;
+                    break;
+                default:
+                    break;
+            }
         }
 
-        private void btn_F_Click(object sender, EventArgs e)
-        {
-            Form1.CamTrigger(CamID.CamF);
-            btn_F1.BackColor = Form1.GetRGBvalue(CamID.CamF, 1);
-            btn_F2.BackColor = Form1.GetRGBvalue(CamID.CamF, 2);
-            btn_F3.BackColor = Form1.GetRGBvalue(CamID.CamF, 3);
-            btn_F4.BackColor = Form1.GetRGBvalue(CamID.CamF, 4);
-            btn_F5.BackColor = Form1.GetRGBvalue(CamID.CamF, 5);
-            btn_F6.BackColor = Form1.GetRGBvalue(CamID.CamF, 6);
-            btn_F7.BackColor = Form1.GetRGBvalue(CamID.CamF, 7);
-            btn_F8.BackColor = Form1.GetRGBvalue(CamID.CamF, 8);
-            btn_F9.BackColor = Form1.GetRGBvalue(CamID.CamF, 9);
+        private void btn_Acquire_Click(object sender, EventArgs e)
+        { 
+            form1.button2_Click(sender, e);
         }
-
-        private void btn_R_Click(object sender, EventArgs e)
+        int stepIndex = 0;
+        bool b_First_U = true;
+        bool b_First_D = true;
+        bool b_First_L = true;
+        bool b_First_R = true;
+        bool b_First_F = true;
+        bool b_First_B = true;
+        private void btn_Solve_Click(object sender, EventArgs e)
         {
-            Form1.CamTrigger(CamID.CamR);
-            btn_R1.BackColor = Form1.GetRGBvalue(CamID.CamR, 1);
-            btn_R2.BackColor = Form1.GetRGBvalue(CamID.CamR, 2);
-            btn_R3.BackColor = Form1.GetRGBvalue(CamID.CamR, 3);
-            btn_R4.BackColor = Form1.GetRGBvalue(CamID.CamR, 4);
-            btn_R5.BackColor = Form1.GetRGBvalue(CamID.CamR, 5);
-            btn_R6.BackColor = Form1.GetRGBvalue(CamID.CamR, 6);
-            btn_R7.BackColor = Form1.GetRGBvalue(CamID.CamR, 7);
-            btn_R8.BackColor = Form1.GetRGBvalue(CamID.CamR, 8);
-            btn_R9.BackColor = Form1.GetRGBvalue(CamID.CamR, 9);
-        }
-
-        private void btn_B_Click(object sender, EventArgs e)
-        {
-            Form1.CamTrigger(CamID.CamB);
-            btn_B1.BackColor = Form1.GetRGBvalue(CamID.CamB, 1);
-            btn_B2.BackColor = Form1.GetRGBvalue(CamID.CamB, 2);
-            btn_B3.BackColor = Form1.GetRGBvalue(CamID.CamB, 3);
-            btn_B4.BackColor = Form1.GetRGBvalue(CamID.CamB, 4);
-            btn_B5.BackColor = Form1.GetRGBvalue(CamID.CamB, 5);
-            btn_B6.BackColor = Form1.GetRGBvalue(CamID.CamB, 6);
-            btn_B7.BackColor = Form1.GetRGBvalue(CamID.CamB, 7);
-            btn_B8.BackColor = Form1.GetRGBvalue(CamID.CamB, 8);
-            btn_B9.BackColor = Form1.GetRGBvalue(CamID.CamB, 9);
-        }
-
-        private void btn_D_Click(object sender, EventArgs e)
-        {
-            Form1.CamTrigger(CamID.CamD);
-            btn_D1.BackColor = Form1.GetRGBvalue(CamID.CamD, 1);
-            btn_D2.BackColor = Form1.GetRGBvalue(CamID.CamD, 2);
-            btn_D3.BackColor = Form1.GetRGBvalue(CamID.CamD, 3);
-            btn_D4.BackColor = Form1.GetRGBvalue(CamID.CamD, 4);
-            btn_D5.BackColor = Form1.GetRGBvalue(CamID.CamD, 5);
-            btn_D6.BackColor = Form1.GetRGBvalue(CamID.CamD, 6);
-            btn_D7.BackColor = Form1.GetRGBvalue(CamID.CamD, 7);
-            btn_D8.BackColor = Form1.GetRGBvalue(CamID.CamD, 8);
-            btn_D9.BackColor = Form1.GetRGBvalue(CamID.CamD, 9);
+            if (form1.textBox2.Text !="")
+            {
+                string[] mSteps = form1.textBox2.Text.Split(' ');
+                switch (mSteps[stepIndex].Substring(0,1))
+                {
+                    case "U":
+                        RotateTo(mSteps[stepIndex],b_First_U);
+                        if (b_First_U)
+                        {
+                            b_First_U = false;
+                        }
+                        break;
+                    case "D":
+                        RotateTo(mSteps[stepIndex], b_First_D);
+                        if (b_First_D)
+                        {
+                            b_First_D = false;
+                        }
+                        break;
+                    case "L":
+                        RotateTo(mSteps[stepIndex], b_First_L);
+                        if (b_First_L)
+                        {
+                            b_First_L = false;
+                        }
+                        break;
+                    case "R":
+                        RotateTo(mSteps[stepIndex], b_First_R);
+                        if (b_First_R)
+                        {
+                            b_First_R = false;
+                        }
+                        break;
+                    case "F":
+                        RotateTo(mSteps[stepIndex], b_First_F);
+                        if (b_First_F)
+                        {
+                            b_First_F = false;
+                        }
+                        break;
+                    case "B":
+                        RotateTo(mSteps[stepIndex], b_First_B);
+                        if (b_First_B)
+                        {
+                            b_First_B = false;
+                        }
+                        break;
+                    default:
+                        break;
+                }
+                
+                stepIndex++;
+            }
         }
     }
 }

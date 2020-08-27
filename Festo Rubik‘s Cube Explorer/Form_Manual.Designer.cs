@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Manual));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_Cam = new System.Windows.Forms.TabPage();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btn_ColorLearning = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel_Cube = new System.Windows.Forms.TableLayoutPanel();
@@ -339,6 +340,7 @@
             // tabPage_Cam
             // 
             this.tabPage_Cam.AutoScroll = true;
+            this.tabPage_Cam.Controls.Add(this.checkBox1);
             this.tabPage_Cam.Controls.Add(this.btn_ColorLearning);
             this.tabPage_Cam.Controls.Add(this.panel1);
             this.tabPage_Cam.Controls.Add(this.tableLayoutPanel_CamControl);
@@ -350,6 +352,17 @@
             this.tabPage_Cam.TabIndex = 0;
             this.tabPage_Cam.Text = "Camera";
             this.tabPage_Cam.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(84, 457);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(223, 32);
+            this.checkBox1.TabIndex = 4;
+            this.checkBox1.Text = "Enable ColorMatch";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // btn_ColorLearning
             // 
@@ -426,100 +439,118 @@
             // 
             this.btn_U9.BackColor = System.Drawing.Color.White;
             this.btn_U9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_U9.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_U9.Location = new System.Drawing.Point(149, 148);
             this.btn_U9.Margin = new System.Windows.Forms.Padding(1);
             this.btn_U9.Name = "btn_U9";
             this.btn_U9.Size = new System.Drawing.Size(72, 71);
             this.btn_U9.TabIndex = 8;
             this.btn_U9.UseVisualStyleBackColor = false;
+            this.btn_U9.Click += new System.EventHandler(this.btn_U9_Click);
             // 
             // btn_U8
             // 
             this.btn_U8.BackColor = System.Drawing.Color.White;
             this.btn_U8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_U8.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_U8.Location = new System.Drawing.Point(75, 148);
             this.btn_U8.Margin = new System.Windows.Forms.Padding(1);
             this.btn_U8.Name = "btn_U8";
             this.btn_U8.Size = new System.Drawing.Size(71, 71);
             this.btn_U8.TabIndex = 7;
             this.btn_U8.UseVisualStyleBackColor = false;
+            this.btn_U8.Click += new System.EventHandler(this.btn_U8_Click);
             // 
             // btn_U7
             // 
             this.btn_U7.BackColor = System.Drawing.Color.White;
             this.btn_U7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_U7.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_U7.Location = new System.Drawing.Point(2, 148);
             this.btn_U7.Margin = new System.Windows.Forms.Padding(1);
             this.btn_U7.Name = "btn_U7";
             this.btn_U7.Size = new System.Drawing.Size(70, 71);
             this.btn_U7.TabIndex = 6;
             this.btn_U7.UseVisualStyleBackColor = false;
+            this.btn_U7.Click += new System.EventHandler(this.btn_U7_Click);
             // 
             // btn_U6
             // 
             this.btn_U6.BackColor = System.Drawing.Color.White;
             this.btn_U6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_U6.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_U6.Location = new System.Drawing.Point(149, 75);
             this.btn_U6.Margin = new System.Windows.Forms.Padding(1);
             this.btn_U6.Name = "btn_U6";
             this.btn_U6.Size = new System.Drawing.Size(72, 70);
             this.btn_U6.TabIndex = 5;
             this.btn_U6.UseVisualStyleBackColor = false;
+            this.btn_U6.Click += new System.EventHandler(this.btn_U6_Click);
             // 
             // btn_U5
             // 
             this.btn_U5.BackColor = System.Drawing.Color.White;
             this.btn_U5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_U5.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_U5.Location = new System.Drawing.Point(75, 75);
             this.btn_U5.Margin = new System.Windows.Forms.Padding(1);
             this.btn_U5.Name = "btn_U5";
             this.btn_U5.Size = new System.Drawing.Size(71, 70);
             this.btn_U5.TabIndex = 4;
             this.btn_U5.UseVisualStyleBackColor = false;
+            this.btn_U5.Click += new System.EventHandler(this.btn_U5_Click);
             // 
             // btn_U4
             // 
             this.btn_U4.BackColor = System.Drawing.Color.White;
             this.btn_U4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_U4.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_U4.Location = new System.Drawing.Point(2, 75);
             this.btn_U4.Margin = new System.Windows.Forms.Padding(1);
             this.btn_U4.Name = "btn_U4";
             this.btn_U4.Size = new System.Drawing.Size(70, 70);
             this.btn_U4.TabIndex = 3;
             this.btn_U4.UseVisualStyleBackColor = false;
+            this.btn_U4.Click += new System.EventHandler(this.btn_U4_Click);
             // 
             // btn_U3
             // 
             this.btn_U3.BackColor = System.Drawing.Color.White;
             this.btn_U3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_U3.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_U3.Location = new System.Drawing.Point(149, 2);
             this.btn_U3.Margin = new System.Windows.Forms.Padding(1);
             this.btn_U3.Name = "btn_U3";
             this.btn_U3.Size = new System.Drawing.Size(72, 70);
             this.btn_U3.TabIndex = 2;
             this.btn_U3.UseVisualStyleBackColor = false;
+            this.btn_U3.Click += new System.EventHandler(this.btn_U3_Click);
             // 
             // btn_U2
             // 
             this.btn_U2.BackColor = System.Drawing.Color.White;
             this.btn_U2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_U2.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_U2.Location = new System.Drawing.Point(75, 2);
             this.btn_U2.Margin = new System.Windows.Forms.Padding(1);
             this.btn_U2.Name = "btn_U2";
             this.btn_U2.Size = new System.Drawing.Size(71, 70);
             this.btn_U2.TabIndex = 1;
             this.btn_U2.UseVisualStyleBackColor = false;
+            this.btn_U2.Click += new System.EventHandler(this.btn_U2_Click);
             // 
             // btn_U1
             // 
             this.btn_U1.BackColor = System.Drawing.Color.White;
             this.btn_U1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_U1.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_U1.Location = new System.Drawing.Point(2, 2);
             this.btn_U1.Margin = new System.Windows.Forms.Padding(1);
             this.btn_U1.Name = "btn_U1";
             this.btn_U1.Size = new System.Drawing.Size(70, 70);
             this.btn_U1.TabIndex = 0;
             this.btn_U1.UseVisualStyleBackColor = false;
+            this.btn_U1.Click += new System.EventHandler(this.btn_U1_Click);
             // 
             // tableLayoutPanel_L
             // 
@@ -554,6 +585,7 @@
             // 
             this.btn_L9.BackColor = System.Drawing.Color.Blue;
             this.btn_L9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_L9.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_L9.Location = new System.Drawing.Point(149, 148);
             this.btn_L9.Margin = new System.Windows.Forms.Padding(1);
             this.btn_L9.Name = "btn_L9";
@@ -566,6 +598,7 @@
             // 
             this.btn_L8.BackColor = System.Drawing.Color.Blue;
             this.btn_L8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_L8.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_L8.Location = new System.Drawing.Point(75, 148);
             this.btn_L8.Margin = new System.Windows.Forms.Padding(1);
             this.btn_L8.Name = "btn_L8";
@@ -578,6 +611,7 @@
             // 
             this.btn_L7.BackColor = System.Drawing.Color.Blue;
             this.btn_L7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_L7.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_L7.Location = new System.Drawing.Point(2, 148);
             this.btn_L7.Margin = new System.Windows.Forms.Padding(1);
             this.btn_L7.Name = "btn_L7";
@@ -590,6 +624,7 @@
             // 
             this.btn_L6.BackColor = System.Drawing.Color.Blue;
             this.btn_L6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_L6.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_L6.Location = new System.Drawing.Point(149, 75);
             this.btn_L6.Margin = new System.Windows.Forms.Padding(1);
             this.btn_L6.Name = "btn_L6";
@@ -602,6 +637,7 @@
             // 
             this.btn_L5.BackColor = System.Drawing.Color.Blue;
             this.btn_L5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_L5.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_L5.Location = new System.Drawing.Point(75, 75);
             this.btn_L5.Margin = new System.Windows.Forms.Padding(1);
             this.btn_L5.Name = "btn_L5";
@@ -614,6 +650,7 @@
             // 
             this.btn_L4.BackColor = System.Drawing.Color.Blue;
             this.btn_L4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_L4.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_L4.Location = new System.Drawing.Point(2, 75);
             this.btn_L4.Margin = new System.Windows.Forms.Padding(1);
             this.btn_L4.Name = "btn_L4";
@@ -626,6 +663,7 @@
             // 
             this.btn_L3.BackColor = System.Drawing.Color.Blue;
             this.btn_L3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_L3.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_L3.Location = new System.Drawing.Point(149, 2);
             this.btn_L3.Margin = new System.Windows.Forms.Padding(1);
             this.btn_L3.Name = "btn_L3";
@@ -638,6 +676,7 @@
             // 
             this.btn_L2.BackColor = System.Drawing.Color.Blue;
             this.btn_L2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_L2.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_L2.Location = new System.Drawing.Point(75, 2);
             this.btn_L2.Margin = new System.Windows.Forms.Padding(1);
             this.btn_L2.Name = "btn_L2";
@@ -650,6 +689,7 @@
             // 
             this.btn_L1.BackColor = System.Drawing.Color.Blue;
             this.btn_L1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_L1.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_L1.Location = new System.Drawing.Point(2, 2);
             this.btn_L1.Margin = new System.Windows.Forms.Padding(1);
             this.btn_L1.Name = "btn_L1";
@@ -690,100 +730,118 @@
             // 
             this.btn_F9.BackColor = System.Drawing.Color.Orange;
             this.btn_F9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_F9.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_F9.Location = new System.Drawing.Point(149, 148);
             this.btn_F9.Margin = new System.Windows.Forms.Padding(1);
             this.btn_F9.Name = "btn_F9";
             this.btn_F9.Size = new System.Drawing.Size(72, 71);
             this.btn_F9.TabIndex = 9;
             this.btn_F9.UseVisualStyleBackColor = false;
+            this.btn_F9.Click += new System.EventHandler(this.btn_F9_Click);
             // 
             // btn_F8
             // 
             this.btn_F8.BackColor = System.Drawing.Color.Orange;
             this.btn_F8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_F8.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_F8.Location = new System.Drawing.Point(75, 148);
             this.btn_F8.Margin = new System.Windows.Forms.Padding(1);
             this.btn_F8.Name = "btn_F8";
             this.btn_F8.Size = new System.Drawing.Size(71, 71);
             this.btn_F8.TabIndex = 8;
             this.btn_F8.UseVisualStyleBackColor = false;
+            this.btn_F8.Click += new System.EventHandler(this.btn_F8_Click);
             // 
             // btn_F7
             // 
             this.btn_F7.BackColor = System.Drawing.Color.Orange;
             this.btn_F7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_F7.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_F7.Location = new System.Drawing.Point(2, 148);
             this.btn_F7.Margin = new System.Windows.Forms.Padding(1);
             this.btn_F7.Name = "btn_F7";
             this.btn_F7.Size = new System.Drawing.Size(70, 71);
             this.btn_F7.TabIndex = 7;
             this.btn_F7.UseVisualStyleBackColor = false;
+            this.btn_F7.Click += new System.EventHandler(this.btn_F7_Click);
             // 
             // btn_F6
             // 
             this.btn_F6.BackColor = System.Drawing.Color.Orange;
             this.btn_F6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_F6.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_F6.Location = new System.Drawing.Point(149, 75);
             this.btn_F6.Margin = new System.Windows.Forms.Padding(1);
             this.btn_F6.Name = "btn_F6";
             this.btn_F6.Size = new System.Drawing.Size(72, 70);
             this.btn_F6.TabIndex = 6;
             this.btn_F6.UseVisualStyleBackColor = false;
+            this.btn_F6.Click += new System.EventHandler(this.btn_F6_Click);
             // 
             // btn_F5
             // 
             this.btn_F5.BackColor = System.Drawing.Color.Orange;
             this.btn_F5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_F5.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_F5.Location = new System.Drawing.Point(75, 75);
             this.btn_F5.Margin = new System.Windows.Forms.Padding(1);
             this.btn_F5.Name = "btn_F5";
             this.btn_F5.Size = new System.Drawing.Size(71, 70);
             this.btn_F5.TabIndex = 5;
             this.btn_F5.UseVisualStyleBackColor = false;
+            this.btn_F5.Click += new System.EventHandler(this.btn_F5_Click);
             // 
             // btn_F4
             // 
             this.btn_F4.BackColor = System.Drawing.Color.Orange;
             this.btn_F4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_F4.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_F4.Location = new System.Drawing.Point(2, 75);
             this.btn_F4.Margin = new System.Windows.Forms.Padding(1);
             this.btn_F4.Name = "btn_F4";
             this.btn_F4.Size = new System.Drawing.Size(70, 70);
             this.btn_F4.TabIndex = 4;
             this.btn_F4.UseVisualStyleBackColor = false;
+            this.btn_F4.Click += new System.EventHandler(this.btn_F4_Click);
             // 
             // btn_F3
             // 
             this.btn_F3.BackColor = System.Drawing.Color.Orange;
             this.btn_F3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_F3.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_F3.Location = new System.Drawing.Point(149, 2);
             this.btn_F3.Margin = new System.Windows.Forms.Padding(1);
             this.btn_F3.Name = "btn_F3";
             this.btn_F3.Size = new System.Drawing.Size(72, 70);
             this.btn_F3.TabIndex = 3;
             this.btn_F3.UseVisualStyleBackColor = false;
+            this.btn_F3.Click += new System.EventHandler(this.btn_F3_Click);
             // 
             // btn_F2
             // 
             this.btn_F2.BackColor = System.Drawing.Color.Orange;
             this.btn_F2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_F2.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_F2.Location = new System.Drawing.Point(75, 2);
             this.btn_F2.Margin = new System.Windows.Forms.Padding(1);
             this.btn_F2.Name = "btn_F2";
             this.btn_F2.Size = new System.Drawing.Size(71, 70);
             this.btn_F2.TabIndex = 2;
             this.btn_F2.UseVisualStyleBackColor = false;
+            this.btn_F2.Click += new System.EventHandler(this.btn_F2_Click);
             // 
             // btn_F1
             // 
             this.btn_F1.BackColor = System.Drawing.Color.Orange;
             this.btn_F1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_F1.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_F1.Location = new System.Drawing.Point(2, 2);
             this.btn_F1.Margin = new System.Windows.Forms.Padding(1);
             this.btn_F1.Name = "btn_F1";
             this.btn_F1.Size = new System.Drawing.Size(70, 70);
             this.btn_F1.TabIndex = 1;
             this.btn_F1.UseVisualStyleBackColor = false;
+            this.btn_F1.Click += new System.EventHandler(this.btn_F1_Click);
             // 
             // tableLayoutPanel_R
             // 
@@ -817,100 +875,118 @@
             // 
             this.btn_R9.BackColor = System.Drawing.Color.Green;
             this.btn_R9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_R9.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_R9.Location = new System.Drawing.Point(149, 148);
             this.btn_R9.Margin = new System.Windows.Forms.Padding(1);
             this.btn_R9.Name = "btn_R9";
             this.btn_R9.Size = new System.Drawing.Size(72, 71);
             this.btn_R9.TabIndex = 9;
             this.btn_R9.UseVisualStyleBackColor = false;
+            this.btn_R9.Click += new System.EventHandler(this.btn_R9_Click);
             // 
             // btn_R8
             // 
             this.btn_R8.BackColor = System.Drawing.Color.Green;
             this.btn_R8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_R8.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_R8.Location = new System.Drawing.Point(75, 148);
             this.btn_R8.Margin = new System.Windows.Forms.Padding(1);
             this.btn_R8.Name = "btn_R8";
             this.btn_R8.Size = new System.Drawing.Size(71, 71);
             this.btn_R8.TabIndex = 8;
             this.btn_R8.UseVisualStyleBackColor = false;
+            this.btn_R8.Click += new System.EventHandler(this.btn_R8_Click);
             // 
             // btn_R7
             // 
             this.btn_R7.BackColor = System.Drawing.Color.Green;
             this.btn_R7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_R7.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_R7.Location = new System.Drawing.Point(2, 148);
             this.btn_R7.Margin = new System.Windows.Forms.Padding(1);
             this.btn_R7.Name = "btn_R7";
             this.btn_R7.Size = new System.Drawing.Size(70, 71);
             this.btn_R7.TabIndex = 7;
             this.btn_R7.UseVisualStyleBackColor = false;
+            this.btn_R7.Click += new System.EventHandler(this.btn_R7_Click);
             // 
             // btn_R6
             // 
             this.btn_R6.BackColor = System.Drawing.Color.Green;
             this.btn_R6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_R6.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_R6.Location = new System.Drawing.Point(149, 75);
             this.btn_R6.Margin = new System.Windows.Forms.Padding(1);
             this.btn_R6.Name = "btn_R6";
             this.btn_R6.Size = new System.Drawing.Size(72, 70);
             this.btn_R6.TabIndex = 6;
             this.btn_R6.UseVisualStyleBackColor = false;
+            this.btn_R6.Click += new System.EventHandler(this.btn_R6_Click);
             // 
             // btn_R5
             // 
             this.btn_R5.BackColor = System.Drawing.Color.Green;
             this.btn_R5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_R5.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_R5.Location = new System.Drawing.Point(75, 75);
             this.btn_R5.Margin = new System.Windows.Forms.Padding(1);
             this.btn_R5.Name = "btn_R5";
             this.btn_R5.Size = new System.Drawing.Size(71, 70);
             this.btn_R5.TabIndex = 5;
             this.btn_R5.UseVisualStyleBackColor = false;
+            this.btn_R5.Click += new System.EventHandler(this.btn_R5_Click);
             // 
             // btn_R4
             // 
             this.btn_R4.BackColor = System.Drawing.Color.Green;
             this.btn_R4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_R4.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_R4.Location = new System.Drawing.Point(2, 75);
             this.btn_R4.Margin = new System.Windows.Forms.Padding(1);
             this.btn_R4.Name = "btn_R4";
             this.btn_R4.Size = new System.Drawing.Size(70, 70);
             this.btn_R4.TabIndex = 4;
             this.btn_R4.UseVisualStyleBackColor = false;
+            this.btn_R4.Click += new System.EventHandler(this.btn_R4_Click);
             // 
             // btn_R3
             // 
             this.btn_R3.BackColor = System.Drawing.Color.Green;
             this.btn_R3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_R3.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_R3.Location = new System.Drawing.Point(149, 2);
             this.btn_R3.Margin = new System.Windows.Forms.Padding(1);
             this.btn_R3.Name = "btn_R3";
             this.btn_R3.Size = new System.Drawing.Size(72, 70);
             this.btn_R3.TabIndex = 3;
             this.btn_R3.UseVisualStyleBackColor = false;
+            this.btn_R3.Click += new System.EventHandler(this.btn_R3_Click);
             // 
             // btn_R2
             // 
             this.btn_R2.BackColor = System.Drawing.Color.Green;
             this.btn_R2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_R2.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_R2.Location = new System.Drawing.Point(75, 2);
             this.btn_R2.Margin = new System.Windows.Forms.Padding(1);
             this.btn_R2.Name = "btn_R2";
             this.btn_R2.Size = new System.Drawing.Size(71, 70);
             this.btn_R2.TabIndex = 2;
             this.btn_R2.UseVisualStyleBackColor = false;
+            this.btn_R2.Click += new System.EventHandler(this.btn_R2_Click);
             // 
             // btn_R1
             // 
             this.btn_R1.BackColor = System.Drawing.Color.Green;
             this.btn_R1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_R1.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_R1.Location = new System.Drawing.Point(2, 2);
             this.btn_R1.Margin = new System.Windows.Forms.Padding(1);
             this.btn_R1.Name = "btn_R1";
             this.btn_R1.Size = new System.Drawing.Size(70, 70);
             this.btn_R1.TabIndex = 1;
             this.btn_R1.UseVisualStyleBackColor = false;
+            this.btn_R1.Click += new System.EventHandler(this.btn_R1_Click);
             // 
             // tableLayoutPanel_B
             // 
@@ -944,100 +1020,118 @@
             // 
             this.btn_B9.BackColor = System.Drawing.Color.Red;
             this.btn_B9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_B9.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_B9.Location = new System.Drawing.Point(149, 148);
             this.btn_B9.Margin = new System.Windows.Forms.Padding(1);
             this.btn_B9.Name = "btn_B9";
             this.btn_B9.Size = new System.Drawing.Size(72, 71);
             this.btn_B9.TabIndex = 9;
             this.btn_B9.UseVisualStyleBackColor = false;
+            this.btn_B9.Click += new System.EventHandler(this.btn_B9_Click);
             // 
             // btn_B8
             // 
             this.btn_B8.BackColor = System.Drawing.Color.Red;
             this.btn_B8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_B8.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_B8.Location = new System.Drawing.Point(75, 148);
             this.btn_B8.Margin = new System.Windows.Forms.Padding(1);
             this.btn_B8.Name = "btn_B8";
             this.btn_B8.Size = new System.Drawing.Size(71, 71);
             this.btn_B8.TabIndex = 8;
             this.btn_B8.UseVisualStyleBackColor = false;
+            this.btn_B8.Click += new System.EventHandler(this.btn_B8_Click);
             // 
             // btn_B7
             // 
             this.btn_B7.BackColor = System.Drawing.Color.Red;
             this.btn_B7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_B7.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_B7.Location = new System.Drawing.Point(2, 148);
             this.btn_B7.Margin = new System.Windows.Forms.Padding(1);
             this.btn_B7.Name = "btn_B7";
             this.btn_B7.Size = new System.Drawing.Size(70, 71);
             this.btn_B7.TabIndex = 7;
             this.btn_B7.UseVisualStyleBackColor = false;
+            this.btn_B7.Click += new System.EventHandler(this.btn_B7_Click);
             // 
             // btn_B6
             // 
             this.btn_B6.BackColor = System.Drawing.Color.Red;
             this.btn_B6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_B6.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_B6.Location = new System.Drawing.Point(149, 75);
             this.btn_B6.Margin = new System.Windows.Forms.Padding(1);
             this.btn_B6.Name = "btn_B6";
             this.btn_B6.Size = new System.Drawing.Size(72, 70);
             this.btn_B6.TabIndex = 6;
             this.btn_B6.UseVisualStyleBackColor = false;
+            this.btn_B6.Click += new System.EventHandler(this.btn_B6_Click);
             // 
             // btn_B5
             // 
             this.btn_B5.BackColor = System.Drawing.Color.Red;
             this.btn_B5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_B5.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_B5.Location = new System.Drawing.Point(75, 75);
             this.btn_B5.Margin = new System.Windows.Forms.Padding(1);
             this.btn_B5.Name = "btn_B5";
             this.btn_B5.Size = new System.Drawing.Size(71, 70);
             this.btn_B5.TabIndex = 5;
             this.btn_B5.UseVisualStyleBackColor = false;
+            this.btn_B5.Click += new System.EventHandler(this.btn_B5_Click);
             // 
             // btn_B4
             // 
             this.btn_B4.BackColor = System.Drawing.Color.Red;
             this.btn_B4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_B4.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_B4.Location = new System.Drawing.Point(2, 75);
             this.btn_B4.Margin = new System.Windows.Forms.Padding(1);
             this.btn_B4.Name = "btn_B4";
             this.btn_B4.Size = new System.Drawing.Size(70, 70);
             this.btn_B4.TabIndex = 4;
             this.btn_B4.UseVisualStyleBackColor = false;
+            this.btn_B4.Click += new System.EventHandler(this.btn_B4_Click);
             // 
             // btn_B3
             // 
             this.btn_B3.BackColor = System.Drawing.Color.Red;
             this.btn_B3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_B3.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_B3.Location = new System.Drawing.Point(149, 2);
             this.btn_B3.Margin = new System.Windows.Forms.Padding(1);
             this.btn_B3.Name = "btn_B3";
             this.btn_B3.Size = new System.Drawing.Size(72, 70);
             this.btn_B3.TabIndex = 3;
             this.btn_B3.UseVisualStyleBackColor = false;
+            this.btn_B3.Click += new System.EventHandler(this.btn_B3_Click);
             // 
             // btn_B2
             // 
             this.btn_B2.BackColor = System.Drawing.Color.Red;
             this.btn_B2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_B2.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_B2.Location = new System.Drawing.Point(75, 2);
             this.btn_B2.Margin = new System.Windows.Forms.Padding(1);
             this.btn_B2.Name = "btn_B2";
             this.btn_B2.Size = new System.Drawing.Size(71, 70);
             this.btn_B2.TabIndex = 2;
             this.btn_B2.UseVisualStyleBackColor = false;
+            this.btn_B2.Click += new System.EventHandler(this.btn_B2_Click);
             // 
             // btn_B1
             // 
             this.btn_B1.BackColor = System.Drawing.Color.Red;
             this.btn_B1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_B1.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_B1.Location = new System.Drawing.Point(2, 2);
             this.btn_B1.Margin = new System.Windows.Forms.Padding(1);
             this.btn_B1.Name = "btn_B1";
             this.btn_B1.Size = new System.Drawing.Size(70, 70);
             this.btn_B1.TabIndex = 1;
             this.btn_B1.UseVisualStyleBackColor = false;
+            this.btn_B1.Click += new System.EventHandler(this.btn_B1_Click);
             // 
             // tableLayoutPanel_D
             // 
@@ -1071,100 +1165,118 @@
             // 
             this.btn_D9.BackColor = System.Drawing.Color.Yellow;
             this.btn_D9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_D9.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_D9.Location = new System.Drawing.Point(149, 148);
             this.btn_D9.Margin = new System.Windows.Forms.Padding(1);
             this.btn_D9.Name = "btn_D9";
             this.btn_D9.Size = new System.Drawing.Size(72, 72);
             this.btn_D9.TabIndex = 9;
             this.btn_D9.UseVisualStyleBackColor = false;
+            this.btn_D9.Click += new System.EventHandler(this.btn_D9_Click);
             // 
             // btn_D8
             // 
             this.btn_D8.BackColor = System.Drawing.Color.Yellow;
             this.btn_D8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_D8.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_D8.Location = new System.Drawing.Point(75, 148);
             this.btn_D8.Margin = new System.Windows.Forms.Padding(1);
             this.btn_D8.Name = "btn_D8";
             this.btn_D8.Size = new System.Drawing.Size(71, 72);
             this.btn_D8.TabIndex = 8;
             this.btn_D8.UseVisualStyleBackColor = false;
+            this.btn_D8.Click += new System.EventHandler(this.btn_D8_Click);
             // 
             // btn_D7
             // 
             this.btn_D7.BackColor = System.Drawing.Color.Yellow;
             this.btn_D7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_D7.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_D7.Location = new System.Drawing.Point(2, 148);
             this.btn_D7.Margin = new System.Windows.Forms.Padding(1);
             this.btn_D7.Name = "btn_D7";
             this.btn_D7.Size = new System.Drawing.Size(70, 72);
             this.btn_D7.TabIndex = 7;
             this.btn_D7.UseVisualStyleBackColor = false;
+            this.btn_D7.Click += new System.EventHandler(this.btn_D7_Click);
             // 
             // btn_D6
             // 
             this.btn_D6.BackColor = System.Drawing.Color.Yellow;
             this.btn_D6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_D6.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_D6.Location = new System.Drawing.Point(149, 75);
             this.btn_D6.Margin = new System.Windows.Forms.Padding(1);
             this.btn_D6.Name = "btn_D6";
             this.btn_D6.Size = new System.Drawing.Size(72, 70);
             this.btn_D6.TabIndex = 6;
             this.btn_D6.UseVisualStyleBackColor = false;
+            this.btn_D6.Click += new System.EventHandler(this.btn_D6_Click);
             // 
             // btn_D5
             // 
             this.btn_D5.BackColor = System.Drawing.Color.Yellow;
             this.btn_D5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_D5.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_D5.Location = new System.Drawing.Point(75, 75);
             this.btn_D5.Margin = new System.Windows.Forms.Padding(1);
             this.btn_D5.Name = "btn_D5";
             this.btn_D5.Size = new System.Drawing.Size(71, 70);
             this.btn_D5.TabIndex = 5;
             this.btn_D5.UseVisualStyleBackColor = false;
+            this.btn_D5.Click += new System.EventHandler(this.btn_D5_Click);
             // 
             // btn_D4
             // 
             this.btn_D4.BackColor = System.Drawing.Color.Yellow;
             this.btn_D4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_D4.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_D4.Location = new System.Drawing.Point(2, 75);
             this.btn_D4.Margin = new System.Windows.Forms.Padding(1);
             this.btn_D4.Name = "btn_D4";
             this.btn_D4.Size = new System.Drawing.Size(70, 70);
             this.btn_D4.TabIndex = 4;
             this.btn_D4.UseVisualStyleBackColor = false;
+            this.btn_D4.Click += new System.EventHandler(this.btn_D4_Click);
             // 
             // btn_D3
             // 
             this.btn_D3.BackColor = System.Drawing.Color.Yellow;
             this.btn_D3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_D3.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_D3.Location = new System.Drawing.Point(149, 2);
             this.btn_D3.Margin = new System.Windows.Forms.Padding(1);
             this.btn_D3.Name = "btn_D3";
             this.btn_D3.Size = new System.Drawing.Size(72, 70);
             this.btn_D3.TabIndex = 3;
             this.btn_D3.UseVisualStyleBackColor = false;
+            this.btn_D3.Click += new System.EventHandler(this.btn_D3_Click);
             // 
             // btn_D2
             // 
             this.btn_D2.BackColor = System.Drawing.Color.Yellow;
             this.btn_D2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_D2.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_D2.Location = new System.Drawing.Point(75, 2);
             this.btn_D2.Margin = new System.Windows.Forms.Padding(1);
             this.btn_D2.Name = "btn_D2";
             this.btn_D2.Size = new System.Drawing.Size(71, 70);
             this.btn_D2.TabIndex = 2;
             this.btn_D2.UseVisualStyleBackColor = false;
+            this.btn_D2.Click += new System.EventHandler(this.btn_D2_Click);
             // 
             // btn_D1
             // 
             this.btn_D1.BackColor = System.Drawing.Color.Yellow;
             this.btn_D1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_D1.Font = new System.Drawing.Font("MetaPlusLF", 8F);
             this.btn_D1.Location = new System.Drawing.Point(2, 2);
             this.btn_D1.Margin = new System.Windows.Forms.Padding(1);
             this.btn_D1.Name = "btn_D1";
             this.btn_D1.Size = new System.Drawing.Size(70, 70);
             this.btn_D1.TabIndex = 1;
             this.btn_D1.UseVisualStyleBackColor = false;
+            this.btn_D1.Click += new System.EventHandler(this.btn_D1_Click);
             // 
             // tableLayoutPanel_CamControl
             // 
@@ -1172,7 +1284,7 @@
             this.tableLayoutPanel_CamControl.ColumnCount = 3;
             this.tableLayoutPanel_CamControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel_CamControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel_CamControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
+            this.tableLayoutPanel_CamControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 174F));
             this.tableLayoutPanel_CamControl.Controls.Add(this.lbl_Trigger, 0, 0);
             this.tableLayoutPanel_CamControl.Controls.Add(this.lbl_Light, 1, 0);
             this.tableLayoutPanel_CamControl.Controls.Add(this.lbl_Status, 2, 0);
@@ -1212,7 +1324,7 @@
             this.lbl_Trigger.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_Trigger.Location = new System.Drawing.Point(4, 1);
             this.lbl_Trigger.Name = "lbl_Trigger";
-            this.lbl_Trigger.Size = new System.Drawing.Size(72, 39);
+            this.lbl_Trigger.Size = new System.Drawing.Size(71, 39);
             this.lbl_Trigger.TabIndex = 1;
             this.lbl_Trigger.Text = "触发";
             this.lbl_Trigger.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1220,9 +1332,9 @@
             // lbl_Light
             // 
             this.lbl_Light.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Light.Location = new System.Drawing.Point(83, 1);
+            this.lbl_Light.Location = new System.Drawing.Point(82, 1);
             this.lbl_Light.Name = "lbl_Light";
-            this.lbl_Light.Size = new System.Drawing.Size(72, 39);
+            this.lbl_Light.Size = new System.Drawing.Size(71, 39);
             this.lbl_Light.TabIndex = 2;
             this.lbl_Light.Text = "光源";
             this.lbl_Light.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1230,9 +1342,9 @@
             // lbl_Status
             // 
             this.lbl_Status.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status.Location = new System.Drawing.Point(162, 1);
+            this.lbl_Status.Location = new System.Drawing.Point(160, 1);
             this.lbl_Status.Name = "lbl_Status";
-            this.lbl_Status.Size = new System.Drawing.Size(167, 39);
+            this.lbl_Status.Size = new System.Drawing.Size(169, 39);
             this.lbl_Status.TabIndex = 3;
             this.lbl_Status.Text = "状态";
             this.lbl_Status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1242,7 +1354,7 @@
             this.btn_U.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_U.Location = new System.Drawing.Point(4, 44);
             this.btn_U.Name = "btn_U";
-            this.btn_U.Size = new System.Drawing.Size(72, 33);
+            this.btn_U.Size = new System.Drawing.Size(71, 33);
             this.btn_U.TabIndex = 4;
             this.btn_U.Text = "U";
             this.btn_U.UseVisualStyleBackColor = true;
@@ -1253,7 +1365,7 @@
             this.btn_L.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_L.Location = new System.Drawing.Point(4, 84);
             this.btn_L.Name = "btn_L";
-            this.btn_L.Size = new System.Drawing.Size(72, 33);
+            this.btn_L.Size = new System.Drawing.Size(71, 33);
             this.btn_L.TabIndex = 5;
             this.btn_L.Text = "L";
             this.btn_L.UseVisualStyleBackColor = true;
@@ -1264,7 +1376,7 @@
             this.btn_F.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_F.Location = new System.Drawing.Point(4, 124);
             this.btn_F.Name = "btn_F";
-            this.btn_F.Size = new System.Drawing.Size(72, 33);
+            this.btn_F.Size = new System.Drawing.Size(71, 33);
             this.btn_F.TabIndex = 6;
             this.btn_F.Text = "F";
             this.btn_F.UseVisualStyleBackColor = true;
@@ -1275,7 +1387,7 @@
             this.btn_R.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_R.Location = new System.Drawing.Point(4, 164);
             this.btn_R.Name = "btn_R";
-            this.btn_R.Size = new System.Drawing.Size(72, 33);
+            this.btn_R.Size = new System.Drawing.Size(71, 33);
             this.btn_R.TabIndex = 7;
             this.btn_R.Text = "R";
             this.btn_R.UseVisualStyleBackColor = true;
@@ -1286,7 +1398,7 @@
             this.btn_B.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_B.Location = new System.Drawing.Point(4, 204);
             this.btn_B.Name = "btn_B";
-            this.btn_B.Size = new System.Drawing.Size(72, 33);
+            this.btn_B.Size = new System.Drawing.Size(71, 33);
             this.btn_B.TabIndex = 8;
             this.btn_B.Text = "B";
             this.btn_B.UseVisualStyleBackColor = true;
@@ -1297,7 +1409,7 @@
             this.btn_D.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_D.Location = new System.Drawing.Point(4, 244);
             this.btn_D.Name = "btn_D";
-            this.btn_D.Size = new System.Drawing.Size(72, 37);
+            this.btn_D.Size = new System.Drawing.Size(71, 37);
             this.btn_D.TabIndex = 9;
             this.btn_D.Text = "D";
             this.btn_D.UseVisualStyleBackColor = true;
@@ -1306,7 +1418,7 @@
             // pic_L_U
             // 
             this.pic_L_U.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_U.Location = new System.Drawing.Point(83, 44);
+            this.pic_L_U.Location = new System.Drawing.Point(82, 44);
             this.pic_L_U.Name = "pic_L_U";
             this.pic_L_U.Size = new System.Drawing.Size(39, 30);
             this.pic_L_U.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1317,7 +1429,7 @@
             // pic_L_L
             // 
             this.pic_L_L.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_L.Location = new System.Drawing.Point(83, 84);
+            this.pic_L_L.Location = new System.Drawing.Point(82, 84);
             this.pic_L_L.Name = "pic_L_L";
             this.pic_L_L.Size = new System.Drawing.Size(39, 30);
             this.pic_L_L.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1328,7 +1440,7 @@
             // pic_L_F
             // 
             this.pic_L_F.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_F.Location = new System.Drawing.Point(83, 124);
+            this.pic_L_F.Location = new System.Drawing.Point(82, 124);
             this.pic_L_F.Name = "pic_L_F";
             this.pic_L_F.Size = new System.Drawing.Size(39, 30);
             this.pic_L_F.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1339,7 +1451,7 @@
             // pic_L_R
             // 
             this.pic_L_R.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_R.Location = new System.Drawing.Point(83, 164);
+            this.pic_L_R.Location = new System.Drawing.Point(82, 164);
             this.pic_L_R.Name = "pic_L_R";
             this.pic_L_R.Size = new System.Drawing.Size(39, 30);
             this.pic_L_R.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1350,7 +1462,7 @@
             // pic_L_B
             // 
             this.pic_L_B.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_B.Location = new System.Drawing.Point(83, 204);
+            this.pic_L_B.Location = new System.Drawing.Point(82, 204);
             this.pic_L_B.Name = "pic_L_B";
             this.pic_L_B.Size = new System.Drawing.Size(39, 30);
             this.pic_L_B.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1361,7 +1473,7 @@
             // pic_L_D
             // 
             this.pic_L_D.Image = global::Festo_Rubik_s_Cube_Explorer.Properties.Resources.未就绪;
-            this.pic_L_D.Location = new System.Drawing.Point(83, 244);
+            this.pic_L_D.Location = new System.Drawing.Point(82, 244);
             this.pic_L_D.Name = "pic_L_D";
             this.pic_L_D.Size = new System.Drawing.Size(39, 33);
             this.pic_L_D.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1372,9 +1484,9 @@
             // lbl_Status_U
             // 
             this.lbl_Status_U.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_U.Location = new System.Drawing.Point(162, 41);
+            this.lbl_Status_U.Location = new System.Drawing.Point(160, 41);
             this.lbl_Status_U.Name = "lbl_Status_U";
-            this.lbl_Status_U.Size = new System.Drawing.Size(167, 39);
+            this.lbl_Status_U.Size = new System.Drawing.Size(169, 39);
             this.lbl_Status_U.TabIndex = 16;
             this.lbl_Status_U.Text = "已连接";
             this.lbl_Status_U.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1382,9 +1494,9 @@
             // lbl_Status_L
             // 
             this.lbl_Status_L.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_L.Location = new System.Drawing.Point(162, 81);
+            this.lbl_Status_L.Location = new System.Drawing.Point(160, 81);
             this.lbl_Status_L.Name = "lbl_Status_L";
-            this.lbl_Status_L.Size = new System.Drawing.Size(167, 39);
+            this.lbl_Status_L.Size = new System.Drawing.Size(169, 39);
             this.lbl_Status_L.TabIndex = 17;
             this.lbl_Status_L.Text = "已连接";
             this.lbl_Status_L.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1392,9 +1504,9 @@
             // lbl_Status_F
             // 
             this.lbl_Status_F.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_F.Location = new System.Drawing.Point(162, 121);
+            this.lbl_Status_F.Location = new System.Drawing.Point(160, 121);
             this.lbl_Status_F.Name = "lbl_Status_F";
-            this.lbl_Status_F.Size = new System.Drawing.Size(167, 39);
+            this.lbl_Status_F.Size = new System.Drawing.Size(169, 39);
             this.lbl_Status_F.TabIndex = 18;
             this.lbl_Status_F.Text = "已连接";
             this.lbl_Status_F.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1402,9 +1514,9 @@
             // lbl_Status_R
             // 
             this.lbl_Status_R.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_R.Location = new System.Drawing.Point(162, 161);
+            this.lbl_Status_R.Location = new System.Drawing.Point(160, 161);
             this.lbl_Status_R.Name = "lbl_Status_R";
-            this.lbl_Status_R.Size = new System.Drawing.Size(167, 39);
+            this.lbl_Status_R.Size = new System.Drawing.Size(169, 39);
             this.lbl_Status_R.TabIndex = 19;
             this.lbl_Status_R.Text = "已连接";
             this.lbl_Status_R.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1412,9 +1524,9 @@
             // lbl_Status_B
             // 
             this.lbl_Status_B.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_B.Location = new System.Drawing.Point(162, 201);
+            this.lbl_Status_B.Location = new System.Drawing.Point(160, 201);
             this.lbl_Status_B.Name = "lbl_Status_B";
-            this.lbl_Status_B.Size = new System.Drawing.Size(167, 39);
+            this.lbl_Status_B.Size = new System.Drawing.Size(169, 39);
             this.lbl_Status_B.TabIndex = 20;
             this.lbl_Status_B.Text = "已连接";
             this.lbl_Status_B.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1422,9 +1534,9 @@
             // lbl_Status_D
             // 
             this.lbl_Status_D.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Status_D.Location = new System.Drawing.Point(162, 241);
+            this.lbl_Status_D.Location = new System.Drawing.Point(160, 241);
             this.lbl_Status_D.Name = "lbl_Status_D";
-            this.lbl_Status_D.Size = new System.Drawing.Size(167, 43);
+            this.lbl_Status_D.Size = new System.Drawing.Size(169, 43);
             this.lbl_Status_D.TabIndex = 21;
             this.lbl_Status_D.Text = "已连接";
             this.lbl_Status_D.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3225,6 +3337,7 @@
             this.btn_Solve.TabIndex = 7;
             this.btn_Solve.Text = "解魔方";
             this.btn_Solve.UseVisualStyleBackColor = true;
+            this.btn_Solve.Click += new System.EventHandler(this.btn_Solve_Click);
             // 
             // btn_Exit
             // 
@@ -3243,6 +3356,7 @@
             this.btn_Acquire.TabIndex = 3;
             this.btn_Acquire.Text = "相机取像";
             this.btn_Acquire.UseVisualStyleBackColor = true;
+            this.btn_Acquire.Click += new System.EventHandler(this.btn_Acquire_Click);
             // 
             // btn_2_P_Acquire
             // 
@@ -3319,6 +3433,7 @@
             this.Load += new System.EventHandler(this.Form_Manual_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage_Cam.ResumeLayout(false);
+            this.tabPage_Cam.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel_Cube.ResumeLayout(false);
             this.tableLayoutPanel_U.ResumeLayout(false);
@@ -3619,5 +3734,6 @@
         private System.Windows.Forms.Button btn_EnableAll;
         private System.Windows.Forms.Button btn_ResetAll;
         private System.Windows.Forms.Button btn_Stop;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

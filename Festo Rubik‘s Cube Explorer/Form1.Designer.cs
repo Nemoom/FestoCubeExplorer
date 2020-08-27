@@ -1027,7 +1027,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 46);
             this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
+            this.button1.Text = "Solve";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -1037,14 +1037,15 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(620, 30);
             this.textBox2.TabIndex = 3;
+            this.textBox2.Text = "U R U2 R L2 U L F\' R\' B\' R\' B2 U R2 U R2 U2 F2 D B2";
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(47, 59);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(86, 44);
             this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
+            this.button2.Text = "Trigger";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -1166,10 +1167,10 @@
         private System.Windows.Forms.Button btn_D1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.Button button2;
     }
 }
 

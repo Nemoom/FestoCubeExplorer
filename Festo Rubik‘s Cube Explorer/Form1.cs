@@ -78,12 +78,13 @@ namespace Festo_Rubik_s_Cube_Explorer
             m_OpcUaClient.OpcStatusChange += M_OpcUaClient_OpcStatusChange;
 
             button4_Click(sender, e);
-            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_U, false);
-            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_D, false);
-            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_L, false);
-            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_R, false);
-            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_F, false);
-            Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_B, false);
+            //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_U, false);
+            //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_D, false);
+            //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_L, false);
+            //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_R, false);
+            //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_F, false);
+            //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_B, false);
+            ResetAllCamTrigger();
         }
 
         private void M_OpcUaClient_OpcStatusChange(object sender, OpcUaStatusEventArgs e)
@@ -495,11 +496,17 @@ namespace Festo_Rubik_s_Cube_Explorer
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //ushort[] m = m_Master_CamR.ReadHoldingRegisters(1, 10079, 10);
-            //button2.Text = m[0].ToString();
+        public void button2_Click(object sender, EventArgs e)
+        {            
+            CamTrigger(CamID.CamU);
+            CamTrigger(CamID.CamD);
+            CamTrigger(CamID.CamL);
             CamTrigger(CamID.CamR);
+            CamTrigger(CamID.CamF);
+            CamTrigger(CamID.CamB);
+            ColorDisplay();
+            tableLayoutPanel_Cube_DoubleClick(sender, e);
+            button1_Click(sender, e);
         }
 
         /// <summary>
@@ -587,6 +594,56 @@ namespace Festo_Rubik_s_Cube_Explorer
             //}
         }
 
+        public static void ResetCamTrigger(CamID mCamID)
+        {
+            try
+            {
+                switch (mCamID)
+                {
+                    case CamID.CamU:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_U, false);
+                        break;
+                    case CamID.CamD:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_D, false);
+                        break;
+                    case CamID.CamL:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_L, false);
+                        break;
+                    case CamID.CamR:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_R, false);
+                        break;
+                    case CamID.CamF:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_F, false);
+                        break;
+                    case CamID.CamB:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_B, false);
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        public static void ResetAllCamTrigger()
+        {
+            try
+            {
+                Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_U, false);
+                Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_D, false);
+                Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_L, false);
+                Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_R, false);
+                Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_F, false);
+                Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_B, false);               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -635,33 +692,21 @@ namespace Festo_Rubik_s_Cube_Explorer
                 {
                     case CamID.CamU:
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_U, false);
-                        //Thread.Sleep(100);
-                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_U, false);
                         break;
                     case CamID.CamD:
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_D, false);
-                        //Thread.Sleep(100);
-                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_D, false);
                         break;
                     case CamID.CamL:
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_L, false);
-                        //Thread.Sleep(100);
-                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_L, false);
                         break;
                     case CamID.CamR:
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_R, false);
-                        //Thread.Sleep(100);
-                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_R, false);
                         break;
                     case CamID.CamF:
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_F, false);
-                        //Thread.Sleep(100);
-                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_F, false);
                         break;
                     case CamID.CamB:
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_B, false);
-                        //Thread.Sleep(100);
-                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_B, false);
                         break;
                 }
             }
@@ -1174,15 +1219,15 @@ namespace Festo_Rubik_s_Cube_Explorer
 
         public void OriginalColorDisplay()
         {
-            OriginalColorDisplay(CamID.CamU, 1, GetRGBvalue(CamID.CamU, 1));
-            OriginalColorDisplay(CamID.CamU, 2, GetRGBvalue(CamID.CamU, 2));
-            OriginalColorDisplay(CamID.CamU, 3, GetRGBvalue(CamID.CamU, 3));
-            OriginalColorDisplay(CamID.CamU, 4, GetRGBvalue(CamID.CamU, 4));
+            OriginalColorDisplay(CamID.CamU, 1, GetRGBvalue(CamID.CamU, 9));
+            OriginalColorDisplay(CamID.CamU, 2, GetRGBvalue(CamID.CamU, 8));
+            OriginalColorDisplay(CamID.CamU, 3, GetRGBvalue(CamID.CamU, 7));
+            OriginalColorDisplay(CamID.CamU, 4, GetRGBvalue(CamID.CamU, 6));
             OriginalColorDisplay(CamID.CamU, 5, GetRGBvalue(CamID.CamU, 5));
-            OriginalColorDisplay(CamID.CamU, 6, GetRGBvalue(CamID.CamU, 6));
-            OriginalColorDisplay(CamID.CamU, 7, GetRGBvalue(CamID.CamU, 7));
-            OriginalColorDisplay(CamID.CamU, 8, GetRGBvalue(CamID.CamU, 8));
-            OriginalColorDisplay(CamID.CamU, 9, GetRGBvalue(CamID.CamU, 9));
+            OriginalColorDisplay(CamID.CamU, 6, GetRGBvalue(CamID.CamU, 4));
+            OriginalColorDisplay(CamID.CamU, 7, GetRGBvalue(CamID.CamU, 3));
+            OriginalColorDisplay(CamID.CamU, 8, GetRGBvalue(CamID.CamU, 2));
+            OriginalColorDisplay(CamID.CamU, 9, GetRGBvalue(CamID.CamU, 1));
 
             OriginalColorDisplay(CamID.CamD, 1, GetRGBvalue(CamID.CamD, 1));
             OriginalColorDisplay(CamID.CamD, 2, GetRGBvalue(CamID.CamD, 2));
@@ -1237,15 +1282,15 @@ namespace Festo_Rubik_s_Cube_Explorer
 
         public void ColorDisplay()
         {
-            ColorDisplay(CamID.CamU, 1, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 1)));
-            ColorDisplay(CamID.CamU, 2, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 2)));
-            ColorDisplay(CamID.CamU, 3, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 3)));
-            ColorDisplay(CamID.CamU, 4, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 4)));
+            ColorDisplay(CamID.CamU, 1, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 9)));
+            ColorDisplay(CamID.CamU, 2, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 8)));
+            ColorDisplay(CamID.CamU, 3, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 7)));
+            ColorDisplay(CamID.CamU, 4, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 6)));
             ColorDisplay(CamID.CamU, 5, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 5)));
-            ColorDisplay(CamID.CamU, 6, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 6)));
-            ColorDisplay(CamID.CamU, 7, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 7)));
-            ColorDisplay(CamID.CamU, 8, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 8)));
-            ColorDisplay(CamID.CamU, 9, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 9)));
+            ColorDisplay(CamID.CamU, 6, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 4)));
+            ColorDisplay(CamID.CamU, 7, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 3)));
+            ColorDisplay(CamID.CamU, 8, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 2)));
+            ColorDisplay(CamID.CamU, 9, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 1)));
        
             ColorDisplay(CamID.CamD, 1, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 1)));
             ColorDisplay(CamID.CamD, 2, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 2)));
@@ -1364,7 +1409,7 @@ namespace Festo_Rubik_s_Cube_Explorer
 
         private void button3_Click(object sender, EventArgs e)
         {
-            new Form_Manual().Show();
+            new Form_Manual(this).Show();
         }
 
         private async void button4_Click(object sender, EventArgs e)

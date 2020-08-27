@@ -173,6 +173,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 }
             }
             MessageBox.Show("保存成功~");
+            GlobalVariables.LoadParasFromXML();
         }
 
         private void Form_ColorLearning_Load(object sender, EventArgs e)
