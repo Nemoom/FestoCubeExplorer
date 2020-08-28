@@ -5,18 +5,18 @@
       <Red>
         <R_min>150</R_min>
         <R_max>255</R_max>
-        <G_min>80</G_min>
-        <G_max>140</G_max>
-        <B_min>60</B_min>
-        <B_max>120</B_max>
+        <G_min>100</G_min>
+        <G_max>150</G_max>
+        <B_min>80</B_min>
+        <B_max>130</B_max>
       </Red>
       <Green>
-        <R_min>40</R_min>
-        <R_max>120</R_max>
-        <G_min>95</G_min>
-        <G_max>170</G_max>
-        <B_min>60</B_min>
-        <B_max>130</B_max>
+        <R_min>55</R_min>
+        <R_max>135</R_max>
+        <G_min>105</G_min>
+        <G_max>185</G_max>
+        <B_min>70</B_min>
+        <B_max>140</B_max>
       </Green>
       <Blue>
         <R_min>65</R_min>
@@ -37,10 +37,10 @@
       <Orange>
         <R_min>150</R_min>
         <R_max>255</R_max>
-        <G_min>120</G_min>
-        <G_max>200</G_max>
-        <B_min>70</B_min>
-        <B_max>135</B_max>
+        <G_min>140</G_min>
+        <G_max>210</G_max>
+        <B_min>80</B_min>
+        <B_max>150</B_max>
       </Orange>
       <Yellow>
         <R_min>210</R_min>
@@ -48,7 +48,7 @@
         <G_min>205</G_min>
         <G_max>255</G_max>
         <B_min>100</B_min>
-        <B_max>190</B_max>
+        <B_max>200</B_max>
       </Yellow>
     </ColorMatch>
   </CamU>
@@ -183,11 +183,11 @@
         <B_max>175</B_max>
       </Blue>
       <White>
-        <R_min>220</R_min>
+        <R_min>200</R_min>
         <R_max>255</R_max>
-        <G_min>220</G_min>
+        <G_min>200</G_min>
         <G_max>255</G_max>
-        <B_min>220</B_min>
+        <B_min>200</B_min>
         <B_max>255</B_max>
       </White>
       <Orange>
@@ -216,7 +216,7 @@
         <G_min>50</G_min>
         <G_max>110</G_max>
         <B_min>40</B_min>
-        <B_max>95</B_max>
+        <B_max>99</B_max>
       </Red>
       <Green>
         <R_min>40</R_min>
@@ -273,18 +273,18 @@
       <Green>
         <R_min>40</R_min>
         <R_max>95</R_max>
-        <G_min>90</G_min>
+        <G_min>95</G_min>
         <G_max>165</G_max>
         <B_min>60</B_min>
-        <B_max>120</B_max>
+        <B_max>110</B_max>
       </Green>
       <Blue>
-        <R_min>30</R_min>
-        <R_max>75</R_max>
-        <G_min>45</G_min>
-        <G_max>85</G_max>
-        <B_min>80</B_min>
-        <B_max>120</B_max>
+        <R_min>50</R_min>
+        <R_max>95</R_max>
+        <G_min>75</G_min>
+        <G_max>130</G_max>
+        <B_min>100</B_min>
+        <B_max>150</B_max>
       </Blue>
       <White>
         <R_min>220</R_min>
@@ -317,10 +317,10 @@
 		  2
 	  </positionTolerance>
     <CWgap>
-		  8
+		  7
 	  </CWgap>
     <CCWgap>
-		  8
+		  7
 	  </CCWgap>
     <Vel>
 	  20000
@@ -335,16 +335,16 @@
 	  100000
 	</Jerk>
     <Vel_Rotate>
-		5000000
+		80000000
 	</Vel_Rotate>
     <Acc_Rotate>
-		200000
+		80000000
 	</Acc_Rotate>
     <Dec_Rotate>
-		200000
+		80000000
 	</Dec_Rotate>
     <Jerk_Rotate>
-		1000000
+		1700000
 	</Jerk_Rotate>
     <!--上料位/下料位-->
     <Feeding>
