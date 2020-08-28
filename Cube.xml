@@ -7,7 +7,7 @@
         <R_max>255</R_max>
         <G_min>80</G_min>
         <G_max>140</G_max>
-        <B_min>70</B_min>
+        <B_min>60</B_min>
         <B_max>120</B_max>
       </Red>
       <Green>
@@ -58,7 +58,7 @@
         <R_min>100</R_min>
         <R_max>190</R_max>
         <G_min>50</G_min>
-        <G_max>110</G_max>
+        <G_max>100</G_max>
         <B_min>40</B_min>
         <B_max>95</B_max>
       </Red>
@@ -229,7 +229,7 @@
       <Blue>
         <R_min>45</R_min>
         <R_max>95</R_max>
-        <G_min>75</G_min>
+        <G_min>70</G_min>
         <G_max>120</G_max>
         <B_min>100</B_min>
         <B_max>175</B_max>
@@ -323,17 +323,29 @@
 		  8
 	  </CCWgap>
     <Vel>
-	  10000
+	  20000
 	</Vel>
     <Acc>
-	  100
+	  500
 	</Acc>
     <Dec>
-	  100
+	  500
 	</Dec>
     <Jerk>
 	  100000
 	</Jerk>
+    <Vel_Rotate>
+		5000000
+	</Vel_Rotate>
+    <Acc_Rotate>
+		200000
+	</Acc_Rotate>
+    <Dec_Rotate>
+		200000
+	</Dec_Rotate>
+    <Jerk_Rotate>
+		1000000
+	</Jerk_Rotate>
     <!--上料位/下料位-->
     <Feeding>
       <i_Enable>

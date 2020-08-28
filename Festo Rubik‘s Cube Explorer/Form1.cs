@@ -18,6 +18,7 @@ namespace Festo_Rubik_s_Cube_Explorer
 {
     public partial class Form1 : Form
     {
+        Form_Manual mForm_Manual;
         public Form1()
         {
             InitializeComponent();
@@ -46,6 +47,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             m_Master_CamR = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamR);
             m_Master_CamF = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamF);
             m_Master_CamB = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamB);
+            mForm_Manual = new Form_Manual(this);
         }
 
         public static OpcUaClient m_OpcUaClient;
@@ -1409,7 +1411,7 @@ namespace Festo_Rubik_s_Cube_Explorer
 
         private void button3_Click(object sender, EventArgs e)
         {
-            new Form_Manual(this).Show();
+            mForm_Manual.Show();
         }
 
         private async void button4_Click(object sender, EventArgs e)
@@ -1423,6 +1425,11 @@ namespace Festo_Rubik_s_Cube_Explorer
             {
                 ClientUtils.HandleException("Connected Failed", ex);
             }
+        }
+
+        private void btn_Start_Click(object sender, EventArgs e)
+        {
+            mForm_Manual.btn_Start_Click(sender, e);
         }
     }
 }
