@@ -98,8 +98,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btn_Start = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_TotalTime = new System.Windows.Forms.Label();
+            this.lbl_StepTime = new System.Windows.Forms.Label();
+            this.lbl_ProcessTime = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel_Cube.SuspendLayout();
             this.tableLayoutPanel_U.SuspendLayout();
@@ -1082,31 +1083,41 @@
             this.btn_Start.UseVisualStyleBackColor = true;
             this.btn_Start.Click += new System.EventHandler(this.btn_Start_Click);
             // 
-            // label1
+            // lbl_TotalTime
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 403);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 23);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "label1";
+            this.lbl_TotalTime.AutoSize = true;
+            this.lbl_TotalTime.Location = new System.Drawing.Point(31, 414);
+            this.lbl_TotalTime.Name = "lbl_TotalTime";
+            this.lbl_TotalTime.Size = new System.Drawing.Size(90, 23);
+            this.lbl_TotalTime.TabIndex = 8;
+            this.lbl_TotalTime.Text = "动作时间";
             // 
-            // label2
+            // lbl_StepTime
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 440);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 23);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "label2";
+            this.lbl_StepTime.AutoSize = true;
+            this.lbl_StepTime.Location = new System.Drawing.Point(31, 451);
+            this.lbl_StepTime.Name = "lbl_StepTime";
+            this.lbl_StepTime.Size = new System.Drawing.Size(90, 23);
+            this.lbl_StepTime.TabIndex = 9;
+            this.lbl_StepTime.Text = "单步计时";
+            // 
+            // lbl_ProcessTime
+            // 
+            this.lbl_ProcessTime.AutoSize = true;
+            this.lbl_ProcessTime.Location = new System.Drawing.Point(31, 377);
+            this.lbl_ProcessTime.Name = "lbl_ProcessTime";
+            this.lbl_ProcessTime.Size = new System.Drawing.Size(90, 23);
+            this.lbl_ProcessTime.TabIndex = 10;
+            this.lbl_ProcessTime.Text = "整体节拍";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(826, 611);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_ProcessTime);
+            this.Controls.Add(this.lbl_StepTime);
+            this.Controls.Add(this.lbl_TotalTime);
             this.Controls.Add(this.btn_Start);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -1206,8 +1217,9 @@
         public System.Windows.Forms.TextBox textBox2;
         public System.Windows.Forms.Button button2;
         public System.Windows.Forms.Button btn_Start;
-        public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label lbl_TotalTime;
+        public System.Windows.Forms.Label lbl_StepTime;
+        public System.Windows.Forms.Label lbl_ProcessTime;
     }
 }
 

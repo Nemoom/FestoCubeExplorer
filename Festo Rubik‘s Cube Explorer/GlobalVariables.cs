@@ -1491,6 +1491,7 @@ namespace Festo_Rubik_s_Cube_Explorer
 
     public enum FaceColor
     {
+        Black = 0,
         Red = 1,
         Green = 2,
         Blue = 3,

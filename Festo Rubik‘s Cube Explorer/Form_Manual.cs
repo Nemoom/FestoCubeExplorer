@@ -5204,7 +5204,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                         Thread.Sleep(1000);
                         updateAxisStatus();
                     }
-                    AllLightOn();
+                    
                     if (GlobalVariables.servo_Feeding.b_P2)
                     {
                         IOlinkAxisOut(5);//5个相机工作位  
@@ -5213,7 +5213,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                     {
                         MessageBox.Show("上料轴未到拍照位，相机不能升起");
                     }
-                    
+                    AllLightOn();
                 }
                 else
                 {
@@ -5347,23 +5347,31 @@ namespace Festo_Rubik_s_Cube_Explorer
             //ServoGotoWithoutCheck("servo_D_Grab", 3);
             //Thread.Sleep(100);
             //ServoGotoWithoutCheck("servo_U_Grab", 3);
-            ServoGoto(2, 3);            
+            ServoGoto(2, 3);      //上下杆同步运动      
             updateAxisStatus();
             while(!(GlobalVariables.servo_D_Grab.b_P3 && GlobalVariables.servo_U_Grab.b_P3))
             { 
-                Thread.Sleep(100);
+                Thread.Sleep(50);
                 updateAxisStatus();
             }            
             ServoGotoWithoutCheck("servo_U_Grab", 1);
-            ServoGotoWithoutCheck("servo_D_Grab", 1);
+            ServoGotoWithoutCheck("servo_D_Grab", 1);           
             updateAxisStatus();
             while (!(GlobalVariables.servo_D_Grab.b_P1 && GlobalVariables.servo_U_Grab.b_P1))
             {
-                Thread.Sleep(100);
+                Thread.Sleep(50);
                 updateAxisStatus();
             }
+            //旋转杆归零
+            ServoGotoWithoutCheck("servo_L_Rotate", 0);
+            ServoGotoWithoutCheck("servo_R_Rotate", 0);
+            ServoGotoWithoutCheck("servo_F_Rotate", 0);
+            ServoGotoWithoutCheck("servo_B_Rotate", 0);
+            ServoGotoWithoutCheck("servo_U_Rotate", 0);
+            ServoGotoWithoutCheck("servo_D_Rotate", 0);
             IOlinkAxisIn(1);//托盘位置至0度位
             ServoGoto("servo_Feeding", 1);
+            ProcessEndTime = DateTime.Now;
         }
 
         public static bool RotateTo(string str_Rotate, bool b_FirstRotate = false, bool b_ChangeDirection = false)
@@ -6231,24 +6239,24 @@ namespace Festo_Rubik_s_Cube_Explorer
                 return 0;
             }
         }
-
+        DateTime ProcessStartTime = DateTime.Now;
+        DateTime ProcessEndTime = DateTime.Now;
         public void btn_Start_Click(object sender, EventArgs e)
         {
+            ProcessStartTime = DateTime.Now;
             btn_2_P_Acquire_Click(sender, e);            
             btn_Acquire_Click(sender, e);
-            Thread.Sleep(100);
-            btn_Acquire_Click(sender, e);
-            Thread.Sleep(100);
-            btn_Acquire_Click(sender, e);
+            //等待魔方解法计算
             while (form1.textBox2.Text == "")
             {
-                Thread.Sleep(100);
+                Thread.Sleep(50);
             }
+            form1.Update();
             if (form1.textBox2.Text != "" && form1.textBox2.Text.Split(' ')[0] != "Unsolvable")
             {
                 btn_2_P_Rotate_Click(sender, e);
                 DateTime mStartTime = DateTime.Now;
-                int StepCount=CubeSolve2();
+                int StepCount = CubeSolve2();
                 //string[] mSteps = form1.textBox2.Text.Split(' ');
                 //for (int stepIndex = 0; stepIndex < mSteps.Length; stepIndex++)
                 //{
@@ -6301,9 +6309,10 @@ namespace Festo_Rubik_s_Cube_Explorer
                 //    }
                 //}
                 DateTime mEndTime = DateTime.Now;
-                form1.label1.Text = (mEndTime - mStartTime).ToString();
-                form1.label2.Text = StepCount.ToString()+" "+((mEndTime - mStartTime).TotalMilliseconds / StepCount).ToString();
+                form1.lbl_TotalTime.Text = (mEndTime - mStartTime).ToString();
+                form1.lbl_StepTime.Text = StepCount.ToString() + " " + ((mEndTime - mStartTime).TotalMilliseconds / StepCount).ToString();
                 btn_CubeBack_Click(sender, e);
+                form1.lbl_ProcessTime.Text = (ProcessEndTime - ProcessStartTime).ToString();
             }
             else
             {

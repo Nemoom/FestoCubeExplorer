@@ -63,6 +63,14 @@ namespace Festo_Rubik_s_Cube_Explorer
         public static Modbus.Device.ModbusIpMaster m_Master_CamR;
         public static Modbus.Device.ModbusIpMaster m_Master_CamF; 
         public static Modbus.Device.ModbusIpMaster m_Master_CamB;
+
+        public bool CamError = false;
+        public bool CamU_Done = false;
+        public bool CamD_Done = false;
+        public bool CamL_Done = false;
+        public bool CamR_Done = false;
+        public bool CamF_Done = false; 
+        public bool CamB_Done = false;
         private void Form1_Load(object sender, EventArgs e)
         {
            
@@ -86,7 +94,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_R, false);
             //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_F, false);
             //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_B, false);
-            ResetAllCamTrigger();
+            
         }
 
         private void M_OpcUaClient_OpcStatusChange(object sender, OpcUaStatusEventArgs e)
@@ -95,6 +103,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             {
                 InvokeChangeButtonText(button4, "Disconnect");
                 //button1.Text = "Disconnect";
+             
             }
             else
             {
@@ -115,8 +124,28 @@ namespace Festo_Rubik_s_Cube_Explorer
         }
         #endregion
 
+        #region InvokeChangeButtonColor
+        protected delegate void ChangeButtonColorHandler(Button buttonCtrl, Color Col);
+        void InvokeChangeButtonColor(Button buttonCtrl, Color Col)
+        {
+            buttonCtrl.Invoke((ChangeButtonColorHandler)ChangeButtonCtrlColor, buttonCtrl, Col);
+        }
+        void ChangeButtonCtrlColor(Button buttonCtrl, Color Col)
+        {
+            buttonCtrl.BackColor = Col;
+        }
+        #endregion
+
+
         private void M_OpcUaClient_ConnectComplete(object sender, EventArgs e)
         {
+            if (Form1.m_OpcUaClient.Connected)
+            {
+                ResetAllCamTrigger();
+                Form_Manual.EmergencyStop();
+                Form_Manual.ResetAll();
+                Form_Manual.EnableAll();
+            }            
             //throw new NotImplementedException();
         }
 
@@ -499,7 +528,28 @@ namespace Festo_Rubik_s_Cube_Explorer
         }
 
         public void button2_Click(object sender, EventArgs e)
-        {            
+        {
+            CamError = false;
+            CamU_Done = false;
+            CamD_Done = false;
+            CamL_Done = false;
+            CamR_Done = false;
+            CamF_Done = false;
+            CamB_Done = false;
+            CamTrigger(CamID.CamU);
+            CamTrigger(CamID.CamD);
+            CamTrigger(CamID.CamL);
+            CamTrigger(CamID.CamR);
+            CamTrigger(CamID.CamF);
+            CamTrigger(CamID.CamB);
+
+            //CamTrigger(CamID.CamU);
+            //CamTrigger(CamID.CamD);
+            //CamTrigger(CamID.CamL);
+            //CamTrigger(CamID.CamR);
+            //CamTrigger(CamID.CamF);
+            //CamTrigger(CamID.CamB);
+
             CamTrigger(CamID.CamU);
             CamTrigger(CamID.CamD);
             CamTrigger(CamID.CamL);
@@ -507,8 +557,72 @@ namespace Festo_Rubik_s_Cube_Explorer
             CamTrigger(CamID.CamF);
             CamTrigger(CamID.CamB);
             ColorDisplay();
-            tableLayoutPanel_Cube_DoubleClick(sender, e);
-            button1_Click(sender, e);
+            ////ThreadStart start_CamU = delegate
+            ////{
+            ////    ColorDisplayU(CamID.CamU);
+            ////};
+            //Thread tStartCamU = new Thread(new ParameterizedThreadStart(CamColorDisplay));
+            //tStartCamU.IsBackground = true;
+            //tStartCamU.Priority = ThreadPriority.AboveNormal;
+            //tStartCamU.Start(CamID.CamU);
+
+            ////ThreadStart start_CamD = delegate
+            ////{
+            ////    ColorDisplayD(CamID.CamD);
+            ////};
+            //Thread tStartCamD = new Thread(new ParameterizedThreadStart(CamColorDisplay));
+            //tStartCamD.IsBackground = true;
+            //tStartCamD.Priority = ThreadPriority.AboveNormal;
+            //tStartCamD.Start(CamID.CamD);
+
+            ////ThreadStart start_CamL = delegate
+            ////{
+            ////    ColorDisplay(CamID.CamL);
+            ////};
+            //Thread tStartCamL = new Thread(new ParameterizedThreadStart(CamColorDisplay));
+            //tStartCamL.IsBackground = true;
+            //tStartCamL.Priority = ThreadPriority.AboveNormal;
+            //tStartCamL.Start(CamID.CamL);
+
+            ////ThreadStart start_CamR = delegate
+            ////{
+            ////    ColorDisplay(CamID.CamR);
+            ////};
+            //Thread tStartCamR = new Thread(new ParameterizedThreadStart(CamColorDisplay));
+            //tStartCamR.IsBackground = true;
+            //tStartCamR.Priority = ThreadPriority.AboveNormal;
+            //tStartCamR.Start(CamID.CamR);
+
+            ////ThreadStart start_CamF = delegate
+            ////{
+            ////    ColorDisplay(CamID.CamF);
+            ////};
+            //Thread tStartCamF = new Thread(new ParameterizedThreadStart(CamColorDisplay));
+            //tStartCamF.IsBackground = true;
+            //tStartCamF.Priority = ThreadPriority.AboveNormal;
+            //tStartCamF.Start(CamID.CamF);
+
+            ////ThreadStart start_CamB = delegate
+            ////{
+            ////    ColorDisplay(CamID.CamB);
+            ////};
+            //Thread tStartCamB = new Thread(new ParameterizedThreadStart(CamColorDisplay));
+            //tStartCamB.IsBackground = true;
+            //tStartCamB.Priority = ThreadPriority.AboveNormal;
+            //tStartCamB.Start(CamID.CamB);
+            //while (!(CamU_Done && CamD_Done && CamL_Done && CamR_Done && CamF_Done && CamB_Done))
+            //{
+            //    Thread.Sleep(100);
+            //}
+            if (!CamError)
+            {
+                tableLayoutPanel_Cube_DoubleClick(sender, e);//生成魔方颜色描述字符串
+                button1_Click(sender, e);//生成解魔方算法
+            }
+            else
+            {
+                textBox2.Text = "Unsolvable ";
+            }
         }
 
         /// <summary>
@@ -522,34 +636,34 @@ namespace Festo_Rubik_s_Cube_Explorer
                 switch (mCamID)
                 {
                     case CamID.CamU:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_U, false);
+                        Thread.Sleep(100);
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_U, true);
-                        //Thread.Sleep(100);
-                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_U, false);
                         break;
                     case CamID.CamD:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_D, false);
+                        Thread.Sleep(100);
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_D, true);
-                        //Thread.Sleep(100);
-                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_D, false);
                         break;
                     case CamID.CamL:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_L, false);
+                        Thread.Sleep(100);
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_L, true);
-                        //Thread.Sleep(100);
-                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_L, false);
                         break;
                     case CamID.CamR:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_R, false);
+                        Thread.Sleep(100);
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_R, true);
-                        //Thread.Sleep(100);
-                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_R, false);
                         break;
                     case CamID.CamF:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_F, false);
+                        Thread.Sleep(100);
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_F, true);
-                        //Thread.Sleep(100);
-                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_F, false);
                         break;
                     case CamID.CamB:
+                        Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_B, false);
+                        Thread.Sleep(100);
                         Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_B, true);
-                        //Thread.Sleep(100);
-                        //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_B, false);
                         break;
                 }
             }
@@ -557,7 +671,8 @@ namespace Festo_Rubik_s_Cube_Explorer
             {
                 MessageBox.Show(ex.ToString());
             }
-            
+
+            #region 放弃：ModbusTCP触发无效
             //ModbusIpMaster m_Master_Cam = null;
             //switch (mCamID)
             //{
@@ -593,7 +708,8 @@ namespace Festo_Rubik_s_Cube_Explorer
             //    {
             //        MessageBox.Show(ex.ToString());
             //    }
-            //}
+            //} 
+            #endregion
         }
 
         public static void ResetCamTrigger(CamID mCamID)
@@ -683,11 +799,24 @@ namespace Festo_Rubik_s_Cube_Explorer
             if (m_Master_Cam != null)
             {
                 ushort startAddress = (ushort)(10000 + (BlockID - 1) * 3 * 100);
-                ushort[] m_R = m_Master_Cam.ReadHoldingRegisters(1, (ushort)(startAddress + 79), 1);
-                ushort[] m_G = m_Master_Cam.ReadHoldingRegisters(1, (ushort)(startAddress + 179), 1);
-                ushort[] m_B = m_Master_Cam.ReadHoldingRegisters(1, (ushort)(startAddress + 279), 1);
-                r_Color = Color.FromArgb(m_R[0], m_G[0], m_B[0]);
+                //ushort[] m_R = m_Master_Cam.ReadHoldingRegisters(1, (ushort)(startAddress + 79), 1);
+                //ushort[] m_G = m_Master_Cam.ReadHoldingRegisters(1, (ushort)(startAddress + 179), 1);
+                //ushort[] m_B = m_Master_Cam.ReadHoldingRegisters(1, (ushort)(startAddress + 279), 1);
+                //r_Color = Color.FromArgb(m_R[0], m_G[0], m_B[0]);
+                ushort[] m_R = m_Master_Cam.ReadHoldingRegisters(1, (ushort)(startAddress + 76), 5);
+                ushort[] m_G = m_Master_Cam.ReadHoldingRegisters(1, (ushort)(startAddress + 176), 5);
+                ushort[] m_B = m_Master_Cam.ReadHoldingRegisters(1, (ushort)(startAddress + 276), 5);
+                if (m_R[0] == 1 && m_G[0] == 1 && m_B[0] == 1)
+                {
+                    r_Color = Color.FromArgb(m_R[3], m_G[3], m_B[3]);
+                }
+                else
+                {
+                    r_Color = Color.FromArgb(0,0,0);//返回“黑色”
+                }
             }
+
+            //清除6个相机触发的高电平
             try
             {
                 switch (mCamID)
@@ -723,6 +852,10 @@ namespace Festo_Rubik_s_Cube_Explorer
         {
             FaceColor r_FaceColor = 0;
             ColorMatch mColorMatch = new ColorMatch();
+            if (mColor.R == 0 && mColor.G == 0 && mColor.B == 0)
+            {
+                return FaceColor.Black;
+            }
             switch (mCamID)
             {
                 case CamID.CamU:
@@ -1197,24 +1330,33 @@ namespace Festo_Rubik_s_Cube_Explorer
             switch (mFaceColor)
             {
                 case FaceColor.Red:
-                    mBtn.BackColor = Color.Red;
+                    InvokeChangeButtonColor(mBtn, Color.Red);
+                    //mBtn.BackColor = Color.Red;
                     break;
                 case FaceColor.Green:
-                    mBtn.BackColor = Color.Green;
+                    InvokeChangeButtonColor(mBtn, Color.Green);
+                    //mBtn.BackColor = Color.Green;
                     break;
                 case FaceColor.Blue:
-                    mBtn.BackColor = Color.Blue;
+                    InvokeChangeButtonColor(mBtn, Color.Blue);
+                    //mBtn.BackColor = Color.Blue;
                     break;
                 case FaceColor.White:
-                    mBtn.BackColor = Color.White;
+                    InvokeChangeButtonColor(mBtn, Color.White);
+                    //mBtn.BackColor = Color.White;
                     break;
                 case FaceColor.Orange:
-                    mBtn.BackColor = Color.Orange;
+                    InvokeChangeButtonColor(mBtn, Color.Orange);
+                    //mBtn.BackColor = Color.Orange;
                     break;
                 case FaceColor.Yellow:
-                    mBtn.BackColor = Color.Yellow;
+                    InvokeChangeButtonColor(mBtn, Color.Yellow);
+                    //mBtn.BackColor = Color.Yellow;
                     break;
                 default:
+                    InvokeChangeButtonColor(mBtn, Color.Black);
+                    CamError = true;
+                    //mBtn.BackColor = Color.Black;
                     break;
             }
         }
@@ -1344,6 +1486,248 @@ namespace Festo_Rubik_s_Cube_Explorer
             ColorDisplay(CamID.CamB, 8, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 8)));
             ColorDisplay(CamID.CamB, 9, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 9)));
         }
+
+        public void CamColorDisplay(object mCamID)
+        {
+            switch (mCamID)
+            {
+                case CamID.CamU:
+                    ColorDisplay(CamID.CamU, 1, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 9)));
+                    ColorDisplay(CamID.CamU, 2, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 8)));
+                    ColorDisplay(CamID.CamU, 3, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 7)));
+                    ColorDisplay(CamID.CamU, 4, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 6)));
+                    ColorDisplay(CamID.CamU, 5, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 5)));
+                    ColorDisplay(CamID.CamU, 6, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 4)));
+                    ColorDisplay(CamID.CamU, 7, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 3)));
+                    ColorDisplay(CamID.CamU, 8, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 2)));
+                    ColorDisplay(CamID.CamU, 9, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 1)));
+                    CamU_Done = true;                  
+                    break;
+                case CamID.CamD:
+                    ColorDisplay(CamID.CamD, 1, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 1)));
+                    ColorDisplay(CamID.CamD, 2, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 2)));
+                    ColorDisplay(CamID.CamD, 3, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 3)));
+                    ColorDisplay(CamID.CamD, 4, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 4)));
+                    ColorDisplay(CamID.CamD, 5, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 5)));
+                    ColorDisplay(CamID.CamD, 6, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 6)));
+                    ColorDisplay(CamID.CamD, 7, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 7)));
+                    ColorDisplay(CamID.CamD, 8, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 8)));
+                    ColorDisplay(CamID.CamD, 9, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 9)));
+                    CamD_Done = true;
+                    break;
+                case CamID.CamL:
+                    ColorDisplay(CamID.CamL, 1, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 1)));
+                    ColorDisplay(CamID.CamL, 2, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 2)));
+                    ColorDisplay(CamID.CamL, 3, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 3)));
+                    ColorDisplay(CamID.CamL, 4, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 4)));
+                    ColorDisplay(CamID.CamL, 5, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 5)));
+                    ColorDisplay(CamID.CamL, 6, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 6)));
+                    ColorDisplay(CamID.CamL, 7, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 7)));
+                    ColorDisplay(CamID.CamL, 8, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 8)));
+                    ColorDisplay(CamID.CamL, 9, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 9)));
+                    CamL_Done = true;
+                    break;
+                case CamID.CamR:
+                    ColorDisplay(CamID.CamR, 1, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 1)));
+                    ColorDisplay(CamID.CamR, 2, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 2)));
+                    ColorDisplay(CamID.CamR, 3, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 3)));
+                    ColorDisplay(CamID.CamR, 4, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 4)));
+                    ColorDisplay(CamID.CamR, 5, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 5)));
+                    ColorDisplay(CamID.CamR, 6, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 6)));
+                    ColorDisplay(CamID.CamR, 7, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 7)));
+                    ColorDisplay(CamID.CamR, 8, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 8)));
+                    ColorDisplay(CamID.CamR, 9, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 9)));
+                    CamR_Done = true;
+                    break;
+                case CamID.CamF:
+                    ColorDisplay(CamID.CamF, 1, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 1)));
+                    ColorDisplay(CamID.CamF, 2, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 2)));
+                    ColorDisplay(CamID.CamF, 3, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 3)));
+                    ColorDisplay(CamID.CamF, 4, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 4)));
+                    ColorDisplay(CamID.CamF, 5, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 5)));
+                    ColorDisplay(CamID.CamF, 6, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 6)));
+                    ColorDisplay(CamID.CamF, 7, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 7)));
+                    ColorDisplay(CamID.CamF, 8, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 8)));
+                    ColorDisplay(CamID.CamF, 9, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 9)));
+                    CamF_Done = true;
+                    break;
+                case CamID.CamB:
+                    ColorDisplay(CamID.CamB, 1, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 1)));
+                    ColorDisplay(CamID.CamB, 2, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 2)));
+                    ColorDisplay(CamID.CamB, 3, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 3)));
+                    ColorDisplay(CamID.CamB, 4, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 4)));
+                    ColorDisplay(CamID.CamB, 5, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 5)));
+                    ColorDisplay(CamID.CamB, 6, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 6)));
+                    ColorDisplay(CamID.CamB, 7, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 7)));
+                    ColorDisplay(CamID.CamB, 8, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 8)));
+                    ColorDisplay(CamID.CamB, 9, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 9)));
+                    CamB_Done = true;
+                    break;
+                default:
+                    break;
+            }           
+        }
+        public void ColorDisplayU(CamID mCamID)
+        {
+            switch (mCamID)
+            {
+                case CamID.CamU:
+                    ColorDisplay(CamID.CamU, 1, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 9)));
+                    ColorDisplay(CamID.CamU, 2, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 8)));
+                    ColorDisplay(CamID.CamU, 3, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 7)));
+                    ColorDisplay(CamID.CamU, 4, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 6)));
+                    ColorDisplay(CamID.CamU, 5, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 5)));
+                    ColorDisplay(CamID.CamU, 6, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 4)));
+                    ColorDisplay(CamID.CamU, 7, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 3)));
+                    ColorDisplay(CamID.CamU, 8, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 2)));
+                    ColorDisplay(CamID.CamU, 9, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 1)));
+                    CamU_Done = true;
+                    break;
+                case CamID.CamD:
+                    ColorDisplay(CamID.CamD, 1, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 1)));
+                    ColorDisplay(CamID.CamD, 2, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 2)));
+                    ColorDisplay(CamID.CamD, 3, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 3)));
+                    ColorDisplay(CamID.CamD, 4, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 4)));
+                    ColorDisplay(CamID.CamD, 5, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 5)));
+                    ColorDisplay(CamID.CamD, 6, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 6)));
+                    ColorDisplay(CamID.CamD, 7, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 7)));
+                    ColorDisplay(CamID.CamD, 8, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 8)));
+                    ColorDisplay(CamID.CamD, 9, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 9)));
+                    CamD_Done = true;
+                    break;
+                case CamID.CamL:
+                    ColorDisplay(CamID.CamL, 1, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 1)));
+                    ColorDisplay(CamID.CamL, 2, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 2)));
+                    ColorDisplay(CamID.CamL, 3, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 3)));
+                    ColorDisplay(CamID.CamL, 4, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 4)));
+                    ColorDisplay(CamID.CamL, 5, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 5)));
+                    ColorDisplay(CamID.CamL, 6, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 6)));
+                    ColorDisplay(CamID.CamL, 7, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 7)));
+                    ColorDisplay(CamID.CamL, 8, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 8)));
+                    ColorDisplay(CamID.CamL, 9, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 9)));
+                    CamL_Done = true;
+                    break;
+                case CamID.CamR:
+                    ColorDisplay(CamID.CamR, 1, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 1)));
+                    ColorDisplay(CamID.CamR, 2, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 2)));
+                    ColorDisplay(CamID.CamR, 3, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 3)));
+                    ColorDisplay(CamID.CamR, 4, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 4)));
+                    ColorDisplay(CamID.CamR, 5, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 5)));
+                    ColorDisplay(CamID.CamR, 6, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 6)));
+                    ColorDisplay(CamID.CamR, 7, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 7)));
+                    ColorDisplay(CamID.CamR, 8, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 8)));
+                    ColorDisplay(CamID.CamR, 9, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 9)));
+                    CamR_Done = true;
+                    break;
+                case CamID.CamF:
+                    ColorDisplay(CamID.CamF, 1, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 1)));
+                    ColorDisplay(CamID.CamF, 2, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 2)));
+                    ColorDisplay(CamID.CamF, 3, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 3)));
+                    ColorDisplay(CamID.CamF, 4, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 4)));
+                    ColorDisplay(CamID.CamF, 5, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 5)));
+                    ColorDisplay(CamID.CamF, 6, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 6)));
+                    ColorDisplay(CamID.CamF, 7, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 7)));
+                    ColorDisplay(CamID.CamF, 8, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 8)));
+                    ColorDisplay(CamID.CamF, 9, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 9)));
+                    CamF_Done = true;
+                    break;
+                case CamID.CamB:
+                    ColorDisplay(CamID.CamB, 1, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 1)));
+                    ColorDisplay(CamID.CamB, 2, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 2)));
+                    ColorDisplay(CamID.CamB, 3, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 3)));
+                    ColorDisplay(CamID.CamB, 4, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 4)));
+                    ColorDisplay(CamID.CamB, 5, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 5)));
+                    ColorDisplay(CamID.CamB, 6, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 6)));
+                    ColorDisplay(CamID.CamB, 7, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 7)));
+                    ColorDisplay(CamID.CamB, 8, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 8)));
+                    ColorDisplay(CamID.CamB, 9, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 9)));
+                    CamB_Done = true;
+                    break;
+                default:
+                    break;
+            }
+        }
+        public void ColorDisplayD(CamID mCamID)
+        {
+            switch (mCamID)
+            {
+                case CamID.CamU:
+                    ColorDisplay(CamID.CamU, 1, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 9)));
+                    ColorDisplay(CamID.CamU, 2, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 8)));
+                    ColorDisplay(CamID.CamU, 3, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 7)));
+                    ColorDisplay(CamID.CamU, 4, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 6)));
+                    ColorDisplay(CamID.CamU, 5, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 5)));
+                    ColorDisplay(CamID.CamU, 6, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 4)));
+                    ColorDisplay(CamID.CamU, 7, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 3)));
+                    ColorDisplay(CamID.CamU, 8, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 2)));
+                    ColorDisplay(CamID.CamU, 9, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 1)));
+                    CamU_Done = true;
+                    break;
+                case CamID.CamD:
+                    ColorDisplay(CamID.CamD, 1, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 1)));
+                    ColorDisplay(CamID.CamD, 2, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 2)));
+                    ColorDisplay(CamID.CamD, 3, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 3)));
+                    ColorDisplay(CamID.CamD, 4, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 4)));
+                    ColorDisplay(CamID.CamD, 5, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 5)));
+                    ColorDisplay(CamID.CamD, 6, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 6)));
+                    ColorDisplay(CamID.CamD, 7, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 7)));
+                    ColorDisplay(CamID.CamD, 8, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 8)));
+                    ColorDisplay(CamID.CamD, 9, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 9)));
+                    CamD_Done = true;
+                    break;
+                case CamID.CamL:
+                    ColorDisplay(CamID.CamL, 1, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 1)));
+                    ColorDisplay(CamID.CamL, 2, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 2)));
+                    ColorDisplay(CamID.CamL, 3, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 3)));
+                    ColorDisplay(CamID.CamL, 4, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 4)));
+                    ColorDisplay(CamID.CamL, 5, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 5)));
+                    ColorDisplay(CamID.CamL, 6, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 6)));
+                    ColorDisplay(CamID.CamL, 7, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 7)));
+                    ColorDisplay(CamID.CamL, 8, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 8)));
+                    ColorDisplay(CamID.CamL, 9, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 9)));
+                    CamL_Done = true;
+                    break;
+                case CamID.CamR:
+                    ColorDisplay(CamID.CamR, 1, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 1)));
+                    ColorDisplay(CamID.CamR, 2, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 2)));
+                    ColorDisplay(CamID.CamR, 3, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 3)));
+                    ColorDisplay(CamID.CamR, 4, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 4)));
+                    ColorDisplay(CamID.CamR, 5, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 5)));
+                    ColorDisplay(CamID.CamR, 6, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 6)));
+                    ColorDisplay(CamID.CamR, 7, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 7)));
+                    ColorDisplay(CamID.CamR, 8, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 8)));
+                    ColorDisplay(CamID.CamR, 9, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 9)));
+                    CamR_Done = true;
+                    break;
+                case CamID.CamF:
+                    ColorDisplay(CamID.CamF, 1, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 1)));
+                    ColorDisplay(CamID.CamF, 2, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 2)));
+                    ColorDisplay(CamID.CamF, 3, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 3)));
+                    ColorDisplay(CamID.CamF, 4, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 4)));
+                    ColorDisplay(CamID.CamF, 5, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 5)));
+                    ColorDisplay(CamID.CamF, 6, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 6)));
+                    ColorDisplay(CamID.CamF, 7, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 7)));
+                    ColorDisplay(CamID.CamF, 8, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 8)));
+                    ColorDisplay(CamID.CamF, 9, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 9)));
+                    CamF_Done = true;
+                    break;
+                case CamID.CamB:
+                    ColorDisplay(CamID.CamB, 1, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 1)));
+                    ColorDisplay(CamID.CamB, 2, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 2)));
+                    ColorDisplay(CamID.CamB, 3, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 3)));
+                    ColorDisplay(CamID.CamB, 4, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 4)));
+                    ColorDisplay(CamID.CamB, 5, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 5)));
+                    ColorDisplay(CamID.CamB, 6, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 6)));
+                    ColorDisplay(CamID.CamB, 7, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 7)));
+                    ColorDisplay(CamID.CamB, 8, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 8)));
+                    ColorDisplay(CamID.CamB, 9, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 9)));
+                    CamB_Done = true;
+                    break;
+                default:
+                    break;
+            }
+        }
+
 
         public void SendResult2PLC()
         {
