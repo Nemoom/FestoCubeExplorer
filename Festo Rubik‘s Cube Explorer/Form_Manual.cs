@@ -6319,5 +6319,10 @@ namespace Festo_Rubik_s_Cube_Explorer
                 MessageBox.Show("解魔方失败！");
             }
         }
+
+        private void Form_Manual_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            form1.mForm_Manual = new Form_Manual(form1);
+        }
     }
 }

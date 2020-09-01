@@ -18,7 +18,7 @@ namespace Festo_Rubik_s_Cube_Explorer
 {
     public partial class Form1 : Form
     {
-        Form_Manual mForm_Manual;
+        public Form_Manual mForm_Manual;
         public Form1()
         {
             InitializeComponent();
@@ -71,6 +71,13 @@ namespace Festo_Rubik_s_Cube_Explorer
         public bool CamR_Done = false;
         public bool CamF_Done = false; 
         public bool CamB_Done = false;
+
+        public bool b_CamU_Connected = false;
+        public bool b_CamD_Connected = false;
+        public bool b_CamL_Connected = false;
+        public bool b_CamR_Connected = false;
+        public bool b_CamF_Connected = false;
+        public bool b_CamB_Connected = false;
         private void Form1_Load(object sender, EventArgs e)
         {
            
@@ -887,13 +894,27 @@ namespace Festo_Rubik_s_Cube_Explorer
                 && mColor.G >= mColorMatch.c_Green.G_min && mColor.G <= mColorMatch.c_Green.G_max
                 && mColor.B >= mColorMatch.c_Green.B_min && mColor.B <= mColorMatch.c_Green.B_max)
             {
-                r_FaceColor = FaceColor.Green;
+                if (mColor.B > mColor.G)
+                {
+                    r_FaceColor = FaceColor.Blue;
+                }
+                else
+                {
+                    r_FaceColor = FaceColor.Green;
+                }                
             }
             else if (mColor.R >= mColorMatch.c_Blue.R_min && mColor.R <= mColorMatch.c_Blue.R_max
                 && mColor.G >= mColorMatch.c_Blue.G_min && mColor.G <= mColorMatch.c_Blue.G_max
                 && mColor.B >= mColorMatch.c_Blue.B_min && mColor.B <= mColorMatch.c_Blue.B_max)
             {
-                r_FaceColor = FaceColor.Blue;
+                if (mColor.B < mColor.G)
+                {
+                    r_FaceColor = FaceColor.Green;
+                }
+                else
+                {
+                    r_FaceColor = FaceColor.Blue;
+                }                
             }
             else if (mColor.R >= mColorMatch.c_White.R_min && mColor.R <= mColorMatch.c_White.R_max
                 && mColor.G >= mColorMatch.c_White.G_min && mColor.G <= mColorMatch.c_White.G_max
