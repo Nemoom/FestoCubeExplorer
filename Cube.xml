@@ -5,9 +5,9 @@
       <Red>
         <R_min>150</R_min>
         <R_max>255</R_max>
-        <G_min>100</G_min>
+        <G_min>75</G_min>
         <G_max>150</G_max>
-        <B_min>80</B_min>
+        <B_min>60</B_min>
         <B_max>130</B_max>
       </Red>
       <Green>
@@ -55,27 +55,27 @@
   <CamD IP="192.168.1.92">
     <ColorMatch>
       <Red>
-        <R_min>100</R_min>
-        <R_max>190</R_max>
-        <G_min>50</G_min>
-        <G_max>100</G_max>
+        <R_min>85</R_min>
+        <R_max>140</R_max>
+        <G_min>40</G_min>
+        <G_max>70</G_max>
         <B_min>40</B_min>
-        <B_max>95</B_max>
+        <B_max>65</B_max>
       </Red>
       <Green>
         <R_min>40</R_min>
         <R_max>95</R_max>
-        <G_min>85</G_min>
+        <G_min>80</G_min>
         <G_max>165</G_max>
         <B_min>60</B_min>
         <B_max>120</B_max>
       </Green>
       <Blue>
-        <R_min>45</R_min>
+        <R_min>40</R_min>
         <R_max>95</R_max>
-        <G_min>65</G_min>
+        <G_min>55</G_min>
         <G_max>120</G_max>
-        <B_min>100</B_min>
+        <B_min>96</B_min>
         <B_max>175</B_max>
       </Blue>
       <White>
@@ -89,15 +89,15 @@
       <Orange>
         <R_min>150</R_min>
         <R_max>255</R_max>
-        <G_min>100</G_min>
+        <G_min>90</G_min>
         <G_max>190</G_max>
-        <B_min>70</B_min>
-        <B_max>125</B_max>
+        <B_min>65</B_min>
+        <B_max>130</B_max>
       </Orange>
       <Yellow>
         <R_min>210</R_min>
         <R_max>255</R_max>
-        <G_min>205</G_min>
+        <G_min>190</G_min>
         <G_max>255</G_max>
         <B_min>100</B_min>
         <B_max>190</B_max>
@@ -125,7 +125,7 @@
       <Blue>
         <R_min>45</R_min>
         <R_max>95</R_max>
-        <G_min>75</G_min>
+        <G_min>70</G_min>
         <G_max>120</G_max>
         <B_min>100</B_min>
         <B_max>175</B_max>
@@ -169,15 +169,15 @@
       <Green>
         <R_min>40</R_min>
         <R_max>95</R_max>
-        <G_min>95</G_min>
+        <G_min>86</G_min>
         <G_max>165</G_max>
-        <B_min>60</B_min>
+        <B_min>55</B_min>
         <B_max>120</B_max>
       </Green>
       <Blue>
         <R_min>45</R_min>
         <R_max>95</R_max>
-        <G_min>65</G_min>
+        <G_min>60</G_min>
         <G_max>120</G_max>
         <B_min>90</B_min>
         <B_max>175</B_max>
@@ -201,9 +201,9 @@
       <Yellow>
         <R_min>210</R_min>
         <R_max>255</R_max>
-        <G_min>205</G_min>
+        <G_min>190</G_min>
         <G_max>255</G_max>
-        <B_min>100</B_min>
+        <B_min>95</B_min>
         <B_max>190</B_max>
       </Yellow>
     </ColorMatch>
@@ -229,7 +229,7 @@
       <Blue>
         <R_min>45</R_min>
         <R_max>95</R_max>
-        <G_min>70</G_min>
+        <G_min>62</G_min>
         <G_max>120</G_max>
         <B_min>100</B_min>
         <B_max>175</B_max>
@@ -247,7 +247,7 @@
         <R_max>255</R_max>
         <G_min>100</G_min>
         <G_max>190</G_max>
-        <B_min>70</B_min>
+        <B_min>65</B_min>
         <B_max>125</B_max>
       </Orange>
       <Yellow>
@@ -273,17 +273,17 @@
       <Green>
         <R_min>40</R_min>
         <R_max>95</R_max>
-        <G_min>95</G_min>
+        <G_min>90</G_min>
         <G_max>165</G_max>
-        <B_min>60</B_min>
+        <B_min>58</B_min>
         <B_max>110</B_max>
       </Green>
       <Blue>
-        <R_min>50</R_min>
+        <R_min>45</R_min>
         <R_max>95</R_max>
-        <G_min>75</G_min>
+        <G_min>62</G_min>
         <G_max>130</G_max>
-        <B_min>100</B_min>
+        <B_min>95</B_min>
         <B_max>150</B_max>
       </Blue>
       <White>
@@ -323,16 +323,16 @@
 		  7
 	  </CCWgap>
     <Vel>
-	  20000
+	  80000
 	</Vel>
     <Acc>
-	  500
+	  4000
 	</Acc>
     <Dec>
-	  500
+	  4000
 	</Dec>
     <Jerk>
-	  100000
+	  10000
 	</Jerk>
     <Vel_Rotate>
 		80000000
@@ -398,7 +398,7 @@
 			ns=4;s=|var|CPX-E-CEC-M1-PN.Application.axis_control_db5.StartTask
 		</o_Go>
       <P1>
-		  20.5
+		  0
       </P1>
       <P2>
 		  344

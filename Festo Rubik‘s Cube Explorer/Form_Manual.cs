@@ -22,75 +22,142 @@ namespace Festo_Rubik_s_Cube_Explorer
         #region tabPage_Cam
         public static void updateLightStatus()
         {
-            #region 更新所有光源的状态
-            try
+            if (Form1.m_OpcUaClient.Connected)
             {
-                List<string> tags = new List<string>();
-                tags.Add(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_U);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_D);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_L);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_R);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_F);
-                tags.Add(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_B);
+                #region 更新所有光源的状态
+                try
+                {
+                    List<string> tags = new List<string>();
+                    tags.Add(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_U);
+                    tags.Add(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_D);
+                    tags.Add(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_L);
+                    tags.Add(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_R);
+                    tags.Add(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_F);
+                    tags.Add(GlobalVariables.CurrentParas.mPLC.LightControl.NodeID_B);
 
-                // 按照顺序定义的值
-                List<bool> values = Form1.m_OpcUaClient.ReadNodes<bool>(tags.ToArray());
+                    // 按照顺序定义的值
+                    List<bool> values = Form1.m_OpcUaClient.ReadNodes<bool>(tags.ToArray());
 
-                if (values[0])
-                {
-                    GlobalVariables.lightStatus.o_U = true;
-                }
-                else
-                {
-                    GlobalVariables.lightStatus.o_U = false;
-                }
-                if (values[1])
-                {
-                    GlobalVariables.lightStatus.o_D = true;
-                }
-                else
-                {
-                    GlobalVariables.lightStatus.o_D = false;
-                }
-                if (values[2])
-                {
-                    GlobalVariables.lightStatus.o_L = true;
-                }
-                else
-                {
-                    GlobalVariables.lightStatus.o_L = false;
-                }
-                if (values[3])
-                {
-                    GlobalVariables.lightStatus.o_R = true;
-                }
-                else
-                {
-                    GlobalVariables.lightStatus.o_R = false;
-                }
-                if (values[4])
-                {
-                    GlobalVariables.lightStatus.o_F = true;
-                }
-                else
-                {
-                    GlobalVariables.lightStatus.o_F = false;
-                }
-                if (values[5])
-                {
-                    GlobalVariables.lightStatus.o_B = true;
-                }
-                else
-                {
-                    GlobalVariables.lightStatus.o_B = false;
-                }
+                    if (values[0])
+                    {
+                        GlobalVariables.lightStatus.o_U = true;
+                    }
+                    else
+                    {
+                        GlobalVariables.lightStatus.o_U = false;
+                    }
+                    if (values[1])
+                    {
+                        GlobalVariables.lightStatus.o_D = true;
+                    }
+                    else
+                    {
+                        GlobalVariables.lightStatus.o_D = false;
+                    }
+                    if (values[2])
+                    {
+                        GlobalVariables.lightStatus.o_L = true;
+                    }
+                    else
+                    {
+                        GlobalVariables.lightStatus.o_L = false;
+                    }
+                    if (values[3])
+                    {
+                        GlobalVariables.lightStatus.o_R = true;
+                    }
+                    else
+                    {
+                        GlobalVariables.lightStatus.o_R = false;
+                    }
+                    if (values[4])
+                    {
+                        GlobalVariables.lightStatus.o_F = true;
+                    }
+                    else
+                    {
+                        GlobalVariables.lightStatus.o_F = false;
+                    }
+                    if (values[5])
+                    {
+                        GlobalVariables.lightStatus.o_B = true;
+                    }
+                    else
+                    {
+                        GlobalVariables.lightStatus.o_B = false;
+                    }
 
-            }
-            catch (Exception ex)
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+                #endregion
+
+            }        
+        }
+        public void updateCamStatus()
+        {
+            if (Form1.b_CamU_Connected)
             {
-                MessageBox.Show(ex.ToString());
+                lbl_Status_U.Text = "已连接";
+                lbl_Status_U.BackColor = Color.Green;
             }
-            #endregion
+            else
+            {
+                lbl_Status_U.Text = "未连接";
+                lbl_Status_U.BackColor = Color.Red;
+            }
+            if (Form1.b_CamD_Connected)
+            {
+                lbl_Status_D.Text = "已连接";
+                lbl_Status_D.BackColor = Color.Green;
+            }
+            else
+            {
+                lbl_Status_D.Text = "未连接";
+                lbl_Status_D.BackColor = Color.Red;
+            }
+            if (Form1.b_CamL_Connected)
+            {
+                lbl_Status_L.Text = "已连接";
+                lbl_Status_L.BackColor = Color.Green;
+            }
+            else
+            {
+                lbl_Status_L.Text = "未连接";
+                lbl_Status_L.BackColor = Color.Red;
+            }
+            if (Form1.b_CamR_Connected)
+            {
+                lbl_Status_R.Text = "已连接";
+                lbl_Status_R.BackColor = Color.Green;
+            }
+            else
+            {
+                lbl_Status_R.Text = "未连接";
+                lbl_Status_R.BackColor = Color.Red;
+            }
+            if (Form1.b_CamF_Connected)
+            {
+                lbl_Status_F.Text = "已连接";
+                lbl_Status_F.BackColor = Color.Green;
+            }              
+            else           
+            {              
+                lbl_Status_F.Text = "未连接";
+                lbl_Status_F.BackColor = Color.Red;
+            }
+            if (Form1.b_CamB_Connected)
+            {
+                lbl_Status_B.Text = "已连接";
+                lbl_Status_B.BackColor = Color.Green;
+            }            
+            else         
+            {            
+                lbl_Status_B.Text = "未连接";
+                lbl_Status_B.BackColor = Color.Red;
+            }
         }
         private void btn_ColorLearning_Click(object sender, EventArgs e)
         {
@@ -1037,8 +1104,18 @@ namespace Festo_Rubik_s_Cube_Explorer
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            updateAxisStatus();
-            updateForm();
+            if (Form1.m_OpcUaClient.Connected)
+            {
+                try
+                {
+                    updateAxisStatus();
+                    updateForm();
+                }
+                catch (Exception)
+                {
+                    timer1.Enabled = false;
+                }
+            }
             //#region 更新所有IOlink轴的状态
             //try
             //{
@@ -5640,56 +5717,60 @@ namespace Festo_Rubik_s_Cube_Explorer
 
         private void Form_Manual_Load(object sender, EventArgs e)
         {
-            updateLightStatus();
-            if (GlobalVariables.lightStatus.o_U)
+            updateCamStatus();
+            if (Form1.m_OpcUaClient.Connected)
             {
-                pic_L_U.Image = imageList1.Images[1];
+                updateLightStatus();
+                if (GlobalVariables.lightStatus.o_U)
+                {
+                    pic_L_U.Image = imageList1.Images[1];
+                }
+                else
+                {
+                    pic_L_U.Image = imageList1.Images[0];
+                }
+                if (GlobalVariables.lightStatus.o_D)
+                {
+                    pic_L_D.Image = imageList1.Images[1];
+                }
+                else
+                {
+                    pic_L_D.Image = imageList1.Images[0];
+                }
+                if (GlobalVariables.lightStatus.o_L)
+                {
+                    pic_L_L.Image = imageList1.Images[1];
+                }
+                else
+                {
+                    pic_L_L.Image = imageList1.Images[0];
+                }
+                if (GlobalVariables.lightStatus.o_R)
+                {
+                    pic_L_R.Image = imageList1.Images[1];
+                }
+                else
+                {
+                    pic_L_R.Image = imageList1.Images[0];
+                }
+                if (GlobalVariables.lightStatus.o_F)
+                {
+                    pic_L_F.Image = imageList1.Images[1];
+                }
+                else
+                {
+                    pic_L_F.Image = imageList1.Images[0];
+                }
+                if (GlobalVariables.lightStatus.o_B)
+                {
+                    pic_L_B.Image = imageList1.Images[1];
+                }
+                else
+                {
+                    pic_L_B.Image = imageList1.Images[0];
+                }
+                timer1.Enabled = true; 
             }
-            else
-            {
-                pic_L_U.Image = imageList1.Images[0];
-            }
-            if (GlobalVariables.lightStatus.o_D)
-            {
-                pic_L_D.Image = imageList1.Images[1];
-            }
-            else
-            {
-                pic_L_D.Image = imageList1.Images[0];
-            }
-            if (GlobalVariables.lightStatus.o_L)
-            {
-                pic_L_L.Image = imageList1.Images[1];
-            }
-            else
-            {
-                pic_L_L.Image = imageList1.Images[0];
-            }
-            if (GlobalVariables.lightStatus.o_R)
-            {
-                pic_L_R.Image = imageList1.Images[1];
-            }
-            else
-            {
-                pic_L_R.Image = imageList1.Images[0];
-            }
-            if (GlobalVariables.lightStatus.o_F)
-            {
-                pic_L_F.Image = imageList1.Images[1];
-            }
-            else
-            {
-                pic_L_F.Image = imageList1.Images[0];
-            }
-            if (GlobalVariables.lightStatus.o_B)
-            {
-                pic_L_B.Image = imageList1.Images[1];
-            }
-            else
-            {
-                pic_L_B.Image = imageList1.Images[0];
-            }
-            timer1.Enabled = true;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -6309,10 +6390,10 @@ namespace Festo_Rubik_s_Cube_Explorer
                 //    }
                 //}
                 DateTime mEndTime = DateTime.Now;
-                form1.lbl_TotalTime.Text = (mEndTime - mStartTime).ToString();
-                form1.lbl_StepTime.Text = StepCount.ToString() + " " + ((mEndTime - mStartTime).TotalMilliseconds / StepCount).ToString();
+                form1.lbl_TotalTime.Text = "动作时间：" + (mEndTime - mStartTime).ToString("mm:ss:fff");
+                form1.lbl_StepTime.Text = "单步计时：" + StepCount.ToString() + " " + Math.Round(((mEndTime - mStartTime).TotalMilliseconds / StepCount),3).ToString();
                 btn_CubeBack_Click(sender, e);
-                form1.lbl_ProcessTime.Text = (ProcessEndTime - ProcessStartTime).ToString();
+                form1.lbl_ProcessTime.Text = "整体时间：" + (ProcessEndTime - ProcessStartTime).ToString("mm:ss:fff");
             }
             else
             {

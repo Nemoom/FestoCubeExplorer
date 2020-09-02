@@ -13,6 +13,7 @@ using System.Net.Sockets;
 using System.Net;
 using Modbus.Device;
 using System.Threading;
+using System.Net.NetworkInformation;
 
 namespace Festo_Rubik_s_Cube_Explorer
 {
@@ -23,30 +24,71 @@ namespace Festo_Rubik_s_Cube_Explorer
         {
             InitializeComponent();
             GlobalVariables.LoadParasFromXML();
-            tcpClient_CamU = new TcpClient();
-            tcpClient_CamD = new TcpClient();
-            tcpClient_CamL = new TcpClient();
-            tcpClient_CamR = new TcpClient();
-            tcpClient_CamF = new TcpClient();
-            tcpClient_CamB = new TcpClient();
-            tcpClient_CamU.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamU.str_IP), 502));
-            tcpClient_CamD.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamD.str_IP), 502));
-            tcpClient_CamL.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamL.str_IP), 502));
-            tcpClient_CamR.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamR.str_IP), 502));
-            tcpClient_CamF.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamF.str_IP), 502));
-            tcpClient_CamB.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamB.str_IP), 502));
-            tcpClient_CamU.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            tcpClient_CamD.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            tcpClient_CamL.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            tcpClient_CamR.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            tcpClient_CamF.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            tcpClient_CamB.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
-            m_Master_CamU = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamU);
-            m_Master_CamD = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamD);
-            m_Master_CamL = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamL);
-            m_Master_CamR = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamR);
-            m_Master_CamF = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamF);
-            m_Master_CamB = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamB);
+            try
+            {
+                tcpClient_CamU = new TcpClient();
+                Ping ping = new Ping();
+                if (ping.Send(GlobalVariables.CurrentParas.CamU.str_IP,100).Status == IPStatus.Success)
+                {
+                    tcpClient_CamU.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamU.str_IP), 502));
+                    tcpClient_CamU.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+                    m_Master_CamU = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamU);
+                    b_CamU_Connected = true;
+
+                    //if (ping.Send(GlobalVariables.CurrentParas.CamD.str_IP).Status == IPStatus.Success)
+                    //{
+                        tcpClient_CamD = new TcpClient();
+                        tcpClient_CamD.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamD.str_IP), 502));
+                        tcpClient_CamD.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+                        m_Master_CamD = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamD);
+                        b_CamD_Connected = true;
+                    //}
+
+                    //if (ping.Send(GlobalVariables.CurrentParas.CamL.str_IP).Status == IPStatus.Success)
+                    //{
+                        tcpClient_CamL = new TcpClient();
+                        tcpClient_CamL.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamL.str_IP), 502));
+                        tcpClient_CamL.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+                        m_Master_CamL = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamL);
+                        b_CamL_Connected = true;
+                    //}
+
+                    //if (ping.Send(GlobalVariables.CurrentParas.CamR.str_IP).Status == IPStatus.Success)
+                    //{
+                        tcpClient_CamR = new TcpClient();
+                        tcpClient_CamR.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamR.str_IP), 502));
+                        tcpClient_CamR.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+                        m_Master_CamR = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamR);
+                        b_CamR_Connected = true;
+                    //}
+
+                    //if (ping.Send(GlobalVariables.CurrentParas.CamF.str_IP).Status == IPStatus.Success)
+                    //{
+                        tcpClient_CamF = new TcpClient();
+                        tcpClient_CamF.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamF.str_IP), 502));
+                        tcpClient_CamF.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+                        m_Master_CamF = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamF);
+                        b_CamF_Connected = true;
+                    //}
+
+                    //if (ping.Send(GlobalVariables.CurrentParas.CamB.str_IP).Status == IPStatus.Success)
+                    //{
+                        tcpClient_CamB = new TcpClient();
+                        tcpClient_CamB.Connect(new IPEndPoint(IPAddress.Parse(GlobalVariables.CurrentParas.CamB.str_IP), 502));
+                        tcpClient_CamB.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
+                        m_Master_CamB = Modbus.Device.ModbusIpMaster.CreateIp(tcpClient_CamB);
+                        b_CamB_Connected = true;
+                    //}
+                }
+                else
+                {
+                    b_CamU_Connected = false;
+                }               
+            }
+            catch (Exception ex)
+            {
+
+            }
             mForm_Manual = new Form_Manual(this);
         }
 
@@ -61,7 +103,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         public static Modbus.Device.ModbusIpMaster m_Master_CamD;
         public static Modbus.Device.ModbusIpMaster m_Master_CamL;
         public static Modbus.Device.ModbusIpMaster m_Master_CamR;
-        public static Modbus.Device.ModbusIpMaster m_Master_CamF; 
+        public static Modbus.Device.ModbusIpMaster m_Master_CamF;
         public static Modbus.Device.ModbusIpMaster m_Master_CamB;
 
         public bool CamError = false;
@@ -69,18 +111,19 @@ namespace Festo_Rubik_s_Cube_Explorer
         public bool CamD_Done = false;
         public bool CamL_Done = false;
         public bool CamR_Done = false;
-        public bool CamF_Done = false; 
+        public bool CamF_Done = false;
         public bool CamB_Done = false;
 
-        public bool b_CamU_Connected = false;
-        public bool b_CamD_Connected = false;
-        public bool b_CamL_Connected = false;
-        public bool b_CamR_Connected = false;
-        public bool b_CamF_Connected = false;
-        public bool b_CamB_Connected = false;
+        public static bool b_CamU_Connected = false;
+        public static bool b_CamD_Connected = false;
+        public static bool b_CamL_Connected = false;
+        public static bool b_CamR_Connected = false;
+        public static bool b_CamF_Connected = false;
+        public static bool b_CamB_Connected = false;
+
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
             m_OpcUaClient = new OpcUaClient();
             //设置匿名连接
             m_OpcUaClient.UserIdentity = new UserIdentity(new AnonymousIdentityToken());
@@ -93,15 +136,14 @@ namespace Festo_Rubik_s_Cube_Explorer
 
             m_OpcUaClient.ConnectComplete += M_OpcUaClient_ConnectComplete;
             m_OpcUaClient.OpcStatusChange += M_OpcUaClient_OpcStatusChange;
-
-            button4_Click(sender, e);
-            //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_U, false);
-            //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_D, false);
-            //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_L, false);
-            //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_R, false);
-            //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_F, false);
-            //Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_B, false);
-            
+            btn_Start.Enabled = false;
+            operateControls(UserLogin.IsLoggedIn);
+            Ping ping = new Ping();
+            if (ping.Send(GlobalVariables.CurrentParas.mPLC.str_IP,100).Status == IPStatus.Success)
+            {
+                button4_Click(sender, e);//建立OPC-UA连接
+            }
+           
         }
 
         private void M_OpcUaClient_OpcStatusChange(object sender, OpcUaStatusEventArgs e)
@@ -110,7 +152,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             {
                 InvokeChangeButtonText(button4, "Disconnect");
                 //button1.Text = "Disconnect";
-             
+
             }
             else
             {
@@ -119,6 +161,62 @@ namespace Festo_Rubik_s_Cube_Explorer
             }
             //throw new NotImplementedException();
         }
+
+        private void M_OpcUaClient_ConnectComplete(object sender, EventArgs e)
+        {
+            if (Form1.m_OpcUaClient.Connected)
+            {
+                ResetAllCamTrigger();
+                Form_Manual.EmergencyStop();
+                Form_Manual.ResetAll();
+                Form_Manual.EnableAll();
+                if (b_CamU_Connected)
+                {
+                    if (b_CamD_Connected)
+                    {
+                        if (b_CamL_Connected)
+                        {
+                            if (b_CamR_Connected)
+                            {
+                                if (b_CamF_Connected)
+                                {
+                                    if (b_CamB_Connected)
+                                    {
+                                        btn_Start.Enabled = true;
+                                    }
+                                    else
+                                    {
+
+                                    }
+                                }
+                                else
+                                {
+
+                                }
+                            }
+                            else
+                            {
+
+                            }
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                    else
+                    {
+
+                    }
+                }
+                else
+                {
+
+                }
+            }
+            //throw new NotImplementedException();
+        }
+
         #region InvokeChangeButtonText
         protected delegate void ChangeButtonTextHandler(Button buttonCtrl, string Txt);
         void InvokeChangeButtonText(Button buttonCtrl, string Txt)
@@ -130,7 +228,6 @@ namespace Festo_Rubik_s_Cube_Explorer
             buttonCtrl.Text = Txt;
         }
         #endregion
-
         #region InvokeChangeButtonColor
         protected delegate void ChangeButtonColorHandler(Button buttonCtrl, Color Col);
         void InvokeChangeButtonColor(Button buttonCtrl, Color Col)
@@ -143,87 +240,81 @@ namespace Festo_Rubik_s_Cube_Explorer
         }
         #endregion
 
-
-        private void M_OpcUaClient_ConnectComplete(object sender, EventArgs e)
-        {
-            if (Form1.m_OpcUaClient.Connected)
-            {
-                ResetAllCamTrigger();
-                Form_Manual.EmergencyStop();
-                Form_Manual.ResetAll();
-                Form_Manual.EnableAll();
-            }            
-            //throw new NotImplementedException();
-        }
-
         private void btn_KeyPress(object sender, KeyPressEventArgs e)
         {
-            switch (e.KeyChar)
+            if (UserLogin.IsLoggedIn)
             {
-                case 'W':
-                case 'w':
-                case '1':
-                    ((Button)sender).BackColor = Color.White;
-                    break;
-                case 'B':
-                case 'b':
-                case '2':
-                    ((Button)sender).BackColor = Color.Blue;
-                    break;
-                case 'O':
-                case 'o':
-                case '3':
-                    ((Button)sender).BackColor = Color.Orange;
-                    break;
-                case 'G':
-                case 'g':
-                case '4':
-                    ((Button)sender).BackColor = Color.Green;
-                    break;
-                case 'R':
-                case 'r':
-                case '5':
-                    ((Button)sender).BackColor = Color.Red;
-                    break;
-                case 'Y':
-                case 'y':
-                case '6':
-                    ((Button)sender).BackColor = Color.Yellow;
-                    break;
-                default:
-                    break;
+                switch (e.KeyChar)
+                {
+                    case 'W':
+                    case 'w':
+                    case '1':
+                        ((Button)sender).BackColor = Color.White;
+                        break;
+                    case 'B':
+                    case 'b':
+                    case '2':
+                        ((Button)sender).BackColor = Color.Blue;
+                        break;
+                    case 'O':
+                    case 'o':
+                    case '3':
+                        ((Button)sender).BackColor = Color.Orange;
+                        break;
+                    case 'G':
+                    case 'g':
+                    case '4':
+                        ((Button)sender).BackColor = Color.Green;
+                        break;
+                    case 'R':
+                    case 'r':
+                    case '5':
+                        ((Button)sender).BackColor = Color.Red;
+                        break;
+                    case 'Y':
+                    case 'y':
+                    case '6':
+                        ((Button)sender).BackColor = Color.Yellow;
+                        break;
+                    default:
+                        break;
+                }
             }
         }
 
         private void btn_Click(object sender, EventArgs e)
         {
-            if (((Button)sender).BackColor == Color.White)
+            if (UserLogin.IsLoggedIn)
             {
-                ((Button)sender).BackColor = Color.Blue;
-            }
-            else if (((Button)sender).BackColor == Color.Blue)
-            {
-                ((Button)sender).BackColor = Color.Orange;
-            }
-            else if (((Button)sender).BackColor == Color.Orange)
-            {
-                ((Button)sender).BackColor = Color.Green;
-            }
-            else if (((Button)sender).BackColor == Color.Green)
-            {
-                ((Button)sender).BackColor = Color.Red;
-            }
-            else if (((Button)sender).BackColor == Color.Red)
-            {
-                ((Button)sender).BackColor = Color.Yellow;
-            }
-            else if (((Button)sender).BackColor == Color.Yellow)
-            {
-                ((Button)sender).BackColor = Color.White;
-            }
-            else
-            {
-                ((Button)sender).BackColor = Color.White;
+                if (((Button)sender).BackColor == Color.White)
+                {
+                    ((Button)sender).BackColor = Color.Blue;
+                }
+                else if (((Button)sender).BackColor == Color.Blue)
+                {
+                    ((Button)sender).BackColor = Color.Orange;
+                }
+                else if (((Button)sender).BackColor == Color.Orange)
+                {
+                    ((Button)sender).BackColor = Color.Green;
+                }
+                else if (((Button)sender).BackColor == Color.Green)
+                {
+                    ((Button)sender).BackColor = Color.Red;
+                }
+                else if (((Button)sender).BackColor == Color.Red)
+                {
+                    ((Button)sender).BackColor = Color.Yellow;
+                }
+                else if (((Button)sender).BackColor == Color.Yellow)
+                {
+                    ((Button)sender).BackColor = Color.White;
+                }
+                else
+                {
+                    ((Button)sender).BackColor = Color.White;
+                }
+
             }
         }
 
@@ -442,7 +533,7 @@ namespace Festo_Rubik_s_Cube_Explorer
 
         private void tableLayoutPanel_Cube_DoubleClick(object sender, EventArgs e)
         {
-            textBox1.Text = GetColor(btn_U1) 
+            textBox1.Text = GetColor(btn_U1)
                         + GetColor(btn_U2)
                         + GetColor(btn_U3)
                         + GetColor(btn_U4)
@@ -511,7 +602,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 p.StartInfo.RedirectStandardOutput = true;//输出参数设定
                 p.StartInfo.RedirectStandardInput = true;//传入参数设定
                 p.StartInfo.CreateNoWindow = true;
-                p.StartInfo.Arguments =  textBox1.Text ;//参数以空格分隔，如果某个参数为空，可以传入””
+                p.StartInfo.Arguments = textBox1.Text;//参数以空格分隔，如果某个参数为空，可以传入””
                 p.Start();
                 string output = p.StandardOutput.ReadToEnd();
                 p.WaitForExit();//关键，等待外部程序退出后才能往下执行}
@@ -761,7 +852,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_L, false);
                 Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_R, false);
                 Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_F, false);
-                Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_B, false);               
+                Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.CamControl.NodeID_B, false);
             }
             catch (Exception ex)
             {
@@ -819,7 +910,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 }
                 else
                 {
-                    r_Color = Color.FromArgb(0,0,0);//返回“黑色”
+                    r_Color = Color.FromArgb(0, 0, 0);//返回“黑色”
                 }
             }
 
@@ -901,7 +992,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 else
                 {
                     r_FaceColor = FaceColor.Green;
-                }                
+                }
             }
             else if (mColor.R >= mColorMatch.c_Blue.R_min && mColor.R <= mColorMatch.c_Blue.R_max
                 && mColor.G >= mColorMatch.c_Blue.G_min && mColor.G <= mColorMatch.c_Blue.G_max
@@ -914,7 +1005,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 else
                 {
                     r_FaceColor = FaceColor.Blue;
-                }                
+                }
             }
             else if (mColor.R >= mColorMatch.c_White.R_min && mColor.R <= mColorMatch.c_White.R_max
                 && mColor.G >= mColorMatch.c_White.G_min && mColor.G <= mColorMatch.c_White.G_max
@@ -1456,7 +1547,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             ColorDisplay(CamID.CamU, 7, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 3)));
             ColorDisplay(CamID.CamU, 8, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 2)));
             ColorDisplay(CamID.CamU, 9, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 1)));
-       
+
             ColorDisplay(CamID.CamD, 1, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 1)));
             ColorDisplay(CamID.CamD, 2, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 2)));
             ColorDisplay(CamID.CamD, 3, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 3)));
@@ -1476,7 +1567,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             ColorDisplay(CamID.CamL, 7, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 7)));
             ColorDisplay(CamID.CamL, 8, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 8)));
             ColorDisplay(CamID.CamL, 9, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 9)));
-                                       
+
             ColorDisplay(CamID.CamR, 1, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 1)));
             ColorDisplay(CamID.CamR, 2, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 2)));
             ColorDisplay(CamID.CamR, 3, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 3)));
@@ -1486,7 +1577,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             ColorDisplay(CamID.CamR, 7, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 7)));
             ColorDisplay(CamID.CamR, 8, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 8)));
             ColorDisplay(CamID.CamR, 9, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 9)));
-                                        
+
             ColorDisplay(CamID.CamF, 1, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 1)));
             ColorDisplay(CamID.CamF, 2, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 2)));
             ColorDisplay(CamID.CamF, 3, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 3)));
@@ -1496,7 +1587,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             ColorDisplay(CamID.CamF, 7, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 7)));
             ColorDisplay(CamID.CamF, 8, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 8)));
             ColorDisplay(CamID.CamF, 9, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 9)));
-                                        
+
             ColorDisplay(CamID.CamB, 1, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 1)));
             ColorDisplay(CamID.CamB, 2, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 2)));
             ColorDisplay(CamID.CamB, 3, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 3)));
@@ -1522,7 +1613,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ColorDisplay(CamID.CamU, 7, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 3)));
                     ColorDisplay(CamID.CamU, 8, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 2)));
                     ColorDisplay(CamID.CamU, 9, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 1)));
-                    CamU_Done = true;                  
+                    CamU_Done = true;
                     break;
                 case CamID.CamD:
                     ColorDisplay(CamID.CamD, 1, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 1)));
@@ -1586,7 +1677,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                     break;
                 default:
                     break;
-            }           
+            }
         }
         public void ColorDisplayU(CamID mCamID)
         {
@@ -1779,7 +1870,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step18,
                 GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step19,
                 GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step20,
-                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step21 },        
+                GlobalVariables.CurrentParas.mPLC.CubeResult.NodeID_Step21 },
            new object[] {
             mCubeResult_Send[0],
             mCubeResult_Send[1],
@@ -1835,6 +1926,101 @@ namespace Festo_Rubik_s_Cube_Explorer
         private void btn_Start_Click(object sender, EventArgs e)
         {
             mForm_Manual.btn_Start_Click(sender, e);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (UserLogin.IsLoggedIn)
+            {
+                UserLogin.IsLoggedIn = false;
+            }
+            else
+            {
+                var loginForm = new Form_Login();
+                loginForm.ShowDialog(this);
+            }
+            operateControls(UserLogin.IsLoggedIn);
+        }
+
+        void operateControls(bool value)
+        {
+            if (value)
+            {
+                //已登录，显示所有按钮
+                button1.Visible = true;
+                button2.Visible = true;
+                button3.Visible = true;
+                button4.Visible = true;
+                textBox1.Visible = true;
+            }
+            else
+            {
+                button1.Visible = false;
+                button2.Visible = false;
+                button3.Visible = false;
+                button4.Visible = false;
+                textBox1.Visible = false;
+            }
+            button5.Visible = value;
+            btn_U1.Enabled = value;
+            btn_U2.Enabled = value;
+            btn_U3.Enabled = value;
+            btn_U4.Enabled = value;
+            btn_U5.Enabled = value;
+            btn_U6.Enabled = value;
+            btn_U7.Enabled = value;
+            btn_U8.Enabled = value;
+            btn_U9.Enabled = value;
+            btn_R1.Enabled = value;
+            btn_R2.Enabled = value;
+            btn_R3.Enabled = value;
+            btn_R4.Enabled = value;
+            btn_R5.Enabled = value;
+            btn_R6.Enabled = value;
+            btn_R7.Enabled = value;
+            btn_R8.Enabled = value;
+            btn_R9.Enabled = value;
+            btn_F1.Enabled = value;
+            btn_F2.Enabled = value;
+            btn_F3.Enabled = value;
+            btn_F4.Enabled = value;
+            btn_F5.Enabled = value;
+            btn_F6.Enabled = value;
+            btn_F7.Enabled = value;
+            btn_F8.Enabled = value;
+            btn_F9.Enabled = value;
+            btn_D1.Enabled = value;
+            btn_D2.Enabled = value;
+            btn_D3.Enabled = value;
+            btn_D4.Enabled = value;
+            btn_D5.Enabled = value;
+            btn_D6.Enabled = value;
+            btn_D7.Enabled = value;
+            btn_D8.Enabled = value;
+            btn_D9.Enabled = value;
+            btn_L1.Enabled = value;
+            btn_L2.Enabled = value;
+            btn_L3.Enabled = value;
+            btn_L4.Enabled = value;
+            btn_L5.Enabled = value;
+            btn_L6.Enabled = value;
+            btn_L7.Enabled = value;
+            btn_L8.Enabled = value;
+            btn_L9.Enabled = value;
+            btn_B1.Enabled = value;
+            btn_B2.Enabled = value;
+            btn_B3.Enabled = value;
+            btn_B4.Enabled = value;
+            btn_B5.Enabled = value;
+            btn_B6.Enabled = value;
+            btn_B7.Enabled = value;
+            btn_B8.Enabled = value;
+            btn_B9.Enabled = value;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new Form_Setting().Show();
         }
     }
 }
