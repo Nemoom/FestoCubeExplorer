@@ -14,6 +14,9 @@ namespace Festo_Rubik_s_Cube_Explorer
     public partial class Form_Manual : Form
     {
         Form1 form1;
+        public static bool b_P_Start = false;
+        public static bool b_P_Acquire = false;
+        public static bool b_P_Rotate = false;
         public Form_Manual(Form1 mform1)
         {
             InitializeComponent();
@@ -1539,6 +1542,9 @@ namespace Festo_Rubik_s_Cube_Explorer
         }
         public static void updateAxisStatus()
         {
+            b_P_Start = false;
+            b_P_Acquire = false;
+            b_P_Rotate = false;
             #region 更新所有IOlink轴的状态
             try
             {
@@ -1916,7 +1922,6 @@ namespace Festo_Rubik_s_Cube_Explorer
                 MessageBox.Show(ex.ToString());
             }
             #endregion
-
             #region 更新Servo的当前位置信息
             try
             {
@@ -2073,6 +2078,319 @@ namespace Festo_Rubik_s_Cube_Explorer
                 MessageBox.Show(ex.ToString());
             }
             #endregion
+            if (GlobalVariables.IOlink_D_Move_Cam.i_In&& GlobalVariables.IOlink_F_Move_Cam.i_In && GlobalVariables.IOlink_B_Move_Cam.i_In
+                && GlobalVariables.IOlink_L_Move_Cam.i_In && GlobalVariables.IOlink_R_Move_Cam.i_In
+                && GlobalVariables.IOlink_Rotate.i_In 
+                && GlobalVariables.IOlink_F_Grab.i_In && GlobalVariables.IOlink_B_Grab.i_In
+                && GlobalVariables.IOlink_L_Grab.i_In && GlobalVariables.IOlink_R_Grab.i_In
+                && GlobalVariables.servo_U_Grab.b_P1 && GlobalVariables.servo_D_Grab.b_P1
+                && GlobalVariables.servo_Feeding.b_P1
+                && GlobalVariables.servo_U_Move.b_P1 && GlobalVariables.servo_D_Move.b_P1)
+            {
+                b_P_Start = true;
+                b_P_Acquire = false;
+                b_P_Rotate = false;
+            }
+            else if (GlobalVariables.IOlink_F_Move_Cam.i_Out && GlobalVariables.IOlink_B_Move_Cam.i_Out
+                && GlobalVariables.IOlink_L_Move_Cam.i_Out && GlobalVariables.IOlink_R_Move_Cam.i_Out
+                && GlobalVariables.IOlink_Rotate.i_In
+                && GlobalVariables.IOlink_F_Grab.i_In && GlobalVariables.IOlink_B_Grab.i_In
+                && GlobalVariables.IOlink_L_Grab.i_In && GlobalVariables.IOlink_R_Grab.i_In
+                && GlobalVariables.servo_U_Grab.b_P1 && GlobalVariables.servo_D_Grab.b_P1
+                && GlobalVariables.servo_Feeding.b_P2
+                && GlobalVariables.servo_U_Move.b_P1 && GlobalVariables.servo_D_Move.b_P1)
+            {
+                b_P_Start = false;
+                b_P_Acquire = true;
+                b_P_Rotate = false;
+            }
+            else if (GlobalVariables.IOlink_D_Move_Cam.i_In && GlobalVariables.IOlink_F_Move_Cam.i_In && GlobalVariables.IOlink_B_Move_Cam.i_In
+                && GlobalVariables.IOlink_L_Move_Cam.i_In && GlobalVariables.IOlink_R_Move_Cam.i_In
+                && GlobalVariables.IOlink_Rotate.i_Out
+                && GlobalVariables.IOlink_F_Grab.i_Out && GlobalVariables.IOlink_B_Grab.i_Out
+                && GlobalVariables.IOlink_L_Grab.i_Out && GlobalVariables.IOlink_R_Grab.i_Out
+                && GlobalVariables.servo_U_Grab.b_P2 && GlobalVariables.servo_D_Grab.b_P2
+                && GlobalVariables.servo_Feeding.b_P2
+                && GlobalVariables.servo_U_Move.b_P2 && GlobalVariables.servo_D_Move.b_P2)
+            {
+                b_P_Start = false;
+                b_P_Acquire = false;
+                b_P_Rotate = true;
+            }
+        }
+        public static void updateAxisStatus(string AxisID)
+        {
+            IOlinkNodeID mIOlinkNodeID = new IOlinkNodeID();
+            IOlinkStatus mIOlinkStatus = new IOlinkStatus();
+            ServoParas mServoParas = new ServoParas();
+            ServoStatus mServoStatus = new ServoStatus();
+            bool b_isServo = false;
+            switch (AxisID)
+            {
+                case "IOlink_Rotate":
+                    mIOlinkNodeID = GlobalVariables.CurrentParas.mPLC.IOlink_Rotate;
+                    mIOlinkStatus = GlobalVariables.IOlink_Rotate;
+                    break;
+                case "IOlink_F_Move_Cam":
+                    mIOlinkNodeID = GlobalVariables.CurrentParas.mPLC.IOlink_F_Move_Cam;
+                    mIOlinkStatus = GlobalVariables.IOlink_F_Move_Cam;
+                    break;
+                case "IOlink_B_Move_Cam":
+                    mIOlinkNodeID = GlobalVariables.CurrentParas.mPLC.IOlink_B_Move_Cam;
+                    mIOlinkStatus = GlobalVariables.IOlink_B_Move_Cam;
+                    break;
+                case "IOlink_L_Move_Cam":
+                    mIOlinkNodeID = GlobalVariables.CurrentParas.mPLC.IOlink_L_Move_Cam;
+                    mIOlinkStatus = GlobalVariables.IOlink_L_Move_Cam;
+                    break;
+                case "IOlink_R_Move_Cam":
+                    mIOlinkNodeID = GlobalVariables.CurrentParas.mPLC.IOlink_R_Move_Cam;
+                    mIOlinkStatus = GlobalVariables.IOlink_R_Move_Cam;
+                    break;
+                case "IOlink_D_Move_Cam":
+                    mIOlinkNodeID = GlobalVariables.CurrentParas.mPLC.IOlink_D_Move_Cam;
+                    mIOlinkStatus = GlobalVariables.IOlink_D_Move_Cam;
+                    break;
+                case "IOlink_F_Grab":
+                    mIOlinkNodeID = GlobalVariables.CurrentParas.mPLC.IOlink_F_Grab;
+                    mIOlinkStatus = GlobalVariables.IOlink_F_Grab;
+                    break;
+                case "IOlink_B_Grab":
+                    mIOlinkNodeID = GlobalVariables.CurrentParas.mPLC.IOlink_B_Grab;
+                    mIOlinkStatus = GlobalVariables.IOlink_B_Grab;
+                    break;
+                case "IOlink_L_Grab":
+                    mIOlinkNodeID = GlobalVariables.CurrentParas.mPLC.IOlink_L_Grab;
+                    mIOlinkStatus = GlobalVariables.IOlink_L_Grab;
+                    break;
+                case "IOlink_R_Grab":
+                    mIOlinkNodeID = GlobalVariables.CurrentParas.mPLC.IOlink_R_Grab;
+                    mIOlinkStatus = GlobalVariables.IOlink_R_Grab;
+                    break;
+                case "servo_B_Rotate":
+                    mServoParas = GlobalVariables.CurrentParas.mPLC.servo_B_Rotate;
+                    mServoStatus = GlobalVariables.servo_B_Rotate;
+                    b_isServo = true;
+                    break;
+                case "servo_D_Grab":
+                    mServoParas = GlobalVariables.CurrentParas.mPLC.servo_D_Grab;
+                    mServoStatus = GlobalVariables.servo_D_Grab;
+                    b_isServo = true;
+                    break;
+                case "servo_D_Move":
+                    mServoParas = GlobalVariables.CurrentParas.mPLC.servo_D_Move;
+                    mServoStatus = GlobalVariables.servo_D_Move;
+                    b_isServo = true;
+                    break;
+                case "servo_D_Rotate":
+                    mServoParas = GlobalVariables.CurrentParas.mPLC.servo_D_Rotate;
+                    mServoStatus = GlobalVariables.servo_D_Rotate;
+                    b_isServo = true;
+                    break;
+                case "servo_Feeding":
+                    mServoParas = GlobalVariables.CurrentParas.mPLC.servo_Feeding;
+                    mServoStatus = GlobalVariables.servo_Feeding;
+                    b_isServo = true;
+                    break;
+                case "servo_F_Rotate":
+                    mServoParas = GlobalVariables.CurrentParas.mPLC.servo_F_Rotate;
+                    mServoStatus = GlobalVariables.servo_F_Rotate;
+                    b_isServo = true;
+                    break;
+                case "servo_L_Rotate":
+                    mServoParas = GlobalVariables.CurrentParas.mPLC.servo_L_Rotate;
+                    mServoStatus = GlobalVariables.servo_L_Rotate;
+                    b_isServo = true;
+                    break;
+                case "servo_R_Rotate":
+                    mServoParas = GlobalVariables.CurrentParas.mPLC.servo_R_Rotate;
+                    mServoStatus = GlobalVariables.servo_R_Rotate;
+                    b_isServo = true;
+                    break;
+                case "servo_U_Grab":
+                    mServoParas = GlobalVariables.CurrentParas.mPLC.servo_U_Grab;
+                    mServoStatus = GlobalVariables.servo_U_Grab;
+                    b_isServo = true;
+                    break;
+                case "servo_U_Move":                  
+                    mServoParas = GlobalVariables.CurrentParas.mPLC.servo_U_Move;
+                    mServoStatus = GlobalVariables.servo_U_Move;
+                    b_isServo = true;
+                    break;
+                case "servo_U_Rotate":                    
+                    mServoParas = GlobalVariables.CurrentParas.mPLC.servo_U_Rotate;
+                    mServoStatus = GlobalVariables.servo_U_Rotate;
+                    b_isServo = true;
+                    break;
+                default:
+                    break;
+            }
+            if (b_isServo)
+            {
+                //更新mServoStatus
+                List<string> tags = new List<string>();
+                tags.Add(mServoParas.mServoNodeID.NodeID_i_Error);
+                tags.Add(mServoParas.mServoNodeID.NodeID_i_Enable);
+                // 按照顺序定义的值
+                List<bool> values = Form1.m_OpcUaClient.ReadNodes<bool>(tags.ToArray());
+                mServoStatus.i_Error = values[0];
+                mServoStatus.i_Enable = values[1];
+                mServoStatus.i_ActPos = Convert.ToDouble(Form1.m_OpcUaClient.ReadNode(mServoParas.mServoNodeID.NodeID_i_ActPos).ToString());
+                //if (mServoStatus.i_ActPos >= mServoParas.P1 - GlobalVariables.positionTolerance &&
+                //    mServoStatus.i_ActPos <= mServoParas.P1 + GlobalVariables.positionTolerance)
+                //{
+                //    mServoStatus.b_P1 = true;
+                //    mServoStatus.b_P2 = false;
+                //    mServoStatus.b_P3 = false;
+                //}
+                //else if (mServoStatus.i_ActPos >= mServoParas.P2 - GlobalVariables.positionTolerance &&
+                //    mServoStatus.i_ActPos <= mServoParas.P2 + GlobalVariables.positionTolerance)
+                //{
+                //    mServoStatus.b_P1 = false;
+                //    mServoStatus.b_P2 = true;
+                //    mServoStatus.b_P3 = false;
+                //}
+                //else if (mServoStatus.i_ActPos >= mServoParas.P3 - GlobalVariables.positionTolerance &&
+                //    mServoStatus.i_ActPos <= mServoParas.P3 + GlobalVariables.positionTolerance)
+                //{
+                //    mServoStatus.b_P1 = false;
+                //    mServoStatus.b_P2 = false;
+                //    mServoStatus.b_P3 = true;
+                //}
+                #region 弃用
+                switch (AxisID)
+                {
+                    case "servo_Feeding":
+                        if (mServoStatus.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_Feeding.P1 - GlobalVariables.positionTolerance &&
+                     mServoStatus.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_Feeding.P1 + GlobalVariables.positionTolerance)
+                        {
+                            GlobalVariables.servo_Feeding.b_P1 = true;
+                            GlobalVariables.servo_Feeding.b_P2 = false;
+                            GlobalVariables.servo_Feeding.b_P3 = false;
+                        }
+                        else if (mServoStatus.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_Feeding.P2 - GlobalVariables.positionTolerance &&
+                            mServoStatus.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_Feeding.P2 + GlobalVariables.positionTolerance)
+                        {
+                            GlobalVariables.servo_Feeding.b_P1 = false;
+                            GlobalVariables.servo_Feeding.b_P2 = true;
+                            GlobalVariables.servo_Feeding.b_P3 = false;
+                        }
+                        else if (mServoStatus.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_Feeding.P3 - GlobalVariables.positionTolerance &&
+                            mServoStatus.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_Feeding.P3 + GlobalVariables.positionTolerance)
+                        {
+                            GlobalVariables.servo_Feeding.b_P1 = false;
+                            GlobalVariables.servo_Feeding.b_P2 = false;
+                            GlobalVariables.servo_Feeding.b_P3 = true;
+                        }
+                        break;
+                    case "servo_U_Grab":
+                        if (GlobalVariables.servo_U_Grab.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_U_Grab.P1 - GlobalVariables.positionTolerance &&
+                     GlobalVariables.servo_U_Grab.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_U_Grab.P1 + GlobalVariables.positionTolerance)
+                        {
+                            GlobalVariables.servo_U_Grab.b_P1 = true;
+                            GlobalVariables.servo_U_Grab.b_P2 = false;
+                            GlobalVariables.servo_U_Grab.b_P3 = false;
+                        }
+                        else if (GlobalVariables.servo_U_Grab.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_U_Grab.P2 - GlobalVariables.positionTolerance &&
+                            GlobalVariables.servo_U_Grab.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_U_Grab.P2 + GlobalVariables.positionTolerance)
+                        {
+                            GlobalVariables.servo_U_Grab.b_P1 = false;
+                            GlobalVariables.servo_U_Grab.b_P2 = true;
+                            GlobalVariables.servo_U_Grab.b_P3 = false;
+                        }
+                        else if (GlobalVariables.servo_U_Grab.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_U_Grab.P3 - GlobalVariables.positionTolerance &&
+                            GlobalVariables.servo_U_Grab.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_U_Grab.P3 + GlobalVariables.positionTolerance)
+                        {
+                            GlobalVariables.servo_U_Grab.b_P1 = false;
+                            GlobalVariables.servo_U_Grab.b_P2 = false;
+                            GlobalVariables.servo_U_Grab.b_P3 = true;
+                        }
+                        break;
+                    case "servo_D_Grab":
+                        if (GlobalVariables.servo_D_Grab.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_D_Grab.P1 - GlobalVariables.positionTolerance &&
+                          GlobalVariables.servo_D_Grab.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_D_Grab.P1 + GlobalVariables.positionTolerance)
+                        {
+                            GlobalVariables.servo_D_Grab.b_P1 = true;
+                            GlobalVariables.servo_D_Grab.b_P2 = false;
+                            GlobalVariables.servo_D_Grab.b_P3 = false;
+                        }
+                        else if (GlobalVariables.servo_D_Grab.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_D_Grab.P2 - GlobalVariables.positionTolerance &&
+                            GlobalVariables.servo_D_Grab.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_D_Grab.P2 + GlobalVariables.positionTolerance)
+                        {
+                            GlobalVariables.servo_D_Grab.b_P1 = false;
+                            GlobalVariables.servo_D_Grab.b_P2 = true;
+                            GlobalVariables.servo_D_Grab.b_P3 = false;
+                        }
+                        else if (GlobalVariables.servo_D_Grab.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_D_Grab.P3 - GlobalVariables.positionTolerance &&
+                            GlobalVariables.servo_D_Grab.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_D_Grab.P3 + GlobalVariables.positionTolerance)
+                        {
+                            GlobalVariables.servo_D_Grab.b_P1 = false;
+                            GlobalVariables.servo_D_Grab.b_P2 = false;
+                            GlobalVariables.servo_D_Grab.b_P3 = true;
+                        }
+                        break;
+                    case "servo_U_Move":
+                        if (GlobalVariables.servo_U_Move.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_U_Move.P1 - GlobalVariables.positionTolerance &&
+                      GlobalVariables.servo_U_Move.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_U_Move.P1 + GlobalVariables.positionTolerance)
+                        {
+                            GlobalVariables.servo_U_Move.b_P1 = true;
+                            GlobalVariables.servo_U_Move.b_P2 = false;
+                            GlobalVariables.servo_U_Move.b_P3 = false;
+                        }
+                        else if (GlobalVariables.servo_U_Move.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_U_Move.P2 - GlobalVariables.positionTolerance &&
+                            GlobalVariables.servo_U_Move.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_U_Move.P2 + GlobalVariables.positionTolerance)
+                        {
+                            GlobalVariables.servo_U_Move.b_P1 = false;
+                            GlobalVariables.servo_U_Move.b_P2 = true;
+                            GlobalVariables.servo_U_Move.b_P3 = false;
+                        }
+                        else if (GlobalVariables.servo_U_Move.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_U_Move.P3 - GlobalVariables.positionTolerance &&
+                            GlobalVariables.servo_U_Move.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_U_Move.P3 + GlobalVariables.positionTolerance)
+                        {
+                            GlobalVariables.servo_U_Move.b_P1 = false;
+                            GlobalVariables.servo_U_Move.b_P2 = false;
+                            GlobalVariables.servo_U_Move.b_P3 = true;
+                        }
+                        break;
+                    case "servo_D_Move":
+                        if (GlobalVariables.servo_D_Move.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_D_Move.P1 - GlobalVariables.positionTolerance &&
+                     GlobalVariables.servo_D_Move.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_D_Move.P1 + GlobalVariables.positionTolerance)
+                        {
+                            GlobalVariables.servo_D_Move.b_P1 = true;
+                            GlobalVariables.servo_D_Move.b_P2 = false;
+                            GlobalVariables.servo_D_Move.b_P3 = false;
+                        }
+                        else if (GlobalVariables.servo_D_Move.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_D_Move.P2 - GlobalVariables.positionTolerance &&
+                            GlobalVariables.servo_D_Move.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_D_Move.P2 + GlobalVariables.positionTolerance)
+                        {
+                            GlobalVariables.servo_D_Move.b_P1 = false;
+                            GlobalVariables.servo_D_Move.b_P2 = true;
+                            GlobalVariables.servo_D_Move.b_P3 = false;
+                        }
+                        else if (GlobalVariables.servo_D_Move.i_ActPos >= GlobalVariables.CurrentParas.mPLC.servo_D_Move.P3 - GlobalVariables.positionTolerance &&
+                            GlobalVariables.servo_D_Move.i_ActPos <= GlobalVariables.CurrentParas.mPLC.servo_D_Move.P3 + GlobalVariables.positionTolerance)
+                        {
+                            GlobalVariables.servo_D_Move.b_P1 = false;
+                            GlobalVariables.servo_D_Move.b_P2 = false;
+                            GlobalVariables.servo_D_Move.b_P3 = true;
+                        }
+                        break;
+                }
+                #endregion
+            }
+            else
+            {
+                //更新mIOlinkStatus
+                List<string> tags = new List<string>();
+                tags.Add(mIOlinkNodeID.NodeID_i_In);
+                tags.Add(mIOlinkNodeID.NodeID_i_Out);
+                tags.Add(mIOlinkNodeID.NodeID_i_Device);
+                // 按照顺序定义的值
+                List<bool> values = Form1.m_OpcUaClient.ReadNodes<bool>(tags.ToArray());
+                mIOlinkStatus.i_In = values[0];
+                mIOlinkStatus.i_Out = values[1];
+                mIOlinkStatus.i_Device = values[2];
+            }
         }
         public void updateForm()
         {
@@ -3028,7 +3346,7 @@ namespace Festo_Rubik_s_Cube_Explorer
 
         public static bool ServoGoto(string AxisID,int PointIndex,bool b_FirstRotate=false,bool b_ChangeDirection=false)
         {
-            updateAxisStatus();
+            updateAxisStatus();//需要避免干涉，所以更新所有轴的状态
             ServoParas mServoParas = new ServoParas();
             ServoStatus mServoStatus = new ServoStatus();
             double TargetPosition = 0;
@@ -5260,50 +5578,51 @@ namespace Festo_Rubik_s_Cube_Explorer
         {
             timer1.Enabled = false;
             updateAxisStatus();
-
             if (!GlobalVariables.IOlink_F_Grab.i_Out && !GlobalVariables.IOlink_B_Grab.i_Out
                 && !GlobalVariables.IOlink_L_Grab.i_Out && !GlobalVariables.IOlink_R_Grab.i_Out
-                 && GlobalVariables.servo_U_Grab.b_P1 && GlobalVariables.servo_D_Grab.b_P1)
+                 && GlobalVariables.servo_U_Grab.b_P1 && GlobalVariables.servo_D_Grab.b_P1)//6个旋杆儿都在缩回的状态
             {
                 if (GlobalVariables.IOlink_B_Move_Cam .i_In && GlobalVariables.IOlink_F_Move_Cam.i_In && GlobalVariables.IOlink_B_Move_Cam.i_In
-                && GlobalVariables.IOlink_L_Move_Cam.i_In && GlobalVariables.IOlink_R_Move_Cam.i_In)
+                && GlobalVariables.IOlink_L_Move_Cam.i_In && GlobalVariables.IOlink_R_Move_Cam.i_In)//5个相机都在缩回的状态
                 {
-                    //线缆未到，屏蔽
+                    //魔方姿态在0度位，屏蔽
                     //if (GlobalVariables.IOlink_Rotate.i_In)
                     //{
 
                     //}
-                    ServoGotoWithoutCheck("servo_Feeding", 2);
+                    ServoGotoWithoutCheck("servo_Feeding", 2);//上料轴运动必须确保下面的旋杆儿和前面的相机都在缩回状态
+                    //上下平移轴至拍照位
                     ServoGotoWithoutCheck("servo_U_Move", 1);
-                    ServoGotoWithoutCheck("servo_D_Move", 1);
+                    ServoGotoWithoutCheck("servo_D_Move", 1);//下平移轴运动必须确认下面的旋杆儿在缩回状态
                     while (!GlobalVariables.servo_Feeding.b_P2)
                     {
-                        Thread.Sleep(1000);
+                        Thread.Sleep(50);
                         updateAxisStatus();
-                    }
-                    
+                    }                    
                     if (GlobalVariables.servo_Feeding.b_P2)
                     {
-                        IOlinkAxisOut(5);//5个相机工作位  
+                        IOlinkAxisOut(5);//5个相机至工作位，确认servo_Feeding已在拍照位
                     }
                     else
                     {
                         MessageBox.Show("上料轴未到拍照位，相机不能升起");
                     }
-                    AllLightOn();
+                    AllLightOn();                    
                 }
                 else
                 {
-                    IOlinkAxisIn(5);//5个相机回原位  
+                    //不动作
+                    //IOlinkAxisIn(5);//5个相机回原位                      
                 }
             }
             else
             {
-                ServoGoHome("servo_U_Grab");
-                ServoGoHome("servo_D_Grab");
-                IOlinkAxisIn(4);//4个旋转杆回原位  
-            }
-            timer1.Enabled = true;
+                //不动作
+                //ServoGoHome("servo_U_Grab");
+                //ServoGoHome("servo_D_Grab");
+                //IOlinkAxisIn(4);//4个旋转杆回原位  
+            }            
+            timer1.Enabled = true;           
         }
 
         private void btn_2_P_Rotate_Click(object sender, EventArgs e)
@@ -6147,6 +6466,10 @@ namespace Festo_Rubik_s_Cube_Explorer
             //}
         }
 
+        /// <summary>
+        /// 支持对面的旋杆儿一起动作
+        /// </summary>
+        /// <returns></returns>
         public int CubeSolve2()
         {
             int cutTimes = 0;
@@ -6324,86 +6647,87 @@ namespace Festo_Rubik_s_Cube_Explorer
         DateTime ProcessEndTime = DateTime.Now;
         public void btn_Start_Click(object sender, EventArgs e)
         {
+            updateAxisStatus();
             ProcessStartTime = DateTime.Now;
-            btn_2_P_Acquire_Click(sender, e);            
-            btn_Acquire_Click(sender, e);
-            //等待魔方解法计算
-            while (form1.textBox2.Text == "")
+            if (b_P_Acquire)
             {
-                Thread.Sleep(50);
+                btn_Acquire_Click(sender, e);
+                //等待魔方解法计算
+                while (form1.textBox2.Text == "")
+                {
+                    Thread.Sleep(50);
+                }
+                form1.Update();
+                if (form1.textBox2.Text != "" && form1.textBox2.Text.Split(' ')[0] != "Unsolvable")
+                {
+                    btn_2_P_Rotate_Click(sender, e);
+                    DateTime mStartTime = DateTime.Now;
+                    int StepCount = CubeSolve2();
+                    DateTime mEndTime = DateTime.Now;
+                    form1.lbl_TotalTime.Text = "动作时间：" + (mEndTime - mStartTime).Seconds.ToString() + "秒 " + (mEndTime - mStartTime).Milliseconds.ToString() + "毫秒";
+                    form1.lbl_StepTime.Text = "单步计时：(" + StepCount.ToString() + ") " + Math.Round(((mEndTime - mStartTime).TotalMilliseconds / StepCount), 3).ToString() + "毫秒";
+                    btn_CubeBack_Click(sender, e);
+                    form1.lbl_ProcessTime.Text = "整体时间：" + (ProcessEndTime - ProcessStartTime).Seconds.ToString() + "秒 "
+                        + (ProcessEndTime - ProcessStartTime).Milliseconds.ToString() + "毫秒";
+                }
+                else
+                {
+                    MessageBox.Show("解魔方失败！");
+                }
             }
-            form1.Update();
-            if (form1.textBox2.Text != "" && form1.textBox2.Text.Split(' ')[0] != "Unsolvable")
+            else if (b_P_Rotate)
             {
-                btn_2_P_Rotate_Click(sender, e);
-                DateTime mStartTime = DateTime.Now;
-                int StepCount = CubeSolve2();
-                //string[] mSteps = form1.textBox2.Text.Split(' ');
-                //for (int stepIndex = 0; stepIndex < mSteps.Length; stepIndex++)
-                //{
-                //    switch (mSteps[stepIndex].Substring(0, 1))
-                //    {
-                //        case "U":
-                //            RotateTo(mSteps[stepIndex], b_First_U);
-                //            if (b_First_U)
-                //            {
-                //                b_First_U = false;
-                //            }
-                //            break;
-                //        case "D":
-                //            RotateTo(mSteps[stepIndex], b_First_D);
-                //            if (b_First_D)
-                //            {
-                //                b_First_D = false;
-                //            }
-                //            break;
-                //        case "L":
-                //            RotateTo(mSteps[stepIndex], b_First_L);
-                //            if (b_First_L)
-                //            {
-                //                b_First_L = false;
-                //            }
-                //            break;
-                //        case "R":
-                //            RotateTo(mSteps[stepIndex], b_First_R);
-                //            if (b_First_R)
-                //            {
-                //                b_First_R = false;
-                //            }
-                //            break;
-                //        case "F":
-                //            RotateTo(mSteps[stepIndex], b_First_F);
-                //            if (b_First_F)
-                //            {
-                //                b_First_F = false;
-                //            }
-                //            break;
-                //        case "B":
-                //            RotateTo(mSteps[stepIndex], b_First_B);
-                //            if (b_First_B)
-                //            {
-                //                b_First_B = false;
-                //            }
-                //            break;
-                //        default:
-                //            break;
-                //    }
-                //}
-                DateTime mEndTime = DateTime.Now;
-                form1.lbl_TotalTime.Text = "动作时间：" + (mEndTime - mStartTime).ToString("mm:ss:fff");
-                form1.lbl_StepTime.Text = "单步计时：" + StepCount.ToString() + " " + Math.Round(((mEndTime - mStartTime).TotalMilliseconds / StepCount),3).ToString();
-                btn_CubeBack_Click(sender, e);
-                form1.lbl_ProcessTime.Text = "整体时间：" + (ProcessEndTime - ProcessStartTime).ToString("mm:ss:fff");
+                if (form1.textBox2.Text != "" && form1.textBox2.Text.Split(' ')[0] != "Unsolvable")
+                {
+                    DateTime mStartTime = DateTime.Now;
+                    int StepCount = CubeSolve2();
+                    DateTime mEndTime = DateTime.Now;
+                    form1.lbl_TotalTime.Text = "动作时间：" + (mEndTime - mStartTime).Seconds.ToString() + "秒 " + (mEndTime - mStartTime).Milliseconds.ToString() + "毫秒";
+                    form1.lbl_StepTime.Text = "单步计时：(" + StepCount.ToString() + ") " + Math.Round(((mEndTime - mStartTime).TotalMilliseconds / StepCount), 3).ToString() + "毫秒";
+                    btn_CubeBack_Click(sender, e);
+                    form1.lbl_ProcessTime.Text = "整体时间：" + (ProcessEndTime - ProcessStartTime).Seconds.ToString() + "秒 "
+                        + (ProcessEndTime - ProcessStartTime).Milliseconds.ToString() + "毫秒";
+                }
+                else
+                {
+                    btn_CubeBack_Click(sender, e);                    
+                    form1.lbl_ProcessTime.Text = "整体时间：" + (ProcessEndTime - ProcessStartTime).Seconds.ToString() + "秒 "
+                        + (ProcessEndTime - ProcessStartTime).Milliseconds.ToString() + "毫秒";
+                }
             }
             else
             {
-                MessageBox.Show("解魔方失败！");
+                btn_2_P_Acquire_Click(sender, e);
+                btn_Acquire_Click(sender, e);
+                //等待魔方解法计算
+                while (form1.textBox2.Text == "")
+                {
+                    Thread.Sleep(50);
+                }
+                form1.Update();
+                if (form1.textBox2.Text != "" && form1.textBox2.Text.Split(' ')[0] != "Unsolvable")
+                {
+                    btn_2_P_Rotate_Click(sender, e);
+                    DateTime mStartTime = DateTime.Now;
+                    int StepCount = CubeSolve2();
+                    DateTime mEndTime = DateTime.Now;
+                    form1.lbl_TotalTime.Text = "动作时间：" + (mEndTime - mStartTime).Seconds.ToString() + "秒 " + (mEndTime - mStartTime).Milliseconds.ToString() + "毫秒";
+                    form1.lbl_StepTime.Text = "单步计时：(" + StepCount.ToString() + ") " + Math.Round(((mEndTime - mStartTime).TotalMilliseconds / StepCount), 3).ToString() + "毫秒";
+                    btn_CubeBack_Click(sender, e);
+                    form1.lbl_ProcessTime.Text = "整体时间：" + (ProcessEndTime - ProcessStartTime).Seconds.ToString() + "秒 "
+                        + (ProcessEndTime - ProcessStartTime).Milliseconds.ToString() + "毫秒";
+                }
+                else
+                {
+                    MessageBox.Show("解魔方失败！");
+                }
             }
+           
         }
 
         private void Form_Manual_FormClosing(object sender, FormClosingEventArgs e)
         {
-            form1.mForm_Manual = new Form_Manual(form1);
+            form1.mForm_Manual = new Form_Manual(form1);//否则再次打开Form_Manual会报错
         }
     }
 }
