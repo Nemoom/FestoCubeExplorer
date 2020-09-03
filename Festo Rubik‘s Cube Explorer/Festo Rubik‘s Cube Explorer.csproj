@@ -252,6 +252,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_AutoColorLearning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AutoColorLearning.Designer.cs">
+      <DependentUpon>Form_AutoColorLearning.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_ColorLearning.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -295,6 +301,9 @@
     <Compile Include="UserLogin.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_AutoColorLearning.resx">
+      <DependentUpon>Form_AutoColorLearning.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ColorLearning.resx">
       <DependentUpon>Form_ColorLearning.cs</DependentUpon>
@@ -344,6 +353,12 @@
     <None Include="Resources\status-away.png" />
     <None Include="Resources\status-busy.png" />
     <None Include="Resources\status-offline.png" />
+    <None Include="1.png" />
+    <None Include="2.png" />
+    <None Include="3.png" />
+    <None Include="4.png" />
+    <None Include="5.png" />
+    <None Include="6.png" />
     <Content Include="Rubik%27s Cube.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
