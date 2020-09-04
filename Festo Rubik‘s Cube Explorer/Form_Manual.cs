@@ -5367,7 +5367,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             EnableAll();            
         }
 
-        private void btn_2_P_Start_Click(object sender, EventArgs e)
+        public void btn_2_P_Start_Click(object sender, EventArgs e)
         {
             IOlinkAxisIn(5);//5个相机回原位
             IOlinkAxisOut(1);//魔方姿态45度
@@ -5574,7 +5574,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 Form1.m_OpcUaClient.WriteNode(GlobalVariables.CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_o_QuitError, false);
             }
         }
-        private void btn_2_P_Acquire_Click(object sender, EventArgs e)
+        public void btn_2_P_Acquire_Click(object sender, EventArgs e)
         {
             timer1.Enabled = false;
             updateAxisStatus();
@@ -6728,6 +6728,11 @@ namespace Festo_Rubik_s_Cube_Explorer
         private void Form_Manual_FormClosing(object sender, FormClosingEventArgs e)
         {
             form1.mForm_Manual = new Form_Manual(form1);//否则再次打开Form_Manual会报错
+        }
+
+        private void btn_AutoColorLearning_Click(object sender, EventArgs e)
+        {
+            new Form_AutoColorLearning(this).Show();
         }
     }
 }

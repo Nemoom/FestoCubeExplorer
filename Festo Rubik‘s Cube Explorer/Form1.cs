@@ -1290,6 +1290,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                     break;
             }
             mBtn.BackColor = mColor;
+            mBtn.Text = mBtn.BackColor.R.ToString() + "\n" + mBtn.BackColor.G.ToString() + "\n" + mBtn.BackColor.B.ToString();
         }
 
         /// <summary>
@@ -1528,6 +1529,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                     //mBtn.BackColor = Color.Black;
                     break;
             }
+            mBtn.Text = "";
         }
 
         public void OriginalColorDisplay()
