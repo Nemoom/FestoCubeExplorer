@@ -190,7 +190,7 @@ namespace Festo_Rubik_s_Cube_Explorer
 
         private void btn_L5_Click(object sender, EventArgs e)
         {
-            new Form_ColorLearning("L").Show();
+            new Form_ColorLearning("L_C").Show();
         }
 
         private void btn_L6_Click(object sender, EventArgs e)
@@ -237,7 +237,7 @@ namespace Festo_Rubik_s_Cube_Explorer
 
         private void btn_U5_Click(object sender, EventArgs e)
         {
-            new Form_ColorLearning("U").Show();
+            new Form_ColorLearning("U_C").Show();
         }
 
         private void btn_U6_Click(object sender, EventArgs e)
@@ -284,7 +284,7 @@ namespace Festo_Rubik_s_Cube_Explorer
 
         private void btn_B5_Click(object sender, EventArgs e)
         {
-            new Form_ColorLearning("B").Show();
+            new Form_ColorLearning("B_C").Show();
         }
 
         private void btn_B6_Click(object sender, EventArgs e)
@@ -331,7 +331,7 @@ namespace Festo_Rubik_s_Cube_Explorer
 
         private void btn_R5_Click(object sender, EventArgs e)
         {
-            new Form_ColorLearning("R").Show();
+            new Form_ColorLearning("R_C").Show();
         }
 
         private void btn_R6_Click(object sender, EventArgs e)
@@ -378,7 +378,7 @@ namespace Festo_Rubik_s_Cube_Explorer
 
         private void btn_F5_Click(object sender, EventArgs e)
         {
-            new Form_ColorLearning("F").Show();
+            new Form_ColorLearning("F_C").Show();
         }
 
         private void btn_F6_Click(object sender, EventArgs e)
@@ -425,7 +425,7 @@ namespace Festo_Rubik_s_Cube_Explorer
 
         private void btn_D5_Click(object sender, EventArgs e)
         {
-            new Form_ColorLearning("D").Show();
+            new Form_ColorLearning("D_C").Show();
         }
 
         private void btn_D6_Click(object sender, EventArgs e)
@@ -6101,7 +6101,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 ColorDisplay(CamID.CamU, 2, Form1.ColorMatch(CamID.CamU, Form1.GetRGBvalue(CamID.CamU, 8)));
                 ColorDisplay(CamID.CamU, 3, Form1.ColorMatch(CamID.CamU, Form1.GetRGBvalue(CamID.CamU, 7)));
                 ColorDisplay(CamID.CamU, 4, Form1.ColorMatch(CamID.CamU, Form1.GetRGBvalue(CamID.CamU, 6)));
-                ColorDisplay(CamID.CamU, 5, Form1.ColorMatch(CamID.CamU, Form1.GetRGBvalue(CamID.CamU, 5)));
+                ColorDisplay(CamID.CamU, 5, Form1.ColorMatch(CamID.CamU, Form1.GetRGBvalue(CamID.CamU, 5), true));
                 ColorDisplay(CamID.CamU, 6, Form1.ColorMatch(CamID.CamU, Form1.GetRGBvalue(CamID.CamU, 4)));
                 ColorDisplay(CamID.CamU, 7, Form1.ColorMatch(CamID.CamU, Form1.GetRGBvalue(CamID.CamU, 3)));
                 ColorDisplay(CamID.CamU, 8, Form1.ColorMatch(CamID.CamU, Form1.GetRGBvalue(CamID.CamU, 2)));
@@ -6111,7 +6111,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 ColorDisplay(CamID.CamD, 2, Form1.ColorMatch(CamID.CamD, Form1.GetRGBvalue(CamID.CamD, 2)));
                 ColorDisplay(CamID.CamD, 3, Form1.ColorMatch(CamID.CamD, Form1.GetRGBvalue(CamID.CamD, 3)));
                 ColorDisplay(CamID.CamD, 4, Form1.ColorMatch(CamID.CamD, Form1.GetRGBvalue(CamID.CamD, 4)));
-                ColorDisplay(CamID.CamD, 5, Form1.ColorMatch(CamID.CamD, Form1.GetRGBvalue(CamID.CamD, 5)));
+                ColorDisplay(CamID.CamD, 5, Form1.ColorMatch(CamID.CamD, Form1.GetRGBvalue(CamID.CamD, 5), true));
                 ColorDisplay(CamID.CamD, 6, Form1.ColorMatch(CamID.CamD, Form1.GetRGBvalue(CamID.CamD, 6)));
                 ColorDisplay(CamID.CamD, 7, Form1.ColorMatch(CamID.CamD, Form1.GetRGBvalue(CamID.CamD, 7)));
                 ColorDisplay(CamID.CamD, 8, Form1.ColorMatch(CamID.CamD, Form1.GetRGBvalue(CamID.CamD, 8)));
@@ -6120,7 +6120,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 ColorDisplay(CamID.CamL, 2, Form1.ColorMatch(CamID.CamL, Form1.GetRGBvalue(CamID.CamL, 2)));
                 ColorDisplay(CamID.CamL, 3, Form1.ColorMatch(CamID.CamL, Form1.GetRGBvalue(CamID.CamL, 3)));
                 ColorDisplay(CamID.CamL, 4, Form1.ColorMatch(CamID.CamL, Form1.GetRGBvalue(CamID.CamL, 4)));
-                ColorDisplay(CamID.CamL, 5, Form1.ColorMatch(CamID.CamL, Form1.GetRGBvalue(CamID.CamL, 5)));
+                ColorDisplay(CamID.CamL, 5, Form1.ColorMatch(CamID.CamL, Form1.GetRGBvalue(CamID.CamL, 5), true));
                 ColorDisplay(CamID.CamL, 6, Form1.ColorMatch(CamID.CamL, Form1.GetRGBvalue(CamID.CamL, 6)));
                 ColorDisplay(CamID.CamL, 7, Form1.ColorMatch(CamID.CamL, Form1.GetRGBvalue(CamID.CamL, 7)));
                 ColorDisplay(CamID.CamL, 8, Form1.ColorMatch(CamID.CamL, Form1.GetRGBvalue(CamID.CamL, 8)));
@@ -6129,7 +6129,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 ColorDisplay(CamID.CamR, 2, Form1.ColorMatch(CamID.CamR, Form1.GetRGBvalue(CamID.CamR, 2)));
                 ColorDisplay(CamID.CamR, 3, Form1.ColorMatch(CamID.CamR, Form1.GetRGBvalue(CamID.CamR, 3)));
                 ColorDisplay(CamID.CamR, 4, Form1.ColorMatch(CamID.CamR, Form1.GetRGBvalue(CamID.CamR, 4)));
-                ColorDisplay(CamID.CamR, 5, Form1.ColorMatch(CamID.CamR, Form1.GetRGBvalue(CamID.CamR, 5)));
+                ColorDisplay(CamID.CamR, 5, Form1.ColorMatch(CamID.CamR, Form1.GetRGBvalue(CamID.CamR, 5), true));
                 ColorDisplay(CamID.CamR, 6, Form1.ColorMatch(CamID.CamR, Form1.GetRGBvalue(CamID.CamR, 6)));
                 ColorDisplay(CamID.CamR, 7, Form1.ColorMatch(CamID.CamR, Form1.GetRGBvalue(CamID.CamR, 7)));
                 ColorDisplay(CamID.CamR, 8, Form1.ColorMatch(CamID.CamR, Form1.GetRGBvalue(CamID.CamR, 8)));
@@ -6139,7 +6139,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 ColorDisplay(CamID.CamF, 2, Form1.ColorMatch(CamID.CamF, Form1.GetRGBvalue(CamID.CamF, 2)));
                 ColorDisplay(CamID.CamF, 3, Form1.ColorMatch(CamID.CamF, Form1.GetRGBvalue(CamID.CamF, 3)));
                 ColorDisplay(CamID.CamF, 4, Form1.ColorMatch(CamID.CamF, Form1.GetRGBvalue(CamID.CamF, 4)));
-                ColorDisplay(CamID.CamF, 5, Form1.ColorMatch(CamID.CamF, Form1.GetRGBvalue(CamID.CamF, 5)));
+                ColorDisplay(CamID.CamF, 5, Form1.ColorMatch(CamID.CamF, Form1.GetRGBvalue(CamID.CamF, 5), true));
                 ColorDisplay(CamID.CamF, 6, Form1.ColorMatch(CamID.CamF, Form1.GetRGBvalue(CamID.CamF, 6)));
                 ColorDisplay(CamID.CamF, 7, Form1.ColorMatch(CamID.CamF, Form1.GetRGBvalue(CamID.CamF, 7)));
                 ColorDisplay(CamID.CamF, 8, Form1.ColorMatch(CamID.CamF, Form1.GetRGBvalue(CamID.CamF, 8)));
@@ -6149,7 +6149,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 ColorDisplay(CamID.CamB, 2, Form1.ColorMatch(CamID.CamB, Form1.GetRGBvalue(CamID.CamB, 2)));
                 ColorDisplay(CamID.CamB, 3, Form1.ColorMatch(CamID.CamB, Form1.GetRGBvalue(CamID.CamB, 3)));
                 ColorDisplay(CamID.CamB, 4, Form1.ColorMatch(CamID.CamB, Form1.GetRGBvalue(CamID.CamB, 4)));
-                ColorDisplay(CamID.CamB, 5, Form1.ColorMatch(CamID.CamB, Form1.GetRGBvalue(CamID.CamB, 5)));
+                ColorDisplay(CamID.CamB, 5, Form1.ColorMatch(CamID.CamB, Form1.GetRGBvalue(CamID.CamB, 5), true));
                 ColorDisplay(CamID.CamB, 6, Form1.ColorMatch(CamID.CamB, Form1.GetRGBvalue(CamID.CamB, 6)));
                 ColorDisplay(CamID.CamB, 7, Form1.ColorMatch(CamID.CamB, Form1.GetRGBvalue(CamID.CamB, 7)));
                 ColorDisplay(CamID.CamB, 8, Form1.ColorMatch(CamID.CamB, Form1.GetRGBvalue(CamID.CamB, 8)));

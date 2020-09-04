@@ -946,7 +946,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             return r_Color;
         }
 
-        public static FaceColor ColorMatch(CamID mCamID, Color mColor)
+        public static FaceColor ColorMatch(CamID mCamID, Color mColor, bool b_Centre = false)
         {
             FaceColor r_FaceColor = 0;
             ColorMatch mColorMatch = new ColorMatch();
@@ -975,55 +975,112 @@ namespace Festo_Rubik_s_Cube_Explorer
                     mColorMatch = GlobalVariables.CurrentParas.CamB.mColorMatch;
                     break;
             }
-            if (mColor.R >= mColorMatch.c_Red.R_min && mColor.R <= mColorMatch.c_Red.R_max
-                && mColor.G >= mColorMatch.c_Red.G_min && mColor.G <= mColorMatch.c_Red.G_max
-                && mColor.B >= mColorMatch.c_Red.B_min && mColor.B <= mColorMatch.c_Red.B_max)
+            if (b_Centre)
             {
-                r_FaceColor = FaceColor.Red;
-            }
-            else if (mColor.R >= mColorMatch.c_Green.R_min && mColor.R <= mColorMatch.c_Green.R_max
-                && mColor.G >= mColorMatch.c_Green.G_min && mColor.G <= mColorMatch.c_Green.G_max
-                && mColor.B >= mColorMatch.c_Green.B_min && mColor.B <= mColorMatch.c_Green.B_max)
-            {
-                if (mColor.B > mColor.G)
+                //是中心块，调用独立的上下限
+                if (mColor.R >= mColorMatch.c_Red_c.R_min && mColor.R <= mColorMatch.c_Red_c.R_max
+             && mColor.G >= mColorMatch.c_Red_c.G_min && mColor.G <= mColorMatch.c_Red_c.G_max
+             && mColor.B >= mColorMatch.c_Red_c.B_min && mColor.B <= mColorMatch.c_Red_c.B_max)
                 {
-                    r_FaceColor = FaceColor.Blue;
+                    r_FaceColor = FaceColor.Red;
                 }
-                else
+                else if (mColor.R >= mColorMatch.c_Green_c.R_min && mColor.R <= mColorMatch.c_Green_c.R_max
+                    && mColor.G >= mColorMatch.c_Green_c.G_min && mColor.G <= mColorMatch.c_Green_c.G_max
+                    && mColor.B >= mColorMatch.c_Green_c.B_min && mColor.B <= mColorMatch.c_Green_c.B_max)
                 {
-                    r_FaceColor = FaceColor.Green;
+                    if (mColor.B > mColor.G)
+                    {
+                        r_FaceColor = FaceColor.Blue;
+                    }
+                    else
+                    {
+                        r_FaceColor = FaceColor.Green;
+                    }
                 }
-            }
-            else if (mColor.R >= mColorMatch.c_Blue.R_min && mColor.R <= mColorMatch.c_Blue.R_max
-                && mColor.G >= mColorMatch.c_Blue.G_min && mColor.G <= mColorMatch.c_Blue.G_max
-                && mColor.B >= mColorMatch.c_Blue.B_min && mColor.B <= mColorMatch.c_Blue.B_max)
-            {
-                if (mColor.B < mColor.G)
+                else if (mColor.R >= mColorMatch.c_Blue_c.R_min && mColor.R <= mColorMatch.c_Blue_c.R_max
+                    && mColor.G >= mColorMatch.c_Blue_c.G_min && mColor.G <= mColorMatch.c_Blue_c.G_max
+                    && mColor.B >= mColorMatch.c_Blue_c.B_min && mColor.B <= mColorMatch.c_Blue_c.B_max)
                 {
-                    r_FaceColor = FaceColor.Green;
+                    if (mColor.B < mColor.G)
+                    {
+                        r_FaceColor = FaceColor.Green;
+                    }
+                    else
+                    {
+                        r_FaceColor = FaceColor.Blue;
+                    }
                 }
-                else
+                else if (mColor.R >= mColorMatch.c_White_c.R_min && mColor.R <= mColorMatch.c_White_c.R_max
+                    && mColor.G >= mColorMatch.c_White_c.G_min && mColor.G <= mColorMatch.c_White_c.G_max
+                    && mColor.B >= mColorMatch.c_White_c.B_min && mColor.B <= mColorMatch.c_White_c.B_max)
                 {
-                    r_FaceColor = FaceColor.Blue;
+                    r_FaceColor = FaceColor.White;
+                }
+                else if (mColor.R >= mColorMatch.c_Orange_c.R_min && mColor.R <= mColorMatch.c_Orange_c.R_max
+                    && mColor.G >= mColorMatch.c_Orange_c.G_min && mColor.G <= mColorMatch.c_Orange_c.G_max
+                    && mColor.B >= mColorMatch.c_Orange_c.B_min && mColor.B <= mColorMatch.c_Orange_c.B_max)
+                {
+                    r_FaceColor = FaceColor.Orange;
+                }
+                else if (mColor.R >= mColorMatch.c_Yellow_c.R_min && mColor.R <= mColorMatch.c_Yellow_c.R_max
+                  && mColor.G >= mColorMatch.c_Yellow_c.G_min && mColor.G <= mColorMatch.c_Yellow_c.G_max
+                  && mColor.B >= mColorMatch.c_Yellow_c.B_min && mColor.B <= mColorMatch.c_Yellow_c.B_max)
+                {
+                    r_FaceColor = FaceColor.Yellow;
                 }
             }
-            else if (mColor.R >= mColorMatch.c_White.R_min && mColor.R <= mColorMatch.c_White.R_max
-                && mColor.G >= mColorMatch.c_White.G_min && mColor.G <= mColorMatch.c_White.G_max
-                && mColor.B >= mColorMatch.c_White.B_min && mColor.B <= mColorMatch.c_White.B_max)
+            else
             {
-                r_FaceColor = FaceColor.White;
-            }
-            else if (mColor.R >= mColorMatch.c_Orange.R_min && mColor.R <= mColorMatch.c_Orange.R_max
-                && mColor.G >= mColorMatch.c_Orange.G_min && mColor.G <= mColorMatch.c_Orange.G_max
-                && mColor.B >= mColorMatch.c_Orange.B_min && mColor.B <= mColorMatch.c_Orange.B_max)
-            {
-                r_FaceColor = FaceColor.Orange;
-            }
-            else if (mColor.R >= mColorMatch.c_Yellow.R_min && mColor.R <= mColorMatch.c_Yellow.R_max
-              && mColor.G >= mColorMatch.c_Yellow.G_min && mColor.G <= mColorMatch.c_Yellow.G_max
-              && mColor.B >= mColorMatch.c_Yellow.B_min && mColor.B <= mColorMatch.c_Yellow.B_max)
-            {
-                r_FaceColor = FaceColor.Yellow;
+                if (mColor.R >= mColorMatch.c_Red.R_min && mColor.R <= mColorMatch.c_Red.R_max
+                    && mColor.G >= mColorMatch.c_Red.G_min && mColor.G <= mColorMatch.c_Red.G_max
+                    && mColor.B >= mColorMatch.c_Red.B_min && mColor.B <= mColorMatch.c_Red.B_max)
+                {
+                    r_FaceColor = FaceColor.Red;
+                }
+                else if (mColor.R >= mColorMatch.c_Green.R_min && mColor.R <= mColorMatch.c_Green.R_max
+                    && mColor.G >= mColorMatch.c_Green.G_min && mColor.G <= mColorMatch.c_Green.G_max
+                    && mColor.B >= mColorMatch.c_Green.B_min && mColor.B <= mColorMatch.c_Green.B_max)
+                {
+                    if (mColor.B > mColor.G)
+                    {
+                        r_FaceColor = FaceColor.Blue;
+                    }
+                    else
+                    {
+                        r_FaceColor = FaceColor.Green;
+                    }
+                }
+                else if (mColor.R >= mColorMatch.c_Blue.R_min && mColor.R <= mColorMatch.c_Blue.R_max
+                    && mColor.G >= mColorMatch.c_Blue.G_min && mColor.G <= mColorMatch.c_Blue.G_max
+                    && mColor.B >= mColorMatch.c_Blue.B_min && mColor.B <= mColorMatch.c_Blue.B_max)
+                {
+                    if (mColor.B < mColor.G)
+                    {
+                        r_FaceColor = FaceColor.Green;
+                    }
+                    else
+                    {
+                        r_FaceColor = FaceColor.Blue;
+                    }
+                }
+                else if (mColor.R >= mColorMatch.c_White.R_min && mColor.R <= mColorMatch.c_White.R_max
+                    && mColor.G >= mColorMatch.c_White.G_min && mColor.G <= mColorMatch.c_White.G_max
+                    && mColor.B >= mColorMatch.c_White.B_min && mColor.B <= mColorMatch.c_White.B_max)
+                {
+                    r_FaceColor = FaceColor.White;
+                }
+                else if (mColor.R >= mColorMatch.c_Orange.R_min && mColor.R <= mColorMatch.c_Orange.R_max
+                    && mColor.G >= mColorMatch.c_Orange.G_min && mColor.G <= mColorMatch.c_Orange.G_max
+                    && mColor.B >= mColorMatch.c_Orange.B_min && mColor.B <= mColorMatch.c_Orange.B_max)
+                {
+                    r_FaceColor = FaceColor.Orange;
+                }
+                else if (mColor.R >= mColorMatch.c_Yellow.R_min && mColor.R <= mColorMatch.c_Yellow.R_max
+                  && mColor.G >= mColorMatch.c_Yellow.G_min && mColor.G <= mColorMatch.c_Yellow.G_max
+                  && mColor.B >= mColorMatch.c_Yellow.B_min && mColor.B <= mColorMatch.c_Yellow.B_max)
+                {
+                    r_FaceColor = FaceColor.Yellow;
+                }
             }
             return r_FaceColor;
         }
@@ -1542,7 +1599,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             ColorDisplay(CamID.CamU, 2, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 8)));
             ColorDisplay(CamID.CamU, 3, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 7)));
             ColorDisplay(CamID.CamU, 4, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 6)));
-            ColorDisplay(CamID.CamU, 5, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 5)));
+            ColorDisplay(CamID.CamU, 5, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 5), true));
             ColorDisplay(CamID.CamU, 6, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 4)));
             ColorDisplay(CamID.CamU, 7, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 3)));
             ColorDisplay(CamID.CamU, 8, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 2)));
@@ -1552,7 +1609,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             ColorDisplay(CamID.CamD, 2, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 2)));
             ColorDisplay(CamID.CamD, 3, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 3)));
             ColorDisplay(CamID.CamD, 4, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 4)));
-            ColorDisplay(CamID.CamD, 5, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 5)));
+            ColorDisplay(CamID.CamD, 5, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 5), true));
             ColorDisplay(CamID.CamD, 6, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 6)));
             ColorDisplay(CamID.CamD, 7, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 7)));
             ColorDisplay(CamID.CamD, 8, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 8)));
@@ -1562,7 +1619,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             ColorDisplay(CamID.CamL, 2, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 2)));
             ColorDisplay(CamID.CamL, 3, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 3)));
             ColorDisplay(CamID.CamL, 4, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 4)));
-            ColorDisplay(CamID.CamL, 5, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 5)));
+            ColorDisplay(CamID.CamL, 5, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 5), true));
             ColorDisplay(CamID.CamL, 6, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 6)));
             ColorDisplay(CamID.CamL, 7, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 7)));
             ColorDisplay(CamID.CamL, 8, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 8)));
@@ -1572,7 +1629,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             ColorDisplay(CamID.CamR, 2, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 2)));
             ColorDisplay(CamID.CamR, 3, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 3)));
             ColorDisplay(CamID.CamR, 4, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 4)));
-            ColorDisplay(CamID.CamR, 5, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 5)));
+            ColorDisplay(CamID.CamR, 5, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 5), true));
             ColorDisplay(CamID.CamR, 6, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 6)));
             ColorDisplay(CamID.CamR, 7, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 7)));
             ColorDisplay(CamID.CamR, 8, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 8)));
@@ -1582,7 +1639,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             ColorDisplay(CamID.CamF, 2, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 2)));
             ColorDisplay(CamID.CamF, 3, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 3)));
             ColorDisplay(CamID.CamF, 4, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 4)));
-            ColorDisplay(CamID.CamF, 5, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 5)));
+            ColorDisplay(CamID.CamF, 5, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 5), true));
             ColorDisplay(CamID.CamF, 6, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 6)));
             ColorDisplay(CamID.CamF, 7, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 7)));
             ColorDisplay(CamID.CamF, 8, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 8)));
@@ -1592,7 +1649,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             ColorDisplay(CamID.CamB, 2, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 2)));
             ColorDisplay(CamID.CamB, 3, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 3)));
             ColorDisplay(CamID.CamB, 4, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 4)));
-            ColorDisplay(CamID.CamB, 5, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 5)));
+            ColorDisplay(CamID.CamB, 5, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 5), true));
             ColorDisplay(CamID.CamB, 6, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 6)));
             ColorDisplay(CamID.CamB, 7, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 7)));
             ColorDisplay(CamID.CamB, 8, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 8)));
@@ -1608,7 +1665,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ColorDisplay(CamID.CamU, 2, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 8)));
                     ColorDisplay(CamID.CamU, 3, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 7)));
                     ColorDisplay(CamID.CamU, 4, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 6)));
-                    ColorDisplay(CamID.CamU, 5, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 5)));
+                    ColorDisplay(CamID.CamU, 5, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 5), true));
                     ColorDisplay(CamID.CamU, 6, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 4)));
                     ColorDisplay(CamID.CamU, 7, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 3)));
                     ColorDisplay(CamID.CamU, 8, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 2)));
@@ -1620,7 +1677,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ColorDisplay(CamID.CamD, 2, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 2)));
                     ColorDisplay(CamID.CamD, 3, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 3)));
                     ColorDisplay(CamID.CamD, 4, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 4)));
-                    ColorDisplay(CamID.CamD, 5, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 5)));
+                    ColorDisplay(CamID.CamD, 5, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 5), true));
                     ColorDisplay(CamID.CamD, 6, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 6)));
                     ColorDisplay(CamID.CamD, 7, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 7)));
                     ColorDisplay(CamID.CamD, 8, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 8)));
@@ -1632,7 +1689,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ColorDisplay(CamID.CamL, 2, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 2)));
                     ColorDisplay(CamID.CamL, 3, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 3)));
                     ColorDisplay(CamID.CamL, 4, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 4)));
-                    ColorDisplay(CamID.CamL, 5, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 5)));
+                    ColorDisplay(CamID.CamL, 5, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 5), true));
                     ColorDisplay(CamID.CamL, 6, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 6)));
                     ColorDisplay(CamID.CamL, 7, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 7)));
                     ColorDisplay(CamID.CamL, 8, ColorMatch(CamID.CamL, GetRGBvalue(CamID.CamL, 8)));
@@ -1644,7 +1701,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ColorDisplay(CamID.CamR, 2, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 2)));
                     ColorDisplay(CamID.CamR, 3, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 3)));
                     ColorDisplay(CamID.CamR, 4, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 4)));
-                    ColorDisplay(CamID.CamR, 5, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 5)));
+                    ColorDisplay(CamID.CamR, 5, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 5), true));
                     ColorDisplay(CamID.CamR, 6, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 6)));
                     ColorDisplay(CamID.CamR, 7, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 7)));
                     ColorDisplay(CamID.CamR, 8, ColorMatch(CamID.CamR, GetRGBvalue(CamID.CamR, 8)));
@@ -1656,7 +1713,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ColorDisplay(CamID.CamF, 2, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 2)));
                     ColorDisplay(CamID.CamF, 3, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 3)));
                     ColorDisplay(CamID.CamF, 4, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 4)));
-                    ColorDisplay(CamID.CamF, 5, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 5)));
+                    ColorDisplay(CamID.CamF, 5, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 5), true));
                     ColorDisplay(CamID.CamF, 6, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 6)));
                     ColorDisplay(CamID.CamF, 7, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 7)));
                     ColorDisplay(CamID.CamF, 8, ColorMatch(CamID.CamF, GetRGBvalue(CamID.CamF, 8)));
@@ -1668,7 +1725,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ColorDisplay(CamID.CamB, 2, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 2)));
                     ColorDisplay(CamID.CamB, 3, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 3)));
                     ColorDisplay(CamID.CamB, 4, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 4)));
-                    ColorDisplay(CamID.CamB, 5, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 5)));
+                    ColorDisplay(CamID.CamB, 5, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 5), true));
                     ColorDisplay(CamID.CamB, 6, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 6)));
                     ColorDisplay(CamID.CamB, 7, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 7)));
                     ColorDisplay(CamID.CamB, 8, ColorMatch(CamID.CamB, GetRGBvalue(CamID.CamB, 8)));
@@ -1688,7 +1745,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ColorDisplay(CamID.CamU, 2, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 8)));
                     ColorDisplay(CamID.CamU, 3, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 7)));
                     ColorDisplay(CamID.CamU, 4, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 6)));
-                    ColorDisplay(CamID.CamU, 5, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 5)));
+                    ColorDisplay(CamID.CamU, 5, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 5), true));
                     ColorDisplay(CamID.CamU, 6, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 4)));
                     ColorDisplay(CamID.CamU, 7, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 3)));
                     ColorDisplay(CamID.CamU, 8, ColorMatch(CamID.CamU, GetRGBvalue(CamID.CamU, 2)));
@@ -1700,7 +1757,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                     ColorDisplay(CamID.CamD, 2, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 2)));
                     ColorDisplay(CamID.CamD, 3, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 3)));
                     ColorDisplay(CamID.CamD, 4, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 4)));
-                    ColorDisplay(CamID.CamD, 5, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 5)));
+                    ColorDisplay(CamID.CamD, 5, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 5), true));
                     ColorDisplay(CamID.CamD, 6, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 6)));
                     ColorDisplay(CamID.CamD, 7, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 7)));
                     ColorDisplay(CamID.CamD, 8, ColorMatch(CamID.CamD, GetRGBvalue(CamID.CamD, 8)));

@@ -164,6 +164,92 @@ namespace Festo_Rubik_s_Cube_Explorer
                         {
                             return XMLCheckResult.ErrorCamU.ToString();
                         }
+                        #region 中心块参数单设
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Red");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamU.mColorMatch.c_Red_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Red_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Red_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Red_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Red_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Red_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamU.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Green");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamU.mColorMatch.c_Green_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Green_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Green_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Green_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Green_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Green_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamU.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Blue");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamU.mColorMatch.c_Blue_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Blue_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Blue_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Blue_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Blue_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Blue_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamU.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/White");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamU.mColorMatch.c_White_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_White_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_White_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_White_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_White_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_White_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamU.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Orange");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamU.mColorMatch.c_Orange_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Orange_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Orange_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Orange_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Orange_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Orange_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamU.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Yellow");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamU.mColorMatch.c_Yellow_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Yellow_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Yellow_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Yellow_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Yellow_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamU.mColorMatch.c_Yellow_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamU.ToString();
+                        } 
+                        #endregion
                     }
                     else
                     {
@@ -267,6 +353,93 @@ namespace Festo_Rubik_s_Cube_Explorer
                         {
                             return XMLCheckResult.ErrorCamD.ToString();
                         }
+                        #region 中心块参数单设
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Red");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamD.mColorMatch.c_Red_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Red_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Red_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Red_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Red_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Red_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamD.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Green");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamD.mColorMatch.c_Green_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Green_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Green_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Green_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Green_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Green_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamD.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Blue");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamD.mColorMatch.c_Blue_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Blue_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Blue_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Blue_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Blue_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Blue_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamD.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/White");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamD.mColorMatch.c_White_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_White_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_White_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_White_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_White_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_White_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamD.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Orange");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamD.mColorMatch.c_Orange_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Orange_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Orange_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Orange_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Orange_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Orange_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamD.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Yellow");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamD.mColorMatch.c_Yellow_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Yellow_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Yellow_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Yellow_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Yellow_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamD.mColorMatch.c_Yellow_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamD.ToString();
+                        }
+                        #endregion
+
                     }
                     else
                     {
@@ -370,6 +543,93 @@ namespace Festo_Rubik_s_Cube_Explorer
                         {
                             return XMLCheckResult.ErrorCamL.ToString();
                         }
+                        #region 中心块参数单设
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Red");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamL.mColorMatch.c_Red_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Red_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Red_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Red_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Red_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Red_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamL.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Green");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamL.mColorMatch.c_Green_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Green_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Green_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Green_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Green_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Green_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamL.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Blue");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamL.mColorMatch.c_Blue_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Blue_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Blue_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Blue_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Blue_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Blue_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamL.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/White");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamL.mColorMatch.c_White_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_White_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_White_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_White_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_White_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_White_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamL.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Orange");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamL.mColorMatch.c_Orange_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Orange_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Orange_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Orange_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Orange_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Orange_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamL.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Yellow");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamL.mColorMatch.c_Yellow_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Yellow_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Yellow_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Yellow_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Yellow_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamL.mColorMatch.c_Yellow_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamL.ToString();
+                        }
+                        #endregion
+
                     }
                     else
                     {
@@ -473,6 +733,93 @@ namespace Festo_Rubik_s_Cube_Explorer
                         {
                             return XMLCheckResult.ErrorCamR.ToString();
                         }
+                        #region 中心块参数单设
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Red");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamR.mColorMatch.c_Red_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Red_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Red_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Red_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Red_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Red_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamR.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Green");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamR.mColorMatch.c_Green_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Green_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Green_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Green_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Green_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Green_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamR.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Blue");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamR.mColorMatch.c_Blue_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Blue_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Blue_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Blue_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Blue_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Blue_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamR.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/White");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamR.mColorMatch.c_White_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_White_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_White_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_White_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_White_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_White_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamR.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Orange");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamR.mColorMatch.c_Orange_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Orange_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Orange_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Orange_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Orange_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Orange_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamR.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Yellow");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamR.mColorMatch.c_Yellow_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Yellow_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Yellow_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Yellow_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Yellow_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamR.mColorMatch.c_Yellow_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamR.ToString();
+                        }
+                        #endregion
+
                     }
                     else
                     {
@@ -576,6 +923,93 @@ namespace Festo_Rubik_s_Cube_Explorer
                         {
                             return XMLCheckResult.ErrorCamF.ToString();
                         }
+                        #region 中心块参数单设
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Red");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamF.mColorMatch.c_Red_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Red_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Red_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Red_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Red_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Red_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamF.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Green");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamF.mColorMatch.c_Green_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Green_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Green_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Green_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Green_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Green_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamF.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Blue");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamF.mColorMatch.c_Blue_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Blue_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Blue_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Blue_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Blue_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Blue_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamF.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/White");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamF.mColorMatch.c_White_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_White_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_White_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_White_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_White_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_White_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamF.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Orange");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamF.mColorMatch.c_Orange_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Orange_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Orange_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Orange_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Orange_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Orange_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamF.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Yellow");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamF.mColorMatch.c_Yellow_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Yellow_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Yellow_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Yellow_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Yellow_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamF.mColorMatch.c_Yellow_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamF.ToString();
+                        }
+                        #endregion
+
                     }
                     else
                     {
@@ -679,6 +1113,93 @@ namespace Festo_Rubik_s_Cube_Explorer
                         {
                             return XMLCheckResult.ErrorCamB.ToString();
                         }
+                        #region 中心块参数单设
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Red");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamB.mColorMatch.c_Red_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Red_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Red_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Red_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Red_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Red_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamB.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Green");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamB.mColorMatch.c_Green_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Green_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Green_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Green_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Green_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Green_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamB.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Blue");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamB.mColorMatch.c_Blue_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Blue_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Blue_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Blue_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Blue_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Blue_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamB.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/White");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamB.mColorMatch.c_White_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_White_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_White_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_White_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_White_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_White_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamB.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Orange");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamB.mColorMatch.c_Orange_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Orange_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Orange_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Orange_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Orange_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Orange_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamB.ToString();
+                        }
+                        xmlnode_Color = ColorMatchNode.SelectSingleNode(@"Centre/Yellow");
+                        if (xmlnode_Color != null)
+                        {
+                            CurrentParas.CamB.mColorMatch.c_Yellow_c.R_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Yellow_c.R_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("R_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Yellow_c.G_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Yellow_c.G_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("G_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Yellow_c.B_min = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_min").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                            CurrentParas.CamB.mColorMatch.c_Yellow_c.B_max = Convert.ToInt16(xmlnode_Color.SelectSingleNode("B_max").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                        }
+                        else
+                        {
+                            return XMLCheckResult.ErrorCamB.ToString();
+                        }
+                        #endregion
+
                     }
                     else
                     {
@@ -1308,6 +1829,13 @@ namespace Festo_Rubik_s_Cube_Explorer
         public RGB_MinMax c_White;
         public RGB_MinMax c_Orange;
         public RGB_MinMax c_Yellow;
+
+        public RGB_MinMax c_Red_c;
+        public RGB_MinMax c_Green_c;
+        public RGB_MinMax c_Blue_c;
+        public RGB_MinMax c_White_c;
+        public RGB_MinMax c_Orange_c;
+        public RGB_MinMax c_Yellow_c;
     }
     public struct CamParas
     {
