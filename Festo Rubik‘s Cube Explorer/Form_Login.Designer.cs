@@ -37,9 +37,10 @@
             // button_change_password
             // 
             this.button_change_password.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button_change_password.Location = new System.Drawing.Point(41, 67);
+            this.button_change_password.Location = new System.Drawing.Point(88, 141);
+            this.button_change_password.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_change_password.Name = "button_change_password";
-            this.button_change_password.Size = new System.Drawing.Size(75, 27);
+            this.button_change_password.Size = new System.Drawing.Size(140, 58);
             this.button_change_password.TabIndex = 7;
             this.button_change_password.Text = "更改口令";
             this.button_change_password.UseVisualStyleBackColor = true;
@@ -49,9 +50,10 @@
             // 
             // button_login
             // 
-            this.button_login.Location = new System.Drawing.Point(131, 67);
+            this.button_login.Location = new System.Drawing.Point(255, 141);
+            this.button_login.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_login.Name = "button_login";
-            this.button_login.Size = new System.Drawing.Size(75, 27);
+            this.button_login.Size = new System.Drawing.Size(140, 58);
             this.button_login.TabIndex = 6;
             this.button_login.Text = "登入";
             this.button_login.UseVisualStyleBackColor = true;
@@ -60,32 +62,36 @@
             // 
             // textBox_password
             // 
-            this.textBox_password.Location = new System.Drawing.Point(88, 26);
+            this.textBox_password.Location = new System.Drawing.Point(147, 64);
+            this.textBox_password.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_password.Name = "textBox_password";
             this.textBox_password.PasswordChar = '*';
-            this.textBox_password.Size = new System.Drawing.Size(118, 22);
+            this.textBox_password.Size = new System.Drawing.Size(274, 34);
             this.textBox_password.TabIndex = 5;
             this.textBox_password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_password_KeyDown);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 29);
+            this.label1.Location = new System.Drawing.Point(55, 70);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 17);
+            this.label1.Size = new System.Drawing.Size(84, 28);
             this.label1.TabIndex = 4;
             this.label1.Text = "口令：";
             // 
             // Form_Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(254, 115);
+            this.ClientSize = new System.Drawing.Size(481, 254);
             this.Controls.Add(this.button_change_password);
             this.Controls.Add(this.button_login);
             this.Controls.Add(this.textBox_password);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("MetaPlusLF", 13.8F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_Login";

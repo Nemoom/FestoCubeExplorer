@@ -46,6 +46,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 this.button_change_password.Visible = true;
                 this.Text = "登入登出（已登入）";
                 this.button_login.Text = "登出";
+                this.Close();//为了操作简洁，屏蔽改密码功能。密码始终默认“1”
             }
             else
             {
