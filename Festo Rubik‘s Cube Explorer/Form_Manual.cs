@@ -1111,8 +1111,16 @@ namespace Festo_Rubik_s_Cube_Explorer
             {
                 try
                 {
-                    updateAxisStatus();
-                    updateForm();
+                    if (updateAxisStatus())
+                    {
+                        updateForm();
+                    }
+                    else
+                    {
+                        //timer1.Enabled = false;
+                        Form1.m_OpcUaClient.Disconnect();
+                    }
+                    
                 }
                 catch (Exception)
                 {
@@ -1540,7 +1548,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             //#endregion
             
         }
-        public static void updateAxisStatus()
+        public static bool updateAxisStatus()
         {
             b_P_Start = false;
             b_P_Acquire = false;
@@ -1857,6 +1865,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+                return false;
             }
             #endregion
             #region 更新Servo状态信息
@@ -1920,6 +1929,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+                return false;
             }
             #endregion
             #region 更新Servo的当前位置信息
@@ -2076,6 +2086,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+                return false;
             }
             #endregion
             if (GlobalVariables.IOlink_D_Move_Cam.i_In&& GlobalVariables.IOlink_F_Move_Cam.i_In && GlobalVariables.IOlink_B_Move_Cam.i_In
@@ -2117,6 +2128,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 b_P_Acquire = false;
                 b_P_Rotate = true;
             }
+            return true;
         }
         public static void updateAxisStatus(string AxisID)
         {
@@ -5369,20 +5381,68 @@ namespace Festo_Rubik_s_Cube_Explorer
 
         public void btn_2_P_Start_Click(object sender, EventArgs e)
         {
-            IOlinkAxisIn(5);//5个相机回原位
-            IOlinkAxisOut(1);//魔方姿态45度
-            IOlinkAxisIn(4);//4个旋转杆回原位           
-            ServoGotoWithoutCheck("servo_L_Rotate",0);
-            ServoGotoWithoutCheck("servo_R_Rotate",0);
-            ServoGotoWithoutCheck("servo_F_Rotate",0);
-            ServoGotoWithoutCheck("servo_B_Rotate",0);         
-            ServoGoto("servo_U_Grab",1);
-            ServoGoto("servo_D_Grab",1);//魔方落回台子上
-            ServoGotoWithoutCheck("servo_U_Rotate",0);
-            ServoGotoWithoutCheck("servo_D_Rotate",0);
-            IOlinkAxisIn(1);//魔方姿态回0位拍照位
-            //确定D相机，D杆都在原位
-            ServoGoto("servo_Feeding",1);
+            updateAxisStatus();
+            if (b_P_Start)
+            {
+                //已在初始位，无需动作
+            }
+            else if (b_P_Acquire)
+            {
+                IOlinkAxisIn(5);//5个相机回原位               
+                IOlinkAxisIn(4);//4个旋转杆回原位           
+                ServoGotoWithoutCheck("servo_L_Rotate", 0);
+                ServoGotoWithoutCheck("servo_R_Rotate", 0);
+                ServoGotoWithoutCheck("servo_F_Rotate", 0);
+                ServoGotoWithoutCheck("servo_B_Rotate", 0);               
+                ServoGotoWithoutCheck("servo_U_Rotate", 0);
+                ServoGotoWithoutCheck("servo_D_Rotate", 0);
+                IOlinkAxisIn(1);//魔方姿态回0位拍照位
+                                //确定D相机，D杆都在原位
+                ServoGoto("servo_Feeding", 1);
+            }
+            else if (b_P_Rotate)
+            {
+                IOlinkAxisIn(5);//5个相机回原位
+                IOlinkAxisOut(1);//魔方姿态45度
+                IOlinkAxisIn(4);//4个旋转杆回原位           
+                ServoGotoWithoutCheck("servo_L_Rotate", 0);
+                ServoGotoWithoutCheck("servo_R_Rotate", 0);
+                ServoGotoWithoutCheck("servo_F_Rotate", 0);
+                ServoGotoWithoutCheck("servo_B_Rotate", 0);
+                ServoGoto("servo_U_Grab", 1);
+                ServoGoto("servo_D_Grab", 1);//魔方落回台子上
+                ServoGotoWithoutCheck("servo_U_Rotate", 0);
+                ServoGotoWithoutCheck("servo_D_Rotate", 0);
+                IOlinkAxisIn(1);//魔方姿态回0位拍照位
+                                //确定D相机，D杆都在原位
+                ServoGoto("servo_Feeding", 1);
+            }
+            else
+            {
+                if (!(GlobalVariables.servo_U_Move.b_P1 && GlobalVariables.servo_D_Move.b_P1))
+                {
+                    ServoGotoWithoutCheck("servo_U_Move", 1);
+                    ServoGoto("servo_D_Move", 1);
+                }
+                updateAxisStatus();
+                if (!b_P_Start)
+                {
+                    IOlinkAxisIn(5);//5个相机回原位
+                    IOlinkAxisOut(1);//魔方姿态45度
+                    IOlinkAxisIn(4);//4个旋转杆回原位           
+                    ServoGotoWithoutCheck("servo_L_Rotate", 0);
+                    ServoGotoWithoutCheck("servo_R_Rotate", 0);
+                    ServoGotoWithoutCheck("servo_F_Rotate", 0);
+                    ServoGotoWithoutCheck("servo_B_Rotate", 0);
+                    ServoGoto("servo_U_Grab", 1);
+                    ServoGoto("servo_D_Grab", 1);//魔方落回台子上
+                    ServoGotoWithoutCheck("servo_U_Rotate", 0);
+                    ServoGotoWithoutCheck("servo_D_Rotate", 0);
+                    IOlinkAxisIn(1);//魔方姿态回0位拍照位
+                                    //确定D相机，D杆都在原位
+                    ServoGoto("servo_Feeding", 1);
+                }
+            }           
         }
 
         private void btn_Stop_Click(object sender, EventArgs e)

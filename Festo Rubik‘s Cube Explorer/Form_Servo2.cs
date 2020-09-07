@@ -174,6 +174,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+                timer1.Enabled = false;
             }
         }
 

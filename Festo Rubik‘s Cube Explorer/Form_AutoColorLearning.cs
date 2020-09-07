@@ -21,6 +21,12 @@ namespace Festo_Rubik_s_Cube_Explorer
         XMLStruct mXMLStruct_new = new XMLStruct();
         int StepIndex_Cur = 0;
         Form_Manual mForm_Manual;
+        bool Step1_Updated = false; 
+        bool Step2_Updated = false; 
+        bool Step3_Updated = false;
+        bool Step4_Updated = false;
+        bool Step5_Updated = false;
+        bool Step6_Updated = false;
         public void update_c_Red(CamID mCamID, Button mButton)
         {
             switch (mCamID)
@@ -2585,12 +2591,84 @@ namespace Festo_Rubik_s_Cube_Explorer
                     default:
                         return false;                        
                 }
-                GlobalVariables.SetXMLNodeValue(XMLNodePath + @"R_min", (mRGB_MinMax.R_min - (int)(nud_MinusTolerance.Value)).ToString());
-                GlobalVariables.SetXMLNodeValue(XMLNodePath + @"R_max", (mRGB_MinMax.R_max + (int)(nud_PlusTolerance.Value)).ToString());
-                GlobalVariables.SetXMLNodeValue(XMLNodePath + @"G_min", (mRGB_MinMax.G_min - (int)(nud_MinusTolerance.Value)).ToString());
-                GlobalVariables.SetXMLNodeValue(XMLNodePath + @"G_max", (mRGB_MinMax.G_max + (int)(nud_PlusTolerance.Value)).ToString());
-                GlobalVariables.SetXMLNodeValue(XMLNodePath + @"B_min", (mRGB_MinMax.B_min - (int)(nud_MinusTolerance.Value)).ToString());
-                GlobalVariables.SetXMLNodeValue(XMLNodePath + @"B_max", (mRGB_MinMax.B_max + (int)(nud_PlusTolerance.Value)).ToString());
+                if (mstrCam.Length > 4)
+                {
+                    GlobalVariables.SetXMLNodeValue(XMLNodePath + @"R_min", (mRGB_MinMax.R_min - (int)(nud_MinusTolerance.Value) * 2).ToString());
+                    if (mRGB_MinMax.R_max + (int)(nud_PlusTolerance.Value) * 2<=255)
+                    {
+                        GlobalVariables.SetXMLNodeValue(XMLNodePath + @"R_max", (mRGB_MinMax.R_max + (int)(nud_PlusTolerance.Value) * 2).ToString());
+
+                    }
+                    else
+                    {
+                        GlobalVariables.SetXMLNodeValue(XMLNodePath + @"R_max", (255).ToString());
+                    }
+                    GlobalVariables.SetXMLNodeValue(XMLNodePath + @"G_min", (mRGB_MinMax.G_min - (int)(nud_MinusTolerance.Value) * 2).ToString());
+                    if (mRGB_MinMax.G_max + (int)(nud_PlusTolerance.Value) * 2<=255)
+                    {
+                        GlobalVariables.SetXMLNodeValue(XMLNodePath + @"G_max", (mRGB_MinMax.G_max + (int)(nud_PlusTolerance.Value) * 2).ToString());
+
+                    }
+                    else
+                    {
+                        GlobalVariables.SetXMLNodeValue(XMLNodePath + @"G_max", (255).ToString());
+                    }
+                    GlobalVariables.SetXMLNodeValue(XMLNodePath + @"B_min", (mRGB_MinMax.B_min - (int)(nud_MinusTolerance.Value) * 2).ToString());
+                    if (mRGB_MinMax.B_max + (int)(nud_PlusTolerance.Value) * 2<=255)
+                    {
+                        GlobalVariables.SetXMLNodeValue(XMLNodePath + @"B_max", (mRGB_MinMax.B_max + (int)(nud_PlusTolerance.Value) * 2).ToString());
+
+                    }
+                    else
+                    {
+                        GlobalVariables.SetXMLNodeValue(XMLNodePath + @"B_max", (255).ToString());
+                    }
+                    if (mFaceColor == FaceColor.White)
+                    {
+                        GlobalVariables.SetXMLNodeValue(XMLNodePath + @"R_max", (255).ToString());
+                        GlobalVariables.SetXMLNodeValue(XMLNodePath + @"G_max", (255).ToString());
+                        GlobalVariables.SetXMLNodeValue(XMLNodePath + @"B_max", (255).ToString());
+                    }
+                }
+                else
+                {
+                    GlobalVariables.SetXMLNodeValue(XMLNodePath + @"R_min", (mRGB_MinMax.R_min - (int)(nud_MinusTolerance.Value)).ToString());
+                    if (mRGB_MinMax.R_max + (int)(nud_PlusTolerance.Value)<=255)
+                    {
+                        GlobalVariables.SetXMLNodeValue(XMLNodePath + @"R_max", (mRGB_MinMax.R_max + (int)(nud_PlusTolerance.Value)).ToString());
+
+                    }
+                    else
+                    {
+                        GlobalVariables.SetXMLNodeValue(XMLNodePath + @"R_max", (255).ToString());
+                    }
+                    GlobalVariables.SetXMLNodeValue(XMLNodePath + @"G_min", (mRGB_MinMax.G_min - (int)(nud_MinusTolerance.Value)).ToString());
+                    if (mRGB_MinMax.G_max + (int)(nud_PlusTolerance.Value)<=255)
+                    {
+                        GlobalVariables.SetXMLNodeValue(XMLNodePath + @"G_max", (mRGB_MinMax.G_max + (int)(nud_PlusTolerance.Value)).ToString());
+
+                    }
+                    else
+                    {
+                        GlobalVariables.SetXMLNodeValue(XMLNodePath + @"G_max", (255).ToString());
+                    }
+                    GlobalVariables.SetXMLNodeValue(XMLNodePath + @"B_min", (mRGB_MinMax.B_min - (int)(nud_MinusTolerance.Value)).ToString());
+                    if (mRGB_MinMax.B_max + (int)(nud_PlusTolerance.Value)<=255)
+                    {
+                        GlobalVariables.SetXMLNodeValue(XMLNodePath + @"B_max", (mRGB_MinMax.B_max + (int)(nud_PlusTolerance.Value)).ToString());
+
+                    }
+                    else
+                    {
+                        GlobalVariables.SetXMLNodeValue(XMLNodePath + @"B_max", (255).ToString());
+                    }
+                    if (mFaceColor == FaceColor.White)
+                    {
+                        GlobalVariables.SetXMLNodeValue(XMLNodePath + @"R_max", (255).ToString());
+                        GlobalVariables.SetXMLNodeValue(XMLNodePath + @"G_max", (255).ToString());
+                        GlobalVariables.SetXMLNodeValue(XMLNodePath + @"B_max", (255).ToString());
+                    }
+                }
                 b_Success = true;
             }
             catch (Exception ex)
@@ -2696,6 +2774,37 @@ namespace Festo_Rubik_s_Cube_Explorer
             }
             
             return b_Success;
+        }
+
+        public void ShowTabPageN(int TabPageIndex)
+        {
+            foreach (TabPage item in tabControl1.TabPages)
+            {
+                tabControl1.TabPages.Remove(item);
+            }
+            switch (TabPageIndex)
+            {
+                case 1:
+                    tabControl1.TabPages.Add(tabPage1);
+                    break;
+                case 2:
+                    tabControl1.TabPages.Add(tabPage2);
+                    break;
+                case 3:
+                    tabControl1.TabPages.Add(tabPage3);
+                    break;
+                case 4:
+                    tabControl1.TabPages.Add(tabPage4);
+                    break;
+                case 5:
+                    tabControl1.TabPages.Add(tabPage5);
+                    break;
+                case 6:
+                    tabControl1.TabPages.Add(tabPage6);
+                    break;
+                default:
+                    break;
+            }
         }
 
         public void OriginalColorDisplay(CamID mCamID, int BlockID, Color mColor)
@@ -2964,11 +3073,72 @@ namespace Festo_Rubik_s_Cube_Explorer
             OriginalColorDisplay(CamID.CamB, 9, Form1.GetRGBvalue(CamID.CamB, 9));
         }
 
+        public void Auto2_P_Start()
+        {
+            mForm_Manual.btn_2_P_Start_Click(null, null);
+            switch (StepIndex_Cur)
+            {
+                case 0:
+                    StepIndex_Cur = 1;
+                    textBox1.AppendText("步序" + StepIndex_Cur.ToString() + "：\r\n");
+                    ShowTabPageN(StepIndex_Cur);
+                    textBox1.AppendText("按上图图示放入魔方后，点击“启动”\r\n");
+                    break;
+                case 1:
+                    StepIndex_Cur = 2;
+                    textBox1.AppendText("步序" + StepIndex_Cur.ToString() + "：\r\n");
+                    ShowTabPageN(StepIndex_Cur);
+                    textBox1.AppendText("按上图图示放入魔方后，点击“启动”\r\n");
+                    break;
+                case 2:
+                    StepIndex_Cur = 3;
+                    textBox1.AppendText("步序" + StepIndex_Cur.ToString() + "：\r\n");
+                    ShowTabPageN(StepIndex_Cur);
+                    textBox1.AppendText("按上图图示放入魔方后，点击“启动”\r\n");
+                    break;
+                case 3:
+                    StepIndex_Cur = 4;
+                    textBox1.AppendText("步序" + StepIndex_Cur.ToString() + "：\r\n");
+                    ShowTabPageN(StepIndex_Cur);
+                    textBox1.AppendText("按上图图示放入魔方后，点击“启动”\r\n");
+                    break;
+                case 4:
+                    StepIndex_Cur = 5;
+                    textBox1.AppendText("步序" + StepIndex_Cur.ToString() + "：\r\n");
+                    ShowTabPageN(StepIndex_Cur);
+                    textBox1.AppendText("按上图图示放入魔方后，点击“启动”\r\n");
+                    break;
+                case 5:
+                    StepIndex_Cur = 6;
+                    textBox1.AppendText("步序" + StepIndex_Cur.ToString() + "：\r\n");
+                    ShowTabPageN(StepIndex_Cur);
+                    textBox1.AppendText("按上图图示放入魔方后，点击“启动”\r\n");
+                    break;
+                case 6:
+                    textBox1.AppendText("开班示教完成~\r\n");
+                    break;
+                default:
+                    break;
+            }
+        }
         private void Form_AutoColorLearning_Load(object sender, EventArgs e)
         {
             File.Copy(GlobalVariables.ProjectPath + "Cube.xml",
                 GlobalVariables.ProjectPath + "Cube_" + DateTime.Now.ToString("MMddHHmmss") + ".xml");
             StepIndex_Cur = 0;
+            Form_Manual.updateAxisStatus();
+            textBox1.Text = "";
+            if (Form_Manual.b_P_Start)
+            {               
+                textBox1.AppendText("步序1：\r\n");
+                StepIndex_Cur = 1;
+                ShowTabPageN(1);
+                textBox1.AppendText("按上图图示放入魔方后，点击“启动”\r\n");
+            }
+            else
+            {
+                textBox1.AppendText("确认OK后，点击“回初始位”\r\n");
+            }
         }
 
         private void btn_Acquire_Click(object sender, EventArgs e)
@@ -3001,7 +3171,32 @@ namespace Festo_Rubik_s_Cube_Explorer
         {
             if (UpdateParamsStep(StepIndex_Cur))
             {
-                MessageBox.Show(StepIndex_Cur.ToString() + "更新成功!");
+                switch (StepIndex_Cur)
+                {
+                    case 1:
+                        Step1_Updated = true;
+                        break;
+                    case 2:
+                        Step2_Updated = true;
+                        break;
+                    case 3:
+                        Step3_Updated = true;
+                        break;
+                    case 4:
+                        Step4_Updated = true;
+                        break;
+                    case 5:
+                        Step5_Updated = true;
+                        break;
+                    case 6:
+                        Step6_Updated = true;
+                        break;
+                    default:
+                        break;
+                }
+                textBox1.AppendText("步序" + StepIndex_Cur.ToString() + "参数写入 成功!\r\n");
+                btn_2_P_Start_Click(sender, e);
+                //MessageBox.Show(StepIndex_Cur.ToString() + "更新成功!");
             }
             
         }
@@ -3009,6 +3204,81 @@ namespace Festo_Rubik_s_Cube_Explorer
         private void btn_2_P_Start_Click(object sender, EventArgs e)
         {
             mForm_Manual.btn_2_P_Start_Click(sender, e);
+            switch (StepIndex_Cur)
+            {
+                case 0:
+                    StepIndex_Cur = 1;
+                    textBox1.AppendText("步序" + StepIndex_Cur.ToString() + "：\r\n");
+                    ShowTabPageN(StepIndex_Cur);
+                    textBox1.AppendText("按上图图示放入魔方后，点击“启动”\r\n");
+                    break;
+                case 1:
+                    if (Step1_Updated)
+                    {
+                        StepIndex_Cur = 2;
+                        
+                    }
+                    else
+                    {
+
+                    }
+                    textBox1.AppendText("步序" + StepIndex_Cur.ToString() + "：\r\n");
+                    ShowTabPageN(StepIndex_Cur);
+                    textBox1.AppendText("按上图图示放入魔方后，点击“启动”\r\n");
+                    break;
+                case 2:
+                    if (Step2_Updated)
+                    {
+                        StepIndex_Cur = 3;
+                        
+                    }
+                    textBox1.AppendText("步序" + StepIndex_Cur.ToString() + "：\r\n");
+                    ShowTabPageN(StepIndex_Cur);
+                    textBox1.AppendText("按上图图示放入魔方后，点击“启动”\r\n");
+                    break;
+                case 3:
+                    if (Step3_Updated)
+                    {
+                        StepIndex_Cur = 4;
+                    }
+                    textBox1.AppendText("步序" + StepIndex_Cur.ToString() + "：\r\n");
+                    ShowTabPageN(StepIndex_Cur);
+                    textBox1.AppendText("按上图图示放入魔方后，点击“启动”\r\n");
+                    break;
+                case 4:
+                    if (Step4_Updated)
+                    {
+                        StepIndex_Cur = 5;
+                    }
+                    textBox1.AppendText("步序" + StepIndex_Cur.ToString() + "：\r\n");
+                    ShowTabPageN(StepIndex_Cur);
+                    textBox1.AppendText("按上图图示放入魔方后，点击“启动”\r\n");
+                    break;
+                case 5:
+                    if (Step5_Updated)
+                    {
+                        StepIndex_Cur = 6;
+                    }
+                    textBox1.AppendText("步序" + StepIndex_Cur.ToString() + "：\r\n");
+                    ShowTabPageN(StepIndex_Cur);
+                    textBox1.AppendText("按上图图示放入魔方后，点击“启动”\r\n");
+                    break;
+                case 6:
+                    if (Step6_Updated)
+                    {
+                        textBox1.AppendText("开班示教完成~\r\n");
+                    }
+                    else
+                    {
+                        textBox1.AppendText("步序" + StepIndex_Cur.ToString() + "：\r\n");
+                        ShowTabPageN(StepIndex_Cur);
+                        textBox1.AppendText("按上图图示放入魔方后，点击“启动”\r\n");
+                    }
+                    break;
+                default:
+                    break;
+            }
+            
         }
 
         private void btn_2_P_Acquire_Click(object sender, EventArgs e)
@@ -3018,7 +3288,17 @@ namespace Festo_Rubik_s_Cube_Explorer
 
         private void btn_Start_Click(object sender, EventArgs e)
         {
-            StepIndex_Cur++;
+            mForm_Manual.btn_2_P_Acquire_Click(sender, e);
+            btn_Acquire_Click(sender, e);
+            this.Update();
+            if (MessageBox.Show("确认更新？", "参数恢复", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                btn_UpdateParams_Click(sender, e);
+            }
+            else
+            {
+                textBox1.AppendText("请确认图像后，点击“更新参数”\r\n");
+            }
         }
     }
 }

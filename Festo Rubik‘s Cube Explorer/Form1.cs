@@ -170,6 +170,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 Form_Manual.EmergencyStop();
                 Form_Manual.ResetAll();
                 Form_Manual.EnableAll();
+                mForm_Manual.btn_2_P_Start_Click(null, null);
                 if (b_CamU_Connected)
                 {
                     if (b_CamD_Connected)
