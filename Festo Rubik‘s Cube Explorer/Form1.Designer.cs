@@ -1038,7 +1038,7 @@
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Location = new System.Drawing.Point(23, 690);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(981, 26);
+            this.textBox1.Size = new System.Drawing.Size(981, 30);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -1059,7 +1059,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Location = new System.Drawing.Point(0, 0);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(843, 26);
+            this.textBox2.Size = new System.Drawing.Size(843, 30);
             this.textBox2.TabIndex = 3;
             // 
             // button2
@@ -1111,7 +1111,7 @@
             this.lbl_TotalTime.AutoSize = true;
             this.lbl_TotalTime.Location = new System.Drawing.Point(17, 326);
             this.lbl_TotalTime.Name = "lbl_TotalTime";
-            this.lbl_TotalTime.Size = new System.Drawing.Size(88, 18);
+            this.lbl_TotalTime.Size = new System.Drawing.Size(110, 23);
             this.lbl_TotalTime.TabIndex = 8;
             this.lbl_TotalTime.Text = "动作时间：";
             // 
@@ -1121,7 +1121,7 @@
             this.lbl_StepTime.AutoSize = true;
             this.lbl_StepTime.Location = new System.Drawing.Point(17, 363);
             this.lbl_StepTime.Name = "lbl_StepTime";
-            this.lbl_StepTime.Size = new System.Drawing.Size(88, 18);
+            this.lbl_StepTime.Size = new System.Drawing.Size(110, 23);
             this.lbl_StepTime.TabIndex = 9;
             this.lbl_StepTime.Text = "单步计时：";
             // 
@@ -1131,7 +1131,7 @@
             this.lbl_ProcessTime.AutoSize = true;
             this.lbl_ProcessTime.Location = new System.Drawing.Point(17, 289);
             this.lbl_ProcessTime.Name = "lbl_ProcessTime";
-            this.lbl_ProcessTime.Size = new System.Drawing.Size(88, 18);
+            this.lbl_ProcessTime.Size = new System.Drawing.Size(110, 23);
             this.lbl_ProcessTime.TabIndex = 10;
             this.lbl_ProcessTime.Text = "整体时间：";
             // 
@@ -1180,9 +1180,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label1.Location = new System.Drawing.Point(31, 0);
+            this.label1.Location = new System.Drawing.Point(9, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 18);
+            this.label1.Size = new System.Drawing.Size(110, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "复原步序：";
             // 
@@ -1238,7 +1238,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 707);
             this.Controls.Add(this.tableLayoutPanel1);

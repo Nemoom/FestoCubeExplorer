@@ -4520,6 +4520,9 @@ namespace Festo_Rubik_s_Cube_Explorer
                                 TargetPosition = TargetPosition + GlobalVariables.CWgap;
                             }
                             break;
+                        default://去任意相对位置
+                            TargetPosition = mServoStatus.i_ActPos - PointIndex;
+                            break;
                     }
                     break;
                 case "servo_D_Grab":
@@ -4591,6 +4594,9 @@ namespace Festo_Rubik_s_Cube_Explorer
                                 TargetPosition = TargetPosition + GlobalVariables.CWgap;
                             }
                             break;
+                        default://去任意相对位置
+                            TargetPosition = mServoStatus.i_ActPos - PointIndex;
+                            break;
                     }
                     break;
                 case "servo_Feeding":
@@ -4646,6 +4652,9 @@ namespace Festo_Rubik_s_Cube_Explorer
                                 TargetPosition = TargetPosition + GlobalVariables.CWgap;
                             }
                             break;
+                        default://去任意相对位置
+                            TargetPosition = mServoStatus.i_ActPos - PointIndex;
+                            break;
                     }
                     break;
                 case "servo_L_Rotate":
@@ -4680,6 +4689,9 @@ namespace Festo_Rubik_s_Cube_Explorer
                                 TargetPosition = TargetPosition + GlobalVariables.CWgap;
                             }
                             break;
+                        default://去任意相对位置
+                            TargetPosition = mServoStatus.i_ActPos - PointIndex;
+                            break;
                     }
                     break;
                 case "servo_R_Rotate":
@@ -4713,6 +4725,9 @@ namespace Festo_Rubik_s_Cube_Explorer
                             {
                                 TargetPosition = TargetPosition + GlobalVariables.CWgap;
                             }
+                            break;
+                        default://去任意相对位置
+                            TargetPosition = mServoStatus.i_ActPos - PointIndex;
                             break;
                     }
                     break;
@@ -4785,6 +4800,9 @@ namespace Festo_Rubik_s_Cube_Explorer
                                 TargetPosition = TargetPosition + GlobalVariables.CWgap;
                             }
                             break;
+                        default://去任意相对位置
+                            TargetPosition = mServoStatus.i_ActPos - PointIndex;
+                            break;
                     }
                     break;
                 default:
@@ -4817,7 +4835,49 @@ namespace Festo_Rubik_s_Cube_Explorer
                         case "servo_D_Rotate":
                         case "servo_L_Rotate":
                         case "servo_R_Rotate":
-                            Form1.m_OpcUaClient.WriteNodes(new string[] {
+                            switch (PointIndex)
+                            {                                
+                                case 90:
+                                    Form1.m_OpcUaClient.WriteNodes(new string[] {
+                mServoParas.mServoNodeID.NodeID_o_Vel,
+                mServoParas.mServoNodeID.NodeID_o_Acc,
+                mServoParas.mServoNodeID.NodeID_o_Dec,
+                mServoParas.mServoNodeID.NodeID_o_Jerk},
+                new object[] {
+                    Convert.ToSingle(GlobalVariables.global_Vel_90),
+                    Convert.ToSingle(GlobalVariables.global_Acc_90),
+                    Convert.ToSingle(GlobalVariables.global_Dec_90),
+                    Convert.ToSingle(GlobalVariables.global_Jerk_90)
+                });
+                                    break;
+                                case 180:
+                                    Form1.m_OpcUaClient.WriteNodes(new string[] {
+                mServoParas.mServoNodeID.NodeID_o_Vel,
+                mServoParas.mServoNodeID.NodeID_o_Acc,
+                mServoParas.mServoNodeID.NodeID_o_Dec,
+                mServoParas.mServoNodeID.NodeID_o_Jerk},
+                new object[] {
+                    Convert.ToSingle(GlobalVariables.global_Vel_180),
+                    Convert.ToSingle(GlobalVariables.global_Acc_180),
+                    Convert.ToSingle(GlobalVariables.global_Dec_180),
+                    Convert.ToSingle(GlobalVariables.global_Jerk_180)
+                });
+                                    break;
+                                case 270:
+                                    Form1.m_OpcUaClient.WriteNodes(new string[] {
+                mServoParas.mServoNodeID.NodeID_o_Vel,
+                mServoParas.mServoNodeID.NodeID_o_Acc,
+                mServoParas.mServoNodeID.NodeID_o_Dec,
+                mServoParas.mServoNodeID.NodeID_o_Jerk},
+                new object[] {
+                    Convert.ToSingle(GlobalVariables.global_Vel_270),
+                    Convert.ToSingle(GlobalVariables.global_Acc_270),
+                    Convert.ToSingle(GlobalVariables.global_Dec_270),
+                    Convert.ToSingle(GlobalVariables.global_Jerk_270)
+                });
+                                    break;
+                                default:
+                                    Form1.m_OpcUaClient.WriteNodes(new string[] {
                 mServoParas.mServoNodeID.NodeID_o_Vel,
                 mServoParas.mServoNodeID.NodeID_o_Acc,
                 mServoParas.mServoNodeID.NodeID_o_Dec,
@@ -4828,6 +4888,9 @@ namespace Festo_Rubik_s_Cube_Explorer
                     Convert.ToSingle(GlobalVariables.global_Dec_Rotate),
                     Convert.ToSingle(GlobalVariables.global_Jerk_Rotate)
                 });
+                                    break;
+                           
+                            }                            
                             break;
                         default:
                             Form1.m_OpcUaClient.WriteNodes(new string[] {
@@ -5760,6 +5823,12 @@ namespace Festo_Rubik_s_Cube_Explorer
                         {
                             //FBLR杆伸出至旋转位
                             IOlinkAxisOut(4);
+                            ServoGotoWithoutCheck("servo_L_Rotate", (int)GlobalVariables.CWgap);
+                            ServoGotoWithoutCheck("servo_R_Rotate", (int)GlobalVariables.CWgap);
+                            ServoGotoWithoutCheck("servo_F_Rotate", (int)GlobalVariables.CWgap);
+                            ServoGotoWithoutCheck("servo_B_Rotate", (int)GlobalVariables.CWgap);
+                            ServoGotoWithoutCheck("servo_U_Rotate", (int)GlobalVariables.CWgap);
+                            ServoGotoWithoutCheck("servo_D_Rotate", (int)GlobalVariables.CWgap);
                         }
                         else
                         {
@@ -5776,6 +5845,13 @@ namespace Festo_Rubik_s_Cube_Explorer
                             {
                                 //FBLR杆伸出至旋转位
                                 IOlinkAxisOut(4);
+
+                                ServoGotoWithoutCheck("servo_L_Rotate", (int)GlobalVariables.CWgap);
+                                ServoGotoWithoutCheck("servo_R_Rotate", (int)GlobalVariables.CWgap);
+                                ServoGotoWithoutCheck("servo_F_Rotate", (int)GlobalVariables.CWgap);
+                                ServoGotoWithoutCheck("servo_B_Rotate", (int)GlobalVariables.CWgap);
+                                ServoGotoWithoutCheck("servo_U_Rotate", (int)GlobalVariables.CWgap);
+                                ServoGotoWithoutCheck("servo_D_Rotate", (int)GlobalVariables.CWgap);
                             }
                         }
                     }
@@ -6557,7 +6633,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                             }
                             else
                             {
-                                RotateTo(mSteps[stepIndex], b_First_U);
+                                RotateTo(mSteps[stepIndex]);
                                 if (b_First_U)
                                 {
                                     b_First_U = false;
@@ -6582,7 +6658,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                             }
                             else
                             {
-                                RotateTo(mSteps[stepIndex], b_First_D);
+                                RotateTo(mSteps[stepIndex]);
                                 if (b_First_D)
                                 {
                                     b_First_D = false;
@@ -6607,7 +6683,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                             }
                             else
                             {
-                                RotateTo(mSteps[stepIndex], b_First_L);
+                                RotateTo(mSteps[stepIndex]);
                                 if (b_First_L)
                                 {
                                     b_First_L = false;
@@ -6632,7 +6708,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                             }
                             else
                             {
-                                RotateTo(mSteps[stepIndex], b_First_R);
+                                RotateTo(mSteps[stepIndex]);
                                 if (b_First_R)
                                 {
                                     b_First_R = false;
@@ -6657,7 +6733,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                             }
                             else
                             {
-                                RotateTo(mSteps[stepIndex], b_First_F);
+                                RotateTo(mSteps[stepIndex]);
                                 if (b_First_F)
                                 {
                                     b_First_F = false;
@@ -6682,7 +6758,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                             }
                             else
                             {
-                                RotateTo(mSteps[stepIndex], b_First_B);
+                                RotateTo(mSteps[stepIndex]);
                                 if (b_First_B)
                                 {
                                     b_First_B = false;

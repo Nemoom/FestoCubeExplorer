@@ -18,6 +18,22 @@ namespace Festo_Rubik_s_Cube_Explorer
         public static double global_Acc;
         public static double global_Dec;
         public static double global_Jerk;
+
+        public static double global_Vel_90;
+        public static double global_Acc_90;
+        public static double global_Dec_90;
+        public static double global_Jerk_90;
+
+        public static double global_Vel_180;
+        public static double global_Acc_180;
+        public static double global_Dec_180;
+        public static double global_Jerk_180;
+
+        public static double global_Vel_270;
+        public static double global_Acc_270;
+        public static double global_Dec_270;
+        public static double global_Jerk_270;
+
         public static double global_Vel_Rotate;
         public static double global_Acc_Rotate;
         public static double global_Dec_Rotate;
@@ -1221,10 +1237,32 @@ namespace Festo_Rubik_s_Cube_Explorer
                     global_Acc = Convert.ToDouble(xmlnode.SelectSingleNode("Acc").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     global_Dec = Convert.ToDouble(xmlnode.SelectSingleNode("Dec").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     global_Jerk = Convert.ToDouble(xmlnode.SelectSingleNode("Jerk").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                    
                     global_Vel_Rotate = Convert.ToDouble(xmlnode.SelectSingleNode("Vel_Rotate").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     global_Acc_Rotate = Convert.ToDouble(xmlnode.SelectSingleNode("Acc_Rotate").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     global_Dec_Rotate = Convert.ToDouble(xmlnode.SelectSingleNode("Dec_Rotate").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     global_Jerk_Rotate = Convert.ToDouble(xmlnode.SelectSingleNode("Jerk_Rotate").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                   
+                    global_Vel_90 = Convert.ToDouble(xmlnode.SelectSingleNode("Vel_90").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                    global_Acc_90 = Convert.ToDouble(xmlnode.SelectSingleNode("Acc_90").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                    global_Dec_90 = Convert.ToDouble(xmlnode.SelectSingleNode("Dec_90").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                    global_Jerk_90 = Convert.ToDouble(xmlnode.SelectSingleNode("Jerk_90").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+
+                    global_Vel_180 = Convert.ToDouble(xmlnode.SelectSingleNode("Vel_180").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                    global_Acc_180 = Convert.ToDouble(xmlnode.SelectSingleNode("Acc_180").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                    global_Dec_180 = Convert.ToDouble(xmlnode.SelectSingleNode("Dec_180").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                    global_Jerk_180 = Convert.ToDouble(xmlnode.SelectSingleNode("Jerk_180").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+
+                    global_Vel_270 = Convert.ToDouble(xmlnode.SelectSingleNode("Vel_270").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                    global_Acc_270 = Convert.ToDouble(xmlnode.SelectSingleNode("Acc_270").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                    global_Dec_270 = Convert.ToDouble(xmlnode.SelectSingleNode("Dec_270").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                    global_Jerk_270 = Convert.ToDouble(xmlnode.SelectSingleNode("Jerk_270").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+
+                    global_Vel_Rotate = Convert.ToDouble(xmlnode.SelectSingleNode("Vel_Rotate").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                    global_Acc_Rotate = Convert.ToDouble(xmlnode.SelectSingleNode("Acc_Rotate").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                    global_Dec_Rotate = Convert.ToDouble(xmlnode.SelectSingleNode("Dec_Rotate").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+                    global_Jerk_Rotate = Convert.ToDouble(xmlnode.SelectSingleNode("Jerk_Rotate").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
+
                     CWgap = Convert.ToDouble(xmlnode.SelectSingleNode("CWgap").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     CCWgap = Convert.ToDouble(xmlnode.SelectSingleNode("CCWgap").InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", ""));
                     #region 1-Feeding
