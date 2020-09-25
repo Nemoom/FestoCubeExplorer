@@ -1982,10 +1982,20 @@ namespace Festo_Rubik_s_Cube_Explorer
                 ClientUtils.HandleException("Connected Failed", ex);
             }
         }
-
+        public static bool b_Started = false;
         private void btn_Start_Click(object sender, EventArgs e)
         {
-            mForm_Manual.btn_Start_Click(sender, e);
+            if (!b_Started)
+            {
+                b_Started = true;
+                btn_Start.Enabled = false;
+                if (Form_Manual.checkAxisStatus())
+                {
+                    mForm_Manual.btn_Start_Click(sender, e);
+                }                
+                b_Started = false;
+                btn_Start.Enabled = true;
+            }            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -2022,6 +2032,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 textBox1.Visible = false;
             }
             button5.Visible = value;
+            btn_Reset.Visible = value;
             btn_U1.Enabled = value;
             btn_U2.Enabled = value;
             btn_U3.Enabled = value;
@@ -2081,6 +2092,22 @@ namespace Festo_Rubik_s_Cube_Explorer
         private void button5_Click(object sender, EventArgs e)
         {
             new Form_Setting().Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            if (UserLogin.IsLoggedIn)
+            {
+                mForm_Manual.btn_2_P_Start_Click(sender, e);
+                b_Started = false;
+                btn_Start.Enabled = true;
+            }
+            
+        }
+
+        private void btn_Reset_Click(object sender, EventArgs e)
+        {
+            mForm_Manual.btn_EnableAll_Click(sender, e);
         }
     }
 }

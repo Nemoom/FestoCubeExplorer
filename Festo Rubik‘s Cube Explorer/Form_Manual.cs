@@ -5373,7 +5373,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             ResetAll();
         }
 
-        private void btn_EnableAll_Click(object sender, EventArgs e)
+        public void btn_EnableAll_Click(object sender, EventArgs e)
         {
             ResetAll();
             EnableAll();            
@@ -5382,6 +5382,7 @@ namespace Festo_Rubik_s_Cube_Explorer
         public void btn_2_P_Start_Click(object sender, EventArgs e)
         {
             updateAxisStatus();
+            AllLightOff();
             if (b_P_Start)
             {
                 //已在初始位，无需动作
@@ -5480,6 +5481,140 @@ namespace Festo_Rubik_s_Cube_Explorer
             GlobalVariables.CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_o_Enable,
             GlobalVariables.CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_o_Enable},
         new object[] { true, true, true, true, true, true, true, true, true, true, true });
+        }
+        public static bool checkAxisStatus()
+        {
+            bool b_Error = false;
+            List<string> tags = new List<string>();
+            tags.Add(GlobalVariables.CurrentParas.mPLC.servo_U_Grab.mServoNodeID.NodeID_i_Error);
+            tags.Add(GlobalVariables.CurrentParas.mPLC.servo_D_Grab.mServoNodeID.NodeID_i_Error);
+            tags.Add(GlobalVariables.CurrentParas.mPLC.servo_U_Rotate.mServoNodeID.NodeID_i_Error);
+            tags.Add(GlobalVariables.CurrentParas.mPLC.servo_D_Rotate.mServoNodeID.NodeID_i_Error);
+            tags.Add(GlobalVariables.CurrentParas.mPLC.servo_L_Rotate.mServoNodeID.NodeID_i_Error);
+            tags.Add(GlobalVariables.CurrentParas.mPLC.servo_R_Rotate.mServoNodeID.NodeID_i_Error);
+            tags.Add(GlobalVariables.CurrentParas.mPLC.servo_F_Rotate.mServoNodeID.NodeID_i_Error);
+            tags.Add(GlobalVariables.CurrentParas.mPLC.servo_B_Rotate.mServoNodeID.NodeID_i_Error);
+            tags.Add(GlobalVariables.CurrentParas.mPLC.servo_U_Move.mServoNodeID.NodeID_i_Error);
+            tags.Add(GlobalVariables.CurrentParas.mPLC.servo_D_Move.mServoNodeID.NodeID_i_Error);
+            tags.Add(GlobalVariables.CurrentParas.mPLC.servo_Feeding.mServoNodeID.NodeID_i_Error);
+            tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_B_Grab.NodeID_i_Device);
+            tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_B_Move_Cam.NodeID_i_Device);
+            tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_D_Move_Cam.NodeID_i_Device);
+            tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_F_Grab.NodeID_i_Device);
+            tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_F_Move_Cam.NodeID_i_Device);
+            tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_L_Grab.NodeID_i_Device);
+            tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_L_Move_Cam.NodeID_i_Device);
+            tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_Rotate.NodeID_i_Device);
+            tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_R_Grab.NodeID_i_Device);
+            tags.Add(GlobalVariables.CurrentParas.mPLC.IOlink_R_Move_Cam.NodeID_i_Device);
+            // 按照顺序定义的值
+            List<bool> values = Form1.m_OpcUaClient.ReadNodes<bool>(tags.ToArray());
+            if (values[0])
+            {
+                b_Error = true;
+                MessageBox.Show("servo_U_Grab error");               
+            }
+            if (values[1])
+            {
+                b_Error = true;
+                MessageBox.Show("servo_D_Grab error");
+            }
+            if (values[2])
+            {
+                b_Error = true;
+                MessageBox.Show("servo_U_Rotate error");
+            }
+            if (values[3])
+            {
+                b_Error = true;
+                MessageBox.Show("servo_D_Rotate error");
+            }
+            if (values[4])
+            {
+                b_Error = true;
+                MessageBox.Show("servo_L_Rotate error");
+            }
+            if (values[5])
+            {
+                b_Error = true;
+                MessageBox.Show("servo_R_Rotate error");
+            }
+            if (values[6])
+            {
+                b_Error = true;
+                MessageBox.Show("servo_F_Rotate error");
+            }
+            if (values[7])
+            {
+                b_Error = true;
+                MessageBox.Show("servo_B_Rotate error");
+            }
+            if (values[8])
+            {
+                b_Error = true;
+                MessageBox.Show("servo_U_Move error");
+            }
+            if (values[9])
+            {
+                b_Error = true;
+                MessageBox.Show("servo_D_Move error");
+            }
+            if (values[10])
+            {
+                b_Error = true;
+                MessageBox.Show("servo_Feeding error");
+            }
+            if (!values[11])
+            {
+                b_Error = true;
+                MessageBox.Show("IOlink_B_Grab error");
+            }
+            if (!values[12])
+            {
+                b_Error = true;
+                MessageBox.Show("IOlink_B_Move_Cam error");
+            }
+            if (!values[13])
+            {
+                b_Error = true;
+                MessageBox.Show("IOlink_D_Move_Cam error");
+            }
+            if (!values[14])
+            {
+                b_Error = true;
+                MessageBox.Show("IOlink_F_Grab error");
+            }
+            if (!values[15])
+            {
+                b_Error = true;
+                MessageBox.Show("IOlink_F_Move_Cam error");
+            }
+            if (!values[16])
+            {
+                b_Error = true;
+                MessageBox.Show("IOlink_L_Grab error");
+            }
+            if (!values[17])
+            {
+                b_Error = true;
+                MessageBox.Show("IOlink_L_Move_Cam error");
+            }
+            if (!values[18])
+            {
+                b_Error = true;
+                MessageBox.Show("IOlink_Rotate error");
+            }
+            if (!values[19])
+            {
+                b_Error = true;
+                MessageBox.Show("IOlink_R_Grab error");
+            }
+            if (!values[20])
+            {
+                b_Error = true;
+                MessageBox.Show("IOlink_R_Move_Cam error");
+            }
+            return !b_Error;
         }
         public static void ResetAll()
         {
@@ -5771,6 +5906,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                             if (!WaitServoMC(mServoNames, 0))
                             {
                                 MessageBox.Show("四周旋杆儿捅进魔方有风险");
+                                btn_2_P_Start_Click(sender, e);
                             }
                             else
                             {
@@ -5782,6 +5918,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                     else
                     {
                         MessageBox.Show("上下旋杆儿捅进魔方有风险");
+                        btn_2_P_Start_Click(sender, e);
                     }
                 }
             }
@@ -6700,6 +6837,7 @@ namespace Festo_Rubik_s_Cube_Explorer
             {
 
                 MessageBox.Show("解魔方失败！");
+                btn_2_P_Start_Click(null, null);
                 return 0;
             }
         }
@@ -6733,6 +6871,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 else
                 {
                     MessageBox.Show("解魔方失败！");
+                    btn_2_P_Start_Click(sender, e);
                 }
             }
             else if (b_P_Rotate)
@@ -6780,6 +6919,7 @@ namespace Festo_Rubik_s_Cube_Explorer
                 else
                 {
                     MessageBox.Show("解魔方失败！");
+                    btn_2_P_Start_Click(sender, e);
                 }
             }
            

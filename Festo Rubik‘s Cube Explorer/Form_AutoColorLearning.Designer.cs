@@ -1995,7 +1995,7 @@
             this.nud_PlusTolerance.Size = new System.Drawing.Size(94, 34);
             this.nud_PlusTolerance.TabIndex = 21;
             this.nud_PlusTolerance.Value = new decimal(new int[] {
-            10,
+            20,
             0,
             0,
             0});
@@ -2012,7 +2012,7 @@
             this.nud_MinusTolerance.Size = new System.Drawing.Size(94, 34);
             this.nud_MinusTolerance.TabIndex = 22;
             this.nud_MinusTolerance.Value = new decimal(new int[] {
-            10,
+            20,
             0,
             0,
             0});

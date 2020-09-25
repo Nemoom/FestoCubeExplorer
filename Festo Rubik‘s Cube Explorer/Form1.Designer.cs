@@ -107,6 +107,7 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.btn_Reset = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel_Cube.SuspendLayout();
             this.tableLayoutPanel_U.SuspendLayout();
@@ -1038,7 +1039,7 @@
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Location = new System.Drawing.Point(23, 690);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(981, 26);
+            this.textBox1.Size = new System.Drawing.Size(981, 30);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -1059,7 +1060,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Location = new System.Drawing.Point(0, 0);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(843, 26);
+            this.textBox2.Size = new System.Drawing.Size(843, 30);
             this.textBox2.TabIndex = 3;
             // 
             // button2
@@ -1085,7 +1086,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(95, 161);
+            this.button4.Location = new System.Drawing.Point(148, 151);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(95, 49);
             this.button4.TabIndex = 6;
@@ -1111,7 +1112,7 @@
             this.lbl_TotalTime.AutoSize = true;
             this.lbl_TotalTime.Location = new System.Drawing.Point(17, 326);
             this.lbl_TotalTime.Name = "lbl_TotalTime";
-            this.lbl_TotalTime.Size = new System.Drawing.Size(88, 18);
+            this.lbl_TotalTime.Size = new System.Drawing.Size(110, 23);
             this.lbl_TotalTime.TabIndex = 8;
             this.lbl_TotalTime.Text = "动作时间：";
             // 
@@ -1121,7 +1122,7 @@
             this.lbl_StepTime.AutoSize = true;
             this.lbl_StepTime.Location = new System.Drawing.Point(17, 363);
             this.lbl_StepTime.Name = "lbl_StepTime";
-            this.lbl_StepTime.Size = new System.Drawing.Size(88, 18);
+            this.lbl_StepTime.Size = new System.Drawing.Size(110, 23);
             this.lbl_StepTime.TabIndex = 9;
             this.lbl_StepTime.Text = "单步计时：";
             // 
@@ -1131,7 +1132,7 @@
             this.lbl_ProcessTime.AutoSize = true;
             this.lbl_ProcessTime.Location = new System.Drawing.Point(17, 289);
             this.lbl_ProcessTime.Name = "lbl_ProcessTime";
-            this.lbl_ProcessTime.Size = new System.Drawing.Size(88, 18);
+            this.lbl_ProcessTime.Size = new System.Drawing.Size(110, 23);
             this.lbl_ProcessTime.TabIndex = 10;
             this.lbl_ProcessTime.Text = "整体时间：";
             // 
@@ -1180,11 +1181,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label1.Location = new System.Drawing.Point(31, 0);
+            this.label1.Location = new System.Drawing.Point(9, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 18);
+            this.label1.Size = new System.Drawing.Size(110, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "复原步序：";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // splitContainer2
             // 
@@ -1200,6 +1202,7 @@
             // 
             // splitContainer2.Panel2
             // 
+            this.splitContainer2.Panel2.Controls.Add(this.btn_Reset);
             this.splitContainer2.Panel2.Controls.Add(this.button5);
             this.splitContainer2.Panel2.Controls.Add(this.btn_Start);
             this.splitContainer2.Panel2.Controls.Add(this.button1);
@@ -1236,9 +1239,19 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // btn_Reset
+            // 
+            this.btn_Reset.Location = new System.Drawing.Point(38, 151);
+            this.btn_Reset.Name = "btn_Reset";
+            this.btn_Reset.Size = new System.Drawing.Size(95, 49);
+            this.btn_Reset.TabIndex = 12;
+            this.btn_Reset.Text = "Reset";
+            this.btn_Reset.UseVisualStyleBackColor = true;
+            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 707);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -1356,6 +1369,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btn_Reset;
     }
 }
 
